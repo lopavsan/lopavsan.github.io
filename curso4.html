@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso detallado sobre el uso del Template de Robótica en PacDrive. Aprende a configurar robots, modificar referencias y gestionar pantallas de visualización con nuestros vídeos y transcripciones educativas.">
+    <meta name="keywords" content="curso PacDrive, template robótica, configuración robots, referencia robots, pantallas de visualización, automatización, formación PacDrive">
+    <title>Curso 4: Uso del Template de Robótica en PacDrive | Formación y Optimización</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<!-- Menú principal -->
+    <header>
+        <nav aria-label="Menú principal">
+			<button id="openMenuButton" class="open-menu-button">☰</button>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<!-- Menú lateral -->
+	<div id="sideMenu" class="side-menu">
+		<div class="side-menu-header">	
+			<h2>CONTENIDO</h2>	
+			<button id="closeMenuButton" class="close-menu-button">&times;</button>
+		</div>
+		<div class="menu-content">
+			<ul>
+				<li><a href="#" onclick="showCapitulo(0)">Configurar Número de Robots</a></li>
+				<li><a href="#" onclick="showCapitulo(1)">Configurar Referencia de Robots</a></li>
+				<li><a href="#" onclick="showCapitulo(2)">Descripción Pantallas Aplicación</a></li>
+			</ul>
+		</div>
+	</div>
+
+    <main>
+		<section class="section-container">
+			<!-- Titular de la sección -->
+			<h1 class="section-title course-title">Uso del Template de Robótica en PacDrive</h1>
+			
+			<!-- Capítulo 1 -->
+			<div class="capitulo-container" id="capitulo1">
+				<video controls poster="assets/curso4/CambiarNumRobots.jpg" playsinline webkit-playsinline aria-label="Vídeo que muestra cómo modificar la cantidad total de robots que nuestra aplicación controlará.">
+					<source src="assets/curso4/CambiarNumRobots.mp4" type="video/mp4">
+					<track src="assets/curso4/CambiarNumRobots.srt" kind="subtitles" srclang="es" label="Español">
+					Tu navegador no soporta la reproducción de video.
+				</video>
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos cómo modificar la cantidad total de robots que nuestra aplicación controlará. El punto de partida, como vemos, sería una situación en la que tenemos cuatro robots y deseamos bajar a dos robots. Antes de hacer el cambio, se tiene que explicar que el código asociado a cada robot, aunque estos estén desactivados, se está ejecutando y esto consume una serie de recursos. Si vamos a ver, por ejemplo, el código asociado al robot número 3, vemos que efectivamente está siendo ejecutado; hay una serie de código y una serie de recursos involucrados en el proceso.</p>
+						<p>Entonces, como nuestro objetivo es eliminar los robots número 3 y 4, simplemente salimos al modo "offline", nos vamos a la carpeta "Robótica", a la subcarpeta "Control Robots" y al objeto "Lista de Variables Globales", accedemos a la constante global "Máximo Número de Robots" y simplemente hemos de modificar este cuatro por dos y, ahora, hacemos una carga con download.</p>
+						<p>Cuando la carga finaliza, es importante mencionar que podría parecer más normal que estos parámetros estuvieran en el panel de configuración, puesto que lo que estamos haciendo es configurar la aplicación. Sin embargo, al final, se ha optado por ponerlos en lo que es el interior del código como constantes globales, ya que afectan de una forma muy crítica a elementos de hardware de la aplicación, que por otra parte ya conocemos durante la calificación de la máquina. Por tanto no van a cambiar durante lo que es la fase de desarrollo de lo que es la aplicación.</p>
+						<p>Bien, parece que se están viendo los resultados. Ahora le damos a "play", volvemos al panel de modo automático de trabajo y vemos que efectivamente, nuestra aplicación, que inicialmente tenía cuatro robots, ahora solo representa dos. Además, si intentamos acceder al robot 3, vemos que ya no nos deja (solo tenemos dos). Y si comprobamos el código asociado al robot número 3, que hemos eliminado, vemos que efectivamente este código no se está ejecutando, por lo tanto, no existe consumo de recursos.</p>
+						<p>Lo que hemos hecho es simplemente eliminar del control a los robots 3 y 4, pero no hemos modificado para nada el código de lo que es la plataforma de desarrollo Multirobot. El código sigue existiendo, solo que no se ejecuta y, por lo tanto, no consume recursos.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p>La plataforma de desarrollo Multirobot se encuentra preparada para trabajar con hasta 4 robots por lo que será necesario modificar su código para trabajar con el número de robots que realmente tendrá la aplicación.</p>
+					<p>El número de robots a utilizar debe establecerse en tiempo de programación modificando el valor de una constante. No es posible hacerlo en tiempo de ejecución desde ninguno de los parámetros existentes en las pantallas de configuración ni tampoco desde una HMI.</p>
+					<p>El código correspondiente a los robots no utilizados permanecerá intacto pero no será ejecutado por lo que no consumirá recursos del controlador</p>
+				</div>	
+			</div>
+
+			<!-- Capítulo 2 -->
+			<div class="capitulo-container" id="capitulo2" style="display:none;">
+				<video controls poster="assets/curso4/CambiarReferenciaRobot.jpg" playsinline webkit-playsinline aria-label="Vídeo que muestra cómo modificar la referencia del robot seleccionado.">
+					<source src="assets/curso4/CambiarReferenciaRobot.mp4" type="video/mp4">
+					Tu navegador no soporta la reproducción de video.
+				</video>
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos cómo modificar la referencia del robot seleccionado. Tomaremos el robot número 2, que tiene un radio de trabajo determinado, y buscaremos una referencia para un robot que tenga un radio de trabajo mayor.</p>
+						<p>El primer paso es seleccionar el robot que deseamos cambiar. Nos dirigimos a la sección superior y, en el selector de robots, escogemos el número 2. Como confirmación, veremos que su radio de trabajo, o su área de trabajo mejor dicho, queda resaltada en azul.</p>
+						<p>Ahora nos vamos al panel de configuración. Nos aseguramos de que efectivamente el robot número 2 es el que vamos a modificar y hacemos clic en su referencia actual. En el panel que se nos abre, veremos una lista con todas las posibles referencias compatibles con la plataforma de desarrollo de aplicaciones multirrobot. Hay una serie de filtros, y uno de ellos nos indica el radio de trabajo. Vamos a escoger un radio de 800 mm. Vemos que automáticamente las referencias que no cumplen con estos filtros quedan desactivadas, y solo se activan 4 de ellas.</p>
+						<p>Escogeremos aquella que más encaje con nuestras necesidades, por ejemplo, esta, que quedará automáticamente resaltada en amarillo. Esta es nuestra selección, pero aún no hemos hecho realmente el cambio. El robot activo como número 2 sigue siendo el resaltado con un trazo un poco más grueso, y el deseado es el resaltado con un fondo en amarillo.</p>
+						<p>Para que este cambio tenga validez, hemos de reiniciar el controlador. Apretamos en "Reiniciar" y, tras unos breves instantes en los que la visualización quedará desactivada, el sistema se reiniciará automáticamente. Salimos del modo online, volvemos a entrar para reactivar las visualizaciones, nos vamos al robot número 2 y vemos que, efectivamente, el modelo ha sido modificado. Para confirmarlo, nos vamos al panel de modo automático y ya vemos que el radio de trabajo es mucho mayor que el que tenía antes.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p>Es fundamental comenzar seleccionando el robot específico (en este caso, el robot número 2) y confirmando su radio de trabajo actual. Este paso asegura que cualquier cambio se aplique al robot correcto, evitando errores en la configuración.</p>
+					<p>Después de acceder a la sección de cambio de referencia del panel de configuración, es recomendable utilizar los filtros disponibles, como el radio de trabajo, para localizar una referencia que se ajuste a las necesidades específicas de la aplicación</p>
+					<p>Para que los cambios tengan efecto, es necesario reiniciar el controlador. Este paso garantiza que la nueva configuración se aplique correctamente. Tras reiniciar, se debe verificar que el robot modificado tiene el nuevo radio de trabajo, confirmando así la efectividad del cambio.</p>
+				</div>	
+			</div>
+
+			<!-- Capítulo 3 -->
+			<div class="capitulo-container" id="capitulo3" style="display:none;">
+				<video controls poster="assets/curso4/ComposicionPanelesVisualización.jpg" playsinline webkit-playsinline aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación.">
+					<source src="assets/curso4/ComposicionPanelesVisualización.mp4" type="video/mp4">
+					Tu navegador no soporta la reproducción de video.
+				</video>
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo se describirá la composición de las pantallas de visualización utilizadas por la aplicación. Para acceder a ellas, haremos doble clic en "Vis_principal" o bien, si no estamos utilizando el entorno de desarrollo, utilizaremos un navegador web y la dirección HTTP, IP del controlador, puerto 8080, y el nombre de la página “webvisu.htm".</p>
+						<p>Una pantalla de visualización se compone de cuatro sectores:</p>
+						<ol>
+							<li><strong>Sector superior:</strong> Aquí se podrá escoger el robot sobre el que se desea interactuar. Después también tiene una serie de botones para solicitar la entrada a un modo de trabajo u otro, unos pilotos que nos indican el modo de trabajo activo, las coordenadas cartesianas del robot, el ángulo del eje auxiliar de giro (si es que el robot lo posee) sistema de coordenadas activo y ciclos por minuto de este robot.</li>
+							<li>
+								<p><strong>Sección izquierda:</strong> Tendremos lo que es la botonera para navegar a través de todos los paneles que incluye la aplicación. El panel por defecto es "Configuración", a través del cual podemos darle valores a una serie de parámetros que nos permitirán configurar el comportamiento general de la aplicación.</p> 
+								<p>A través del botón "Automático", entraremos al panel donde se nos mostrará información relativa al modo de trabajo automático, del mismo modo que ocurre con los botones "Aprendizaje" y "Impulsos". </p>
+								<p>Con el botón de "Recetas", accederemos a un panel específico general para hacer lo que es la gestión de recetas (cargar, editar, borrar recetas) y también para configurar todos los parámetros de la aplicación a su valor por defecto. </p>
+								<p>En el panel de "Alarmas", tendríamos una visión de las 10 alarmas activas en ese momento y un resumen de la situación de cada uno de los robots utilizados.</p>
+								<p>Finalmente, tenemos acceso a una serie de paneles específicos que vienen en el template utilizado para construir la plataforma de desarrollo de aplicaciones multi-robot. Estos paneles de visualización se han dejado tal cual, pues pueden ser útiles en caso de que se amplíe la aplicación. Para regresar a los paneles de visualización, iremos a "Vis_Navigation" y daremos "Ir Aplicación".</p>
+								<p>Finalmente, podemos escoger el idioma de los paneles de visualización a través de una serie de banderitas: español, inglés y portugués.</p>
+							</li>	
+							<li><strong>Sector central:</strong> El panel central va cambiando en función del botón que tengamos pulsado en cada momento.</li>
+							<li><strong>Sector derecho:</strong> Este sector mostrará la información de los elementos de hardware del controlador, es decir, entradas y salidas digitales, o las entradas de emergencia. En el caso específico de que estemos visualizando el panel de "Automático", veremos además el contenido de los registros de desplazamiento para la cinta de recogida y de entrega.</li>							
+						</ol>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p>Es posible acceder a las pantallas de visualización desde el entorno de desarrollo haciendo doble clic en "Vis_principal" o utilizando un navegador web utilizando la dirección http://ip controlador:8080/webvisu.htm”.</p>
+					<p>Las pantallas de visualización se dividen en cuatro sectores: uno superior para ordenar el modo de trabajo y seleccionar el robot sobre el que se desea interactuar, uno lateral izquierdo para seleccionar qué información queremos mostrar en el panel central, uno central con información y parámetros relativos a un modo de trabajo determinado (según lo seleccionado en el sector izquierdo) y uno lateral derecho para visualizar el estado de las entradas/salidas del controlador o el contenido de los registros de desplazamiento de las cintas de recogida y entrega.</p>
+					<p>Es posible escoger el idioma de las pantallas de visualización entre tres opcione (español, inglés y portugués).</p>
+				</div>	
+			</div>
+		</section>
+		
+		<div class="navegacion">
+			<button id="prevBtn">Anterior</button>
+			<button id="nextBtn">Siguiente</button>
+		</div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
