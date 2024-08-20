@@ -1,0 +1,493 @@
+:root {
+	--color-fondo-menu: white;
+	--color-fondo-pagina: #F0F0F0;
+    --color-fondo-oscuro: 0,35,40;					/*0,35,40 Color azulado-verdoso oscuro*/
+    --color-texto-blanco: white;
+	--color-texto-negro: #333;								
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--color-fondo-pagina);
+    color: var(--color-texto-negro);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 							/* Evita el desbordamiento horizontal en todo el cuerpo y así no aparece barra inferior de scroll*/
+	user-select: none;
+}
+
+/* Estilo del header */
+header {
+    text-align: center;
+    max-width: 100%;
+}
+
+/* Estilo de la barra de navegación */
+header nav {
+    background-color: rgb(var(--color-fondo-oscuro));
+    color: var(--color-texto-blanco); 
+    padding: 10px;
+    max-width: 100%;
+    position: relative; 							/* Añadido para que el botón se posicione en relación a nav */
+    display: flex; 									/* Usamos flexbox para alinear los elementos */
+    justify-content: center; 						/* Centra los elementos de la barra de navegación */
+    align-items: center; 							/* Alinea verticalmente los elementos */
+}
+
+/* Estilo del botón de apertura del menú */
+.open-menu-button {
+    font-size: 1.5em;
+    background-color: transparent; 					/* Fondo transparente */
+    color: var(--color-texto-blanco);
+    border: none;
+    cursor: pointer;
+    position: absolute; 							/* Posiciona el botón dentro del nav */
+    left: 10px; 									/* Ajusta según sea necesario */
+}
+
+/* Estilo de la lista de navegación */
+header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; 						/* Centra los elementos de la lista */
+    flex-wrap: wrap; 								/* Permite que los elementos se envuelvan si es necesario */
+    margin-left: auto; 								/* Mueve el menú de navegación hacia la derecha */
+    margin-right: auto; 							/* Mueve el menú de navegación hacia la izquierda */
+}
+
+/* Estilo de los elementos de la lista */
+header nav ul li {
+    margin: 0 10px;
+}
+
+/* Estilo de los enlaces de navegación */
+header nav ul li a {
+    font-weight: bold;
+    color: var(--color-texto-blanco);
+    text-decoration: none;  
+	padding: 5px 15px;
+}
+
+/* Agrega un fondo resaltado al pasar el ratón sobre el enlace */
+header nav ul li a:hover {
+    background-color: #00FF00; /* Verde claro */
+    color: var(--color-texto-oscuro); /* Color del texto cuando el fondo es verde claro */
+	border-radius: 15px; /* Bordes redondeados */
+	transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
+	box-shadow: 0 0 0 2px white; /* Borde blanco alrededor, no afecta el tamaño del elemento */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 600px) {
+	.open-menu-button {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+    header nav ul li {
+        margin: 0 5px;
+    }
+    header nav ul li a {
+        font-size: 0.9em;
+    }
+}
+
+main {
+    padding: 20px;
+	margin-bottom: 60px; 							/* Espacio adicional para asegurar que el contenido no quede pegado al borde inferior */
+}
+
+/*###########################################*/
+/*			   ELEMENTOS COMUNES			 */
+/*###########################################*/
+/* Contenedor de sección */
+.section-container {
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en columna */
+    align-items: center; /* Centra horizontalmente los elementos */
+}
+
+/* Titular de sección */
+.section-title {
+    text-align: center; /* Centra el texto del titular */
+    font-size: 2.5em;   /* Ajusta el tamaño del texto */
+    color: #333;        /* Cambia el color del texto */
+    margin-bottom: 40px; /* Espacio debajo del titular */
+    width: 100%;        /* Asegura que el titular ocupe todo el ancho disponible */
+    max-width: 600px;   /* Limita el ancho máximo del titular al ancho del contenedor */
+    margin: 0 auto; /* Centra el texto en el contenedor */	  
+}
+
+/*###########################################*/
+/*				PAGINA BIENVENIDA			 */
+/*###########################################*/
+.contenido-bienvenida {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo para el contenido */
+	margin-top: 20px; /* Desplaza el contenedor hacia abajo 20px */
+}
+
+.contenido-bienvenida p {
+    line-height: 1.6; /* Ajusta el interlineado de los párrafos */
+	margin: 0 0 20px 0; /* Espacio entre párrafos por aplicación de un margen en la parte inferior*/
+}
+
+.video-bienvenida {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente dentro del contenedor */
+    margin: 20px 0; /* Espacio alrededor del video */
+}
+
+.video-bienvenida video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .contenido-bienvenida {
+        max-width: 90%; /* Ajusta el ancho máximo del contenedor en pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenido-bienvenida {
+        max-width: 100%; /* Ancho total en pantallas muy pequeñas */
+        padding: 10px; /* Reduce el padding en pantallas pequeñas */
+    }
+}
+
+/*###########################################*/
+/*			PAGINA MENU DE CURSOS			 */
+/*###########################################*/
+/*-------------------------------------------*/
+/*   			PARRILLA DE CURSOS   		 */
+/*-------------------------------------------*/
+/* Contenedor de la cuadrícula */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));	/* Asegura que las tarjetas tengan un ancho mínimo de 280px, pero pueden expandirse hasta ocupar todo el espacio disponible si hay más espacio en la pantalla */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: calc(100% - 40px);	 					/* Asegura que el contenedor ocupe el ancho disponible menos un pequeño margen para evitar desbordamiento */
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .courses-grid {
+        grid-template-columns: 1fr; 				/* Una sola columna en pantallas muy pequeñas */
+        gap: 30px; 									/* Aumenta el espacio entre tarjetas */
+        padding: 20px 10px;
+        width: calc(100% - 20px); 					/* Asegura que el contenedor ocupe el ancho disponible menos un pequeño margen para evitar desbordamiento */
+    }
+}
+
+/* Vínculo hacia la página del curso */
+.course-card-link {
+	color: inherit; 								/* Mantiene el color del texto dentro del enlace */
+    text-decoration: none; 							/* Elimina el subrayado del enlace */ 
+}
+
+/* Tarjetas de cursos individuales */
+.course-card {
+	display: flex;
+	background-color: rgb(var(--color-fondo-oscuro));
+    color: var(--color-texto-blanco);	
+    height: 300px;
+	/*width: 280px;*/								/* Se elimina el ancho fijo para que las tarjetas se adapten al ancho de la columna de la cuadricula*/
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    border-radius: 0px;								/* Redondez de los bordes de las tarjetas. Se fija a cero para que muestre un cuadrado */
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: space-between; 				/* Distribuye el contenido verticalmente */
+}
+
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.text-content {
+	display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-card h2 {
+	font-weight: bold;
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 8px 16px 0 16px;
+}
+
+.course-card p {
+    font-size: 0.8em;
+	line-height: 1.6;
+    margin: 0 16px 16px;
+}
+
+/* Efecto hover */
+.course-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+
+/*###########################################*/
+/*			PAGINA CONTENIDO CURSOS			 */
+/*###########################################*/
+/* Titular de sección */
+.course-title {  
+    max-width: 800px;   /* Modifica el ancho del contenedor del título (esto hereda de .section-title) */
+}
+/*-------------------------------------------*/
+/*   				VIDEO   				 */
+/*-------------------------------------------*/
+/* Contenedor centrado */
+.capitulo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 							/* Centra los elementos dentro del contenedor */
+	margin-bottom: 40px; /* Este valor debe ser consistente con el margin-bottom del titular */
+    padding: 0 10px; 								/* Agrega un poco de espacio a los lados */
+	overflow: hidden;
+	margin-top: 20px; /* Ajusta este valor según el espacio que necesites */
+}
+
+/* Estilo del video */
+.capitulo-container video {
+    width: 100%; 									/* Ajusta el ancho del video al 100% del contenedor */
+    max-width: 800px; 								/* Limita el ancho máximo del video */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	margin-bottom: 10px; 							/* Espacio debajo del video */
+}
+
+/*-------------------------------------------*/
+/*		  TRANSCRIPCION SONIDO VIDEO		 */
+/*-------------------------------------------*/
+/* Contenedor */
+.transcripcion-container {
+    font-size: 1em;
+    color: var(--color-texto-negro);
+    text-align: left; 								/* Alinea el texto al lado izquierdo */
+    width: 100%; 									/* Ajusta el ancho al 100% del contenedor */
+    max-width: 800px; 								/* Limita el ancho máximo */
+    margin: 10px 0; 								/* Espacio alrededor del texto */
+}
+
+.transcripcion-header {
+	display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.transcripcion-icon {
+	font-size: 1em; 								/* Tamaño adecuado del triángulo */
+    color: var(--color-texto-negro);
+    transition: transform 0.3s ease;
+    transform-origin: center center;
+    margin-right: 5px;
+    margin-top: -1px;
+}
+
+.transcripcion-content {
+    display: none; 									/* Oculta la transcripción por defecto */
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--color-texto-negro);
+    margin: 20px 0 0 0; /* Elimina márgenes superior e inferior y define solo el margen inferior */
+}
+
+.transcripcion-content li{
+    margin-bottom: 1em; /* Añade espacio de 10px entre cada elemento de la lista */
+}
+
+/*-------------------------------------------*/
+/*				ASPECTOS CLAVE				 */
+/*-------------------------------------------*/
+/* Contenedor */
+.aspectos-container {
+    width: 100%; 									/* Ajusta el ancho al 100% del contenedor */
+    max-width: 800px; 								/* Limita el ancho máximo */
+    margin: 20px 0; 								/* Espacio alrededor del contenedor */
+}
+
+/* Titular "Aspectos clave" */
+.aspectos-container h3 {
+	font-size: 1.5em;
+    color: var(--color-texto-negro);
+    margin-top: 20px;
+}
+
+/* Texto descriptivo aspectos clave*/
+.aspectos-container p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--color-texto-negro);
+}
+
+/*-------------------------------------------*/
+/*	  BOTONES NAVEGACION CAPITULO ANT/SIG	 */
+/*-------------------------------------------*/
+.navegacion {
+    text-align: center;
+}
+
+.navegacion button {
+	font-size: 1em;
+	background-color: rgb(var(--color-fondo-oscuro));
+    color: var(--color-texto-blanco);
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+}
+
+.navegacion button:hover {
+    background-color: rgba(var(--color-fondo-oscuro),0.5);
+}
+
+.navegacion button:disabled {
+    background-color: #c0c0c0;
+    color: #808080;
+    cursor: not-allowed;
+}
+
+.navegacion button:disabled:hover {
+    background-color: #c0c0c0;
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .capitulo-container video {
+        width: 100%; 								/* Ajusta el ancho del video al 100% en pantallas pequeñas */
+        max-width: 100%; 							/* Asegura que el video ocupe todo el ancho disponible */
+		height: auto;
+    }
+
+    .transcripcion-container,
+    .aspectos-container {
+        width: 100%; 								/* Ajusta el ancho de los contenedores al 100% */
+        max-width: 100%; 							/* Asegura que los contenedores ocupen todo el ancho disponible */
+    }
+
+    .transcripcion-content {
+        font-size: 0.9em; 							/* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    .aspectos-container h3 {
+        font-size: 1.2em; 							/* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .aspectos-container p {
+        font-size: 0.9em; 							/* Reduce el tamaño del texto descriptivo en pantallas pequeñas */
+    }
+}
+
+/*-------------------------------------------*/
+/*	MENU LATERAL NAVEGACION ENTRE CAPITULOS	 */
+/*-------------------------------------------*/
+.side-menu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: var(--color-fondo-menu); 		/* Fondo blanco */
+	overflow: hidden;
+	transition: 0.5s;
+	box-shadow: 4px 0 5px rgba(0, 0, 0, 0.2);
+	display: flex;									/* Esto hace que los elementos hijos (el título y el botón de cierre) se alineen en fila de manera automática.*/
+    flex-direction: column;  						/* Asegura que el contenido se organice en columna */
+}
+
+.side-menu-header {
+    display: flex;
+    justify-content: space-between; /* Asegura que el título esté alineado a la izquierda y el botón de cierre a la derecha, ocupando todo el espacio disponible */
+    align-items: center; /* Alinea verticalmente ambos elementos.*/
+    height: 40px; /* Define la altura del header */
+}
+
+.close-menu-button {
+    background: none;
+    border: none;
+    color: var(--color-texto-negro);
+    font-size: 2.5em;
+    cursor: pointer;
+	z-index: 10;
+	height: 100%; /* Asegura que el botón ocupe toda la altura del header */
+    display: flex;
+    align-items: center; /* Centra el contenido del botón verticalmente */
+}
+
+.side-menu h2 {
+    margin: 0;
+    font-size: 1.2em;
+	padding: 0 20px; /* Mantén el padding si lo necesitas para espacio horizontal */
+    display: flex;
+    align-items: center; /* Centra verticalmente el texto dentro del h2 */
+    height: 100%; /* Asegura que el h2 ocupe toda la altura del header */
+
+}
+
+.menu-content {
+    position: relative; /* Cambia a relativo para que siga el flujo normal del documento */
+    width: 300px; /* Ancho fijo */
+    height: auto; /* Altura dinámica para ocupar el resto del espacio */
+    bottom: 0; /* Se extiende hasta el fondo del sidebar */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 20px;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding-left: 10px; 							/* Alinea la lista con el título */
+    margin: 0;
+}
+
+.side-menu ul li {
+    margin: 0; 										/* Espacio reducido entre las opciones del menú */
+}
+
+.side-menu ul li a {
+    color: var(--color-texto-negro);
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-align: left;
+}
+
+.side-menu ul li a.active {
+	font-size: 1em;
+    font-weight: bold; /* Resalta el texto de la opción activa en negrita */
+    background-color: transparent; /* Opcional: color de fondo para el resaltado */
+    border-radius: 5px; /* Opcional: añade bordes redondeados para un efecto visual más suave */
+}
+
+.side-menu ul li a:hover {
+    background-color: #d0d0d0; 						/* Color de fondo gris claro al pasar el ratón */
+    text-decoration: none; 							/* Eliminar subrayado al pasar el ratón */
+}
+
+
+/* Ocultar la barra de desplazamiento en navegadores WebKit/Blink */
+/* .menu-content::-webkit-scrollbar {
+/*     width: 0; 									/* Oculta la barra de desplazamiento vertical */
+/*     height: 0; 									/* Oculta la barra de desplazamiento horizontal si es necesario */
+/* }*/
