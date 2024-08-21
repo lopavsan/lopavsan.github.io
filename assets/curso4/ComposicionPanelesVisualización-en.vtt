@@ -1,221 +1,265 @@
 WEBVTT
 
 1
-00:00:01.400 --> 00:00:04.640
-In this video, we will see how to modify the
+00:00:01.360 --> 00:00:04.160
+In this video, the
 
 2
-00:00:03.240 --> 00:00:06.919
-reference of the robot
+00:00:03.080 --> 00:00:05.839
+composition of the
 
 3
-00:00:04.640 --> 00:00:08.639
-selected. We will take robot number
+00:00:04.160 --> 00:00:08.160
+visualization screens used by the
 
 4
-00:00:06.919 --> 00:00:11.840
-two, which has a specified working radius,
+00:00:05.839 --> 00:00:10.679
+application will be described. To access them, we will
 
 5
-00:00:08.639 --> 00:00:13.559
-and we will look for a reference
+00:00:08.160 --> 00:00:12.360
+double-click on "Vis_Principal" or, if we are not
 
 6
-00:00:11.840 --> 00:00:16.400
-for a robot with a larger working radius.
+00:00:10.679 --> 00:00:15.400
+using the development environment, we will use a web browser
 
 7
-00:00:13.559 --> 00:00:19.359
-The first step is to select the
+00:00:12.360 --> 00:00:19.400
+and the address http, IP of the controller,
 
 8
-00:00:16.400 --> 00:00:22.080
-robot we want to change. We go
+00:00:15.400 --> 00:00:21.320
+port 8080 and the page name
 
 9
-00:00:19.359 --> 00:00:24.240
-to the upper section and, in the
+00:00:19.400 --> 00:00:24.840
+"webvisu.htm". Well, a visualization screen is composed of four
 
 10
-00:00:22.080 --> 00:00:26.840
-robot selector, choose number
+00:00:21.320 --> 00:00:26.160
+sectors: a top sector where
 
 11
-00:00:24.240 --> 00:00:28.960
-two. As confirmation, we will see that its
+00:00:24.840 --> 00:00:28.760
+you can choose the robot you want
 
 12
-00:00:26.840 --> 00:00:31.880
-working radius, or its working area
+00:00:26.160 --> 00:00:30.720
+to interact with. Then, there is also a
 
 13
-00:00:28.960 --> 00:00:34.840
-to be more precise, is highlighted in blue.
+00:00:28.760 --> 00:00:32.760
+set of buttons to request entry into
 
 14
-00:00:31.880 --> 00:00:36.879
-Now we go to the settings panel. We make sure
+00:00:30.720 --> 00:00:34.840
+one working mode or another, some
 
 15
-00:00:34.840 --> 00:00:39.120
-that robot number two is indeed the
+00:00:32.760 --> 00:00:36.840
+indicators that show the active working mode, the
 
 16
-00:00:36.879 --> 00:00:40.920
-one we want to modify and click on
+00:00:34.840 --> 00:00:39.360
+Cartesian coordinates of the robot, the angle of the
 
 17
-00:00:39.120 --> 00:00:42.079
-its current reference.
+00:00:36.840 --> 00:00:42.000
+auxiliary rotation axis (if the robot has one),
 
 18
-00:00:40.920 --> 00:00:45.000
-In the panel that opens,
+00:00:39.360 --> 00:00:44.960
+the active coordinate system, and
 
 19
-00:00:42.079 --> 00:00:46.960
-we will see a list of all possible
+00:00:42.000 --> 00:00:46.879
+the cycles per minute of that robot. In the
 
 20
-00:00:45.000 --> 00:00:48.920
-references compatible with the
+00:00:44.960 --> 00:00:49.199
+left section, we will have what is
 
 21
-00:00:46.960 --> 00:00:50.559
-Multirobot application development
+00:00:46.879 --> 00:00:52.760
+the button panel to navigate through
 
 22
-00:00:48.920 --> 00:00:51.760
-platform.
+00:00:49.199 --> 00:00:56.960
+all the panels included in the application.
 
 23
-00:00:50.559 --> 00:00:55.480
-There are a number
+00:00:52.760 --> 00:00:57.879
+The default panel is "Configuration," where
 
 24
-00:00:51.760 --> 00:00:58.239
-of filters, one of which indicates the
+00:00:56.960 --> 00:01:00.960
+we can assign values to
 
 25
-00:00:55.480 --> 00:01:01.359
-working radius. We will choose a
+00:00:57.879 --> 00:01:03.239
+a series of parameters that will
 
 26
-00:00:58.239 --> 00:01:03.159
-radius of 800mm.
+00:01:00.960 --> 00:01:07.479
+allow us to configure the general
 
 27
-00:01:01.359 --> 00:01:05.560
-We see that automatically the
+00:01:03.239 --> 00:01:09.400
+behavior of the application. Through the
 
 28
-00:01:03.159 --> 00:01:08.520
-references that do not meet these
+00:01:07.479 --> 00:01:12.080
+"Automatic" button, we will enter the panel
 
 29
-00:01:05.560 --> 00:01:11.280
-filters are deactivated, and only
+00:01:09.400 --> 00:01:15.439
+where information related to the automatic
 
 30
-00:01:08.520 --> 00:01:13.799
-four of them are activated.
+00:01:12.080 --> 00:01:18.040
+working mode will be shown,
 
 31
-00:01:11.280 --> 00:01:15.439
-We will choose the one that best fits
+00:01:15.439 --> 00:01:20.360
+just like with the "Learning" and
 
 32
-00:01:13.799 --> 00:01:18.400
-our needs, for example, this one,
+00:01:18.040 --> 00:01:23.920
+"Impulses" buttons. With the "Recipes" button,
 
 33
-00:01:15.439 --> 00:01:20.520
-which will be automatically highlighted in
+00:01:20.360 --> 00:01:26.840
+we will access a specific panel
 
 34
-00:01:18.400 --> 00:01:23.119
-yellow. This is our selection, but
+00:01:23.920 --> 00:01:31.079
+to manage what are
 
 35
-00:01:20.520 --> 00:01:26.360
-we haven't actually made the change yet.
+00:01:26.840 --> 00:01:36.000
+the recipes (loading, editing, deleting
 
 36
-00:01:23.119 --> 00:01:29.119
-The robot currently active, robot
+00:01:31.079 --> 00:01:41.119
+recipes) and also to configure all
 
 37
-00:01:26.360 --> 00:01:31.759
-number two, still appears here,
+00:01:36.000 --> 00:01:44.280
+the application parameters to their
 
 38
-00:01:29.119 --> 00:01:34.040
-highlighted with a slightly thicker line,
+00:01:41.119 --> 00:01:47.360
+default value. In the "Alarms" panel,
 
 39
-00:01:31.759 --> 00:01:37.000
-and the desired one is highlighted with
+00:01:44.280 --> 00:01:50.000
+we will have a view of the 10 active alarms
 
 40
-00:01:34.040 --> 00:01:39.200
-a yellow background. For this
+00:01:47.360 --> 00:01:53.159
+at this moment and a summary of the
 
 41
-00:01:37.000 --> 00:01:41.560
-change to be valid, we need to restart
+00:01:50.000 --> 00:01:55.640
+status of each of the robots
 
 42
-00:01:39.200 --> 00:01:45.079
-the controller. We click here on
+00:01:53.159 --> 00:01:58.000
+used. Finally, we have access to
 
 43
-00:01:41.560 --> 00:01:48.280
-"Restart" and, after a few brief moments
+00:01:55.640 --> 00:02:00.200
+a series of specific panels that
 
 44
-00:01:45.079 --> 00:01:50.520
-during which the display will be
+00:01:58.000 --> 00:02:02.039
+are in the template used to
 
 45
-00:01:48.280 --> 00:01:53.840
-deactivated, the system will automatically
+00:02:00.200 --> 00:02:05.240
+build the Multirobot application development platform.
 
 46
-00:01:50.520 --> 00:01:56.880
-restart. We exit online mode,
+00:02:02.039 --> 00:02:08.399
+These visualization panels have been
 
 47
-00:01:53.840 --> 00:01:58.799
-re-enter to reactivate the
+00:02:05.240 --> 00:02:10.080
+kept as they are because they might be
 
 48
-00:01:56.880 --> 00:02:01.840
-visualizations,
+00:02:08.399 --> 00:02:12.480
+interesting if the application is expanded.
 
 49
-00:01:58.799 --> 00:02:01.840
-we go to robot number two and see
+00:02:10.080 --> 00:02:14.400
+To return to the
 
 50
-00:02:03.119 --> 00:02:08.119
-that indeed the model has been
+00:02:12.480 --> 00:02:18.040
+visualization panels, we go to "Vis_Navigation"
 
 51
-00:02:05.479 --> 00:02:10.720
-modified. To confirm this, we go
+00:02:14.400 --> 00:02:20.239
+and click on "Go to Application".
 
 52
-00:02:08.119 --> 00:02:12.280
-to the automatic mode
+00:02:18.040 --> 00:02:23.120
+Finally, we can choose the language of the
 
 53
-00:02:10.720 --> 00:02:14.840
-panel and we see that the working radius
+00:02:20.239 --> 00:02:25.400
+visualization panels through a series
 
 54
-00:02:12.280 --> 00:02:17.200
-is much greater than it was
+00:02:23.120 --> 00:02:29.040
+of flags: this would be in Spanish, English, and also
 
 55
-00:02:14.840 --> 00:02:20.200
-before.
+00:02:25.400 --> 00:02:31.800
+in Portuguese.
+
+56
+00:02:29.040 --> 00:02:33.440
+The central panel
+
+57
+00:02:31.800 --> 00:02:36.560
+changes according to the
+
+58
+00:02:33.440 --> 00:02:37.920
+button pressed at any
+
+59
+00:02:36.560 --> 00:02:41.319
+moment. And finally, we have a
+
+60
+00:02:37.920 --> 00:02:43.959
+right section that will show the
+
+61
+00:02:41.319 --> 00:02:47.879
+information of the hardware elements
+
+62
+00:02:43.959 --> 00:02:50.000
+of the controller, that is, digital inputs and
+
+63
+00:02:47.879 --> 00:02:52.480
+outputs, or emergency inputs. In the specific case of
+
+64
+00:02:50.000 --> 00:02:55.200
+viewing the "Automatic" panel, we will see, in addition, the content
+
+65
+00:02:52.480 --> 00:02:59.319
+of the displacement logs
+
+66
+00:02:55.200 --> 00:03:01.280
+for the pick and place belts. And that's all.
