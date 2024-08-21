@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:01.400 --> 00:00:04.640
+In this video, we will see how to modify the
+
+2
+00:00:03.240 --> 00:00:06.919
+reference of the robot
+
+3
+00:00:04.640 --> 00:00:08.639
+selected. We will take robot number
+
+4
+00:00:06.919 --> 00:00:11.840
+two, which has a specified working radius,
+
+5
+00:00:08.639 --> 00:00:13.559
+and we will look for a reference
+
+6
+00:00:11.840 --> 00:00:16.400
+for a robot with a larger working radius.
+
+7
+00:00:13.559 --> 00:00:19.359
+The first step is to select the
+
+8
+00:00:16.400 --> 00:00:22.080
+robot we want to change. We go
+
+9
+00:00:19.359 --> 00:00:24.240
+to the upper section and, in the
+
+10
+00:00:22.080 --> 00:00:26.840
+robot selector, choose number
+
+11
+00:00:24.240 --> 00:00:28.960
+two. As confirmation, we will see that its
+
+12
+00:00:26.840 --> 00:00:31.880
+working radius, or its working area
+
+13
+00:00:28.960 --> 00:00:34.840
+to be more precise, is highlighted in blue.
+
+14
+00:00:31.880 --> 00:00:36.879
+Now we go to the settings panel. We make sure
+
+15
+00:00:34.840 --> 00:00:39.120
+that robot number two is indeed the
+
+16
+00:00:36.879 --> 00:00:40.920
+one we want to modify and click on
+
+17
+00:00:39.120 --> 00:00:42.079
+its current reference.
+
+18
+00:00:40.920 --> 00:00:45.000
+In the panel that opens,
+
+19
+00:00:42.079 --> 00:00:46.960
+we will see a list of all possible
+
+20
+00:00:45.000 --> 00:00:48.920
+references compatible with the
+
+21
+00:00:46.960 --> 00:00:50.559
+Multirobot application development
+
+22
+00:00:48.920 --> 00:00:51.760
+platform.
+
+23
+00:00:50.559 --> 00:00:55.480
+There are a number
+
+24
+00:00:51.760 --> 00:00:58.239
+of filters, one of which indicates the
+
+25
+00:00:55.480 --> 00:01:01.359
+working radius. We will choose a
+
+26
+00:00:58.239 --> 00:01:03.159
+radius of 800mm.
+
+27
+00:01:01.359 --> 00:01:05.560
+We see that automatically the
+
+28
+00:01:03.159 --> 00:01:08.520
+references that do not meet these
+
+29
+00:01:05.560 --> 00:01:11.280
+filters are deactivated, and only
+
+30
+00:01:08.520 --> 00:01:13.799
+four of them are activated.
+
+31
+00:01:11.280 --> 00:01:15.439
+We will choose the one that best fits
+
+32
+00:01:13.799 --> 00:01:18.400
+our needs, for example, this one,
+
+33
+00:01:15.439 --> 00:01:20.520
+which will be automatically highlighted in
+
+34
+00:01:18.400 --> 00:01:23.119
+yellow. This is our selection, but
+
+35
+00:01:20.520 --> 00:01:26.360
+we haven't actually made the change yet.
+
+36
+00:01:23.119 --> 00:01:29.119
+The robot currently active, robot
+
+37
+00:01:26.360 --> 00:01:31.759
+number two, still appears here,
+
+38
+00:01:29.119 --> 00:01:34.040
+highlighted with a slightly thicker line,
+
+39
+00:01:31.759 --> 00:01:37.000
+and the desired one is highlighted with
+
+40
+00:01:34.040 --> 00:01:39.200
+a yellow background. For this
+
+41
+00:01:37.000 --> 00:01:41.560
+change to be valid, we need to restart
+
+42
+00:01:39.200 --> 00:01:45.079
+the controller. We click here on
+
+43
+00:01:41.560 --> 00:01:48.280
+"Restart" and, after a few brief moments
+
+44
+00:01:45.079 --> 00:01:50.520
+during which the display will be
+
+45
+00:01:48.280 --> 00:01:53.840
+deactivated, the system will automatically
+
+46
+00:01:50.520 --> 00:01:56.880
+restart. We exit online mode,
+
+47
+00:01:53.840 --> 00:01:58.799
+re-enter to reactivate the
+
+48
+00:01:56.880 --> 00:02:01.840
+visualizations,
+
+49
+00:01:58.799 --> 00:02:01.840
+we go to robot number two and see
+
+50
+00:02:03.119 --> 00:02:08.119
+that indeed the model has been
+
+51
+00:02:05.479 --> 00:02:10.720
+modified. To confirm this, we go
+
+52
+00:02:08.119 --> 00:02:12.280
+to the automatic mode
+
+53
+00:02:10.720 --> 00:02:14.840
+panel and we see that the working radius
+
+54
+00:02:12.280 --> 00:02:17.200
+is much greater than it was
+
+55
+00:02:14.840 --> 00:02:20.200
+before.

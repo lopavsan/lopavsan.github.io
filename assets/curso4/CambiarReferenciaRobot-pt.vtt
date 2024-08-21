@@ -1,0 +1,221 @@
+WEBVTT
+
+1
+00:00:01.400 --> 00:00:04.640
+Neste vídeo, veremos como modificar a
+
+2
+00:00:03.240 --> 00:00:06.919
+referência do robô
+
+3
+00:00:04.640 --> 00:00:08.639
+selecionado. Vamos usar o robô número
+
+4
+00:00:06.919 --> 00:00:11.840
+dois, que tem um raio de trabalho
+
+5
+00:00:08.639 --> 00:00:13.559
+especificado, e procuraremos uma referência
+
+6
+00:00:11.840 --> 00:00:16.400
+para um robô com um raio de trabalho
+
+7
+00:00:13.559 --> 00:00:19.359
+maior. O primeiro passo é selecionar o
+
+8
+00:00:16.400 --> 00:00:22.080
+robô que queremos alterar. Vamos
+
+9
+00:00:19.359 --> 00:00:24.240
+para a seção superior e, no
+
+10
+00:00:22.080 --> 00:00:26.840
+seletor de robôs, escolhemos o número
+
+11
+00:00:24.240 --> 00:00:28.960
+dois. Como confirmação, veremos que seu
+
+12
+00:00:26.840 --> 00:00:31.880
+raio de trabalho, ou sua área de trabalho
+
+13
+00:00:28.960 --> 00:00:34.840
+para ser mais preciso, está destacada em azul.
+
+14
+00:00:31.880 --> 00:00:36.879
+Agora, vamos para o painel de
+
+15
+00:00:34.840 --> 00:00:39.120
+configuração. Verificamos se
+
+16
+00:00:36.879 --> 00:00:40.920
+o robô número dois é realmente o
+
+17
+00:00:39.120 --> 00:00:42.079
+que queremos modificar e clicamos em
+
+18
+00:00:40.920 --> 00:00:45.000
+sua referência
+
+19
+00:00:42.079 --> 00:00:46.960
+atual. No painel que se abre,
+
+20
+00:00:45.000 --> 00:00:48.920
+veremos uma lista com todas as possíveis
+
+21
+00:00:46.960 --> 00:00:50.559
+referências compatíveis com a
+
+22
+00:00:48.920 --> 00:00:51.760
+plataforma de desenvolvimento de aplicações
+
+23
+00:00:50.559 --> 00:00:55.480
+Multirobot.
+
+24
+00:00:51.760 --> 00:00:58.239
+Há uma série
+
+25
+00:00:55.480 --> 00:01:01.359
+de filtros, e um deles indica o
+
+26
+00:00:58.239 --> 00:01:03.159
+raio de trabalho. Vamos escolher um
+
+27
+00:01:01.359 --> 00:01:05.560
+raio de 800mm.
+
+28
+00:01:03.159 --> 00:01:08.520
+Vemos que automaticamente as
+
+29
+00:01:05.560 --> 00:01:11.280
+referências que não atendem a esses
+
+30
+00:01:08.520 --> 00:01:13.799
+filtros são desativadas, e apenas
+
+31
+00:01:11.280 --> 00:01:15.439
+quatro delas são ativadas.
+
+32
+00:01:13.799 --> 00:01:18.400
+Escolheremos aquela que melhor se encaixa com
+
+33
+00:01:15.439 --> 00:01:20.520
+nossas necessidades, por exemplo, esta,
+
+34
+00:01:18.400 --> 00:01:23.119
+que ficará automaticamente destacada em
+
+35
+00:01:20.520 --> 00:01:26.360
+amarelo. Esta é a nossa seleção, mas
+
+36
+00:01:23.119 --> 00:01:29.119
+ainda não fizemos realmente a mudança.
+
+37
+00:01:26.360 --> 00:01:31.759
+O robô atualmente ativo, o robô
+
+38
+00:01:29.119 --> 00:01:34.040
+número dois, ainda aparece aqui,
+
+39
+00:01:31.759 --> 00:01:37.000
+destacado com uma linha um pouco mais
+
+40
+00:01:34.040 --> 00:01:39.200
+grossa, e o desejado é o destacado com
+
+41
+00:01:37.000 --> 00:01:41.560
+um fundo amarelo. Para que essa
+
+42
+00:01:39.200 --> 00:01:45.079
+mudança seja válida, precisamos reiniciar
+
+43
+00:01:41.560 --> 00:01:48.280
+o controlador. Clicamos aqui em
+
+44
+00:01:45.079 --> 00:01:50.520
+"Reiniciar" e, após alguns breves momentos
+
+45
+00:01:48.280 --> 00:01:53.840
+em que a visualização ficará
+
+46
+00:01:50.520 --> 00:01:56.880
+desativada, o sistema será reiniciado
+
+47
+00:01:53.840 --> 00:01:58.799
+automaticamente. Saímos do modo online,
+
+48
+00:01:56.880 --> 00:02:01.840
+entramos novamente para reativar as
+
+49
+00:01:58.799 --> 00:02:01.840
+visualizações,
+
+50
+00:02:03.119 --> 00:02:08.119
+vamos para o robô número dois e vemos
+
+51
+00:02:05.479 --> 00:02:10.720
+que, de fato, o modelo foi
+
+52
+00:02:08.119 --> 00:02:12.280
+modificado. Para confirmar, vamos ao painel de
+
+53
+00:02:10.720 --> 00:02:14.840
+modo automático e vemos que o raio de
+
+54
+00:02:12.280 --> 00:02:17.200
+trabalho é muito maior do que o que tinha
+
+55
+00:02:14.840 --> 00:02:20.200
+antes.
