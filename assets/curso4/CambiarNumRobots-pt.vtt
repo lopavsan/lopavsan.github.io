@@ -1,0 +1,190 @@
+WEBVTT
+
+00:00:01.599 --> 00:00:03.800
+Neste vídeo, veremos como modificar o
+
+00:00:03.800 --> 00:00:05.120
+número total de robôs que nossa
+
+00:00:05.120 --> 00:00:07.799
+aplicação controlará. O ponto de
+
+00:00:07.799 --> 00:00:09.719
+partida, como podemos ver, seria uma
+
+00:00:09.719 --> 00:00:11.000
+situação em que temos quatro
+
+00:00:11.000 --> 00:00:15.440
+robôs e queremos reduzir para dois robôs.
+
+00:00:15.440 --> 00:00:17.840
+Antes de fazer a mudança, deve-se
+
+00:00:17.840 --> 00:00:20.240
+explicar que o código associado a cada
+
+00:00:20.240 --> 00:00:22.960
+robô, mesmo que estejam desativados,
+
+00:00:22.960 --> 00:00:25.039
+ainda está sendo executado e consome uma
+
+00:00:25.039 --> 00:00:26.560
+certa quantidade de recursos. Se olharmos, por
+
+00:00:26.560 --> 00:00:28.320
+exemplo, o código associado ao robô
+
+00:00:28.320 --> 00:00:30.560
+número 3,
+
+00:00:30.560 --> 00:00:32.960
+vemos que ele está de fato sendo
+
+00:00:32.960 --> 00:00:34.640
+executado; há uma certa quantidade de código e alguns
+
+00:00:34.640 --> 00:00:36.120
+recursos envolvidos
+
+00:00:36.120 --> 00:00:37.800
+no processo.
+
+00:00:37.800 --> 00:00:41.039
+Então, como nosso objetivo
+
+00:00:41.039 --> 00:00:42.920
+é remover os robôs número 3 e 4,
+
+00:00:42.920 --> 00:00:46.719
+simplesmente saímos para o modo offline, vamos
+
+00:00:46.719 --> 00:00:48.840
+para a pasta "Robótica", para a
+
+00:00:48.840 --> 00:00:52.239
+subpasta "Controle de Robôs", e para o objeto
+
+00:00:52.239 --> 00:00:53.280
+"Lista de Variáveis Globais"
+
+00:00:53.280 --> 00:00:54.840
+correspondente aos
+
+00:00:54.840 --> 00:00:57.520
+robôs, acessamos a constante global
+
+00:00:57.520 --> 00:01:00.239
+"Número Máximo de Robôs" e simplesmente
+
+00:01:00.239 --> 00:01:02.559
+modificamos este quatro para dois
+
+00:01:02.559 --> 00:01:09.360
+e, agora, fazemos um download.
+
+00:01:09.360 --> 00:01:11.080
+Bem, enquanto o download está em andamento, já que
+
+00:01:11.080 --> 00:01:13.600
+pode demorar um pouco, é importante dizer que
+
+00:01:13.600 --> 00:01:15.920
+poderia parecer mais lógico que esses
+
+00:01:15.920 --> 00:01:17.360
+parâmetros estivessem no painel de
+
+00:01:17.360 --> 00:01:19.439
+configuração, já que o que estamos
+
+00:01:19.439 --> 00:01:21.600
+fazendo é configurar a aplicação. No entanto,
+
+00:01:21.600 --> 00:01:23.040
+decidiu-se, no final,
+
+00:01:23.040 --> 00:01:25.200
+colocá-los no interior do
+
+00:01:25.200 --> 00:01:27.640
+código como constantes globais, pois
+
+00:01:27.640 --> 00:01:30.000
+afetam de maneira crítica
+
+00:01:30.000 --> 00:01:31.520
+os elementos de hardware da aplicação, que
+
+00:01:31.520 --> 00:01:33.600
+já conhecemos durante a
+
+00:01:33.600 --> 00:01:36.320
+qualificação da máquina. Portanto, eles não
+
+00:01:36.320 --> 00:01:39.159
+vão mudar durante a fase de
+
+00:01:39.159 --> 00:01:42.159
+desenvolvimento da
+
+00:01:42.159 --> 00:01:47.119
+aplicação. Bem, parece que está
+
+00:01:47.200 --> 00:01:51.360
+enviando... já temos. Pressionamos "Play",
+
+00:01:51.360 --> 00:01:55.079
+voltamos ao painel de modo automático de
+
+00:01:55.079 --> 00:01:57.560
+trabalho e vemos que, de fato,
+
+00:01:57.560 --> 00:01:59.399
+nossa aplicação, que inicialmente
+
+00:01:59.399 --> 00:02:02.399
+tinha quatro robôs, agora mostra apenas dois.
+
+00:02:02.399 --> 00:02:04.960
+Além disso, se tentarmos acessar o robô número três,
+
+00:02:04.960 --> 00:02:07.039
+vemos que já não conseguimos (temos apenas
+
+00:02:07.039 --> 00:02:09.679
+dois). E se verificarmos o código associado
+
+00:02:09.679 --> 00:02:13.360
+ao robô número três, que foi
+
+00:02:13.360 --> 00:02:16.360
+removido, vemos que, de fato, este
+
+00:02:16.360 --> 00:02:18.480
+código não está mais sendo executado, portanto,
+
+00:02:18.480 --> 00:02:20.959
+não há consumo de recursos. O que
+
+00:02:20.959 --> 00:02:24.080
+fizemos foi simplesmente remover
+
+00:02:24.080 --> 00:02:27.560
+do controle os robôs três e
+
+00:02:27.560 --> 00:02:29.160
+quatro, mas não modificamos em nada o
+
+00:02:29.160 --> 00:02:30.440
+código da
+
+00:02:30.440 --> 00:02:31.760
+plataforma de desenvolvimento Multirobot.
+
+00:02:31.760 --> 00:02:34.280
+O código ainda existe, mas não é executado, então não consome
+
+00:02:34.280 --> 00:02:36.440
+recursos.
