@@ -114,11 +114,11 @@ Vemos que automaticamente as
 
 29
 00:01:08.520 --> 00:01:11.280
-referências que não atendem a esses
+referências que não atendem a 
 
 30
 00:01:11.280 --> 00:01:13.799
-filtros são desativadas, e apenas
+esses filtros são desativadas, e apenas
 
 31
 00:01:13.799 --> 00:01:15.439
@@ -150,11 +150,11 @@ O robô atualmente ativo, o robô
 
 38
 00:01:31.759 --> 00:01:34.040
-número dois, ainda aparece aqui,
+número dois, ainda aparece 
 
 39
 00:01:34.040 --> 00:01:37.000
-destacado com uma linha um pouco mais
+aqui, destacado com uma linha um pouco mais
 
 40
 00:01:37.000 --> 00:01:39.200
@@ -190,11 +190,11 @@ automaticamente. Saímos do modo online,
 
 48
 00:01:58.799 --> 00:02:01.840
-entramos novamente para reativar as
+entramos novamente para 
 
 49
 00:02:01.840 --> 00:02:03.119
-visualizações,
+reativar as visualizações,
 
 50
 00:02:03.119 --> 00:02:05.479
@@ -206,16 +206,20 @@ que, de fato, o modelo foi
 
 52
 00:02:08.119 --> 00:02:10.720
-modificado. Para confirmar, vamos ao painel de
+modificado. Para confirmar, vamos 
 
 53
 00:02:10.720 --> 00:02:12.280
-modo automático e vemos que o raio de
+ao painel de modo 
 
 54
 00:02:12.280 --> 00:02:14.840
-trabalho é muito maior do que o que tinha
+automático e vemos que o raio de 
 
 55
 00:02:14.840 --> 00:02:17.200
+trabalho é muito maior do que o que tinha
+
+56
+00:02:17.200 --> 00:02:20.200
 antes.

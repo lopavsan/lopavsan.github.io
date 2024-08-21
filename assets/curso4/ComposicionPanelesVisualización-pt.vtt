@@ -218,11 +218,11 @@ mantidos como estão, pois podem ser
 
 55
 00:02:08.399 --> 00:02:10.080
-interessantes caso a aplicação seja ampliada.
+interessantes caso a aplicação 
 
 56
 00:02:10.080 --> 00:02:12.480
-Para retornar aos
+seja ampliada. Para retornar aos
 
 57
 00:02:12.480 --> 00:02:14.400
@@ -238,68 +238,72 @@ Finalmente, podemos escolher o idioma dos
 
 60
 00:02:20.239 --> 00:02:23.120
-painéis de visualização através de uma série
+painéis de visualização 
 
 61
 00:02:23.120 --> 00:02:25.400
-de bandeirinhas: este seria em espanhol, inglês e também
+através de uma série de bandeirinhas: este 
 
 62
 00:02:25.400 --> 00:02:29.040
-em português.
+seria em espanhol, inglês e também 
 
 63
 00:02:29.040 --> 00:02:31.800
-O painel
+em português. 
 
 64
 00:02:31.800 --> 00:02:33.440
-central muda conforme o
+O painel 
 
 65
 00:02:33.440 --> 00:02:36.560
-botão que temos pressionado em cada
+central muda conforme o 
 
 66
 00:02:36.560 --> 00:02:37.920
-momento. E, por fim, temos um
+botão que temos pressionado em cada 
 
 67
 00:02:37.920 --> 00:02:41.319
-setor direito que mostrará a
+momento. E, por fim, temos um
 
 68
 00:02:41.319 --> 00:02:43.959
-informação dos elementos de hardware
+setor direito que mostrará a 
 
 69
 00:02:43.959 --> 00:02:47.879
-do controlador, ou seja, entradas e
+informação dos elementos de hardware 
 
 70
 00:02:47.879 --> 00:02:50.000
-saídas digitais, ou as entradas de
+do controlador, ou seja, entradas e 
 
 71
 00:02:50.000 --> 00:02:52.480
-emergência. No caso específico de
+saídas digitais, ou as entradas de 
 
 72
 00:02:52.480 --> 00:02:55.200
-estarmos visualizando o painel de
+emergência. No caso específico de 
 
 73
 00:02:55.200 --> 00:02:59.319
-"Automático", veremos, além disso, o conteúdo
+estarmos visualizando o painel de 
 
 74
 00:02:59.319 --> 00:03:01.280
-dos registros de deslocamento
+"Automático", veremos, além disso, o conteúdo 
 
 75
 00:03:01.280 --> 00:03:04.040
-para a fita de coleta e de
+dos registros de deslocamento 
 
 76
 00:03:04.040 --> 00:03:08.760
-entrega. E isso é tudo.
+para a fita de coleta 
+
+77
+00:03:08.760 --> 00:03:10.080
+e de entrega. E isso é tudo.

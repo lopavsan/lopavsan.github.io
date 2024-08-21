@@ -54,168 +54,172 @@ to be more precise, is highlighted in blue.
 
 14
 00:00:34.840 --> 00:00:36.879
-Now we go to the settings panel. We make sure
+Now we go to the settings panel. 
 
 15
 00:00:36.879 --> 00:00:39.120
-that robot number two is indeed the
+We make sure that 
 
 16
 00:00:39.120 --> 00:00:40.920
-one we want to modify and click on
+robot number two is indeed the one 
 
 17
 00:00:40.920 --> 00:00:42.079
-its current reference.
+we want to modify and click on 
 
 18
 00:00:42.079 --> 00:00:45.000
-In the panel that opens,
+its current reference.
 
 19
 00:00:45.000 --> 00:00:46.960
-we will see a list of all possible
+In the panel that opens, 
 
 20
 00:00:46.960 --> 00:00:48.920
-references compatible with the
+we will see a list of all possible 
 
 21
 00:00:48.920 --> 00:00:50.559
-Multirobot application development
+references compatible with the 
 
 22
 00:00:50.559 --> 00:00:51.760
-platform.
+Multirobot application development 
 
 23
 00:00:51.760 --> 00:00:55.480
-There are a number
+platform.
 
 24
 00:00:55.480 --> 00:00:58.239
-of filters, one of which indicates the
+There are a number of 
 
 25
 00:00:58.239 --> 00:01:01.359
-working radius. We will choose a
+filters, one of which indicates the 
 
 26
 00:01:01.359 --> 00:01:03.159
-radius of 800mm.
+working radius. We will choose a 
 
 27
 00:01:03.159 --> 00:01:05.560
-We see that automatically the
+radius of 800mm. 
 
 28
 00:01:05.560 --> 00:01:08.520
-references that do not meet these
+We see that automatically the 
 
 29
 00:01:08.520 --> 00:01:11.280
-filters are deactivated, and only
+references that do not meet 
 
 30
 00:01:11.280 --> 00:01:13.799
-four of them are activated.
+these filters are deactivated, and only 
 
 31
 00:01:13.799 --> 00:01:15.439
-We will choose the one that best fits
+four of them are activated. 
 
 32
 00:01:15.439 --> 00:01:18.400
-our needs, for example, this one,
+We will choose the one that best fits 
 
 33
 00:01:18.400 --> 00:01:20.520
-which will be automatically highlighted in
+our needs, for example, this one, 
 
 34
 00:01:20.520 --> 00:01:23.119
-yellow. This is our selection, but
+which will be automatically highlighted in 
 
 35
 00:01:23.119 --> 00:01:26.360
-we haven't actually made the change yet.
+yellow. This is our selection, but 
 
 36
 00:01:26.360 --> 00:01:29.119
-The robot currently active, robot
+we haven't actually made the change yet. 
 
 37
 00:01:29.119 --> 00:01:31.759
-number two, still appears here,
+The robot currently active, robot 
 
 38
 00:01:31.759 --> 00:01:34.040
-highlighted with a slightly thicker line,
+number two, still appears here, 
 
 39
 00:01:34.040 --> 00:01:37.000
-and the desired one is highlighted with
+highlighted with a slightly
 
 40
 00:01:37.000 --> 00:01:39.200
-a yellow background. For this
+thicker line, and the desired one is highlighted with 
 
 41
 00:01:39.200 --> 00:01:41.560
-change to be valid, we need to restart
+a yellow background. For this 
 
 42
 00:01:41.560 --> 00:01:45.079
-the controller. We click here on
+change to be valid, we need to restart 
 
 43
 00:01:45.079 --> 00:01:48.280
-"Restart" and, after a few brief moments
+the controller. We click here on 
 
 44
 00:01:48.280 --> 00:01:50.520
-during which the display will be
+"Restart" and, after a few brief moments 
 
 45
 00:01:50.520 --> 00:01:53.840
-deactivated, the system will automatically
+during which the display will be 
 
 46
 00:01:53.840 --> 00:01:56.880
-restart. We exit online mode,
+deactivated, the system will automatically 
 
 47
 00:01:56.880 --> 00:01:58.799
-re-enter to reactivate the
+restart. We exit online mode, 
 
 48
 00:01:58.799 --> 00:02:01.840
-visualizations,
+re-enter to 
 
 49
 00:02:01.840 --> 00:02:03.119
-we go to robot number two and see
+reactivate the visualizations, 
 
 50
 00:02:03.119 --> 00:02:05.479
-that indeed the model has been
+we go to robot number two and see 
 
 51
 00:02:05.479 --> 00:02:08.119
-modified. To confirm this, we go
+that indeed the model has been 
 
 52
 00:02:08.119 --> 00:02:10.720
-to the automatic mode
+modified. To confirm this, we go 
 
 53
 00:02:10.720 --> 00:02:12.280
-panel and we see that the working radius
+to the automatic mode 
 
 54
 00:02:12.280 --> 00:02:14.840
-is much greater than it was
+panel and we see that the working 
 
 55
 00:02:14.840 --> 00:02:17.200
+radius is much greater than it was 
+
+56
+00:02:17.200 --> 00:02:20.200
 before.
