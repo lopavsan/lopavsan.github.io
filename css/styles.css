@@ -7,7 +7,7 @@
 }
 
 body {
-	font-family: Arial, sans-serif;
+	font-family:  Helvetica, Arial, sans-serif;
 	background-color: var(--color-fondo-pagina);
     color: var(--color-texto-negro);
     margin: 0;
@@ -159,6 +159,103 @@ main {
         padding: 10px; /* Reduce el padding en pantallas pequeñas */
     }
 }
+
+/*###########################################*/
+/*				PAGINA FOOTER			     */
+/*###########################################*/
+/* Estilo del footer */
+footer {
+    background-color: rgb(var(--color-fondo-oscuro)); /* Fondo oscuro similar al del menú */
+    color: var(--color-texto-blanco); /* Texto blanco para contraste */
+    padding: 20px 0; /* Espaciado vertical dentro del footer */
+    text-align: center; /* Centra el contenido del footer */
+    width: 100%; /* Asegura que el footer ocupe todo el ancho */
+    position: relative; /* Permite personalizaciones adicionales */
+}
+
+/* Estilo de la navegación dentro del footer */
+footer nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0;
+    margin: 0 0 10px 0; /* Espacio inferior */
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
+}
+
+/* Estilo de los elementos de la lista dentro del footer */
+footer nav ul li {
+    margin: 0 15px; /* Espacio entre los enlaces */
+}
+
+/* Estilo de los enlaces dentro del footer */
+footer nav ul li a {
+    color: var(--color-texto-blanco); /* Mantén el texto en blanco */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold;
+    transition: color 0.3s; /* Suave transición para cambios de color */
+}
+
+/* Estilo al pasar el ratón sobre los enlaces del footer */
+footer nav ul li a:hover {
+    color: #00FF00; /* Cambia a verde claro al pasar el ratón */
+    text-decoration: underline; /* Opcional: subraya el enlace al pasar el ratón */
+}
+
+/* Estilo del texto de derechos reservados */
+footer p {
+    margin: 10px 0 0 0; /* Espacio entre el nav y el texto */
+    font-size: 0.9em; /* Texto ligeramente más pequeño */
+    color: var(--color-texto-blanco); /* Mismo color que los enlaces */
+}
+
+/* Responsividad para el footer */
+@media (max-width: 600px) {
+    footer nav ul li {
+        margin: 5px 10px; /* Reduce el espacio entre los enlaces en pantallas pequeñas */
+    }
+}
+
+/*###########################################*/
+/*				PAGINAS LEGALES			     */
+/*###########################################*/
+/* Contenedor principal de las páginas legales */
+.legal-container {
+    max-width: 800px; /* Limita el ancho máximo del texto */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px; /* Añade espaciado interno */
+    background-color: var(--color-fondo-pagina); /* Mismo fondo que el resto de la página */
+    color: var(--color-texto-negro); /* Asegura que el texto sea legible */
+    line-height: 1.6; /* Mejora la legibilidad del texto */
+    font-size: 1em; /* Tamaño de fuente estándar */
+}
+
+/* Estilo de los encabezados */
+.legal-container h1, .legal-container h2, .legal-container h3 {
+    color: var(--color-texto-negro); /* Usa el mismo color para los encabezados */
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* Estilo de los párrafos */
+.legal-container p {
+    margin-bottom: 20px; /* Añade espacio entre los párrafos */
+}
+
+/* Listas dentro de las páginas legales */
+.legal-container ul {
+    margin-left: 20px; /* Indenta las listas */
+    list-style: disc; /* Muestra una viñeta con disc para las listas */
+}
+
+/* Enlaces dentro de las páginas legales */
+.legal-container a {
+    color: rgb(var(--color-fondo-oscuro)); /* Color para los enlaces */
+    text-decoration: underline; /* Mantén los enlaces subrayados */
+    transition: color 0.3s;
+}
+
+
 
 /*###########################################*/
 /*			PAGINA MENU DE CURSOS			 */
