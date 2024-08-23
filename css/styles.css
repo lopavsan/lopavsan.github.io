@@ -368,6 +368,17 @@ footer p {
 	margin-bottom: 10px; 							/* Espacio debajo del video */
 }
 
+/* Estilo del iframe */
+.capitulo-container iframe {
+    width: 100%;                                  /* Ajusta el ancho del iframe al 100% del contenedor */
+    max-width: 800px;                              /* Limita el ancho máximo del iframe */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;                           /* Espacio debajo del iframe */
+    aspect-ratio: 16/9;                            /* Mantiene la relación de aspecto del video */
+}
+
 /*-------------------------------------------*/
 /*		  TRANSCRIPCION SONIDO VIDEO		 */
 /*-------------------------------------------*/
@@ -430,6 +441,24 @@ footer p {
     font-size: 1em;
     line-height: 1.6;
     color: var(--color-texto-negro);
+
+}
+
+/* Listas dentro del contenedor de aspectos clave */
+.aspectos-container ul {
+    padding-left: 20px;                         /* Espacio a la izquierda para la lista */
+    margin-bottom: 1.6em;                       /* Espacio inferior similar al interlineado de los párrafos */
+}
+
+.aspectos-container li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--color-texto-negro);
+    margin-bottom: 0.8em;                       /* Espacio inferior entre elementos de la lista */
+}
+
+.aspectos-container li:last-child {
+    margin-bottom: 0;                          /* Elimina el margen inferior del último elemento */
 }
 
 /*-------------------------------------------*/

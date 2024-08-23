@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function showCapitulo(index) {
         // Pausar y reiniciar todos los videos antes de cambiar de sección
-        resetAllVideos();
+        resetAllMedia();
 
         currentIndex = index;
         capitulos.forEach((capitulo, i) => {
@@ -31,14 +31,24 @@ document.addEventListener("DOMContentLoaded", function() {
         updateMenuHighlight(); // Llama a la función para actualizar el resaltado del menú
     }
 
-    function resetAllVideos() {
-        const videos = document.querySelectorAll('video');
-        videos.forEach(video => {
-            video.pause(); // Pausa el video
-            video.currentTime = 0; // Lo lleva al inicio
+	function resetAllMedia() {
+		// Detener y recargar todos los videos HTML5
+		const videos = document.querySelectorAll('video');
+		videos.forEach(video => {
+			video.pause(); // Pausa el video
+			video.currentTime = 0; // Lo lleva al inicio
 			video.load(); // Vuelve a cargar el video para mostrar el poster
-        });
-    }
+		});
+
+		// Detener y recargar todos los iframes de YouTube y Vimeo
+		const iframes = document.querySelectorAll('iframe');
+		iframes.forEach(iframe => {
+			const src = iframe.src; // Guarda la URL actual del iframe
+			iframe.src = ''; // Borra temporalmente la URL para detener el video
+			iframe.src = src; // Restablece la URL para recargar el video desde el inicio
+		});
+	}
+
 
     function updateButtons() {
         document.getElementById('prevBtn').disabled = currentIndex === 0;
@@ -94,3 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});

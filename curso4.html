@@ -34,9 +34,12 @@
 		</div>
 		<div class="menu-content">
 			<ul>
-				<li><a href="#" onclick="showCapitulo(0)">Configurar Número de Robots</a></li>
-				<li><a href="#" onclick="showCapitulo(1)">Configurar Referencia de Robots</a></li>
-				<li><a href="#" onclick="showCapitulo(2)">Descripción Pantallas Aplicación</a></li>
+				<li><a href="#" onclick="showCapitulo(0)">Configurar número de robots</a></li>
+				<li><a href="#" onclick="showCapitulo(1)">Configurar referencia de robots</a></li>
+				<li><a href="#" onclick="showCapitulo(2)">Descripción pantallas aplicación</a></li>
+				<li><a href="#" onclick="showCapitulo(3)">Simulador de ítems</a></li>
+				<li><a href="#" onclick="showCapitulo(4)">Reparto de carga entre robots</a></li>
+				<li><a href="#" onclick="showCapitulo(5)">Reglas de selección de ítems</a></li>
 			</ul>
 		</div>
 	</div>
@@ -46,7 +49,7 @@
 			<!-- Titular de la sección -->
 			<h1 class="section-title course-title">Uso del Template de Robótica en PacDrive</h1>
 			
-			<!-- Capítulo 1 -->
+			<!-- Capítulo 1: Configurar número de robots -->
 			<div class="capitulo-container" id="capitulo1">
 				<video controls poster="assets/curso4/CambiarNumRobots.jpg" playsinline webkit-playsinline aria-label="Vídeo que muestra cómo modificar la cantidad total de robots que nuestra aplicación controlará." controlsList="nodownload">
 					<source src="assets/curso4/CambiarNumRobots.mp4" type="video/mp4">
@@ -77,7 +80,7 @@
 				</div>	
 			</div>
 
-			<!-- Capítulo 2 -->
+			<!-- Capítulo 2: Configurar referencia de robots -->
 			<div class="capitulo-container" id="capitulo2" style="display:none;">
 				<video controls poster="assets/curso4/CambiarReferenciaRobot.jpg" playsinline webkit-playsinline aria-label="Vídeo que muestra cómo modificar la referencia del robot seleccionado." controlsList="nodownload">
 					<source src="assets/curso4/CambiarReferenciaRobot.mp4" type="video/mp4">
@@ -108,7 +111,7 @@
 				</div>	
 			</div>
 
-			<!-- Capítulo 3 -->
+			<!-- Capítulo 3: Descripción pantallas aplicación -->
 			<div class="capitulo-container" id="capitulo3" style="display:none;">
 				<video controls poster="assets/curso4/ComposicionPanelesVisualización.jpg" playsinline webkit-playsinline aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." controlsList="nodownload">
 					<source src="assets/curso4/ComposicionPanelesVisualización.mp4" type="video/mp4">
@@ -148,6 +151,133 @@
 					<p>Es posible escoger el idioma de las pantallas de visualización entre tres opcione (español, inglés y portugués).</p>
 				</div>	
 			</div>
+			
+			
+			<!-- Capítulo 4: Simulador de ítems -->
+			<div class="capitulo-container" id="capitulo4" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/IGlXcWXshPI" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
+					style="width: 100%; height: auto;">
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo se verá cómo funciona el selector de objetivos del modo automático de trabajo. En una situación real, es muy probable que en el área de trabajo del robot, esta área de color verde, se encuentren varios ítems a procesar. De alguna manera, se le ha de decir al robot cuál de estos ítems debe ser el primero. Para ello, se utiliza una serie de reglas. Las reglas que incluye la plataforma de desarrollo de aplicaciones multirobot son tres y se pueden encontrar en el panel de configuración, en la sección de parámetros del modo automático. En esta sección, en esta zona, tenemos tres para la cinta de recogida o operación de picking y los mismos tres para la cinta de entrega o operación de place. Vamos a ver un ejemplo de cada, que es como mejor se entiende.</p>
+						<p>Primero seleccionaremos para el robot número 1 la regla de selección “cercana”. Volvemos al panel automático y vamos a desinhibir el robot para que empiece a procesar los ítems que se encuentran dentro de su área de trabajo. Como la regla de selección es la “cercana”, lo que va a hacer es buscar el ítem que se encuentre más cerca del cero de coordenadas del robot, que estaría marcado por estos ejes cartesianos. En este caso, debería ser el 4, pero el 4, si nos fijamos, está marcado en gris.</p>
+						<p>¿Esto por qué es? Porque este ítem ha sido marcado para no ser procesado debido a que se encuentra más allá de los límites software de este robot. Los límites software, si los vamos a... hacemos una rápida visita, se encuentran aquí. Para este robot 1, el robot 2 tiene otros límites distintos; están fijados en -400. Así que es muy probable que este ítem, el 4, tenga una cota inferior a -400 y, por tanto, no debe ser procesado. Entonces vamos a darle al botón inhibir para habilitar el robot y vamos a ver lo que hace. Vemos que se va al 5 porque su cero de coordenadas es el más cercano al cero del robot, luego al 3, luego seguramente al 2, al 7, siempre está escogiendo aquel cuyo centro se encuentre más cercano al centro de coordenadas del robot, hasta quedarse sin candidatos viables.</p>
+						<p>Bien, vamos a inhibir el robot para que no trabaje y hacemos llegar más ítems al área de trabajo del robot. Por ejemplo, aquí fijémonos que estos siete ítems, que estaban marcados como inviables para el robot número uno porque su cota Y está más abajo del límite inferior Y, han quedado desmarcados al rebasar la zona de trabajo del robot número 1. Esto es así porque el robot número 2 debe tener otros límites software. Por tanto, lo que no era válido para el robot uno no tiene por qué ser también inválido para el robot número dos.</p>
+						<p>Entonces, volviendo a lo que estábamos haciendo, volvemos al panel de configuración y en este caso seleccionamos otra regla: la “lejano negativa”. Lejano negativa quiere decir que el robot escogerá aquel ítem cuyo cero de coordenadas se encuentre más lejos del cero de coordenadas del robot, pero en sentido negativo respecto al eje cartesiano X. En este caso, muy probablemente será el 1. Vamos a verlo. Exacto. Luego, el siguiente que va a procesar será el 13 porque es el siguiente viable más lejano en negativo y así el 8, dependiendo si está dentro o fuera del área verde, pues lo procesará o no. En este caso, está fuera por un pelín, no lo procesa.</p>
+						<p>Vamos a inhibir y hacemos llegar más ítems al área de trabajo. Bueno, ya tenemos unos cuantos y vamos a seleccionar la última de las reglas que nos faltaba por probar: la “lejana positiva”, que es exactamente igual a lo que hemos visto hasta ahora, pero cogerá el ítem cuyo centro se encuentre más lejos del cero de coordenadas del robot, pero en sentido positivo. Es decir, en este caso sería el 2. Vamos a habilitar el robot y así... ahora será el 3.</p>
+						<p>No hay una regla de selección mejor que otra; depende de la aplicación y lo que se pretende de ella. En este caso se incluyen estas tres porque son las más evidentes, pero corresponde al desarrollador de la máquina decidir cuál es la más correcta para su máquina y, sin ninguna de ellas, desarrollar la suya propia.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p>Es posible acceder a las pantallas de visualización desde el entorno de desarrollo haciendo doble clic en "Vis_principal" o utilizando un navegador web utilizando la dirección http://ip controlador:8080/webvisu.htm”.</p>
+					<p>Las pantallas de visualización se dividen en cuatro sectores: uno superior para ordenar el modo de trabajo y seleccionar el robot sobre el que se desea interactuar, uno lateral izquierdo para seleccionar qué información queremos mostrar en el panel central, uno central con información y parámetros relativos a un modo de trabajo determinado (según lo seleccionado en el sector izquierdo) y uno lateral derecho para visualizar el estado de las entradas/salidas del controlador o el contenido de los registros de desplazamiento de las cintas de recogida y entrega.</p>
+					<p>Es posible escoger el idioma de las pantallas de visualización entre tres opcione (español, inglés y portugués).</p>
+				</div>	
+			</div>
+			
+			<!-- Capítulo 5: Reparto de carga entre robots -->
+			<div class="capitulo-container" id="capitulo5" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/xk3Bc-ihg20" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
+					style="width: 100%; height: auto;">
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos las opciones de reparto de carga entre robots incluidas en la aplicación. Para ello, nos dirigiremos al panel de configuración y a la sección donde se encuentran los parámetros relativos al modo automático de trabajo.</p>
+						<p>En este panel, vemos que, en cuanto a reparto de carga, existen tres posibilidades: no utilizar ningún reparto de carga, utilizar un reparto de carga basado en la zona de la cinta donde se encuentra el ítem, o bien un reparto de carga basado en la categoría que la cámara asigna a cada ítem.</p>
+						<p>Para comprobar el comportamiento de la máquina ante cada una de estas tres posibilidades, nos aseguraremos de que los cuatro robots que vamos a emplear en el proceso poseen el mismo tipo de reparto de carga. En este caso, seleccionaremos “ninguno”. Nos dirigiremos al panel automático y arrancaremos las cintas en esta modalidad.</p>
+						<p>Como no existe ningún reparto de carga, cada robot intentará procesar todos los ítems que entren en su zona de influencia. Aquellos que no consiga procesar seguirán su camino hasta alcanzar la zona de influencia del siguiente robot, que hará lo propio, y así hasta el último de los robots.</p>
+						<p>A simple vista, vemos que los primeros robots están asumiendo la mayor parte de la carga de trabajo, mientras que los últimos robots tienden a asumir una carga mucho menor. El robot número uno y el número dos están continuamente procesando ítems sin parar, mientras que el robot número tres está procesando ítems solamente el 50% de su tiempo, más o menos, y el cuarto robot no procesó ninguno; no hay ningún ítem que alcance su zona de influencia.</p>
+						<p>Esto puede tener consecuencias negativas en cuanto a mantenimiento porque, evidentemente, los robots que más trabajan se desgastan antes y necesitan más planes de mantenimiento que los últimos. Por tanto, es muy probable que a lo largo del año se produzcan muchas más paradas técnicas que si el reparto estuviera más equilibrado. Luego, los planes de mantenimiento predictivo y preventivo podrían complicarse porque necesitarían considerar no la máquina como un conjunto, sino cada uno de los robots como si fueran máquinas individuales.</p>
+						<p>Bien, vamos a ver el comportamiento del sistema con otro reparto de carga. Nos dirigiremos al panel de configuración y, en este caso, seleccionaremos un reparto de carga “zonal” en cada uno de los cuatro robots.</p>
+						<p>En este tipo de reparto de carga, lo que se hace es dividir el ancho de la cinta de recogida en tantas zonas como robots se encuentren activos, es decir, en automático y trabajando. En este caso, como tenemos cuatro robots, el ancho de la cinta se divide en cuatro secciones, cada una con el 25% del ancho total de la cinta.</p>
+						<p>De tal modo que los ítems que circulan por el primer 25% del ancho de la cinta serán asignados al primer robot. El segundo robot recogerá solamente los ítems que se encuentren dentro del siguiente 25%. El tercer robot solo recogerá los ítems que se encuentren en el tercer 25%, y el cuarto robot hará lo propio con los ítems que se encuentren en el último 25%.</p>
+						<p>De esta forma, ya vemos que el reparto está más equilibrado. Tal vez los primeros robots estén produciendo menos tiempo, pero eso es porque el reparto está más equilibrado y los últimos dos robots están produciendo más que antes, cuando no teníamos ningún reparto de carga.</p>
+						<p>Si ahora, por ejemplo, cogiéramos el robot número dos y lo inhibiéramos, el sistema se auto-configuraría y las zonas se dividirían no en cuatro, sino en tres, puesto que solamente tendríamos tres robots en automático y produciendo. El primer robot recogerá solamente los ítems que se encuentren en el primer tercio del ancho de la cinta. El segundo no recogerá ninguno porque está inhibido. El tercer robot recogerá solamente los ítems que se encuentren en la parte central de la cinta, en el segundo tercio, y el cuarto robot recogerá solamente los ítems que se encuentren en el último tercio de la cinta, el último 33%.</p>																								
+						<p>Esto puede ser útil en aquellos casos en los que, por avería o por otras causas, se deba detener uno de los robots y necesitemos que el resto sigan produciendo. Se podría bajar la velocidad de la cinta y los tres robots supervivientes asumirían la totalidad de la carga.</p>
+						<p>Bien, vamos a parar las cintas y, en este caso, vamos a seleccionar el último tipo de reparto de carga existente, que sería el reparto de carga basado en la categoría que la cámara asigna a cada ítem.</p>						
+						<p>Haremos lo mismo: nos dirigiremos al robot 1, cámara; robot 2, cámara, y así sucesivamente. En este caso, la cámara asignará una categoría a cada ítem en función de sus características. El operario podrá asignar cada una de estas categorías para ser procesadas por un robot u otro.</p>						
+						<p>En este ejemplo, vamos a dividir la carga de forma equilibrada y asignaremos la categoría 0 al robot 1, la categoría 1 al robot 2, la categoría 2 al robot 3 y la categoría 3 al robot 4. La cuarta categoría se la asignaremos a todos los robots, de forma que si hay un ítem que tenga categoría 4, será procesado por cualquiera de los robots.</p>						
+						<p>Vamos a aceptar, nos vamos al panel automático y vamos a borrar la cinta para que no nos cree confusión. El segundo robot, que está inhibido, lo vamos a habilitar y ahora vamos a arrancar la cinta de nuevo. Dado que el generador de ítems está generando ítems de forma aleatoria, las categorías también son aleatorias. Por tanto, es muy probable que la distribución sea bastante equitativa.</p>						
+						<p>Vemos que el robot número uno solamente está cogiendo ítems que hayan sido clasificados como categoría 0 o categoría 4. El robot número 2 solo recogerá los de categoría 1 y 4; el robot número 3 recogerá los de categoría 2 y 4; y el cuarto robot los de categoría 3 o 4. Algunos ítems pueden escapar, por ejemplo, si algún ítem de categoría 0 no ha sido procesado por el primer robot, ya no será procesado por ninguno y se escapará. Los ítems de categoría 4 es menos probable que se escapen porque, si no fueran procesados por el robot 1, aún podrían ser procesados por el 2, por el 3 o por el 4. Hemos visto que se ha escapado uno.</p>						
+						<p>Para evitar esto, siempre que la aplicación lo permita, es posible utilizar repartos de carga distintos para cada robot. Lo habitual es que el cuarto robot intente procesar todo lo que el resto de robots no pueda procesar. Para eso, se puede dirigir al panel de configuración y para el cuarto robot solamente indicar que no deseamos ningún reparto de carga. En este caso, el robot número 4 procesará todos los ítems que lleguen a su zona de influencia, siempre y cuando pueda, claro. Esto no todas las aplicaciones lo permiten.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p><strong>Tipos de Reparto de Carga:</strong></p>
+					<ul>
+						<li><strong>Sin Reparto de Carga:</strong> Los robots intentan procesar todos los ítems en su zona de influencia. Esto puede resultar en una distribución desigual de la carga de trabajo, con los primeros robots procesando más ítems que los últimos, lo que puede afectar el mantenimiento y la eficiencia operativa.</li>
+						<li><strong>Reparto de Carga Zonal:</strong> Se divide el ancho de la cinta en zonas específicas para cada robot. Esto equilibra la carga de trabajo y el desgaste en los robots mejorando la eficiencia global. Si un robot se inhibe, el sistema ajusta automáticamente el reparto entre los restantes, asegurando continuidad en la producción.</li>
+						<li><strong>Reparto Basado en Categorías:</strong> Los ítems son clasificados en categorías por la cámara, y cada robot está asignado a procesar ciertas categorías. Esto permite una distribución específica y controlada de los ítems, optimizando el procesamiento al asegurar que cada robot maneje los ítems que mejor se ajusten a sus capacidades.</li>
+					</ul>
+					<p><strong>Flexibilidad del reparto de Carga:</strong></p>
+					<ul>
+						<li><strong>Adaptabilidad:</strong> El sistema puede ajustar el reparto de carga automáticamente si uno de los robots se inhibe, redistribuyendo el trabajo entre los restantes para mantener la producción. Esto asegura que la operación continúe sin interrupciones significativas, adaptándose a cambios en la disponibilidad de los robots.</li>
+						<li><strong>Multiconfiguración:</strong> Es posible configurar cada robot con un tipo específico de reparto de carga. Por ejemplo, algunos robots pueden estar configurados para procesar todos los ítems que los otros robots no pueden manejar, mientras que otros pueden estar asignados a procesar ítems según categorías o zonas específicas. Esta flexibilidad asegura una cobertura completa y minimiza el riesgo de que algunos ítems no sean procesados adecuadamente.</li>
+					</ul>
+				</div>	
+			</div>
+			
+			<!-- Capítulo 6: Reglas de selección de ítems -->
+			<div class="capitulo-container" id="capitulo6" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/XkIW-Sa0lVw" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
+					style="width: 100%; height: auto;">
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo se verá cómo funciona el selector de objetivos del modo automático de trabajo. En una situación real, es muy probable que en el área de trabajo del robot, esta área de color verde, se encuentren varios ítems a procesar. De alguna manera, se le ha de decir al robot cuál de estos ítems debe ser el primero. Para ello, se utiliza una serie de reglas. Las reglas que incluye la plataforma de desarrollo de aplicaciones multirobot son tres y se pueden encontrar en el panel de configuración, en la sección de parámetros del modo automático. En esta sección, en esta zona, tenemos tres para la cinta de recogida o operación de picking y los mismos tres para la cinta de entrega o operación de place. Vamos a ver un ejemplo de cada, que es como mejor se entiende.</p>
+						<p>Primero seleccionaremos para el robot número 1 la regla de selección “cercana”. Volvemos al panel automático y vamos a desinhibir el robot para que empiece a procesar los ítems que se encuentran dentro de su área de trabajo. Como la regla de selección es la “cercana”, lo que va a hacer es buscar el ítem que se encuentre más cerca del cero de coordenadas del robot, que estaría marcado por estos ejes cartesianos. En este caso, debería ser el 4, pero el 4, si nos fijamos, está marcado en gris.</p>
+						<p>¿Esto por qué es? Porque este ítem ha sido marcado para no ser procesado debido a que se encuentra más allá de los límites software de este robot. Los límites software, si los vamos a... hacemos una rápida visita, se encuentran aquí. Para este robot 1, el robot 2 tiene otros límites distintos; están fijados en -400. Así que es muy probable que este ítem, el 4, tenga una cota inferior a -400 y, por tanto, no debe ser procesado. Entonces vamos a darle al botón inhibir para habilitar el robot y vamos a ver lo que hace. Vemos que se va al 5 porque su cero de coordenadas es el más cercano al cero del robot, luego al 3, luego seguramente al 2, al 7, siempre está escogiendo aquel cuyo centro se encuentre más cercano al centro de coordenadas del robot, hasta quedarse sin candidatos viables.</p>
+						<p>Bien, vamos a inhibir el robot para que no trabaje y hacemos llegar más ítems al área de trabajo del robot. Por ejemplo, aquí fijémonos que estos siete ítems, que estaban marcados como inviables para el robot número uno porque su cota Y está más abajo del límite inferior Y, han quedado desmarcados al rebasar la zona de trabajo del robot número 1. Esto es así porque el robot número 2 debe tener otros límites software. Por tanto, lo que no era válido para el robot uno no tiene por qué ser también inválido para el robot número dos.</p>
+						<p>Entonces, volviendo a lo que estábamos haciendo, volvemos al panel de configuración y en este caso seleccionamos otra regla: la “lejano negativa”. Lejano negativa quiere decir que el robot escogerá aquel ítem cuyo cero de coordenadas se encuentre más lejos del cero de coordenadas del robot, pero en sentido negativo respecto al eje cartesiano X. En este caso, muy probablemente será el 1. Vamos a verlo. Exacto. Luego, el siguiente que va a procesar será el 13 porque es el siguiente viable más lejano en negativo y así el 8, dependiendo si está dentro o fuera del área verde, pues lo procesará o no. En este caso, está fuera por un pelín, no lo procesa.</p>
+						<p>Vamos a inhibir y hacemos llegar más ítems al área de trabajo. Bueno, ya tenemos unos cuantos y vamos a seleccionar la última de las reglas que nos faltaba por probar: la “lejana positiva”, que es exactamente igual a lo que hemos visto hasta ahora, pero cogerá el ítem cuyo centro se encuentre más lejos del cero de coordenadas del robot, pero en sentido positivo. Es decir, en este caso sería el 2. Vamos a habilitar el robot y así... ahora será el 3.</p>
+						<p>No hay una regla de selección mejor que otra; depende de la aplicación y lo que se pretende de ella. En este caso se incluyen estas tres porque son las más evidentes, pero corresponde al desarrollador de la máquina decidir cuál es la más correcta para su máquina y, sin ninguna de ellas, desarrollar la suya propia.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+
+					<p><strong>Selección de Ítems Basada en Reglas:</strong> La plataforma de desarrollo de aplicaciones multirobot permite seleccionar ítems para el procesamiento mediante reglas específicas. Estas reglas, como “cercana”, “lejano negativa” y “lejana positiva”, ayudan a determinar cuál ítem debe ser procesado primero, basándose en su proximidad al centro de coordenadas del robot o en su distancia en sentido positivo o negativo.</p>
+					<p><strong>Importancia de los Límites Software:</strong> Los límites software del robot juegan un papel crucial en la selección de ítems. Los ítems que se encuentran fuera de los límites software del robot no son procesados. Estos límites pueden variar entre diferentes robots, por lo que un ítem puede ser válido para un robot y no para otro.</p>
+					<p><strong>Adaptabilidad a Diferentes Reglas de Selección:</strong> La elección de la regla de selección más adecuada depende de la aplicación específica y de los objetivos del proceso. No hay una regla de selección universalmente mejor; en su lugar, se deben adaptar las reglas según los requisitos de la tarea y las características del entorno de trabajo.</p>
+
+				</div>	
+			</div>
 		</section>
 		
 		<div class="navegacion">
@@ -156,7 +286,7 @@
 		</div>
     </main>
 
-	<footer>
+	<footer id="contacto">
 		<nav aria-label="Enlaces legales">
 			<ul>
 				<li><a href="nota-legal.html">Nota Legal</a></li>
