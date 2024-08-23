@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="cursos.html">Cursos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#info">Info</a></li>
             </ul>
         </nav>
     </header>
@@ -156,47 +156,54 @@
 			<!-- Capítulo 4: Simulador de ítems -->
 			<div class="capitulo-container" id="capitulo4" style="display:none;">
 				<iframe 
-					src="https://www.youtube.com/embed/IGlXcWXshPI" 
+					src="https://www.youtube.com/embed/IGlXcWXshPI?rel=0" 
 					frameborder="0" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
-					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
-					style="width: 100%; height: auto;">
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación."> 
+					
 				</iframe>
-
+			
 				<div class="transcripcion-container">
 					<div class="transcripcion-header">
 						<span class="transcripcion-icon">▶</span>
 						<span class="transcripcion-text">Transcripción</span>
 					</div>
 					<div class="transcripcion-content">
-						<p>En este vídeo se verá cómo funciona el selector de objetivos del modo automático de trabajo. En una situación real, es muy probable que en el área de trabajo del robot, esta área de color verde, se encuentren varios ítems a procesar. De alguna manera, se le ha de decir al robot cuál de estos ítems debe ser el primero. Para ello, se utiliza una serie de reglas. Las reglas que incluye la plataforma de desarrollo de aplicaciones multirobot son tres y se pueden encontrar en el panel de configuración, en la sección de parámetros del modo automático. En esta sección, en esta zona, tenemos tres para la cinta de recogida o operación de picking y los mismos tres para la cinta de entrega o operación de place. Vamos a ver un ejemplo de cada, que es como mejor se entiende.</p>
-						<p>Primero seleccionaremos para el robot número 1 la regla de selección “cercana”. Volvemos al panel automático y vamos a desinhibir el robot para que empiece a procesar los ítems que se encuentran dentro de su área de trabajo. Como la regla de selección es la “cercana”, lo que va a hacer es buscar el ítem que se encuentre más cerca del cero de coordenadas del robot, que estaría marcado por estos ejes cartesianos. En este caso, debería ser el 4, pero el 4, si nos fijamos, está marcado en gris.</p>
-						<p>¿Esto por qué es? Porque este ítem ha sido marcado para no ser procesado debido a que se encuentra más allá de los límites software de este robot. Los límites software, si los vamos a... hacemos una rápida visita, se encuentran aquí. Para este robot 1, el robot 2 tiene otros límites distintos; están fijados en -400. Así que es muy probable que este ítem, el 4, tenga una cota inferior a -400 y, por tanto, no debe ser procesado. Entonces vamos a darle al botón inhibir para habilitar el robot y vamos a ver lo que hace. Vemos que se va al 5 porque su cero de coordenadas es el más cercano al cero del robot, luego al 3, luego seguramente al 2, al 7, siempre está escogiendo aquel cuyo centro se encuentre más cercano al centro de coordenadas del robot, hasta quedarse sin candidatos viables.</p>
-						<p>Bien, vamos a inhibir el robot para que no trabaje y hacemos llegar más ítems al área de trabajo del robot. Por ejemplo, aquí fijémonos que estos siete ítems, que estaban marcados como inviables para el robot número uno porque su cota Y está más abajo del límite inferior Y, han quedado desmarcados al rebasar la zona de trabajo del robot número 1. Esto es así porque el robot número 2 debe tener otros límites software. Por tanto, lo que no era válido para el robot uno no tiene por qué ser también inválido para el robot número dos.</p>
-						<p>Entonces, volviendo a lo que estábamos haciendo, volvemos al panel de configuración y en este caso seleccionamos otra regla: la “lejano negativa”. Lejano negativa quiere decir que el robot escogerá aquel ítem cuyo cero de coordenadas se encuentre más lejos del cero de coordenadas del robot, pero en sentido negativo respecto al eje cartesiano X. En este caso, muy probablemente será el 1. Vamos a verlo. Exacto. Luego, el siguiente que va a procesar será el 13 porque es el siguiente viable más lejano en negativo y así el 8, dependiendo si está dentro o fuera del área verde, pues lo procesará o no. En este caso, está fuera por un pelín, no lo procesa.</p>
-						<p>Vamos a inhibir y hacemos llegar más ítems al área de trabajo. Bueno, ya tenemos unos cuantos y vamos a seleccionar la última de las reglas que nos faltaba por probar: la “lejana positiva”, que es exactamente igual a lo que hemos visto hasta ahora, pero cogerá el ítem cuyo centro se encuentre más lejos del cero de coordenadas del robot, pero en sentido positivo. Es decir, en este caso sería el 2. Vamos a habilitar el robot y así... ahora será el 3.</p>
-						<p>No hay una regla de selección mejor que otra; depende de la aplicación y lo que se pretende de ella. En este caso se incluyen estas tres porque son las más evidentes, pero corresponde al desarrollador de la máquina decidir cuál es la más correcta para su máquina y, sin ninguna de ellas, desarrollar la suya propia.</p>
+						<p>En este vídeo se describirá el simulador de ítems integrado en la plataforma para conocer sus opciones. Nos dirigiremos al panel de configuración y a la sección donde se encuentran los parámetros relativos a la captura y simulación de ítems.</p>
+						<p>Los primeros parámetros a tener en cuenta corresponden con las dimensiones del propio ítem, que pueden ser distintas según pertenezca a la cinta de recogida o a la de entrega, y el número de ítems a generar en cada disparo. También es importante el modo de trabajo del propio simulador, que puede ser continuo, es decir, que el disparo se produzca de forma automática cada cierto avance de la cinta, o modo no continuo, donde el propio usuario es quien genera el disparo cuando lo estime oportuno.</p>
+						<p>Con estos parámetros vamos a ver el funcionamiento del simulador. Si nos vamos al panel automático en la sección inferior, vemos que existen dos botones: "crear ítem bueno" y "crear ítem malo". Si creamos un ítem bueno, veremos que este aparece en el cero de coordenadas de la cinta de recogida a la cual pertenece. Todos los ítems se crean respecto al cero de coordenadas de la cinta a la cual pertenecen. En este caso, en este eje de coordenadas, vamos a arrancar la cinta uno y también vamos a arrancar la cinta dos para que se vayan evacuando los productos. Este ítem, al ser creado como bueno, se considera válido para ser procesado por el robot. Por tanto, el robot, cuando se encuentra en la zona de trabajo, en la zona verde, lo va a buscar. Un ítem malo no es procesable por el robot, por tanto, el robot lo dejará pasar. Que un ítem sea bueno o malo es labor de la cámara de visión artificial, según los criterios que se definan para la aplicación.</p>
+						<p>Bien, vamos a repetir la operación, pero en este caso, en cada disparo vamos a generar tres ítems. Si repetimos la operación, vemos que los tres ítems se han generado, como se ha comentado anteriormente, en el cero de coordenadas de la cinta de recogida, es decir, uno encima del otro. Esto es una situación que habitualmente no se suele dar en la vida real y no es, por lo general, deseable.</p>
+						<p>Por tanto, se han añadido una serie de parámetros que permiten generar ítems alrededor del cero de coordenadas con una cierta variabilidad, tanto en X como en la coordenada Y, e incluso en el ángulo. Por ejemplo, vamos a probar añadiendo una variabilidad de 200 alrededor del cero del eje coordenado X, lo cual quiere decir que cada ítem adoptará una X aleatoria entre estos dos rangos. La Y también tendrá su variabilidad, y aprovecharemos para darle incluso también un ángulo al ítem, un ángulo alrededor del eje Z entre -45º y +45º de forma aleatoria.</p>
+						<p>Vamos a probar y vamos generando disparos de forma manual. Vemos que los ítems ya no se superponen y circulan con una cierta separación entre ellos. Aquí se ve más claramente, asimilándose más a lo que nos podríamos encontrar en la vida real.</p>
+						<p>Bien, ahora vamos a probar el modo continuo. Si lo activamos, veremos que cada 200 mm de avance de cinta se genera un pulso de duración 100 milisegundos que desemboca en la generación de tres ítems sobre la cinta de recogida con esta variabilidad en sus coordenadas. Vamos a verlo. Sí, bien, aquí los vamos teniendo. Si nos fijamos, los ítems se van generando muy aleatoriamente, con una densidad más o menos elevada, pero algunos de ellos se pueden encontrar superpuestos. Por ejemplo, aquí estos dos están superpuestos, o aquí vemos también un grupo de ellos que están superpuestos. Esto hay aplicaciones, sobre todo de clasificación, en los que puede ser habitual encontrarlo, aunque no es algo que se suela buscar, porque luego las coordenadas Z también son importantes.</p>
+						<p>En estos casos, a veces para simular una llegada de material más realista, lo que se suele hacer es falsear o jugar, mejor dicho, con estos parámetros para que los ítems se generen con cierta aleatoriedad y cierta densidad, pero que nunca se superpongan los unos a los otros. Lo recomendable sería, en estos casos, que el disparo no corresponda con el campo de visión de la cámara, como tendría que ser lo habitual, sino que sea un pelín superior al propio ancho del ítem y además generar solamente un ítem por cada disparo.</p>
+						<p>Por ejemplo, si activamos aquí un ítem por cada disparo y avance, es decir, el disparo cada 100 mm de avance de cinta, que es un pelín superior a 80, obtendríamos. Vemos que aún no lo hemos conseguido porque aún se siguen superponiendo, pero se estaría generando un ítem cada 100 mm de avance de cinta. El problema aquí es que, como sigue existiendo una cierta variabilidad alrededor de la coordenada X, el ítem de una foto puede superponerse al de la foto anterior. En este caso, para evitarlo, simplemente vamos a configurarlo en cero la variabilidad alrededor de la X.</p>
+						<p>En este caso ya vemos que la Y sigue siendo aleatoria. La X siempre se genera en el cero, pero al estar separado 100 mm con respecto a la anterior foto y la siguiente, ya nunca se pisan. Podríamos conseguir, por ejemplo, en aplicaciones en las que el producto venga en fila india y distante entre sí, pues este efecto. Cogeríamos la Y, la variabilidad alrededor del eje Y se lo bajaríamos a cero, volveríamos y aquí veríamos cómo los ítems vienen distantes entre sí. Aunque no aparentemente no parezcan hacerlo debido al ángulo, la separación entre los centros de los ítems es equidistante, igual a 100 o a 200. Para verlo más claramente, podemos eliminar el ángulo alrededor del eje Z y aquí lo veríamos. Aquí ya vemos claramente que los ítems se generan equidistantes entre sí y vienen por la cinta de recogida en fila india. Hay aplicaciones en las que es así y que puede servir este simulador. Podemos separarlos un poco más, 200, y así simular una situación de una aplicación real de una forma más cómoda.</p>
+						<p>Muy bien. Además, para ajustar finamente, porque el simulador, si nos fijamos, el robot va a buscar el producto justo en el centro del ítem. Pero hay aplicaciones en las que esto no es así. Para ajustar un poco más el trabajo de captura de ítems, tenemos los offsets, que dependen o son distintos para cada robot.</p>
+						<p>En este caso, como el ancho del ítem no son 80, si aplicamos un offset de 40 positivos en la X, veremos cómo el robot ya no lo coge en el centro, sino que lo coge justo en el borde. Esto sería con 40 positivos. Con 40 negativos, lo haría en el otro extremo. Esto puede ayudar cuando se utiliza una cámara de visión artificial real a ajustar pequeños desajustes que tenga el robot con respecto a esta cámara. Un robot en concreto puede ser que un robot tenga siempre un error conocido de 2 mm o de 3 mm respecto a la X o respecto a la Y, y el siguiente robot pues no los tenga. Mediante estos parámetros podemos ajustar cada robot de forma que su herramienta se ponga encima del producto de la misma forma en todos los robots.</p>
+						<p>Bien, otra cosa que hay que decir antes de acabar sería que el simulador de ítems se superpone al trabajo de una cámara de visión artificial real. Esto quiere decir que si en este momento tuviéramos una cámara de visión artificial leyendo objetos reales, estos serían dados de alta encima de la cinta de recogida, superponiéndose a los que están de alta virtualmente a través del simulador. Por esto es recomendable, cuando se utiliza una cámara de visión artificial real leyendo producto real, no utilizar el simulador.</p>
 					</div>
 				</div>
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p>Es posible acceder a las pantallas de visualización desde el entorno de desarrollo haciendo doble clic en "Vis_principal" o utilizando un navegador web utilizando la dirección http://ip controlador:8080/webvisu.htm”.</p>
-					<p>Las pantallas de visualización se dividen en cuatro sectores: uno superior para ordenar el modo de trabajo y seleccionar el robot sobre el que se desea interactuar, uno lateral izquierdo para seleccionar qué información queremos mostrar en el panel central, uno central con información y parámetros relativos a un modo de trabajo determinado (según lo seleccionado en el sector izquierdo) y uno lateral derecho para visualizar el estado de las entradas/salidas del controlador o el contenido de los registros de desplazamiento de las cintas de recogida y entrega.</p>
-					<p>Es posible escoger el idioma de las pantallas de visualización entre tres opcione (español, inglés y portugués).</p>
+						<p><strong>Modos de Generación de Ítems:</strong> El simulador puede generar ítems de dos maneras: manualmente, generando items individuales dentro del campo de visión del robot de forma manual, o de forma continua, generando items automáticamente a lo largo del tiempo a intervalos predefinidos . Esta flexibilidad en la generación permite una variedad de pruebas y simulaciones para evaluar el rendimiento del robot en diferentes condiciones operativas.</p>
+						<p><strong>Ajustes de Variabilidad:</strong> Los parámetros de variabilidad que se pueden ajustar incluyen las coordenadas X e Y y el ángulo de los ítems. Esto permite simular una amplia gama de posiciones y orientaciones, replicando de manera más realista las condiciones en las que el robot debe operar, haciendo posible evaluar cómo el sistema responde ante diferentes escenarios de colocación y orientación de ítems.</p>
+						<p><strong>Prevención de Superposición de Ítems:</strong> El sistema tiene mecanismos para evitar que los ítems se generen superpuestos unos encima de los otros, asegurando que cada ítem se ubique en una posición única y no interfiera con ítems vecinos. Esto es crucial para mantener la precisión en la detección y manipulación de los ítems por parte del robot y para evitar errores en las pruebas y simulaciones.</p>
+						<p><strong>Ajuste de Offsets:</strong> Los offsets se utilizan para ajustar la posición de captura del ítem, permitiendo corregir cualquier desajuste entre el robot y la cámara de visión artificial. Estos ajustes son necesarios para asegurar que el robot pueda identificar y manipular los ítems correctamente, especialmente si hay variaciones en la alineación entre los diferentes componentes del sistema.</p>
+						<p><strong>Interacción con la Cámara de Visión Real:</strong> Aunque el simulador puede trabajar en conjunto con una cámara de visión real para pruebas más precisas, se recomienda evitar el uso simultáneo de ambos sistemas para prevenir posibles conflictos. Utilizar solo uno de los sistemas a la vez ayuda a garantizar que el funcionamiento del simulador sea más eficiente y que las pruebas no se vean afectadas por interferencias entre los sistemas.</p>
 				</div>	
 			</div>
 			
 			<!-- Capítulo 5: Reparto de carga entre robots -->
 			<div class="capitulo-container" id="capitulo5" style="display:none;">
 				<iframe 
-					src="https://www.youtube.com/embed/xk3Bc-ihg20" 
+					src="https://www.youtube.com/embed/xk3Bc-ihg20?rel=0" 
 					frameborder="0" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
-					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
-					style="width: 100%; height: auto;">
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación."> 
 				</iframe>
 
 				<div class="transcripcion-container">
@@ -245,12 +252,11 @@
 			<!-- Capítulo 6: Reglas de selección de ítems -->
 			<div class="capitulo-container" id="capitulo6" style="display:none;">
 				<iframe 
-					src="https://www.youtube.com/embed/XkIW-Sa0lVw" 
+					src="https://www.youtube.com/embed/XkIW-Sa0lVw?rel=0" 
 					frameborder="0" 
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
-					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación." 
-					style="width: 100%; height: auto;">
+					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación."> 
 				</iframe>
 
 				<div class="transcripcion-container">
@@ -286,7 +292,7 @@
 		</div>
     </main>
 
-	<footer id="contacto">
+	<footer id="info">
 		<nav aria-label="Enlaces legales">
 			<ul>
 				<li><a href="nota-legal.html">Nota Legal</a></li>

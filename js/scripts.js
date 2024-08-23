@@ -1,3 +1,6 @@
+/*######################################################################################*/
+/*						DESPLIEGUE Y COLAPSO DE TEXTO TRANSCRIPCION						*/
+/*######################################################################################*/
 /* Esta sección de código funciona con todas las instancias del controlador de tipo transcripcion-header */
 document.addEventListener("DOMContentLoaded", function() {
     const headers = document.querySelectorAll('.transcripcion-header');
@@ -14,6 +17,9 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+/*######################################################################################*/
+/*	  NAVEGACION ENTRE CLASES (DESDE BOTONES ANTERIOR/POSTERIOR Y DEDE MENU LATERAL 	*/
+/*######################################################################################*/
 document.addEventListener("DOMContentLoaded", function() {
     const capitulos = document.querySelectorAll('.capitulo-container');
     const menuItems = document.querySelectorAll('.side-menu ul li a'); // Selecciona las opciones del menú
@@ -48,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			iframe.src = src; // Restablece la URL para recargar el video desde el inicio
 		});
 	}
-
 
     function updateButtons() {
         document.getElementById('prevBtn').disabled = currentIndex === 0;
@@ -88,7 +93,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-
+/*######################################################################################*/
+/*				APERTURA Y CIERRE DE MENU LATERAL CONTENIDO FORMACION					*/
+/*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
     const openMenuButton = document.getElementById('openMenuButton');
     const closeMenuButton = document.getElementById('closeMenuButton');
@@ -104,6 +111,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/*######################################################################################*/
+/*		PERMITE DIRIGIRSE AL FOOTER AL PULSAR INFO EN MENU SUPERIOR DE FORMA SUAVE		*/
+/*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
