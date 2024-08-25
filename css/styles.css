@@ -119,6 +119,18 @@ main {
     margin: 0 auto; /* Centra el texto en el contenedor */	  
 }
 
+/* Estilo de la superposición */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparente */
+  display: none; /* Oculta por defecto */
+  z-index: 1000; /* Justo debajo del menú lateral */
+}
+
 /*###########################################*/
 /*				PAGINA FOOTER			     */
 /*###########################################*/
@@ -294,6 +306,13 @@ footer p {
     transform: translateY(-5px);
 }
 
+/* Estilo para los tarjetones deshabilitados */
+.course-card-link.disabled {
+    pointer-events: none; /* Evita clics en el enlace */
+    opacity: 0.5; /* Da una apariencia deshabilitada */
+    cursor: not-allowed; /* Cambia el cursor para indicar que no es clickeable */
+	filter: grayscale(100%); /* Aplica un filtro en escala de grises para hacer el contenido menos llamativo */
+}
 
 /*###########################################*/
 /*			PAGINA CONTENIDO CURSOS			 */
@@ -481,25 +500,34 @@ footer p {
 /*	MENU LATERAL NAVEGACION ENTRE CAPITULOS	 */
 /*-------------------------------------------*/
 .side-menu {
-	height: 100%;
-	width: 0;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	background-color: var(--color-fondo-menu); 		/* Fondo blanco */
-	overflow: hidden;
-	transition: 0.5s;
-	box-shadow: 4px 0 5px rgba(0, 0, 0, 0.2);
-	display: flex;									/* Esto hace que los elementos hijos (el título y el botón de cierre) se alineen en fila de manera automática.*/
-    flex-direction: column;  						/* Asegura que el contenido se organice en columna */
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--color-fondo-menu);
+    overflow: hidden;
+    transition: 0.5s;
+    box-shadow: 4px 0 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
 }
 
 .side-menu-header {
     display: flex;
-    justify-content: space-between; /* Asegura que el título esté alineado a la izquierda y el botón de cierre a la derecha, ocupando todo el espacio disponible */
-    align-items: center; /* Alinea verticalmente ambos elementos.*/
-    height: 40px; /* Define la altura del header */
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    height: 60px;							/* Para fijar la altura de la parte de la cabecera del menú desplegable */	
+}
+
+.close-menu-button,
+.side-menu h2 {
+    font-size: 1.2em;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .close-menu-button {
@@ -508,42 +536,32 @@ footer p {
     color: var(--color-texto-negro);
     font-size: 2.5em;
     cursor: pointer;
-	z-index: 10;
-	height: 100%; /* Asegura que el botón ocupe toda la altura del header */
-    display: flex;
-    align-items: center; /* Centra el contenido del botón verticalmente */
+    z-index: 10;
+	display: none;							/* Ocultaremos el botón de cierre porque no lo usaremos más */	
 }
 
 .side-menu h2 {
     margin: 0;
-    font-size: 1.2em;
-	padding: 0 20px; /* Mantén el padding si lo necesitas para espacio horizontal */
-    display: flex;
-    align-items: center; /* Centra verticalmente el texto dentro del h2 */
-    height: 100%; /* Asegura que el h2 ocupe toda la altura del header */
-
+    padding: 0 10px;
 }
 
 .menu-content {
-    position: relative; /* Cambia a relativo para que siga el flujo normal del documento */
-    width: 300px; /* Ancho fijo */
-    height: auto; /* Altura dinámica para ocupar el resto del espacio */
-    bottom: 0; /* Se extiende hasta el fondo del sidebar */
+    width: 300px;
+    padding-bottom: 20px;
     overflow-y: scroll;
     overflow-x: hidden;
-    padding-bottom: 20px;
     box-sizing: border-box;
     scrollbar-width: none;
 }
 
 .side-menu ul {
     list-style: none;
-    padding-left: 10px; 							/* Alinea la lista con el título */
     margin: 0;
+    padding-left: 0;
 }
 
 .side-menu ul li {
-    margin: 0; 										/* Espacio reducido entre las opciones del menú */
+    margin: 0;
 }
 
 .side-menu ul li a {
@@ -552,22 +570,19 @@ footer p {
     font-size: 1em;
     display: block;
     padding: 10px;
-    border-radius: 5px;
     transition: background-color 0.3s;
     text-align: left;
 }
 
 .side-menu ul li a.active {
-	font-size: 1em;
-    font-weight: bold; /* Resalta el texto de la opción activa en negrita */
-    background-color: transparent; /* Opcional: color de fondo para el resaltado */
-    border-radius: 5px; /* Opcional: añade bordes redondeados para un efecto visual más suave */
+    font-weight: bold;
+    background-color: transparent;
 }
 
 .side-menu ul li a:hover {
-    background-color: #d0d0d0; 						/* Color de fondo gris claro al pasar el ratón */
-    text-decoration: none; 							/* Eliminar subrayado al pasar el ratón */
+    background-color: #d0d0d0;
 }
+
 
 /*###########################################*/
 /*				PAGINAS LEGALES			     */

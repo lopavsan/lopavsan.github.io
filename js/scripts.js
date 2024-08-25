@@ -92,10 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
     window.showCapitulo = showCapitulo;
 });
 
-
-/*######################################################################################*/
-/*				APERTURA Y CIERRE DE MENU LATERAL CONTENIDO FORMACION					*/
-/*######################################################################################*/
 /*######################################################################################*/
 /*				APERTURA Y CIERRE DE MENU LATERAL CONTENIDO FORMACION					*/
 /*######################################################################################*/
@@ -103,16 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const openMenuButton = document.getElementById('openMenuButton');
     const closeMenuButton = document.getElementById('closeMenuButton');
     const sideMenu = document.getElementById('sideMenu');
+    const overlay = document.getElementById('overlay');
     const menuItems = document.querySelectorAll('.side-menu ul li a'); // Selecciona las opciones del menú
 
-    openMenuButton.addEventListener('click', () => {
+    function abrirMenu() {
         sideMenu.style.width = "300px";
         sideMenu.querySelector('.menu-content').scrollTop = 0;
-    });
+        document.body.style.overflow = 'hidden'; // Evita el scroll en el fondo
+        overlay.style.display = 'block'; // Muestra la superposición
+    }
 
-    closeMenuButton.addEventListener('click', () => {
+    function cerrarMenu() {
         sideMenu.style.width = "0px";
-    });
+        document.body.style.overflow = ''; // Restaura el scroll
+        overlay.style.display = 'none'; // Oculta la superposición
+    }
+
+    openMenuButton.addEventListener('click', abrirMenu);
+
+    closeMenuButton.addEventListener('click', cerrarMenu);
 
     // Añadir evento de clic a cada ítem del menú para cambiar el capítulo y cerrar el menú lateral
     menuItems.forEach((item, index) => {
@@ -121,10 +126,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (window.showCapitulo) { // Asegúrate de que la función showCapitulo esté disponible
                 window.showCapitulo(index); // Cambia al capítulo correspondiente
             }
-            sideMenu.style.width = "0px"; // Cierra el menú lateral
+            cerrarMenu(); // Cierra el menú lateral
         });
     });
+
+    // Cerrar el menú al hacer clic en la superposición
+    overlay.addEventListener('click', cerrarMenu);
+
+    // Cerrar el menú al hacer clic fuera del menú lateral
+    document.addEventListener('click', (event) => {
+        if (sideMenu.style.width === '300px') {
+            // Verifica si el clic ocurrió fuera del menú
+            const isClickInsideMenu = sideMenu.contains(event.target);
+            const isClickOnOpenButton = openMenuButton.contains(event.target);
+            if (!isClickInsideMenu && !isClickOnOpenButton) {
+                cerrarMenu();
+            }
+        }
+    });
 });
+
+
+
 
 
 /*######################################################################################*/
