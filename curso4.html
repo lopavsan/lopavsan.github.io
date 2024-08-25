@@ -43,6 +43,10 @@
 				<li><a href="#" onclick="showCapitulo(6)">Visualizador 3D</a></li>
 				<li><a href="#" onclick="showCapitulo(7)">Funcionalides IoT</a></li>
 				<li><a href="#" onclick="showCapitulo(8)">Ajuste trayectoria en Automático</a></li>
+				<li><a href="#" onclick="showCapitulo(9)">Modo Impulsos (básico)</a></li>
+				<li><a href="#" onclick="showCapitulo(10)">Modo Impulsos (avanzado)</a></li>
+				<li><a href="#" onclick="showCapitulo(11)">Modo Aprendizaje</a></li>
+				
 			</ul>
 		</div>
 	</div>
@@ -424,6 +428,136 @@
 						<p><strong>Creación de Capas:</strong> El parámetro "altura capa" permite ajustar la altura entre capas de productos cuando se apilan en una caja. Esto permite organizar los productos en diferentes niveles y adaptarse a las dimensiones específicas de la caja.</p>
 				</div>	
 			</div>
+			
+			<!-- Capítulo 10: Modo Impulsos Básico -->
+			<div class="capitulo-container" id="capitulo10" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/5EPx4OiCEzk?rel=0" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe las opciones básicas disponibles en el panel de modo impulsos"> 
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos las posibilidades más básicas del modo de trabajo de impulsos. Para ello, tomaremos el robot número uno y ordenaremos que pase a modo de trabajo de impulsos a través del botón de la sección superior de las pantallas de visualización, lo confirmaremos con su piloto correspondiente y, además, a través de la etiqueta que aparece en la zona superior del área de trabajo del robot.</p>
+						<p>Luego, para acceder a las opciones más básicas, nos iremos al panel de impulsos, y aquí vemos las operaciones que podemos realizar en este modo de trabajo. Básicamente, son tres operaciones: operaciones respecto a lo que son los ejes primitivos, operaciones cartesianas respecto al TCP del robot, y en caso de que el robot tenga un eje auxiliar de rotación, el desplazamiento en sentido horario o antihorario de este eje de rotación.</p>
+						<p>Para ayudarnos en la explicación, lo que vamos a hacer es apoyarnos en una representación 3D del robot. Bien, vamos a hacer un ejemplo de cada uno. Por ejemplo, vamos a intentar desplazar en modo impulsos el eje primitivo del robot, el eje A. Si vamos hacia adentro, vemos que efectivamente el brazo A se mueve hacia adentro y solo lo hace el eje A, sin importar lo que esté haciendo el TCP del robot.</p>
+						<p>Podemos hacer lo mismo con el eje B y el eje Z, o eje C, perdón. Vale, otra cosa que podemos hacer es desplazar cartesianamente, esta vez, el TCP del robot (el punto central de la herramienta TCP). Por ejemplo, en X, vemos que vamos en positivo o en negativo, y para realizar este movimiento se mueven los tres brazos.</p>
+						<p>Y también, por supuesto, podemos mover el eje de rotación. En este caso, el robot tiene un eje de rotación, por le podemos dar en un sentido, antihorario, y luego en el otro sentido.</p>
+						<p>¿Qué más cosas podemos hacer? Podemos variar los parámetros del movimiento. Por ejemplo, en este caso, cuando estamos moviendo en X, puede ser que nos parece que va muy lento, pues simplemente tenemos que coger aquí, en esta sección del panel de impulsos, seleccionar que vamos a modificar un parámetro cartesiano y que va a ser el X. En este caso, la velocidad es 20, y queremos que vaya pues al doble de velocidad. Le damos así y ya se observa que la velocidad es mayor.</p>
+						<p>Otra cosa que podemos hacer es mover una distancia máxima. Por ejemplo, en este caso vemos que el robot está en la cota Z 235.7 y queremos bajar esta cota 7 décimas y esto, haciéndolo de esta forma, es bastante complicado porque enseguida nos vamos a pasar pero, si venimos aquí, cartesiano Z y le decimos 0.7 y ahora cogemos y vamos en negativo vemos que, da igual la velocidad que estemos utilizando que lo máximo que se va a mover es esa distancia. Si quisiéramos bajar 5 mm, por ejemplo, haríamos la misma operación. Esta es una forma bastante fiable de llevar el robot a un punto que nosotros deseemos.</p>
+						<p>Pasa lo mismo con el resto de movimientos. Por ejemplo, un  primitivo, seleccionaríamos "Robot Axes", seleccionamos el primitivo que vamos a mover (en este caso, por ejemplo, el A) y variamos la velocidad. En este caso iba muy rápido pues le ponemos una velocidad más lenta. A ver, más lenta aún y ya vemos que el robot cada vez va más lento y esto nos permite probar cada uno de los ejes de forma independiente. Esto es muy útil durante la puesta en marcha o para llevar el robot a una posición muy concreta para comprobar que estamos justo encima, o para realizar opciones de calibrado de la cámara de visión artificial, etcétera.</p>
+						<p>Y esto es todo.</p>																								
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p><strong>Activación del Modo Impulsos:</strong> Para utilizar el modo de trabajo de impulsos, es necesario seleccionar el robot correspondiente, en este caso el número uno, y activar este modo mediante el botón ubicado en la pantalla de visualización. Esta acción debe ser confirmada tanto con el piloto del robot como con la etiqueta visible en el área de trabajo, asegurando que el robot esté operando en el modo correcto.</p>
+					<p><strong>Operaciones Básicas Disponibles:</strong> Una vez en el panel de impulsos, se pueden realizar tres tipos de operaciones básicas. Estas incluyen movimientos en los ejes primitivos del robot, desplazamientos cartesianas respecto al TCP (punto central de la herramienta), y la rotación del eje auxiliar si el robot está equipado con uno. Cada tipo de operación permite diferentes ajustes y manipulaciones del robot, facilitando una amplia gama de movimientos y configuraciones.</p>
+					<p><strong>Modificación de Parámetros de Movimiento:</strong> El panel de impulsos también ofrece la posibilidad de ajustar parámetros como la velocidad y la distancia de movimiento. Por ejemplo, se puede incrementar la velocidad de desplazamiento en el eje X o limitar el movimiento a una distancia específica. Esto resulta particularmente útil para hacer ajustes precisos y para realizar pruebas que requieren un control exacto del movimiento del robot.</p>
+					<p><strong>Uso en Calibración y Puesta en Marcha:</strong> El modo impulsos es especialmente valioso durante la puesta en marcha del robot y para la calibración de sistemas como cámaras de visión artificial. Permite probar cada eje del robot de forma independiente, ajustar velocidades y distancias con precisión, y garantizar que el robot esté en la posición correcta para operaciones de calibración y ajuste fino.</p>
+				</div>	
+			</div>
+
+			<!-- Capítulo 11: Modo Impulsos Avanzado -->
+			<div class="capitulo-container" id="capitulo11" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/k7e_zOWrzlQ?rel=0" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe las opciones avanzadas disponibles en el panel de modo impulsos"> 
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos las opciones avanzadas del modo de trabajo impulsos. Para ello cogeremos el robot número uno, lo pasaremos a modo de trabajo impulsos, confirmaremos que este modo de trabajo ha sido aceptado a través del piloto correspondiente y también a través de la etiqueta que figura en la zona superior del área de trabajo, que el robot número uno se encuentra efectivamente en modo impulsos.</p>
+						<p>Ahora nos dirigiremos al panel de aprendizaje, que es un panel un tanto especial porque reúne funciones propias del modo impulsos, pero también propias del modo aprendizaje. Nos fijaremos en las que se incluyen en el cuadro este de aquí, que son opciones relativas a segmentos que conforman una trayectoria. Existen otros botones activos, pero se refieren más a las operaciones básicas que ya hemos visto en un vídeo anterior.</p>
+						<p>En cuanto a las operaciones referidas a la trayectoria, hay que decir o recordar que una trayectoria se compone de una serie de segmentos. En este caso, en modo impulsos, todos los segmentos que vamos a utilizar son lineales. Es cierto que tenemos segmentos tipo circular y tipo spline, pero en modo impulso únicamente trabajaremos con segmentos lineales. Para fabricar una trayectoria, lo que hemos de hacer es concatenar una serie de segmentos predefinidos hacia unas cotas determinadas.</p>
+						<p>En este caso, vamos a crear una trayectoria muy simple, consistente en dos segmentos: uno que vaya desde la posición actual al punto 3, y otro que vaya desde el punto 3 al punto 2. Para ello, simplemente venimos aquí, pulsamos "ir punto 3" e "ir punto 2", y si nos fijamos en los movimientos disponibles, antes teníamos 20 movimientos lineales disponibles y ahora tenemos solamente 18. ¿Por qué? Porque hemos introducido estos dos.</p>
+						<p>También tenemos otra serie de información interesante, que es la trayectoria que acabamos de crear. Aquí nos dice la longitud total de la trayectoria, compuesta de dos segmentos, y la longitud del siguiente segmento, es decir, este de aquí, el que va de la posición actual al punto tres.</p>
+						<p>Otros datos interesantes que nos pueden ser de utilidad son el tiempo restante a la velocidad actual, que serían 100 unidades por segundo. Cuando yo pulse "ir" o "desplazarse" de esta trayectoria, veremos el tiempo que nos falta hasta llegar al final.</p>
+						<p>Vamos a poner a prueba la teoría dándole al botoncito de trayectoria positiva. Nos moveremos en sentido positivo. Ya hemos llegado. Si nos hemos fijado en los valores actuales, veremos que efectivamente el tiempo va disminuyendo a la vez que la posición, etcétera.</p>
+						<p>Vamos a darle otra vez. Estos elementos de aquí, los valores actuales, son muy importantes cuando vayamos en modo automático para controlar en qué posición de la trayectoria nos encontramos, cuánto tiempo falta para finalizar la trayectoria, etcétera. Y esto nos permitirá activar electroválvulas cuando falte un cierto tiempo o realizar operaciones cuando estemos a cierta distancia del objetivo.</p>
+						<p>Lo visto hasta ahora, si nos hemos fijado bien, vemos que el robot no pasa por el punto 3 realmente, sino que hace como una especie de redondeo cuando entra en esta área de color rojo y continúa por ahí. ¿Esto por qué es? Esto es porque el primer segmento al que se dirigía desde el punto 7 hasta el punto 3, tenía definido un parámetro que se llama zona, con un valor de 50, es decir, tiene un radio de 50. Con lo cual, el robot, en lugar de llegar al punto 3, lo que hace es una suavización, coge estos dos segmentos y los conecta de forma suave.</p>
+						<p>¿Qué es lo que hace el robot? Aunque aquí veamos un círculo, en realidad esto en el espacio tridimensional es una esfera. Lo que hace el robot es que, cuando alcanza la superficie de esta esfera, la superficie teórica que sería línea recta esta de aquí y esta de aquí, lo que hace es entrar tangencialmente y salir tangencialmente, que es básicamente la definición de un spline. El sistema lo que hace es hacer un movimiento tipo spline por el interior de la esfera y nunca alcanza el punto tres. De esta forma, hace lo que se llama un "connection path". Conecta el path del primer segmento con el path del siguiente segmento y crea un único segmento más largo. Volvemos otra vez hacia el origen.</p>
+						<p>Bien, dicho esto, vamos a añadir un nuevo grado de dificultad, que sería realizar un movimiento con el eje auxiliar de rotación insertado o superpuesto a la trayectoria que tenemos de momento almacenada en el buffer de movimientos. ¿Cómo hacemos esto? Pues lo vamos a hacer a través del "Giro Recogida", este botoncito de aquí. Si vamos a buscar aquí los parámetros, vemos que el giro va a tener 90 grados, que se va a iniciar en el segmento 1210, que sería este de aquí, y vemos que cada segmento tiene un identificador único. Va a finalizar en el segmento 1215, que sería el segundo que hemos añadido.</p>
+						<p>¿Cuándo va a iniciar? Pues cuando lleve transcurrido 0.5 mm del segmento 1210. ¿Y cuándo lo va a finalizar? Cuando le falten 0.5 mm, de ahí el signo negativo, para finalizar el segmento 1215.</p>
+						<p>Visto esto, le damos al botón y volvemos a repetir el movimiento. Vemos aquí en la posición de giro como realmente está girando, y también en el gráfico, lo único que en el gráfico no se ve tan bien. Da la impresión de que ya ha finalizado el ángulo de -90, pero en realidad aún le falta un pelín porque hasta que no le queden 0.5 mm realmente no acaba. Ahí está. Es decir, lo que vamos a hacer es un movimiento síncrono con la trayectoria del robot y entre dos puntos que a nosotros nos interese.</p>
+						<p>Finalmente, vamos a hacer otra operación, que es borrar totalmente la trayectoria del buffer de movimientos. Esto lo haremos a través de esta casilla, indicando que queremos borrar desde el segmento cero. El segmento cero no existe, aquí vemos que no hay ningún segmento cero, pero es un código especial que lo que hace es borrar todos los segmentos del buffer de movimientos. De momento tenemos dos. Vemos aquí que tenemos disponibles 18 de los 20 que teníamos. Le damos aquí y ya volvemos a tener 20, y además no podemos desplazarnos a través de la trayectoria porque no hay trayectoria.</p>
+						<p>Bien, repitamos la operación que hemos hecho hasta ahora, pero vamos a quitarle la zona al punto 3. Venimos al punto 3, sus coordenadas cartesianas, y en lugar de 50, vamos a decirle que no, que queremos cero, y vamos a volver a crear una trayectoria idéntica a la anterior. Es decir, vamos al punto 3 y vamos al punto 2, y como ya tenemos trayectoria creada, pues los botones de movimiento por impulso se han activado de nuevo. Vamos a ver qué pasa. Le damos y vemos que efectivamente llega a la posición 3, pero no continúa como antes sucedía. Se queda ahí parado. ¿Por qué? Porque él considera que esta trayectoria, que está compuesta de dos segmentos, es una trayectoria porque los dos segmentos se encuentran en memoria. Deseamos realmente pararnos, no tiene zona, no hay suavización, por tanto él lo que hace es pararse.</p>
+						<p>Aquí podemos ir hacia atrás o hacia delante igual que antes, pero esta trayectoria finaliza ahí. Si queremos saltar al siguiente segmento que se encuentra en memoria, hemos de decirle siguiente "Connection Path". Le damos y ahora ya podemos movernos a través del siguiente segmento, pero no podemos regresar al anterior. El anterior ya se ha cumplido, hemos saltado y hemos salido de este segmento. Y en principio estos son todos los movimientos avanzados que posee el modo impulsos.</p>
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p><strong>Activación del Modo Impulsos:</strong> Para trabajar con las opciones avanzadas en el modo impulsos, primero debes activar este modo en el robot y confirmar que está activo tanto a través del piloto correspondiente como de la etiqueta visible en el área de trabajo del robot. Esto establece el entorno necesario para realizar operaciones avanzadas.</p>
+					<p><strong>Creación y Análisis de Trayectorias Lineales:</strong> En el modo impulsos, las trayectorias se componen exclusivamente de segmentos lineales. Para construir una trayectoria, se concatenan varios segmentos, que definen el camino del robot desde un punto de inicio hasta un destino. Puedes revisar la longitud total de la trayectoria y el tiempo estimado para completarla, lo cual es crucial para monitorear el progreso y hacer ajustes según sea necesario.</p>
+					<p><strong>Suavización de Trayectorias y Movimiento del Eje Auxiliar:</strong> Al definir trayectorias, el robot puede aplicar una suavización entre segmentos usando un parámetro de zona. Esto evita transiciones bruscas y permite un movimiento más fluido. Además, es posible incorporar movimientos del eje auxiliar de rotación dentro de la trayectoria, sincronizándolos con el movimiento general del robot para realizar ajustes precisos en su orientación durante el trayecto.</p>
+					<p><strong>Eliminación y Ajuste de Trayectorias:</strong> Es posible eliminar trayectorias del buffer de movimientos utilizando comandos específicos, como borrar desde el segmento cero. También se pueden ajustar trayectorias existentes, por ejemplo, eliminando zonas de suavización para que el robot se detenga en puntos específicos. Estos ajustes permiten una mayor flexibilidad y precisión en la programación de movimientos del robot.</p>
+				</div>	
+			</div>
+
+			<!-- Capítulo 12: Modo Aprendizaje -->
+			<div class="capitulo-container" id="capitulo6" style="display:none;">
+				<iframe 
+					src="https://www.youtube.com/embed/95tx77AlOYk?rel=0" 
+					frameborder="0" 
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+					allowfullscreen 
+					aria-label="Vídeo que describe las opciones disponibles en el panel de modo aprendizaje"> 
+				</iframe>
+
+				<div class="transcripcion-container">
+					<div class="transcripcion-header">
+						<span class="transcripcion-icon">▶</span>
+						<span class="transcripcion-text">Transcripción</span>
+					</div>
+					<div class="transcripcion-content">
+						<p>En este vídeo veremos las funcionalidades que incluye el modo de trabajo aprendizaje. Para ello, lo primero será seleccionar el robot con el cual queremos trabajar. En este caso, será el robot número uno y le ordenaremos pasar a modo aprendizaje.</p>
+						<p>Confirmaremos que el modo aprendizaje ha sido aceptado con el piloto correspondiente y nos dirigiremos al panel de aprendizaje. Desde este panel podemos hacer básicamente dos cosas.</p>
+						<p>Primero, comprobar que el robot se dirige correctamente a todos los puntos que hemos encontrado previamente gracias al uso del modo impulsos y que se encuentran definidos en esta sección. En esta sección podemos ver las coordenadas y zona para cada uno de los puntos que conformarán nuestra trayectoria del modo automático.</p>
+						<p>En este caso, una vez ya encontrados, repito, utilizando el modo de trabajo impulsos, podemos comprobar si el robot se dirige a cada uno de ellos de forma individual a las velocidades que emplearemos cuando nos encontremos en el modo automático de trabajo.</p>
+						<p>Por ejemplo, pulsando aquí podemos ver cómo se dirige a este punto. El siguiente punto de la trayectoria automática sería ir a la posición de espera de ítem, el siguiente a la de recogida del ítem. Luego, nos retiraríamos hasta la posición segura superior de recogida, luego iríamos a reposo, a entrega, a espera de entrega y finalmente a entrega. Luego, nos retiraríamos a la superior de entrega y volveríamos a la de recogida, a la superior de recogida, y así.</p>
+						<p>Esto lo podemos comprobar también utilizando la Smartvisu. Venimos aquí, vamos a minimizar esto y así trabajaremos con los dos elementos. Podemos ver cómo el robot se dirige a cada uno de los puntos que tenemos pregrabados y si realmente lo hace correctamente.</p>
+						<p>Si las pinzas del robot se sitúan encima del ítem de forma correcta para cogerlo, etcétera. Esta es la parte quizás menos interesante. La más interesante, yo creo, es esta de aquí abajo, que es secuenciar todos estos puntos de una forma automática, es decir, crear una trayectoria secuenciada que se va repitiendo una y otra vez. Nos permite comprobar si la cadencia de la máquina va a alcanzar las expectativas que posee el cliente para esta aplicación.</p>
+						<p>Vamos a activarla. Cogemos aquí "Activar secuencia". Vemos que el robot se dirige a la posición de reposo y luego, inmediatamente, con las velocidades que hemos definido en estas cajetillas, se dirigirá a cada uno de los puntos. En este caso, se ha ido al de "Espera Producto".</p>
+						<p>Esperamos de picking. Vamos a decirle que ya ha llegado un producto, decimos OK y ahora ha alcanzado el punto cinco, que sería "Espera Entrega". Este está para simular que está esperando la llegada de una caja. Vamos a decirle que la caja ya está disponible. En estos casos, como los permisivos, para continuar permanecen activos. Ya no hay ninguna espera, simplemente el ciclo se va repitiendo una y otra vez sin parar.</p>
+						<p>En esta parte superior vemos los ciclos por minuto que estamos alcanzando con los parámetros actuales y los puntos definidos en las posiciones en las que están definidos. Como todo ciclo se compone de un viaje de picking en el que el robot no contiene aún ningún producto, y otro de placing en el que viaja con un producto cogido.</p>
+						<p>Podemos definir velocidades distintas para cada uno de los sentidos. Por ejemplo, el de recogida, que no tiene nada en las pinzas, podría llegar a hacerlo más rápido. Entonces podemos coger y modificar la velocidad, aumentándola a 5000 y ya vemos que el viaje de recogida lo hace mucho más rápido. La cadencia nos ha aumentado un poco también.</p>
+						<p>Puede ser que nos digan que la operación de picking, es decir, si queremos coger un producto con una ventosa, el tiempo para que la ventosa haga vacío encima del producto, en lugar de un segundo, sea quizás 200 milisegundos. Entonces le añadimos el tiempo que nos digan y ya vemos que aquí ha vuelto a aumentar.</p>
+						<p>Para dejar el producto y soltarlo, quizás porque el producto sea muy pesado o lo que sea, no haga falta 200 milisegundos. Con 100 milisegundos es suficiente, porque al cortar la orden de vacío, la propia gravedad hará que el producto caiga más rápido.</p>
+						<p>Aquí ya vemos que el ciclo poco a poco va aumentando su cadencia. Puede pasar también que, aunque la velocidad de entrega no sea tan rápida como la de recogida, porque el robot está transportando un producto, no hace falta que sea tan baja. Podemos, a lo mejor, subirla un pelín.</p>
+						<p>Esto lo podemos probar incluso con un producto para ver cómo se comporta. Hay que tener en cuenta que el simulador no simula las inercias del producto ni la masa de la herramienta, pero sí nos permite acercarnos bastante a la realidad.</p>
+						<p>Entonces, con estos parámetros más o menos, podemos ver qué cadencia aumentará. Por ejemplo, otros parámetros que tenemos disponibles son estos de aquí, las rampas. Podemos hacerlas más bruscas o menos bruscas. La velocidad es muy importante porque aquí no vemos las inercias del producto. Si es muy grande, estas aceleraciones tan bruscas y estos frenazos tan bruscos pueden ser que, aunque el robot sea capaz de hacerlo, no signifique que sea bueno para la aplicación.</p>
+						<p>Una aceleración muy brusca puede desprender el producto de las pinzas. Vamos a jugar, por ejemplo, con la suavidad de las rampas. Vamos a hacerlas menos suaves, o sea, más bruscas. Y aquí vemos que sí ha mejorado un pelín lo que son los ciclos por minuto, pero tampoco espectacularmente. Hemos subido de 53 a 56.</p>
+						<p>Vamos a volver a aumentar la suavidad, es decir, que igual no merece mucho la pena para ganar tres golpes por minuto. Empeorar la suavidad de las rampas puede hacer que el producto no se comporte correctamente en la herramienta.</p>
+						<p>En definitiva, todos estos parámetros nos sirven junto con la Smartvisu para determinar, antes incluso de tener el robot disponible, si el robot va a alcanzar lo que se le está exigiendo.</p>						
+					</div>
+				</div>
+				
+				<div class="aspectos-container">
+					<h3>Aspectos Clave</h3>
+					<p><strong>Verificación de Trayectorias y Puntos:</strong> El modo de trabajo aprendizaje permite crear una trayectoria similar a la que seguiría el robot en modo automático para comprobar que los puntos de paso que definen la trayectoria son correctos y que el comportamiento mecánico del robot es aceptable (vibraciones, brusquedad en el movimiento, medida de productividad...).</p>
+					<p><strong>Secuenciación y Simulación de Ciclos:</strong> Este modo facilita la secuenciación automática de los puntos definidos, permitiendo crear y repetir trayectorias para simular el ciclo de trabajo del robot. Puedes observar cómo el robot se mueve entre puntos y ajustar parámetros pare mejorar la cadencia del ciclo a fin de cumplir con las expectativas de producción deseadas.</p>
+					<p><strong>Ajuste de Parámetros Operativos:</strong> Permite ajustar velocidades, tiempos de operación y otros parámetros, como el tiempo de vacío para ventosas. Puedes experimentar con diferentes configuraciones para optimizar la eficiencia del robot, ajustando el ciclo de recogida y entrega para mejorar el rendimiento según las necesidades específicas de la aplicación.</p>
+					<p><strong>Utilidad en la Puesta en Marcha y Ajuste con Producto:</strong> El modo de aprendizaje es crucial durante la puesta en marcha del robot, ya que permite simular el comportamiento del robot con productos reales o virtuales antes de desplegar el modo automático. Esto ayuda a verificar que el robot puede manejar adecuadamente el producto, ajustar la suavidad de las rampas y adaptar las velocidades para evitar problemas como el desprendimiento de productos o comportamientos inadecuados en la herramienta. Esta comprobación reduce el riesgo de errores y asegura que el robot cumplirá con los requisitos operativos en modo automático.</p>
+				</div>	
+			</div>			
+			
+			
 		</section>
 		
 		<div class="navegacion">

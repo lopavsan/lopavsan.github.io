@@ -96,20 +96,36 @@ document.addEventListener("DOMContentLoaded", function() {
 /*######################################################################################*/
 /*				APERTURA Y CIERRE DE MENU LATERAL CONTENIDO FORMACION					*/
 /*######################################################################################*/
+/*######################################################################################*/
+/*				APERTURA Y CIERRE DE MENU LATERAL CONTENIDO FORMACION					*/
+/*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
     const openMenuButton = document.getElementById('openMenuButton');
     const closeMenuButton = document.getElementById('closeMenuButton');
     const sideMenu = document.getElementById('sideMenu');
+    const menuItems = document.querySelectorAll('.side-menu ul li a'); // Selecciona las opciones del menú
 
     openMenuButton.addEventListener('click', () => {
         sideMenu.style.width = "300px";
-		sideMenu.querySelector('.menu-content').scrollTop = 0;
+        sideMenu.querySelector('.menu-content').scrollTop = 0;
     });
 
     closeMenuButton.addEventListener('click', () => {
         sideMenu.style.width = "0px";
     });
+
+    // Añadir evento de clic a cada ítem del menú para cambiar el capítulo y cerrar el menú lateral
+    menuItems.forEach((item, index) => {
+        item.addEventListener('click', (event) => {
+            event.preventDefault(); // Previene la acción por defecto del enlace
+            if (window.showCapitulo) { // Asegúrate de que la función showCapitulo esté disponible
+                window.showCapitulo(index); // Cambia al capítulo correspondiente
+            }
+            sideMenu.style.width = "0px"; // Cierra el menú lateral
+        });
+    });
 });
+
 
 /*######################################################################################*/
 /*		PERMITE DIRIGIRSE AL FOOTER AL PULSAR INFO EN MENU SUPERIOR DE FORMA SUAVE		*/
