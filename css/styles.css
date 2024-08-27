@@ -506,7 +506,7 @@ footer p {
     top: 0;
     left: 0;
     background-color: var(--color-fondo-menu);
-    overflow: hidden;
+    overflow: auto;
     transition: 0.5s;
     box-shadow: 4px 0 5px rgba(0, 0, 0, 0.2);
     display: flex;
