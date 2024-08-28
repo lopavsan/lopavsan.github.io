@@ -65,9 +65,11 @@ header nav ul li {
 /* Estilo de los enlaces de navegación */
 header nav ul li a {
     font-weight: bold;
+	background-color: rgb(var(--color-fondo-oscuro));
     color: var(--color-texto-blanco);
     text-decoration: none;  
 	padding: 5px 15px;
+	box-shadow: none; 								/* Sin borde */
 }
 
 /* Agrega un fondo resaltado al pasar el ratón sobre el enlace */

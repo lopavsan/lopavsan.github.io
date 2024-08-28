@@ -26,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
 
     function showCapitulo(index) {
+		// Cierra todas las transcripciones antes de cambiar de capítulo
+        closeAllTranscriptions();
+		
         // Pausar y reiniciar todos los videos antes de cambiar de sección
         resetAllMedia();
 
@@ -36,6 +39,19 @@ document.addEventListener("DOMContentLoaded", function() {
         updateButtons();
         updateMenuHighlight(); // Llama a la función para actualizar el resaltado del menú
     }
+
+	function closeAllTranscriptions() {
+			const contents = document.querySelectorAll('.transcripcion-content');
+			const icons = document.querySelectorAll('.transcripcion-icon');
+
+			contents.forEach(content => {
+				content.style.display = 'none';
+			});
+
+			icons.forEach(icon => {
+				icon.style.transform = 'rotate(0deg)';
+			});
+		}
 
 	function resetAllMedia() {
 		// Detener y recargar todos los videos HTML5
