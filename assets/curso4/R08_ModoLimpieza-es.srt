@@ -1,0 +1,312 @@
+1
+00:00:01,240 --> 00:00:06,319
+En este vídeo veremos la funcionalidad
+
+2
+00:00:03,879 --> 00:00:08,280
+del modo de trabajo limpieza. Este modo
+
+3
+00:00:06,319 --> 00:00:10,400
+de trabajo ha sido diseñado para
+
+4
+00:00:08,280 --> 00:00:13,839
+desplazar el robot hacia una
+
+5
+00:00:10,400 --> 00:00:15,759
+zona predefinida, más allá de la zona de
+
+6
+00:00:13,839 --> 00:00:17,560
+trabajo habitual del robot, para
+
+7
+00:00:15,759 --> 00:00:19,800
+operaciones de limpieza o de
+
+8
+00:00:17,560 --> 00:00:21,760
+mantenimiento de, por ejemplo, de las
+
+9
+00:00:19,800 --> 00:00:23,240
+pinzas del robot o de la herramienta que
+
+10
+00:00:21,760 --> 00:00:26,039
+porte este
+
+11
+00:00:23,240 --> 00:00:29,640
+robot. Dado que estas coordenadas pueden
+
+12
+00:00:26,039 --> 00:00:32,360
+encontrarse más allá de los límites
+
+13
+00:00:29,640 --> 00:00:34,760
+sofware definidos para este robot, la
+
+14
+00:00:32,360 --> 00:00:37,480
+maniobra se realizará a una velocidad
+
+15
+00:00:34,760 --> 00:00:40,320
+inferior, una velocidad segura que suele
+
+16
+00:00:37,480 --> 00:00:42,920
+ser bastante más baja que la de
+
+17
+00:00:40,320 --> 00:00:45,559
+trabajo habitual, y siempre por el camino
+
+18
+00:00:42,920 --> 00:00:49,000
+seguro, es decir, antes de desplazarse por
+
+19
+00:00:45,559 --> 00:00:52,559
+las coordenadas XY, siempre se
+
+20
+00:00:49,000 --> 00:00:55,399
+elevará la cota Z hasta una altura de
+
+21
+00:00:52,559 --> 00:00:58,840
+seguridad, altura en la que puede navegar
+
+22
+00:00:55,399 --> 00:01:01,120
+el robot de una forma segura y, una vez
+
+23
+00:00:58,840 --> 00:01:04,080
+alcanzado esa cota de
+
+24
+00:01:01,120 --> 00:01:06,720
+navegación, se procederá a desplazar el
+
+25
+00:01:04,080 --> 00:01:08,640
+robot a las cotas XY finales, las que
+
+26
+00:01:06,720 --> 00:01:12,119
+hayamos definido para la posición de
+
+27
+00:01:08,640 --> 00:01:15,520
+limpieza. Una vez alcanzadas las cotas XY,
+
+28
+00:01:12,119 --> 00:01:17,759
+entonces se bajará la Z a la 
+
+29
+00:01:15,520 --> 00:01:23,640
+definida para la posición de limpieza.
+
+30
+00:01:17,759 --> 00:01:23,640
+Estas coordenadas se parametrizan en el 
+
+31
+00:01:24,479 --> 00:01:30,280
+panel de aprendizaje dentro de este indicador
+
+32
+00:01:27,079 --> 00:01:32,320
+donde pone "Posiciones" para la posición de
+
+33
+00:01:30,280 --> 00:01:36,680
+limpieza. En este caso, tenemos definidas
+
+34
+00:01:32,320 --> 00:01:39,439
+unas coordenadas X0, Y-500, que está más
+
+35
+00:01:36,680 --> 00:01:45,439
+allá del límite inferior
+
+36
+00:01:39,439 --> 00:01:45,439
+software para la Y, y una cota Z de 125.
+
+37
+00:01:46,040 --> 00:01:54,240
+Si activamos el modo
+
+38
+00:01:50,280 --> 00:01:58,600
+limpieza, vemos que primero se desplaza
+
+39
+00:01:54,240 --> 00:02:00,399
+en XY y luego la Z. Esta sería la
+
+40
+00:01:58,600 --> 00:02:02,920
+posición de limpieza.
+
+41
+00:02:00,399 --> 00:02:06,320
+Esta posición, que es Y-500,
+
+42
+00:02:02,920 --> 00:02:07,440
+se encuentra fuera de la zona de
+
+43
+00:02:06,320 --> 00:02:11,280
+seguridad
+
+44
+00:02:07,440 --> 00:02:14,680
+definida. Esto lo podemos comprobar
+
+45
+00:02:11,280 --> 00:02:16,800
+aquí: el límite negativo para la Y,
+
+46
+00:02:14,680 --> 00:02:21,160
+para este robot, sería -400 y, sin
+
+47
+00:02:16,800 --> 00:02:23,440
+embargo, está en -500, sin generar ningún
+
+48
+00:02:21,160 --> 00:02:25,040
+aviso ni ninguna alarma. Si ahora
+
+49
+00:02:23,440 --> 00:02:28,200
+saliéramos de la zona de limpieza y
+
+50
+00:02:25,040 --> 00:02:30,519
+entrásemos, por ejemplo, en modo 
+
+51
+00:02:28,200 --> 00:02:34,120
+impulsos, veríamos que ya nos está dando
+
+52
+00:02:30,519 --> 00:02:36,440
+un aviso. Vamos a ver el aviso, qué es; nos
+
+53
+00:02:34,120 --> 00:02:37,840
+está indicando que el robot se encuentra
+
+54
+00:02:36,440 --> 00:02:42,000
+más allá
+
+55
+00:02:37,840 --> 00:02:44,280
+del límite cartesiano Y en negativo,
+
+56
+00:02:42,000 --> 00:02:47,319
+en sentido
+
+57
+00:02:44,280 --> 00:02:49,319
+negativo. Como el modo impulsos permite
+
+58
+00:02:47,319 --> 00:02:51,760
+sacar el robot de una zona peligrosa,
+
+59
+00:02:49,319 --> 00:02:53,360
+simplemente no deja de ser un aviso.
+
+60
+00:02:51,760 --> 00:02:56,000
+Salimos de
+
+61
+00:02:53,360 --> 00:02:58,599
+impulsos, reseteamos el
+
+62
+00:02:56,000 --> 00:03:01,519
+aviso, y ahora vamos a entrar en un modo
+
+63
+00:02:58,599 --> 00:03:03,959
+de trabajo que es el aprendizaje. En este
+
+64
+00:03:01,519 --> 00:03:08,440
+caso, el robot sí se encuentra fuera de
+
+65
+00:03:03,959 --> 00:03:09,959
+la zona de de seguridad y si se
+
+66
+00:03:08,440 --> 00:03:12,799
+genera un
+
+67
+00:03:09,959 --> 00:03:16,599
+fallo. Si volvemos al panel de alarmas,
+
+68
+00:03:12,799 --> 00:03:19,159
+vemos realmente que hay un
+
+69
+00:03:16,599 --> 00:03:22,360
+fallo.
+
+70
+00:03:19,159 --> 00:03:23,879
+Reseteamos, y si en esta posición, fuera
+
+71
+00:03:22,360 --> 00:03:25,440
+de la zona de trabajo, entramos en modo
+
+72
+00:03:23,879 --> 00:03:27,439
+automático, el modo automático sí lo
+
+73
+00:03:25,440 --> 00:03:30,400
+tiene en
+
+74
+00:03:27,439 --> 00:03:32,120
+cuenta. Regresa primero por el
+
+75
+00:03:30,400 --> 00:03:35,519
+camino seguro, es decir, elevando la Z y
+
+76
+00:03:32,120 --> 00:03:38,000
+luego desplazándose en XY a reposo, y
+
+77
+00:03:35,519 --> 00:03:41,439
+entra tranquilamente en el modo de
+
+78
+00:03:38,000 --> 00:03:41,439
+trabajo automático.
+

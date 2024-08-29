@@ -1,0 +1,396 @@
+1
+00:00:01,400 --> 00:00:05,440
+En este vídeo veremos las posibilidades
+
+2
+00:00:03,679 --> 00:00:08,120
+más básicas del modo de trabajo 
+
+3
+00:00:05,440 --> 00:00:10,599
+impulsos. Para ello, tomaremos el robot
+
+4
+00:00:08,120 --> 00:00:11,880
+número 1 y ordenaremos que pase a modo
+
+5
+00:00:10,599 --> 00:00:13,759
+de trabajo impulsos a través del
+
+6
+00:00:11,880 --> 00:00:16,000
+botón de la sección superior de las
+
+7
+00:00:13,759 --> 00:00:17,760
+pantallas de visualización, lo
+
+8
+00:00:16,000 --> 00:00:20,640
+confirmaremos con su piloto
+
+9
+00:00:17,760 --> 00:00:22,600
+correspondiente y, además, a través de la
+
+10
+00:00:20,640 --> 00:00:25,480
+etiqueta que aparece en la zona superior
+
+11
+00:00:22,600 --> 00:00:27,039
+del área de trabajo del robot. Luego,
+
+12
+00:00:25,480 --> 00:00:30,240
+para acceder a las opciones más básicas,
+
+13
+00:00:27,039 --> 00:00:32,279
+nos iremos al panel de impulsos, y aquí
+
+14
+00:00:30,240 --> 00:00:34,320
+vemos las operaciones que podemos
+
+15
+00:00:32,279 --> 00:00:36,680
+realizar en este modo de trabajo.
+
+16
+00:00:34,320 --> 00:00:39,719
+Básicamente, son tres: operaciones
+
+17
+00:00:36,680 --> 00:00:42,879
+respecto a lo que son los ejes
+
+18
+00:00:39,719 --> 00:00:46,559
+primitivos, operaciones respecto, 
+
+19
+00:00:42,879 --> 00:00:48,199
+cartesianas, respecto al TCP del robot, y
+
+20
+00:00:46,559 --> 00:00:51,199
+en caso de que el robot tenga un eje
+
+21
+00:00:48,199 --> 00:00:53,520
+auxiliar de rotación, pues, el desplazamiento
+
+22
+00:00:51,199 --> 00:00:56,280
+en sentido horario o antihorario de
+
+23
+00:00:53,520 --> 00:01:00,399
+este eje de rotación. Para ayudarnos en
+
+24
+00:00:56,280 --> 00:01:03,399
+la explicación, lo que vamos a hacer es
+
+25
+00:01:00,399 --> 00:01:06,080
+apoyarnos en una representación 3D del
+
+26
+00:01:03,399 --> 00:01:08,680
+robot. Bien, vamos a hacer un ejemplo
+
+27
+00:01:06,080 --> 00:01:12,159
+de cada. Por ejemplo, vamos a intentar
+
+28
+00:01:08,680 --> 00:01:16,360
+desplazar en modo impulsos el eje
+
+29
+00:01:12,159 --> 00:01:18,520
+primitivo del robot, el eje A. Si
+
+30
+00:01:16,360 --> 00:01:22,680
+vamos para adentro, vemos que
+
+31
+00:01:18,520 --> 00:01:25,119
+efectivamente el brazo A se mueve hacia
+
+32
+00:01:22,680 --> 00:01:28,040
+adentro y solo lo hace el eje A, sin importar lo
+
+33
+00:01:25,119 --> 00:01:30,880
+que esté haciendo el TCP del robot. Vale,
+
+34
+00:01:28,040 --> 00:01:33,920
+podemos hacer lo mismo con el eje B,
+
+35
+00:01:30,880 --> 00:01:36,960
+y el eje Z, o el eje C,
+
+36
+00:01:33,920 --> 00:01:37,799
+perdón. Vale, otra cosa que podemos hacer
+
+37
+00:01:36,960 --> 00:01:41,880
+es desplazar cartesianamente,
+
+38
+00:01:37,799 --> 00:01:44,000
+esta vez, el TCP del
+
+39
+00:01:41,880 --> 00:01:48,640
+robot (el punto central de la herramienta, el
+
+40
+00:01:44,000 --> 00:01:51,640
+TCP). Por ejemplo, en X, vemos que vamos en
+
+41
+00:01:48,640 --> 00:01:55,040
+positivo o en negativo, y para realizar
+
+42
+00:01:51,640 --> 00:01:55,040
+este movimiento se mueven los tres
+
+43
+00:01:55,079 --> 00:02:00,079
+brazos. Y también, por supuesto, podemos
+
+44
+00:01:57,880 --> 00:02:01,719
+mover el eje de rotación. En este
+
+45
+00:02:00,079 --> 00:02:05,280
+caso, el robot tiene un eje de rotación,
+
+46
+00:02:01,719 --> 00:02:09,080
+pues le podemos dar en un sentido,
+
+47
+00:02:05,280 --> 00:02:12,959
+antihorario, y luego en el otro
+
+48
+00:02:09,080 --> 00:02:15,599
+sentido. Vale, ¿qué más cosas podemos hacer?
+
+49
+00:02:12,959 --> 00:02:18,519
+Podemos variar los parámetros del
+
+50
+00:02:15,599 --> 00:02:21,560
+movimiento. Por ejemplo, en este caso,
+
+51
+00:02:18,519 --> 00:02:23,760
+cuando estamos moviendo en X, puede
+
+52
+00:02:21,560 --> 00:02:26,200
+ser que nos parece que va muy lento, pues
+
+53
+00:02:23,760 --> 00:02:29,959
+simplemente tenemos que coger aquí, en
+
+54
+00:02:26,200 --> 00:02:31,440
+esta sección del panel de impulsos,
+
+55
+00:02:29,959 --> 00:02:35,360
+seleccionar que vamos a modificar un
+
+56
+00:02:31,440 --> 00:02:37,239
+parámetro cartesiano y que va a ser el X.
+
+57
+00:02:35,360 --> 00:02:38,959
+En este caso, la velocidad es 20, y
+
+58
+00:02:37,239 --> 00:02:43,360
+queremos que vaya pues al doble de
+
+59
+00:02:38,959 --> 00:02:46,920
+velocidad. Le damos así y ya se observa
+
+60
+00:02:43,360 --> 00:02:46,920
+que la velocidad es
+
+61
+00:02:47,360 --> 00:02:53,319
+mayor. Otra cosa que podemos hacer es
+
+62
+00:02:50,599 --> 00:02:54,920
+mover una distancia máxima. Por ejemplo,
+
+63
+00:02:53,319 --> 00:02:57,040
+en este caso vemos que el robot está en
+
+64
+00:02:54,920 --> 00:02:59,920
+la cota Z 235,7.
+
+65
+00:02:57,040 --> 00:03:01,400
+Queremos bajar esta cota 7 décimas y
+
+66
+00:02:59,920 --> 00:03:03,120
+esto, haciéndolo de esta forma, es
+
+67
+00:03:01,400 --> 00:03:06,239
+bastante complicado porque enseguida nos
+
+68
+00:03:03,120 --> 00:03:11,000
+vamos a pasar pero, si venimos aquí,
+
+69
+00:03:06,239 --> 00:03:11,000
+cartesiano Z, y le decimos
+
+70
+00:03:11,599 --> 00:03:19,799
+0,7 y ahora cogemos y vamos en
+
+71
+00:03:16,680 --> 00:03:21,519
+negativo vemos que, da igual la velocidad
+
+72
+00:03:19,799 --> 00:03:24,080
+que estemos utilizando, que lo máximo que
+
+73
+00:03:21,519 --> 00:03:27,400
+se va a mover es esa distancia. Si ahora
+
+74
+00:03:24,080 --> 00:03:30,120
+quisiéramos bajar 5 mm, por ejemplo,
+
+75
+00:03:27,400 --> 00:03:33,239
+haríamos la misma operación.
+
+76
+00:03:30,120 --> 00:03:34,920
+Esta es una forma bastante fiable de
+
+77
+00:03:33,239 --> 00:03:38,000
+llevar el robot a un punto que nosotros
+
+78
+00:03:34,920 --> 00:03:40,040
+deseemos. Pasa lo mismo con el 
+
+79
+00:03:38,000 --> 00:03:42,640
+resto de movimientos. Por ejemplo, un
+
+80
+00:03:40,040 --> 00:03:45,200
+primitivo, seleccionaríamos "Robot
+
+81
+00:03:42,640 --> 00:03:46,879
+Axes", seleccionaríamos el primitivo que
+
+82
+00:03:45,200 --> 00:03:50,400
+vamos a mover (en este caso, por ejemplo,
+
+83
+00:03:46,879 --> 00:03:52,239
+el A) y variaríamos la velocidad. En este
+
+84
+00:03:50,400 --> 00:03:54,799
+caso iba muy rápido pues lo ponemos una
+
+85
+00:03:52,239 --> 00:03:54,799
+velocidad más
+
+86
+00:03:55,519 --> 00:04:02,239
+lenta. A
+
+87
+00:03:58,720 --> 00:04:02,239
+ver, más lenta
+
+88
+00:04:03,120 --> 00:04:08,680
+aún y ya vemos que el robot cada vez va
+
+89
+00:04:06,519 --> 00:04:08,680
+más
+
+90
+00:04:08,799 --> 00:04:14,400
+lento o, mucho más lento
+
+91
+00:04:14,760 --> 00:04:19,400
+aún, y esto nos permite desplazar, probar
+
+92
+00:04:17,600 --> 00:04:21,919
+cada uno de los ejes de forma
+
+93
+00:04:19,400 --> 00:04:24,800
+independiente (muy útil durante la puesta
+
+94
+00:04:21,919 --> 00:04:26,840
+en marcha), o ir a una posición muy
+
+95
+00:04:24,800 --> 00:04:28,840
+concreta para comprobar que estamos
+
+96
+00:04:26,840 --> 00:04:31,080
+justo encima, o para, bueno, hacer operaciones
+
+97
+00:04:28,840 --> 00:04:32,400
+de calibrado de la cámara de visión
+
+98
+00:04:31,080 --> 00:04:37,560
+artificial
+
+99
+00:04:32,400 --> 00:04:37,560
+etcétera. Y esto es todo.
+

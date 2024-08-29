@@ -1,0 +1,504 @@
+1
+00:00:02,040 --> 00:00:05,759
+En este vídeo veremos cómo podemos
+
+2
+00:00:04,279 --> 00:00:08,000
+representar en tres dimensiones el
+
+3
+00:00:05,759 --> 00:00:09,080
+comportamiento de una máquina creada con
+
+4
+00:00:08,000 --> 00:00:11,280
+la plataforma de desarrollo de
+
+5
+00:00:09,080 --> 00:00:13,440
+aplicaciones multirrobot. Para ello, se
+
+6
+00:00:11,280 --> 00:00:16,359
+hace uso de un aplicativo externo,
+
+7
+00:00:13,440 --> 00:00:19,400
+llamado Smartvisu, que se basa en Unity3D
+
+8
+00:00:16,359 --> 00:00:22,119
+y que no necesita ser instalado; es
+
+9
+00:00:19,400 --> 00:00:23,640
+autoejecutable. La plataforma de
+
+10
+00:00:22,119 --> 00:00:25,760
+desarrollo de aplicaciones multirrobot,
+
+11
+00:00:23,640 --> 00:00:28,359
+en su panel de configuración, incluye un
+
+12
+00:00:25,760 --> 00:00:31,320
+botón que se llama "Visualización 3D" que,
+
+13
+00:00:28,359 --> 00:00:33,239
+una vez activado, enviará a dicho
+
+14
+00:00:31,320 --> 00:00:37,040
+programa externo, mediante comunicaciones
+
+15
+00:00:33,239 --> 00:00:41,440
+Ethernet UDP, toda una serie de datos que
+
+16
+00:00:37,040 --> 00:00:43,960
+permitirán crear en 3D la
+
+17
+00:00:41,440 --> 00:00:47,480
+configuración actual de la
+
+18
+00:00:43,960 --> 00:00:48,800
+máquina. Para ello, vamos a ver el aspecto
+
+19
+00:00:47,480 --> 00:00:50,760
+de este programa externo, que se llama
+
+20
+00:00:48,800 --> 00:00:53,359
+Smartvisu. Vemos que en su pantalla de
+
+21
+00:00:50,760 --> 00:00:56,280
+presentación solo necesita un dato que
+
+22
+00:00:53,359 --> 00:00:59,000
+es la IP del controlador.
+
+23
+00:00:56,280 --> 00:01:00,559
+Este aplicativo externo, de momento,
+
+24
+00:00:59,000 --> 00:01:03,879
+solo es compatible con una serie
+
+25
+00:01:00,559 --> 00:01:07,119
+reducida de robots, todos de Schneider Electric y,
+
+26
+00:01:03,879 --> 00:01:09,640
+básicamente, son los tipo Scara, los tipo
+
+27
+00:01:07,119 --> 00:01:12,720
+Delta de la serie T, que solo tienen dos
+
+28
+00:01:09,640 --> 00:01:14,600
+brazos, y los tipo Delta de la serie P,
+
+29
+00:01:12,720 --> 00:01:16,280
+que son los que tienen tres brazos y
+
+30
+00:01:14,600 --> 00:01:18,360
+además son los incluidos en la
+
+31
+00:01:16,280 --> 00:01:20,799
+plataforma de desarrollo de aplicaciones
+
+32
+00:01:18,360 --> 00:01:22,680
+multirrobot, Además es posible utilizar
+
+33
+00:01:20,799 --> 00:01:25,119
+una serie de objetos geométricos para,
+
+34
+00:01:22,680 --> 00:01:29,200
+por ejemplo, representar items o cajas u
+
+35
+00:01:25,119 --> 00:01:30,560
+otros elementos, y también cintas. Bien, le
+
+36
+00:01:29,200 --> 00:01:33,200
+damos a conectar
+
+37
+00:01:30,560 --> 00:01:36,040
+y vemos que enseguida nos aparece el
+
+38
+00:01:33,200 --> 00:01:37,640
+estado actual de configuración de
+
+39
+00:01:36,040 --> 00:01:40,079
+nuestra máquina, tal como hayamos
+
+40
+00:01:37,640 --> 00:01:42,399
+definido en la plataforma de desarrollo
+
+41
+00:01:40,079 --> 00:01:46,280
+de aplicaciones multirrobot. Por supuesto,
+
+42
+00:01:42,399 --> 00:01:49,439
+podemos con el ratón hacer zoom, quitarlo,
+
+43
+00:01:46,280 --> 00:01:51,920
+rotarlo, verlo en todos los ángulos.
+
+44
+00:01:49,439 --> 00:01:53,240
+Además, aquí tenemos un atajo en tres
+
+45
+00:01:51,920 --> 00:01:57,479
+dimensiones para
+
+46
+00:01:53,240 --> 00:02:00,399
+poder verlo desde distintos puntos de
+
+47
+00:01:57,479 --> 00:02:02,880
+vista, aunque con el raton es mucho más
+
+48
+00:02:00,399 --> 00:02:04,600
+cómodo y luego, si pulsamos y
+
+49
+00:02:02,880 --> 00:02:06,399
+mantenemos pulsado el botón CTRL y
+
+50
+00:02:04,600 --> 00:02:08,959
+hacemos clic sobre cada uno de los
+
+51
+00:02:06,399 --> 00:02:10,879
+robots, nos aparecerá información
+
+52
+00:02:08,959 --> 00:02:13,440
+adicional de cada uno de ellos. Vamos a
+
+53
+00:02:10,879 --> 00:02:13,440
+apartarlo un
+
+54
+00:02:13,680 --> 00:02:19,160
+poco. Bien, ¿qué información adicional? Pues
+
+55
+00:02:16,480 --> 00:02:20,959
+básicamente la referencia del robot, si
+
+56
+00:02:19,160 --> 00:02:23,440
+tiene o no tiene eje de giro (todos ellos
+
+57
+00:02:20,959 --> 00:02:26,519
+lo tienen de momento), y las coordenadas
+
+58
+00:02:23,440 --> 00:02:28,879
+cartesianas de su TCP (del centro de
+
+59
+00:02:26,519 --> 00:02:31,280
+coordenadas de la herramienta).
+
+60
+00:02:28,879 --> 00:02:33,120
+También podemos optar por ver el espacio
+
+61
+00:02:31,280 --> 00:02:37,920
+de trabajo de cada uno de los
+
+62
+00:02:33,120 --> 00:02:40,440
+robots o, vamos a configurar el segundo, o
+
+63
+00:02:37,920 --> 00:02:41,440
+la trayectoria seguida por el TCP (por el
+
+64
+00:02:40,440 --> 00:02:44,800
+centro de
+
+65
+00:02:41,440 --> 00:02:46,599
+coordenadas de la herramienta). Vamos a
+
+66
+00:02:44,800 --> 00:02:50,800
+hacerlo un poquito más
+
+67
+00:02:46,599 --> 00:02:53,920
+grande. Bien, si volvemos a la
+
+68
+00:02:50,800 --> 00:02:55,560
+aplicación y cogemos los dos robots que
+
+69
+00:02:53,920 --> 00:02:58,319
+vamos a utilizar para esta
+
+70
+00:02:55,560 --> 00:03:01,200
+demostración y los habilitamos para
+
+71
+00:02:58,319 --> 00:03:04,280
+funcionar,
+
+72
+00:03:01,200 --> 00:03:04,280
+vamos a darle marcha a las
+
+73
+00:03:05,400 --> 00:03:13,879
+cintas. Si volvemos a la pantalla 3D, al
+
+74
+00:03:09,920 --> 00:03:16,560
+programa externo, aquí
+
+75
+00:03:13,879 --> 00:03:20,159
+vemos, vamos a quitar esto que está
+
+76
+00:03:16,560 --> 00:03:22,840
+molestando más que ayudar, aquí vemos el
+
+77
+00:03:20,159 --> 00:03:25,480
+funcionamiento de la visualización 3D,
+
+78
+00:03:22,840 --> 00:03:27,360
+que como vemos está siguiendo
+
+79
+00:03:25,480 --> 00:03:30,159
+perfectamente lo que está haciendo la
+
+80
+00:03:27,360 --> 00:03:32,640
+máquina. Aquí, si nos fijamos, vemos la
+
+81
+00:03:30,159 --> 00:03:35,319
+trayectoria marcada para el robot número 2;
+
+82
+00:03:32,640 --> 00:03:37,400
+el 1 también se la podemos marcar.
+
+83
+00:03:35,319 --> 00:03:40,760
+Ahí se
+
+84
+00:03:37,400 --> 00:03:42,480
+ve. Esto es una herramienta muy potente,
+
+85
+00:03:40,760 --> 00:03:43,879
+sobre todo en las fases de desarrollo de
+
+86
+00:03:42,480 --> 00:03:47,480
+la aplicación, cuando aún no tenemos
+
+87
+00:03:43,879 --> 00:03:50,120
+disponible un robot físicamente o, aún
+
+88
+00:03:47,480 --> 00:03:52,519
+teniéndolo, no nos interesa probar con el
+
+89
+00:03:50,120 --> 00:03:53,920
+robot para evitar impactos o porque no
+
+90
+00:03:52,519 --> 00:03:57,120
+estamos seguros de si algún algoritmo
+
+91
+00:03:53,920 --> 00:04:00,840
+está bien depurado o puede ser un
+
+92
+00:03:57,120 --> 00:04:03,040
+riesgo probarlo con el robot físicamente.
+
+93
+00:04:00,840 --> 00:04:06,680
+En tales casos, siempre se recomienda
+
+94
+00:04:03,040 --> 00:04:09,640
+trabajar con los ejes en modo virtual y
+
+95
+00:04:06,680 --> 00:04:12,319
+utilizar esta herramienta porque nos da
+
+96
+00:04:09,640 --> 00:04:15,360
+una flexibilidad bastante elevada,
+
+97
+00:04:12,319 --> 00:04:17,120
+incluso en la selección de algunos
+
+98
+00:04:15,360 --> 00:04:19,720
+de los parámetros pues, por
+
+99
+00:04:17,120 --> 00:04:23,800
+ejemplo, para ver si el reparto de cargas
+
+100
+00:04:19,720 --> 00:04:28,360
+es correcto o si va a dar de sí. Unida con
+
+101
+00:04:23,800 --> 00:04:28,360
+el simulador de items, esta herramienta
+
+102
+00:04:28,720 --> 00:04:32,280
+puede ayudarnos a ver si la máquina,
+
+103
+00:04:30,880 --> 00:04:36,479
+cuando conectemos este programa en la
+
+104
+00:04:32,280 --> 00:04:36,479
+máquina real, va a ser correcto o
+
+105
+00:04:36,919 --> 00:04:42,600
+no. La
+
+106
+00:04:39,680 --> 00:04:46,680
+última cosa que hay que
+
+107
+00:04:42,600 --> 00:04:47,840
+decir es que, una vez activado este botón,
+
+108
+00:04:46,680 --> 00:04:50,240
+el botón de
+
+109
+00:04:47,840 --> 00:04:53,440
+visualización, ya no pueden existir más
+
+110
+00:04:50,240 --> 00:04:55,440
+cambios. Ya, lo que es el mundo 3D ya ha
+
+111
+00:04:53,440 --> 00:04:57,360
+sido creado, ya ha sido definido y no
+
+112
+00:04:55,440 --> 00:05:00,160
+puede ser redefinido. Es decir, si
+
+113
+00:04:57,360 --> 00:05:02,199
+queremos utilizar items con unas
+
+114
+00:05:00,160 --> 00:05:04,560
+dimensiones distintas, ya no lo podríamos
+
+115
+00:05:02,199 --> 00:05:07,199
+hacer. Tendríamos que apagar el controlador
+
+116
+00:05:04,560 --> 00:05:10,400
+y volverlo a encender. Entonces sí que, al
+
+117
+00:05:07,199 --> 00:05:13,080
+volver a activar el botón "Visualización 3D",
+
+118
+00:05:10,400 --> 00:05:15,520
+estos cambios quedarían reflejados.
+
+119
+00:05:13,080 --> 00:05:19,840
+Por ejemplo, si vamos aquí a items y
+
+120
+00:05:15,520 --> 00:05:19,840
+hacemos aquí el ítem más
+
+121
+00:05:23,160 --> 00:05:29,319
+grande, esto, este cambio que hemos hecho
+
+122
+00:05:26,560 --> 00:05:31,160
+y que debería haberse reflejado en las
+
+123
+00:05:29,319 --> 00:05:33,919
+características o dimensiones del
+
+124
+00:05:31,160 --> 00:05:36,960
+objeto gráfico en 3D, vemos que no hay
+
+125
+00:05:33,919 --> 00:05:41,880
+cambio alguno porque ya se han
+
+126
+00:05:36,960 --> 00:05:41,880
+mandado estos datos al inicio.
+

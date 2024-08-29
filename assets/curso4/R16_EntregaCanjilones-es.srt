@@ -1,0 +1,392 @@
+1
+00:00:01,360 --> 00:00:04,759
+En este vídeo veremos el tercero de los
+
+2
+00:00:03,280 --> 00:00:07,359
+tipos de entrega que posee la operación
+
+3
+00:00:04,759 --> 00:00:09,719
+"Pick & Place" del modo automático: la
+
+4
+00:00:07,359 --> 00:00:11,400
+entrega sobre cinta de cangilones. Una
+
+5
+00:00:09,719 --> 00:00:14,480
+cinta de cangilones no deja de ser más
+
+6
+00:00:11,400 --> 00:00:15,679
+que una cadena que se mueve sin fin y
+
+7
+00:00:14,480 --> 00:00:18,640
+que está compuesta por un número
+
+8
+00:00:15,679 --> 00:00:21,160
+determinado de receptáculos separados
+
+9
+00:00:18,640 --> 00:00:22,279
+entre sí una distancia conocida. No es
+
+10
+00:00:21,160 --> 00:00:23,359
+necesario una cámara de visión
+
+11
+00:00:22,279 --> 00:00:25,519
+artificial para detectar estos
+
+12
+00:00:23,359 --> 00:00:27,840
+receptáculos, pero sí que es preciso, en
+
+13
+00:00:25,519 --> 00:00:30,080
+algún momento dado, realizar una
+
+14
+00:00:27,840 --> 00:00:31,320
+búsqueda de Home: referenciar uno de
+
+15
+00:00:30,080 --> 00:00:33,440
+estos
+
+16
+00:00:31,320 --> 00:00:34,760
+receptáculos. En una situación real, lo
+
+17
+00:00:33,440 --> 00:00:38,360
+que haríamos sería arrancar La cinta
+
+18
+00:00:34,760 --> 00:00:41,960
+número 2 hasta que uno de los
+
+19
+00:00:38,360 --> 00:00:45,239
+receptáculos hicera llegar un pivote
+
+20
+00:00:41,960 --> 00:00:47,399
+mecánico sobre un detector inductivo o
+
+21
+00:00:45,239 --> 00:00:51,039
+similar. En ese
+
+22
+00:00:47,399 --> 00:00:54,239
+momento, veríamos que todas las
+
+23
+00:00:51,039 --> 00:00:56,280
+posiciones de la cinta de cangilones
+
+24
+00:00:54,239 --> 00:00:58,440
+quedan completamente identificadas y ya
+
+25
+00:00:56,280 --> 00:01:01,559
+se puede trabajar con ellas. Bien, para
+
+26
+00:00:58,440 --> 00:01:03,719
+trabajar en este modo de entrega,
+
+27
+00:01:01,559 --> 00:01:06,200
+lo que hemos de hacer es irnos al
+
+28
+00:01:03,719 --> 00:01:07,280
+panel de configuración, a la sección
+
+29
+00:01:06,200 --> 00:01:10,000
+donde se encuentran los parámetros del
+
+30
+00:01:07,280 --> 00:01:11,479
+modo automático, y asegurarnos de que
+
+31
+00:01:10,000 --> 00:01:13,280
+todos los robots involucrados se
+
+32
+00:01:11,479 --> 00:01:15,720
+encuentran trabajando bajo el tipo de
+
+33
+00:01:13,280 --> 00:01:18,520
+operación "Pick & Place" y tipo de
+
+34
+00:01:15,720 --> 00:01:21,000
+entrega "Cangilon", tanto el 1, como el 2,
+
+35
+00:01:18,520 --> 00:01:22,479
+como el 3, como el 4. Además, en
+
+36
+00:01:21,000 --> 00:01:25,479
+este caso concreto, como vamos a trabajar
+
+37
+00:01:22,479 --> 00:01:27,200
+con cuatro robots, lo que vamos a hacer,
+
+38
+00:01:25,479 --> 00:01:29,600
+para que haya un reparto equitativo de
+
+39
+00:01:27,200 --> 00:01:34,439
+carga, es que el robot número 1 trabaje
+
+40
+00:01:29,600 --> 00:01:36,880
+por un reparto de carga zonal, el 2
+
+41
+00:01:34,439 --> 00:01:39,600
+también, el 3
+
+42
+00:01:36,880 --> 00:01:42,399
+también, y el 4 coja todo lo que
+
+43
+00:01:39,600 --> 00:01:43,640
+pueda coger (no utilice ningún reparto
+
+44
+00:01:42,399 --> 00:01:46,159
+de
+
+45
+00:01:43,640 --> 00:01:48,439
+carga). Bien, vamos a arrancar la cinta
+
+46
+00:01:46,159 --> 00:01:48,439
+número
+
+47
+00:01:48,759 --> 00:01:54,119
+1 y empezarán a llegar los ítems en
+
+48
+00:01:52,079 --> 00:01:57,560
+posiciones y ángulos totalmente
+
+49
+00:01:54,119 --> 00:02:00,960
+aleatorios. Y a medida que entre un ítem
+
+50
+00:01:57,560 --> 00:02:06,039
+de la zona que le corresponda a
+
+51
+00:02:00,960 --> 00:02:06,039
+cada robot en su área de trabajo, lo irá
+
+52
+00:02:06,920 --> 00:02:12,640
+procesando. Aquí vemos
+
+53
+00:02:08,959 --> 00:02:16,480
+como cada robot coge los ítems de su
+
+54
+00:02:12,640 --> 00:02:16,480
+zona y los va depositando en la cinta de
+
+55
+00:02:18,640 --> 00:02:24,959
+cangilones. Observamos que van quedando
+
+56
+00:02:21,160 --> 00:02:27,239
+una serie de huecos vacíos debido a
+
+57
+00:02:24,959 --> 00:02:30,000
+las distintas velocidades tanto de la
+
+58
+00:02:27,239 --> 00:02:32,280
+cinta de de entrega como la de recogida.
+
+59
+00:02:30,000 --> 00:02:34,560
+En ciertas situaciones no conviene que
+
+60
+00:02:32,280 --> 00:02:38,200
+la cinta de cangilones siga avanzando con
+
+61
+00:02:34,560 --> 00:02:41,360
+algún hueco en la cinta de 
+
+62
+00:02:38,200 --> 00:02:45,280
+cangilones. Por ejemplo, el 7 no
+
+63
+00:02:41,360 --> 00:02:46,680
+debería haber pasado ¿vale?. Entonces, para
+
+64
+00:02:45,280 --> 00:02:49,920
+evitar estas
+
+65
+00:02:46,680 --> 00:02:51,640
+situaciones, se ha añadido una opción en
+
+66
+00:02:49,920 --> 00:02:54,560
+el modo
+
+67
+00:02:51,640 --> 00:02:56,959
+cangilones que hemos llamado "Detener
+
+68
+00:02:54,560 --> 00:02:59,280
+cinta" y que normalmente se activa en el
+
+69
+00:02:56,959 --> 00:03:01,280
+último de los robots involucrados. Vamos
+
+70
+00:02:59,280 --> 00:03:05,440
+a poner que estamos en el 4, detener
+
+71
+00:03:01,280 --> 00:03:08,360
+cinta y volvemos al panel
+
+72
+00:03:05,440 --> 00:03:11,720
+automático. Aquí veremos que ahora, en
+
+73
+00:03:08,360 --> 00:03:13,239
+teoría, no tendría que atravesar el
+
+74
+00:03:11,720 --> 00:03:16,760
+límite, digamos, de la zona de trabajo del
+
+75
+00:03:13,239 --> 00:03:19,200
+robot 4 ningún cangilón vacío. Ahora
+
+76
+00:03:16,760 --> 00:03:19,200
+llegarán unos
+
+77
+00:03:19,360 --> 00:03:28,120
+cuantos. A ver si lo nos da tiempo
+
+78
+00:03:24,080 --> 00:03:30,680
+verlo. Ahí, se ha parado, se ha parado
+
+79
+00:03:28,120 --> 00:03:33,840
+automáticamente porque este
+
+80
+00:03:30,680 --> 00:03:36,439
+cangilón, el 52, se encontraba libre. Ahora,
+
+81
+00:03:33,840 --> 00:03:38,360
+al ser ocupado por un nuevo ítem, la
+
+82
+00:03:36,439 --> 00:03:40,080
+cinta vuelve a arrancar
+
+83
+00:03:38,360 --> 00:03:43,319
+automáticamente. De esta forma
+
+84
+00:03:40,080 --> 00:03:46,200
+garantizamos que ningún cangilón queda
+
+85
+00:03:43,319 --> 00:03:49,120
+vacío más allá de la zona, digamos, de
+
+86
+00:03:46,200 --> 00:03:51,480
+influencia de todo lo que es la
+
+87
+00:03:49,120 --> 00:03:51,480
+línea
+
+88
+00:03:53,879 --> 00:03:59,879
+robótica. La visualización 3D relacionada
+
+89
+00:04:00,760 --> 00:04:04,400
+no aporta tampoco mucha más información;
+
+90
+00:04:02,480 --> 00:04:07,280
+simplemente vemos la cinta de cangilones,
+
+91
+00:04:04,400 --> 00:04:11,360
+pues, que se van rellenando los huecos a
+
+92
+00:04:07,280 --> 00:04:14,239
+medida que va avanzando, pero ningún
+
+93
+00:04:11,360 --> 00:04:17,840
+hueco debería sobrepasar el área máxima
+
+94
+00:04:14,239 --> 00:04:17,840
+de trabajo del último
+
+95
+00:04:18,239 --> 00:04:22,320
+robot. Ahí
+
+96
+00:04:22,759 --> 00:04:26,639
+tenemos. Aquí ya se ha parado, exacto. se
+
+97
+00:04:25,199 --> 00:04:32,720
+ha parado porque este hueco está
+
+98
+00:04:26,639 --> 00:04:32,720
+libre y ahora a vuelto a arrancar.
+

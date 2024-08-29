@@ -1,0 +1,192 @@
+1
+00:00:01,280 --> 00:00:04,799
+En este vídeo veremos el segundo de los
+
+2
+00:00:03,199 --> 00:00:07,240
+tipos de entrega que posee la operación
+
+3
+00:00:04,799 --> 00:00:09,480
+"Pick & Place" del modo automático: la
+
+4
+00:00:07,240 --> 00:00:11,160
+entrega sobre caja. Para activar este
+
+5
+00:00:09,480 --> 00:00:13,000
+tipo de entrega hemos de irnos al panel
+
+6
+00:00:11,160 --> 00:00:15,320
+de configuración, a la sección de
+
+7
+00:00:13,000 --> 00:00:17,439
+parámetros del modo automático, y
+
+8
+00:00:15,320 --> 00:00:18,840
+asegurarnos de que todos los robots se
+
+9
+00:00:17,439 --> 00:00:20,960
+encuentran trabajando bajo el tipo de
+
+10
+00:00:18,840 --> 00:00:24,400
+operación "Pick & Place" y el tipo de
+
+11
+00:00:20,960 --> 00:00:26,920
+entrega "Caja". El robot número 1 es así el
+
+12
+00:00:24,400 --> 00:00:29,519
+2 también el 3 también y el 4
+
+13
+00:00:26,920 --> 00:00:30,560
+también. Perfecto. Volvemos al panel de
+
+14
+00:00:29,519 --> 00:00:33,440
+automático
+
+15
+00:00:30,560 --> 00:00:35,440
+y damos marcha a las dos cintas, tanto la
+
+16
+00:00:33,440 --> 00:00:37,399
+de recogida como la de entrega, y
+
+17
+00:00:35,440 --> 00:00:40,520
+empezarán a llegar, pues, una serie de
+
+18
+00:00:37,399 --> 00:00:43,480
+ítems en posiciones y ángulos aleatorios,
+
+19
+00:00:40,520 --> 00:00:44,760
+y una serie de cajas también en
+
+20
+00:00:43,480 --> 00:00:47,520
+posiciones y ángulos totalmente
+
+21
+00:00:44,760 --> 00:00:51,039
+aleatorios. Esto en la vida real tampoco
+
+22
+00:00:47,520 --> 00:00:53,719
+es tan extremo, pero se ha hecho así, se ha
+
+23
+00:00:51,039 --> 00:00:56,760
+simulado así, para ver la potencia de
+
+24
+00:00:53,719 --> 00:00:58,640
+este método. Vemos que el robot número
+
+25
+00:00:56,760 --> 00:01:01,320
+1 está, de momento, asumiendo todo el
+
+26
+00:00:58,640 --> 00:01:03,440
+trabajo hasta que, debido a
+
+27
+00:01:01,320 --> 00:01:05,360
+circunstancias, no... se escape alguna caja.
+
+28
+00:01:03,440 --> 00:01:08,560
+Por ejemplo, la 9 se le ha
+
+29
+00:01:05,360 --> 00:01:10,920
+escapado, entonces el robot número 2
+
+30
+00:01:08,560 --> 00:01:12,600
+acabará el proceso con la 9 y la 11, que
+
+31
+00:01:10,920 --> 00:01:17,080
+también se ha escapado, y la
+
+32
+00:01:12,600 --> 00:01:21,920
+14. Aquí vemos. Es importante observar
+
+33
+00:01:17,080 --> 00:01:26,640
+como el ángulo del eje de giro
+
+34
+00:01:21,920 --> 00:01:29,200
+auxiliar del robot adopta el ángulo de
+
+35
+00:01:26,640 --> 00:01:31,079
+la pieza de recogida y de la caja de
+
+36
+00:01:29,200 --> 00:01:32,119
+entrega. Esto lo podemos ver con la
+
+37
+00:01:31,079 --> 00:01:34,520
+flechita
+
+38
+00:01:32,119 --> 00:01:36,320
+esta. Y luego, si queremos ver esto un
+
+39
+00:01:34,520 --> 00:01:38,560
+poquito mejor en tres dimensiones,
+
+40
+00:01:36,320 --> 00:01:42,399
+podemos dirigirnos
+
+41
+00:01:38,560 --> 00:01:44,880
+aquí. Y aquí vemos el proceso un poquito
+
+42
+00:01:42,399 --> 00:01:48,079
+más
+
+43
+00:01:44,880 --> 00:01:50,960
+realista. Vemos que los items se cogen en
+
+44
+00:01:48,079 --> 00:01:53,560
+el ángulo correcto y se rotan durante la
+
+45
+00:01:50,960 --> 00:01:56,600
+trayectoria hacia el objetivo en el
+
+46
+00:01:53,560 --> 00:01:59,200
+ángulo destino, y que solo se procesan
+
+47
+00:01:56,600 --> 00:02:04,039
+las cajas que están vacías realmente; no
+
+48
+00:01:59,200 --> 00:02:04,039
+se introduce 2 ítems en la misma caja.
+

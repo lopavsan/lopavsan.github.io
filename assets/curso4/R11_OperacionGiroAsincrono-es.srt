@@ -1,0 +1,188 @@
+1
+00:00:01,839 --> 00:00:07,480
+En este vídeo veremos el tipo de
+
+2
+00:00:03,520 --> 00:00:10,280
+operación "Giro Asíncrono". Para activar
+
+3
+00:00:07,480 --> 00:00:12,000
+este modo de operación hemos de irnos al panel
+
+4
+00:00:10,280 --> 00:00:13,200
+de configuración, a la sección donde se
+
+5
+00:00:12,000 --> 00:00:15,759
+encuentran los parámetros del modo
+
+6
+00:00:13,200 --> 00:00:18,560
+automático y escoger este tipo de
+
+7
+00:00:15,759 --> 00:00:20,080
+operación, "Giro Asíncrono", para el robot
+
+8
+00:00:18,560 --> 00:00:22,240
+que vamos a emplear. En este caso, solo
+
+9
+00:00:20,080 --> 00:00:23,880
+vamos a emplear el robot número 1.
+
+10
+00:00:22,240 --> 00:00:26,199
+Volvemos al panel de
+
+11
+00:00:23,880 --> 00:00:28,800
+automático. Tenemos ya el robot en modo
+
+12
+00:00:26,199 --> 00:00:30,679
+automático y simplemente vamos a hacer
+
+13
+00:00:28,800 --> 00:00:32,120
+que la cinta de recogida arranque y
+
+14
+00:00:30,679 --> 00:00:34,160
+empiecen a llegar
+
+15
+00:00:32,120 --> 00:00:36,640
+items.
+
+16
+00:00:34,160 --> 00:00:39,640
+Bien, vemos que, a medida que van llegando
+
+17
+00:00:36,640 --> 00:00:42,760
+los ítems, el robot se sitúa encima de
+
+18
+00:00:39,640 --> 00:00:47,680
+ellos y ejecuta un
+
+19
+00:00:42,760 --> 00:00:49,600
+giro, un giro de 360 grados con una velocidad
+
+20
+00:00:47,680 --> 00:00:52,719
+tal que lo completa en 1 segundo y
+
+21
+00:00:49,600 --> 00:00:56,440
+además en sentido horario. Si activáramos
+
+22
+00:00:52,719 --> 00:00:59,160
+el contragiro "Giro Negativo",
+
+23
+00:00:56,440 --> 00:01:01,719
+veríamos que el giro tiene lugar en el
+
+24
+00:00:59,160 --> 00:01:04,960
+sentido opuesto.
+
+25
+00:01:01,719 --> 00:01:04,960
+Ahora volvemos a
+
+26
+00:01:06,200 --> 00:01:13,119
+invertir y efectivamente se
+
+27
+00:01:09,799 --> 00:01:15,640
+invierte. Vemos también que los
+
+28
+00:01:13,119 --> 00:01:18,080
+controles para este modo de trabajo
+
+29
+00:01:15,640 --> 00:01:21,159
+son distintos que en otros modos: el modo
+
+30
+00:01:18,080 --> 00:01:22,240
+"Pick & Place" o el modo "CNC"; no se
+
+31
+00:01:21,159 --> 00:01:24,880
+necesitan
+
+32
+00:01:22,240 --> 00:01:26,520
+más. En este caso, aunque aquí esté
+
+33
+00:01:24,880 --> 00:01:28,360
+dibujada la cinta de entrega, la cinta de
+
+34
+00:01:26,520 --> 00:01:30,840
+entrega no influye, no se
+
+35
+00:01:28,360 --> 00:01:32,000
+utiliza en este modo de trabajo. La cinta
+
+36
+00:01:30,840 --> 00:01:33,720
+de entrega solo se utiliza en el modo
+
+37
+00:01:32,000 --> 00:01:37,799
+"Pick & Place".
+
+38
+00:01:33,720 --> 00:01:41,960
+Y si vamos a ver la visualización 3D,
+
+39
+00:01:37,799 --> 00:01:44,799
+veremos que, efectivamente, y de una
+
+40
+00:01:41,960 --> 00:01:47,920
+forma más clara, el robot lo que hace es
+
+41
+00:01:44,799 --> 00:01:50,759
+irse a cada uno de los items y efectúa un
+
+42
+00:01:47,920 --> 00:01:54,119
+giro con su eje auxiliar de
+
+43
+00:01:50,759 --> 00:01:56,560
+rotación. Esto puede estar indicado, pues,
+
+44
+00:01:54,119 --> 00:02:00,320
+para operaciones en las que se tenga que
+
+45
+00:01:56,560 --> 00:02:03,759
+dosificar algo encima de un elemento
+
+46
+00:02:00,320 --> 00:02:07,000
+o realizar un lijado o cualquier otro
+
+47
+00:02:03,759 --> 00:02:07,000
+tipo de operación.
+

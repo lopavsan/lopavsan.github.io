@@ -1,0 +1,544 @@
+1
+00:00:01,240 --> 00:00:04,880
+En este vídeo veremos el tipo de
+
+2
+00:00:03,399 --> 00:00:07,120
+operación CNC del modo de trabajo
+
+3
+00:00:04,880 --> 00:00:10,040
+automático. Para activar este tipo de
+
+4
+00:00:07,120 --> 00:00:12,160
+operación, hemos de entrar en el panel de
+
+5
+00:00:10,040 --> 00:00:13,320
+configuración en la sección donde se
+
+6
+00:00:12,160 --> 00:00:15,719
+encuentran los parámetros del modo
+
+7
+00:00:13,320 --> 00:00:18,160
+automático y asegurarnos de que el robot
+
+8
+00:00:15,719 --> 00:00:21,160
+que vamos a emplear tiene activada este
+
+9
+00:00:18,160 --> 00:00:23,039
+tipo de operación: CNC. Volvemos al panel
+
+10
+00:00:21,160 --> 00:00:27,199
+de automático. Bien,
+
+11
+00:00:23,039 --> 00:00:29,000
+el tipo de operación CNC lo que realiza es
+
+12
+00:00:27,199 --> 00:00:30,599
+dirigirse, lo que hace es dirigirse
+
+13
+00:00:29,000 --> 00:00:33,559
+hacia
+
+14
+00:00:30,599 --> 00:00:35,200
+el centro de un ítem cualquiera y
+
+15
+00:00:33,559 --> 00:00:36,480
+ejecuta una serie de maniobras que se
+
+16
+00:00:35,200 --> 00:00:39,680
+encuentran definidas dentro de un
+
+17
+00:00:36,480 --> 00:00:42,160
+fichero ASCII mediante códigos G, que es
+
+18
+00:00:39,680 --> 00:00:45,719
+un lenguaje específico de fabricación
+
+19
+00:00:42,160 --> 00:00:48,640
+aditiva o control numérico. El fichero
+
+20
+00:00:45,719 --> 00:00:50,640
+que vamos a utilizar, este de aquí, 
+
+21
+00:00:48,640 --> 00:00:54,280
+contiene una serie de instrucciones que,
+
+22
+00:00:50,640 --> 00:00:56,800
+básicamente, son movimientos lineales y
+
+23
+00:00:54,280 --> 00:00:58,879
+una serie de marcas que, básicamente, son
+
+24
+00:00:56,800 --> 00:01:00,879
+órdenes para activar o desactivar una
+
+25
+00:00:58,879 --> 00:01:05,119
+herramienta, sea la herramienta que sea
+
+26
+00:01:00,879 --> 00:01:06,520
+(no importa). Al final, tenemos una marca
+
+27
+00:01:05,119 --> 00:01:10,159
+especial, que es la marca 7, que nos
+
+28
+00:01:06,520 --> 00:01:12,200
+indica el final de programa y lo que hace
+
+29
+00:01:10,159 --> 00:01:14,840
+el robot cuando detecta esta marca es
+
+30
+00:01:12,200 --> 00:01:16,240
+abandonar el ítem y dirigirse, o bien al
+
+31
+00:01:14,840 --> 00:01:18,799
+siguiente ítem si ya se encuentra dentro
+
+32
+00:01:16,240 --> 00:01:22,920
+del área de trabajo, o bien a reposo, a
+
+33
+00:01:18,799 --> 00:01:24,759
+la espera de un nuevo ítem. Además, 
+
+34
+00:01:22,920 --> 00:01:26,680
+para dar un poquito más de
+
+35
+00:01:24,759 --> 00:01:30,320
+funcionalidades o de versatilidad a este
+
+36
+00:01:26,680 --> 00:01:33,720
+tipo de función, cada una de estas
+
+37
+00:01:30,320 --> 00:01:35,680
+marcas que implican una acción sobre la
+
+38
+00:01:33,720 --> 00:01:37,680
+herramienta, bien de activación o
+
+39
+00:01:35,680 --> 00:01:39,159
+desactivación, tenemos una serie de
+
+40
+00:01:37,680 --> 00:01:40,399
+parámetros que se pueden configurar a
+
+41
+00:01:39,159 --> 00:01:43,240
+tiempo
+
+42
+00:01:40,399 --> 00:01:46,119
+real. Los más importantes, aparte de las
+
+43
+00:01:43,240 --> 00:01:49,520
+velocidades de los movimientos G0 y G1 y
+
+44
+00:01:46,119 --> 00:01:52,840
+sus rampas, son los retardos. ¿Por qué?
+
+45
+00:01:49,520 --> 00:01:55,320
+Porque nos permiten generar o añadir
+
+46
+00:01:52,840 --> 00:01:56,600
+una espera entre lo que es la orden de
+
+47
+00:01:55,320 --> 00:01:59,960
+activación o desactivación de la
+
+48
+00:01:56,600 --> 00:02:02,439
+herramienta y el siguiente movimiento
+
+49
+00:01:59,960 --> 00:02:05,719
+que realizará el robot. Por ejemplo, si la
+
+50
+00:02:02,439 --> 00:02:09,440
+herramienta fuera un taladro, al darle la
+
+51
+00:02:05,719 --> 00:02:11,039
+orden de bajar taladro, esa 
+
+52
+00:02:09,440 --> 00:02:13,959
+bajada de taladro pues tarda un tiempo,
+
+53
+00:02:11,039 --> 00:02:15,560
+el que sea, pongamos que sea, pues, medio
+
+54
+00:02:13,959 --> 00:02:18,120
+segundo. Para garantizar de que el
+
+55
+00:02:15,560 --> 00:02:20,640
+taladro está abajo, se le puede dar un
+
+56
+00:02:18,120 --> 00:02:22,519
+retardo de inicio de un segundo y
+
+57
+00:02:20,640 --> 00:02:24,400
+entonces, desde que damos la orden de
+
+58
+00:02:22,519 --> 00:02:27,400
+bajar taladro hasta que este realmente
+
+59
+00:02:24,400 --> 00:02:30,280
+se encuentra abajo, en contacto con el
+
+60
+00:02:27,400 --> 00:02:32,519
+ítem, 
+
+61
+00:02:30,280 --> 00:02:34,080
+transcurre ese segundo, y a partir de ahí,
+
+62
+00:02:32,519 --> 00:02:37,080
+pues, ya puede realizar el movimiento con
+
+63
+00:02:34,080 --> 00:02:39,480
+el taladro abajo. Una vez realizado este
+
+64
+00:02:37,080 --> 00:02:41,599
+movimiento, damos la orden de subir, pero
+
+65
+00:02:39,480 --> 00:02:43,640
+esa orden no se ejecuta instantáneamente,
+
+66
+00:02:41,599 --> 00:02:46,040
+también tarda un tiempo, por tanto,
+
+67
+00:02:43,640 --> 00:02:47,680
+podemos configurar como retardo final
+
+68
+00:02:46,040 --> 00:02:49,800
+más o menos la misma cantidad
+
+69
+00:02:47,680 --> 00:02:51,280
+de tiempo, un segundo, para garantizar de
+
+70
+00:02:49,800 --> 00:02:54,720
+que el taladro ya se encuentre arriba
+
+71
+00:02:51,280 --> 00:02:54,720
+antes de iniciar el siguiente
+
+72
+00:02:54,800 --> 00:03:00,000
+movimiento. Una vez dicho esto, vamos a
+
+73
+00:02:57,760 --> 00:03:03,159
+verlo en la práctica. Vamos a arrancar
+
+74
+00:03:00,000 --> 00:03:05,400
+la cinta número uno y empezar a llegar
+
+75
+00:03:03,159 --> 00:03:07,159
+ítems. Aunque en la representación gráfica
+
+76
+00:03:05,400 --> 00:03:09,640
+hay una cinta número dos, La de entrega,
+
+77
+00:03:07,159 --> 00:03:12,040
+en este modo de trabajo no se utiliza
+
+78
+00:03:09,640 --> 00:03:14,040
+este cinta. Esta cinta de entrega
+
+79
+00:03:12,040 --> 00:03:16,440
+solo se utiliza en el tipo de operación
+
+80
+00:03:14,040 --> 00:03:20,080
+Pick and Place. Bueno, aquí aparece el
+
+81
+00:03:16,440 --> 00:03:22,799
+primer ítem. Vamos lentos porque, como la
+
+82
+00:03:20,080 --> 00:03:24,200
+operación tarda un tiempo, para que le dé
+
+83
+00:03:22,799 --> 00:03:27,200
+tiempo a realizar toda la
+
+84
+00:03:24,200 --> 00:03:29,760
+operación. Si nos fijamos, aquí en el
+
+85
+00:03:27,200 --> 00:03:31,959
+indicador este, que tendría que estar
+
+86
+00:03:29,760 --> 00:03:33,959
+vinculado con una salida digital, se
+
+87
+00:03:31,959 --> 00:03:35,360
+observa que efectivamente se está
+
+88
+00:03:33,959 --> 00:03:37,080
+activando y desactivando la herramienta
+
+89
+00:03:35,360 --> 00:03:39,000
+en unos puntos muy determinados,
+
+90
+00:03:37,080 --> 00:03:43,599
+básicamente se activa
+
+91
+00:03:39,000 --> 00:03:43,599
+en el lado superior y en el lado
+
+92
+00:03:48,120 --> 00:03:51,120
+inferior.
+
+93
+00:03:51,280 --> 00:03:55,879
+Exacto. Esto lo podríamos ver un poquito
+
+94
+00:03:53,959 --> 00:03:58,319
+mejor en la representación 3D. Si nos
+
+95
+00:03:55,879 --> 00:04:01,079
+vamos a la representación 3D, vemos lo
+
+96
+00:03:58,319 --> 00:04:03,720
+que se ha explicado de una forma un poco
+
+97
+00:04:01,079 --> 00:04:05,439
+más cercana a la realidad. El robot se va
+
+98
+00:04:03,720 --> 00:04:07,840
+al punto central, luego se va a la
+
+99
+00:04:05,439 --> 00:04:10,439
+esquina superior. Ahí da orden de
+
+100
+00:04:07,840 --> 00:04:12,319
+activar herramienta y, un segundo después
+
+101
+00:04:10,439 --> 00:04:14,239
+de dar esa orden, es cuando realiza el
+
+102
+00:04:12,319 --> 00:04:17,280
+movimiento con la herramienta ya 
+
+103
+00:04:14,239 --> 00:04:19,919
+activa. Cuando llega al final de lo que
+
+104
+00:04:17,280 --> 00:04:22,079
+es el lado superior, en esta esquina, lo
+
+105
+00:04:19,919 --> 00:04:23,919
+que hace es dar orden de levantar la
+
+106
+00:04:22,079 --> 00:04:25,120
+herramienta, en este caso, de desactivar la
+
+107
+00:04:23,919 --> 00:04:27,560
+herramienta. En este caso, si fuera el
+
+108
+00:04:25,120 --> 00:04:30,120
+taladro, hemos dicho, levantaría el
+
+109
+00:04:27,560 --> 00:04:31,919
+taladro. Desde que se da la orden hasta
+
+110
+00:04:30,120 --> 00:04:33,280
+que realmente se va a la otra esquina,
+
+111
+00:04:31,919 --> 00:04:34,600
+pues, transcurre un segundo para
+
+112
+00:04:33,280 --> 00:04:37,600
+garantizar que el taladro se
+
+113
+00:04:34,600 --> 00:04:41,680
+encuentra arriba. Y así va repitiendo,
+
+114
+00:04:37,600 --> 00:04:41,680
+pues, todo el proceso, una y otra
+
+115
+00:04:42,680 --> 00:04:48,960
+vez. Esto proporciona a al sistema, pues,
+
+116
+00:04:47,479 --> 00:04:51,240
+una
+
+117
+00:04:48,960 --> 00:04:52,759
+versatilidad bastante potente porque
+
+118
+00:04:51,240 --> 00:04:54,840
+podemos definir el comportamiento del
+
+119
+00:04:52,759 --> 00:04:57,479
+robot simplemente con un fichero externo.
+
+120
+00:04:54,840 --> 00:04:59,120
+No hace falta entrar a modificar el
+
+121
+00:04:57,479 --> 00:05:01,280
+código de la aplicación cada vez que
+
+122
+00:04:59,120 --> 00:05:05,280
+queremos redefinir el comportamiento del
+
+123
+00:05:01,280 --> 00:05:08,080
+robot. Simplemente cogemos un cliente
+
+124
+00:05:05,280 --> 00:05:11,440
+FTP, cogemos, o definimos, mejor dicho, la
+
+125
+00:05:08,080 --> 00:05:12,919
+trayectoria a través de un fichero ASCII,
+
+126
+00:05:11,440 --> 00:05:17,520
+se lo enviamos a la memoria del
+
+127
+00:05:12,919 --> 00:05:21,319
+controlador mediante un cliente FTP, y el
+
+128
+00:05:17,520 --> 00:05:23,639
+programa, el fichero, se lo dejamos en
+
+129
+00:05:21,319 --> 00:05:26,639
+el área de ficheros del
+
+130
+00:05:23,639 --> 00:05:28,919
+controlador. Este ficherito, pues, tiene un
+
+131
+00:05:26,639 --> 00:05:30,720
+nombre determinado: GCodeRobot1. Es un
+
+132
+00:05:28,919 --> 00:05:33,280
+nombre muy concreto y solo sirve para el
+
+133
+00:05:30,720 --> 00:05:35,800
+robot número. El robot número dos tendría
+
+134
+00:05:33,280 --> 00:05:39,400
+GCodeRobot2 y así. Cada robot podría
+
+135
+00:05:35,800 --> 00:05:42,880
+tener un perfil o una maniobra
+
+136
+00:05:39,400 --> 00:05:42,880
+asociada distinta.
+

@@ -1,0 +1,380 @@
+1
+00:00:01,640 --> 00:00:05,160
+En este vídeo veremos el primero de los
+
+2
+00:00:03,480 --> 00:00:07,600
+tipos de entrega que posee la operación
+
+3
+00:00:05,160 --> 00:00:10,679
+"Pick & Place" del modo automático: la
+
+4
+00:00:07,600 --> 00:00:12,759
+entrega sobre punto fijo. Para activar
+
+5
+00:00:10,679 --> 00:00:14,719
+este tipo de entrega deberíamos irnos al
+
+6
+00:00:12,759 --> 00:00:17,199
+panel de configuración, a las opciones
+
+7
+00:00:14,719 --> 00:00:18,680
+del modo automático, y asegurarnos que
+
+8
+00:00:17,199 --> 00:00:20,439
+todos los robots que vamos a emplear en
+
+9
+00:00:18,680 --> 00:00:21,880
+esta operativa se encuentran
+
+10
+00:00:20,439 --> 00:00:24,000
+configurados con el tipo de operación
+
+11
+00:00:21,880 --> 00:00:26,160
+"Pick & Place" y el tipo de entrega
+
+12
+00:00:24,000 --> 00:00:27,960
+"Punto Fijo". Vamos navegando a través de
+
+13
+00:00:26,160 --> 00:00:30,000
+todos los robots, vamos a emplear
+
+14
+00:00:27,960 --> 00:00:31,920
+solamente los tres primeros, y 
+
+15
+00:00:30,000 --> 00:00:34,600
+confirmamos que realmente se encuentran
+
+16
+00:00:31,920 --> 00:00:39,039
+en esta configuración. Volvemos al panel
+
+17
+00:00:34,600 --> 00:00:42,840
+de automático, arrancamos la cinta de
+
+18
+00:00:39,039 --> 00:00:46,079
+recogida y empezarán a llegar ítems en
+
+19
+00:00:42,840 --> 00:00:48,320
+posiciones y ángulos arbitrarios. Veremos
+
+20
+00:00:46,079 --> 00:00:52,079
+que cada uno de los robots toma estos
+
+21
+00:00:48,320 --> 00:00:55,239
+items y genera un un patrón sobre la cinta
+
+22
+00:00:52,079 --> 00:00:57,680
+de entrega. El patrón definido para cada
+
+23
+00:00:55,239 --> 00:01:00,359
+uno de los robots es distinto,
+
+24
+00:00:57,680 --> 00:01:01,960
+simplemente para demostrar la utilidad
+
+25
+00:01:00,359 --> 00:01:04,320
+de este
+
+26
+00:01:01,960 --> 00:01:06,799
+método. Normalmente este método se suele
+
+27
+00:01:04,320 --> 00:01:09,240
+utilizar cuando la cinta de entrega se
+
+28
+00:01:06,799 --> 00:01:11,080
+encuentra detenida, por ejemplo, porque
+
+29
+00:01:09,240 --> 00:01:14,080
+tenemos una caja o un receptáculo en una
+
+30
+00:01:11,080 --> 00:01:15,880
+posición determinada y podemos ejecutar
+
+31
+00:01:14,080 --> 00:01:19,080
+este 
+
+32
+00:01:15,880 --> 00:01:21,320
+método. Vemos que el patrón que se
+
+33
+00:01:19,080 --> 00:01:22,560
+encuentra diseñado para el robot
+
+34
+00:01:21,320 --> 00:01:25,200
+número 1, pues, es simplemente una
+
+35
+00:01:22,560 --> 00:01:26,600
+cuadrícula de 9 items el robot número
+
+36
+00:01:25,200 --> 00:01:29,000
+2 también son 9 ítems, pero con
+
+37
+00:01:26,600 --> 00:01:32,159
+ángulos y en un orden distinto, mientras
+
+38
+00:01:29,000 --> 00:01:35,200
+que el robot número 3 siguen
+
+39
+00:01:32,159 --> 00:01:39,399
+siendo 9 items, pero
+
+40
+00:01:35,200 --> 00:01:42,280
+realiza 3 filas de 3 items cada una
+
+41
+00:01:39,399 --> 00:01:42,280
+a 3 niveles
+
+42
+00:01:43,240 --> 00:01:49,200
+digamos. Una vez acabado el
+
+43
+00:01:45,920 --> 00:01:51,520
+patrón, el robot vuelve a repetirlo
+
+44
+00:01:49,200 --> 00:01:53,000
+encima del ya creado porque la
+
+45
+00:01:51,520 --> 00:01:55,640
+plataforma de desarrollo de aplicaciones
+
+46
+00:01:53,000 --> 00:01:57,119
+multirrobot es abierta y no tiene
+
+47
+00:01:55,640 --> 00:01:59,000
+ninguna maniobra para evacuar este
+
+48
+00:01:57,119 --> 00:02:01,680
+producto. Esta maniobra se tendría que
+
+49
+00:01:59,000 --> 00:02:03,840
+crear a propósito en función de una serie
+
+50
+00:02:01,680 --> 00:02:07,399
+de condiciones
+
+51
+00:02:03,840 --> 00:02:08,840
+externas. Bien, si queremos ver el
+
+52
+00:02:07,399 --> 00:02:12,640
+resultado en tres
+
+53
+00:02:08,840 --> 00:02:12,640
+dimensiones, podemos venir
+
+54
+00:02:17,680 --> 00:02:21,680
+aquí y verlo en tres dimensiones;
+
+55
+00:02:20,480 --> 00:02:23,200
+seguramente ahora los robots están
+
+56
+00:02:21,680 --> 00:02:25,920
+detenidos porque ya hemos llegado al
+
+57
+00:02:23,200 --> 00:02:28,360
+total de objetos que
+
+58
+00:02:25,920 --> 00:02:31,239
+permite gestionar la cinta de entrega.
+
+59
+00:02:28,360 --> 00:02:32,640
+Vamos a borrarlos, ahí está, y así podemos
+
+60
+00:02:31,239 --> 00:02:36,840
+volver a
+
+61
+00:02:32,640 --> 00:02:36,840
+reiniciar. Y ahí vemos la
+
+62
+00:02:36,959 --> 00:02:43,440
+operativa. Vamos a darle la vuelta, quizás
+
+63
+00:02:39,400 --> 00:02:43,440
+se verá mejor así, la
+
+64
+00:02:43,720 --> 00:02:48,440
+ampliamos. Vemos que los orden el orden,
+
+65
+00:02:46,400 --> 00:02:51,920
+digamos, de creación de cada patrón es
+
+66
+00:02:48,440 --> 00:02:53,239
+distinto: aquí estamos creando 3
+
+67
+00:02:51,920 --> 00:02:55,560
+niveles
+
+68
+00:02:53,239 --> 00:02:58,400
+de 
+
+69
+00:02:55,560 --> 00:03:01,840
+items aquí solamente tenemos 1 y otro
+
+70
+00:02:58,400 --> 00:03:01,840
+aquí pero con ángulos distintos.
+
+71
+00:03:02,920 --> 00:03:08,159
+Bien, volvamos al
+
+72
+00:03:04,599 --> 00:03:09,879
+programa. El diseño de estos patrones se
+
+73
+00:03:08,159 --> 00:03:12,000
+tiene que realizar desde el panel de
+
+74
+00:03:09,879 --> 00:03:15,480
+configuración: volvemos al modo
+
+75
+00:03:12,000 --> 00:03:18,360
+automático y pulsando sobre el botón
+
+76
+00:03:15,480 --> 00:03:21,159
+"Definición" del robot en cuestión. En este
+
+77
+00:03:18,360 --> 00:03:22,840
+caso vemos que tenemos disponibles 10
+
+78
+00:03:21,159 --> 00:03:24,680
+items, no necesariamente tenemos que
+
+79
+00:03:22,840 --> 00:03:26,280
+emplearlos todos; para eso está la
+
+80
+00:03:24,680 --> 00:03:29,480
+columna de habilitar, aquí en este caso
+
+81
+00:03:26,280 --> 00:03:32,439
+solo utilizamos 9, y cada item tiene sus
+
+82
+00:03:29,480 --> 00:03:35,680
+propias coordenadas X, Y y Z y el
+
+83
+00:03:32,439 --> 00:03:38,360
+ángulo. El patrón se formará de forma
+
+84
+00:03:35,680 --> 00:03:40,120
+secuencial, es decir, primero realizará el
+
+85
+00:03:38,360 --> 00:03:43,879
+primer ítem, las coordenadas del primer
+
+86
+00:03:40,120 --> 00:03:43,879
+ítem, luego el segundo, el tercero, y
+
+87
+00:03:44,120 --> 00:03:50,560
+cuarto. Cada robot tiene creado su propio
+
+88
+00:03:48,000 --> 00:03:54,720
+esquema de patrón, por ejemplo, en este
+
+89
+00:03:50,560 --> 00:03:58,120
+caso tenemos ángulos distintos y en el
+
+90
+00:03:54,720 --> 00:04:00,519
+último sí que ya tenemos los 10 ítems
+
+91
+00:03:58,120 --> 00:04:02,519
+seleccionados.
+
+92
+00:04:00,519 --> 00:04:05,280
+Por esto, si vamos a fijarnos en la
+
+93
+00:04:02,519 --> 00:04:07,760
+representación 3D, aquí tenemos 3
+
+94
+00:04:05,280 --> 00:04:11,920
+filas de 3 y una última 4 que
+
+95
+00:04:07,760 --> 00:04:11,920
+tiene el décimo ítem.
+
