@@ -13,7 +13,10 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; 							/* Evita el desbordamiento horizontal en todo el cuerpo y así no aparece barra inferior de scroll*/
-	user-select: none;
+	user-select: none;         						/* Evita la selección de texto en la página (Estándar) */
+	-webkit-user-select: none; 						/* Evita la selección de texto en la página (Safari y Chrome) */
+    -moz-user-select: none;    						/* Evita la selección de texto en la página (Firefox) */
+    -ms-user-select: none;     						/* Evita la selección de texto en la página (Internet Explorer/Edge) */
 }
 
 /* Estilo del header */
@@ -153,6 +156,7 @@ footer nav ul {
     margin: 0 0 10px 0; /* Espacio inferior */
     display: flex;
     justify-content: center; /* Centra los enlaces */
+	align-items: center; /* Alinea verticalmente los elementos */
     flex-wrap: wrap; /* Permite que los enlaces se envuelvan en pantallas pequeñas */
 }
 
@@ -181,12 +185,22 @@ footer p {
     color: var(--color-texto-blanco); /* Mismo color que los enlaces */
 }
 
-/* Responsividad para el footer */
-@media (max-width: 600px) {
-    footer nav ul li {
-        margin: 5px 10px; /* Reduce el espacio entre los enlaces en pantallas pequeñas */
-    }
+/* Estilo para el ícono de LinkedIn en el footer */
+footer nav ul li a img {
+	width: 32px; /* Ajusta el tamaño del ícono según sea necesario */
+    height: 32px;
+    filter: none; /* Elimina cualquier filtro aplicado al img dentro del enlace */
+	margin-left: 15px; /* Espacio entre el ícono y el texto */
+    opacity: 1; /* Asegura que el icono se muestre completamente opaco */
+    transition: none; /* Evita transiciones de color o filtro */
 }
+
+footer nav ul li a img:hover {
+    filter: brightness(0.8);
+    transition: filter 0.3s ease;
+}
+
+
 
 /*###########################################*/
 /*				PAGINA BIENVENIDA			 */
