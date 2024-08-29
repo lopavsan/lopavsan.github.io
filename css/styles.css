@@ -190,7 +190,7 @@ footer nav ul li a img {
 	width: 32px; /* Ajusta el tamaño del ícono según sea necesario */
     height: 32px;
     filter: none; /* Elimina cualquier filtro aplicado al img dentro del enlace */
-	margin-left: 15px; /* Espacio entre el ícono y el texto */
+	
     opacity: 1; /* Asegura que el icono se muestre completamente opaco */
     transition: none; /* Evita transiciones de color o filtro */
 }
