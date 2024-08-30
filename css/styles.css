@@ -75,13 +75,15 @@ header nav ul li a {
 	box-shadow: none; 								/* Sin borde */
 }
 
-/* Agrega un fondo resaltado al pasar el ratón sobre el enlace */
-header nav ul li a:hover {
-    background-color: #00FF00; /* Verde claro */
-    color: var(--color-texto-oscuro); /* Color del texto cuando el fondo es verde claro */
-	border-radius: 15px; /* Bordes redondeados */
-	transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
-	box-shadow: 0 0 0 2px white; /* Borde blanco alrededor, no afecta el tamaño del elemento */
+@media (hover: hover) and (pointer: fine) {
+	/* Agrega un fondo resaltado al pasar el ratón sobre el enlace */
+	header nav ul li a:hover {
+		background-color: #00FF00; /* Verde claro */
+		color: var(--color-texto-oscuro); /* Color del texto cuando el fondo es verde claro */
+		border-radius: 15px; /* Bordes redondeados */
+		transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
+		box-shadow: 0 0 0 2px white; /* Borde blanco alrededor, no afecta el tamaño del elemento */
+	}
 }
 
 /* Media Query para pantallas pequeñas */
@@ -201,7 +203,6 @@ footer nav ul li a img:hover {
 }
 
 
-
 /*###########################################*/
 /*				PAGINA BIENVENIDA			 */
 /*###########################################*/
@@ -317,9 +318,11 @@ footer nav ul li a img:hover {
 }
 
 /* Efecto hover */
-.course-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-5px);
+@media (hover: hover) and (pointer: fine) {
+	.course-card:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+		transform: translateY(-5px);
+	}
 }
 
 /* Estilo para los tarjetones deshabilitados */
@@ -434,7 +437,6 @@ footer nav ul li a img:hover {
     font-size: 1em;
     line-height: 1.6;
     color: var(--color-texto-negro);
-
 }
 
 /* Listas dentro del contenedor de aspectos clave */
@@ -471,8 +473,10 @@ footer nav ul li a img:hover {
     border-radius: 4px;
 }
 
-.navegacion button:hover {
-    background-color: rgba(var(--color-fondo-oscuro),0.5);
+@media (hover: hover) and (pointer: fine) {
+	.navegacion button:hover {
+		background-color: rgba(var(--color-fondo-oscuro),0.5);
+	}
 }
 
 .navegacion button:disabled {
@@ -481,8 +485,10 @@ footer nav ul li a img:hover {
     cursor: not-allowed;
 }
 
-.navegacion button:disabled:hover {
-    background-color: #c0c0c0;
+@media (hover: hover) and (pointer: fine) {
+	.navegacion button:disabled:hover {
+		background-color: #c0c0c0;
+	}
 }
 
 /* Media Queries para pantallas más pequeñas */
@@ -595,10 +601,11 @@ footer nav ul li a img:hover {
     background-color: transparent;
 }
 
-.side-menu ul li a:hover {
-    background-color: #d0d0d0;
+@media (hover: hover) and (pointer: fine) {
+	.side-menu ul li a:hover {
+		background-color: #d0d0d0;
+	}
 }
-
 
 /*###########################################*/
 /*				PAGINAS LEGALES			     */

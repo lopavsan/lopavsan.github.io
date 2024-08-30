@@ -180,46 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Aplica el color auxiliar temporalmente
-			this.style.transition = 'none'; // Desactiva la transición temporalmente
-            this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))'; // Color auxiliar
-            this.style.color = 'var(--color-texto-blanco)'; // Color del texto cuando el fondo es auxiliar
-            this.style.boxShadow = 'none';
-
-            // Realiza el desplazamiento suave al objetivo
             const targetElement = document.querySelector(this.getAttribute('href'));
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-
-                // Forzar reflujo para restablecer el estado de hover
-                this.offsetHeight; // Esto fuerza un reflujo
-
-                // Restaurar estilos a los definidos en CSS
-				this.style.transition = ''; // Restaura la transición definida en CSS
-                this.style.backgroundColor = ''; // Restaurar estilo original
-                this.style.color = ''; // Restaurar estilo original
-                this.style.boxShadow = ''; // Restaurar estilo original
             }
         });
     });
 });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-//        anchor.addEventListener('click', function (e) {
-//             e.preventDefault();
-//             const targetElement = document.querySelector(this.getAttribute('href'));
-//             if (targetElement) {
-//                 targetElement.scrollIntoView({
-//                     behavior: 'smooth'
-// 					this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))';
-// 					this.style.color = 'var(--color-texto-blanco)';
-// 					this.style.boxShadow = 'none';
-//                 });
-//             }
-//         });
-//     });
-// });
