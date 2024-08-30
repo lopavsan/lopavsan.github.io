@@ -32,12 +32,22 @@ document.addEventListener("DOMContentLoaded", function() {
         // Pausar y reiniciar todos los videos antes de cambiar de sección
         resetAllMedia();
 
+		// Actualiza el índice actual
         currentIndex = index;
+		
+		// Muestra el capítulo correspondiente y oculta los demás
         capitulos.forEach((capitulo, i) => {
             capitulo.style.display = i === index ? 'flex' : 'none';
         });
+		
+		// Actualiza los botones de navegación
         updateButtons();
-        updateMenuHighlight(); // Llama a la función para actualizar el resaltado del menú
+		
+		// Llama a la función para actualizar el resaltado del menú
+        updateMenuHighlight();
+		
+		// Desplazar hacia la parte superior de la pantalla
+        window.scrollTo(0, 0);
     }
 
 	function closeAllTranscriptions() {
@@ -162,10 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
-
 /*######################################################################################*/
 /*		PERMITE DIRIGIRSE AL FOOTER AL PULSAR INFO EN MENU SUPERIOR DE FORMA SUAVE		*/
 /*######################################################################################*/
@@ -173,11 +179,20 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
+            
+            // Añadir la clase 'touched' al enlace actual
+            this.classList.add('touched');
+
             const targetElement = document.querySelector(this.getAttribute('href'));
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
+                
+                // Elimina la clase 'touched' después de un breve retraso
+                setTimeout(() => {
+                    this.classList.remove('touched');
+                }, 300); // Ajusta el tiempo si es necesario
             }
         });
     });
