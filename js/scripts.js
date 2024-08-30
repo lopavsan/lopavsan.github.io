@@ -180,9 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Aplica el estilo temporal al enlace clicado
-            this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))';
-            this.style.color = 'var(--color-texto-blanco)';
+            // Aplica el color auxiliar temporalmente
+			this.style.transition = 'none'; // Desactiva la transición temporalmente
+            this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))'; // Color auxiliar
+            this.style.color = 'var(--color-texto-blanco)'; // Color del texto cuando el fondo es auxiliar
             this.style.boxShadow = 'none';
 
             // Realiza el desplazamiento suave al objetivo
@@ -191,14 +192,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-            }
 
-            // Elimina el estilo temporal después de un breve retraso
-            setTimeout(() => {
+                // Forzar reflujo para restablecer el estado de hover
+                this.offsetHeight; // Esto fuerza un reflujo
+
+                // Restaurar estilos a los definidos en CSS
+				this.style.transition = ''; // Restaura la transición definida en CSS
                 this.style.backgroundColor = ''; // Restaurar estilo original
                 this.style.color = ''; // Restaurar estilo original
                 this.style.boxShadow = ''; // Restaurar estilo original
-            }, 500); // Ajusta el tiempo según el comportamiento del scroll
+            }
         });
     });
 });
