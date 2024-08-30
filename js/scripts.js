@@ -176,18 +176,16 @@ document.addEventListener('DOMContentLoaded', () => {
 /*		PERMITE DIRIGIRSE AL FOOTER AL PULSAR INFO EN MENU SUPERIOR DE FORMA SUAVE		*/
 /*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
-    // Selecciona todos los enlaces que empiezan con #
-    const anchors = document.querySelectorAll('a[href^="#"]');
-
-    anchors.forEach(anchor => {
-        // Evento para manejar clics y toques
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Añadir la clase 'touched' al enlace actual
-            anchors.forEach(a => a.classList.remove('touched')); // Elimina 'touched' de todos los enlaces
-            this.classList.add('touched'); // Añade 'touched' al enlace clicado
+            // Aplica el estilo temporal al enlace clicado
+            this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))';
+            this.style.color = 'var(--color-texto-blanco)';
+            this.style.boxShadow = 'none';
 
+            // Realiza el desplazamiento suave al objetivo
             const targetElement = document.querySelector(this.getAttribute('href'));
             if (targetElement) {
                 targetElement.scrollIntoView({
@@ -195,21 +193,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // Elimina la clase 'touched' después de un breve retraso
+            // Elimina el estilo temporal después de un breve retraso
             setTimeout(() => {
-                this.classList.remove('touched');
-            }, 300); // Ajusta el tiempo si es necesario
-        });
-
-        // Asegúrate de manejar los eventos táctiles
-        anchor.addEventListener('touchstart', function () {
-            this.classList.add('touched');
-        });
-
-        anchor.addEventListener('touchend', function () {
-            setTimeout(() => {
-                this.classList.remove('touched');
-            }, 300); // Ajusta el tiempo si es necesario
+                this.style.backgroundColor = ''; // Restaurar estilo original
+                this.style.color = ''; // Restaurar estilo original
+                this.style.boxShadow = ''; // Restaurar estilo original
+            }, 500); // Ajusta el tiempo según el comportamiento del scroll
         });
     });
 });
+
+
+// document.addEventListener('DOMContentLoaded', () => {
+//    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//        anchor.addEventListener('click', function (e) {
+//             e.preventDefault();
+//             const targetElement = document.querySelector(this.getAttribute('href'));
+//             if (targetElement) {
+//                 targetElement.scrollIntoView({
+//                     behavior: 'smooth'
+// 					this.style.backgroundColor = 'rgb(var(--color-fondo-oscuro))';
+// 					this.style.color = 'var(--color-texto-blanco)';
+// 					this.style.boxShadow = 'none';
+//                 });
+//             }
+//         });
+//     });
+// });

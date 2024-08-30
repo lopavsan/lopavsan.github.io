@@ -84,16 +84,6 @@ header nav ul li a:hover {
 	box-shadow: 0 0 0 2px white; /* Borde blanco alrededor, no afecta el tamaño del elemento */
 }
 
-/* Estilo para el estado 'touched ' */
-header nav ul li a.touched  {
-    background-color: rgb(var(--color-fondo-oscuro)); /* Restaura el color de fondo */
-    color: var(--color-texto-blanco); /* Restaura el color del texto */
-    border-radius: 15px; /* Mantiene el borde redondeado */
-    box-shadow: none; /* Elimina el borde blanco */
-	pointer-events: none; /* Deshabilita los eventos del puntero para evitar el efecto 'hover' persistente */
-    /* No hay transición para asegurar que el estilo se aplica instantáneamente */
-}
-
 /* Media Query para pantallas pequeñas */
 @media (max-width: 600px) {
 	.open-menu-button {
