@@ -90,6 +90,7 @@ header nav ul li a.touched  {
     color: var(--color-texto-blanco); /* Restaura el color del texto */
     border-radius: 15px; /* Mantiene el borde redondeado */
     box-shadow: none; /* Elimina el borde blanco */
+	pointer-events: none; /* Deshabilita los eventos del puntero para evitar el efecto 'hover' persistente */
     /* No hay transición para asegurar que el estilo se aplica instantáneamente */
 }
 

@@ -176,24 +176,40 @@ document.addEventListener('DOMContentLoaded', () => {
 /*		PERMITE DIRIGIRSE AL FOOTER AL PULSAR INFO EN MENU SUPERIOR DE FORMA SUAVE		*/
 /*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Selecciona todos los enlaces que empiezan con #
+    const anchors = document.querySelectorAll('a[href^="#"]');
+
+    anchors.forEach(anchor => {
+        // Evento para manejar clics y toques
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
+
             // Añadir la clase 'touched' al enlace actual
-            this.classList.add('touched');
+            anchors.forEach(a => a.classList.remove('touched')); // Elimina 'touched' de todos los enlaces
+            this.classList.add('touched'); // Añade 'touched' al enlace clicado
 
             const targetElement = document.querySelector(this.getAttribute('href'));
             if (targetElement) {
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
                 });
-                
-                // Elimina la clase 'touched' después de un breve retraso
-                setTimeout(() => {
-                    this.classList.remove('touched');
-                }, 300); // Ajusta el tiempo si es necesario
             }
+
+            // Elimina la clase 'touched' después de un breve retraso
+            setTimeout(() => {
+                this.classList.remove('touched');
+            }, 300); // Ajusta el tiempo si es necesario
+        });
+
+        // Asegúrate de manejar los eventos táctiles
+        anchor.addEventListener('touchstart', function () {
+            this.classList.add('touched');
+        });
+
+        anchor.addEventListener('touchend', function () {
+            setTimeout(() => {
+                this.classList.remove('touched');
+            }, 300); // Ajusta el tiempo si es necesario
         });
     });
 });
