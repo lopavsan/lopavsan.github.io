@@ -44,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
         updateButtons();
 		
 		// Llama a la función para actualizar el resaltado del menú
-        updateMenuHighlight();
-		
+        updateMenuHighlight(); 	
+			
 		// Desplazar hacia la parte superior de la pantalla
-        window.scrollTo(0, 0);
+        window.scrollTo(0, 0);	
     }
 
 	function closeAllTranscriptions() {
@@ -72,12 +72,21 @@ document.addEventListener("DOMContentLoaded", function() {
 			video.load(); // Vuelve a cargar el video para mostrar el poster
 		});
 
-		// Detener y recargar todos los iframes de YouTube y Vimeo
+		// Pausar todos los iframes de YouTube
 		const iframes = document.querySelectorAll('iframe');
 		iframes.forEach(iframe => {
-			const src = iframe.src; // Guarda la URL actual del iframe
-			iframe.src = ''; // Borra temporalmente la URL para detener el video
-			iframe.src = src; // Restablece la URL para recargar el video desde el inicio
+			const src = iframe.src;
+			if (src.includes("youtube.com")) {
+				// Pausar video usando la API de YouTube (buscar en documentación otras "func" disponibles)
+				//iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+				//iframe.contentWindow.postMessage('{"event":"command","func":"seekTo","args":["0", true]}', '*');
+				iframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+
+			} else {
+				// Para otros iframes, usar el método de recarga
+				iframe.src = '';
+				iframe.src = src;
+			}
 		});
 	}
 
@@ -179,7 +188,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-
             const targetElement = document.querySelector(this.getAttribute('href'));
             if (targetElement) {
                 targetElement.scrollIntoView({

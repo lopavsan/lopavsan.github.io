@@ -19,6 +19,20 @@ body {
     -ms-user-select: none;     						/* Evita la selección de texto en la página (Internet Explorer/Edge) */
 }
 
+/*###########################################*/
+/*			  	MENU SUPERIOR			 	 */
+/*###########################################*/
+/* Estilo del botón de apertura del menú */
+.open-menu-button {
+    font-size: 1.5em;
+    background-color: transparent; 					/* Fondo transparente */
+    color: var(--color-texto-blanco);
+    border: none;
+    cursor: pointer;
+    position: absolute; 							/* Posiciona el botón dentro del nav */
+    left: 10px; 									/* Ajusta según sea necesario */
+}
+
 /* Estilo del header */
 header {
     text-align: center;
@@ -35,17 +49,6 @@ header nav {
     display: flex; 									/* Usamos flexbox para alinear los elementos */
     justify-content: center; 						/* Centra los elementos de la barra de navegación */
     align-items: center; 							/* Alinea verticalmente los elementos */
-}
-
-/* Estilo del botón de apertura del menú */
-.open-menu-button {
-    font-size: 1.5em;
-    background-color: transparent; 					/* Fondo transparente */
-    color: var(--color-texto-blanco);
-    border: none;
-    cursor: pointer;
-    position: absolute; 							/* Posiciona el botón dentro del nav */
-    left: 10px; 									/* Ajusta según sea necesario */
 }
 
 /* Estilo de la lista de navegación */
@@ -75,6 +78,7 @@ header nav ul li a {
 	box-shadow: none; 								/* Sin borde */
 }
 
+/* Media Query para evitar ejecutar el hover en dispositivos táctiles */
 @media (hover: hover) and (pointer: fine) {
 	/* Agrega un fondo resaltado al pasar el ratón sobre el enlace */
 	header nav ul li a:hover {
@@ -100,14 +104,14 @@ header nav ul li a {
     }
 }
 
+/*###########################################*/
+/*			   ELEMENTOS CENTRALES			 */
+/*###########################################*/
 main {
     padding: 20px;
 	margin-bottom: 60px; 							/* Espacio adicional para asegurar que el contenido no quede pegado al borde inferior */
 }
 
-/*###########################################*/
-/*			   ELEMENTOS COMUNES			 */
-/*###########################################*/
 /* Contenedor de sección */
 .section-container {
     display: flex;
@@ -197,11 +201,13 @@ footer nav ul li a img {
     transition: none; /* Evita transiciones de color o filtro */
 }
 
-footer nav ul li a img:hover {
-    filter: brightness(0.8);
-    transition: filter 0.3s ease;
+/* Media Query para evitar ejecutar el hover en dispositivos táctiles */
+@media (hover: hover) and (pointer: fine) {
+	footer nav ul li a img:hover {
+		filter: brightness(0.8);
+		transition: filter 0.3s ease;
+	}
 }
-
 
 /*###########################################*/
 /*				PAGINA BIENVENIDA			 */
@@ -340,6 +346,14 @@ footer nav ul li a img:hover {
 .course-title {  
     max-width: 800px;   /* Modifica el ancho del contenedor del título (esto hereda de .section-title) */
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .section-title {
+        font-size: 1.5em; /* Tamaño de letra reducido para pantallas pequeñas */
+    }
+}
+
 /*-------------------------------------------*/
 /*   				VIDEO   				 */
 /*-------------------------------------------*/
