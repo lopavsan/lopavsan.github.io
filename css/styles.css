@@ -350,7 +350,7 @@ footer nav ul li a img {
 /* Media query para pantallas pequeñas */
 @media (max-width: 600px) {
     .section-title {
-        font-size: 1.5em; /* Tamaño de letra reducido para pantallas pequeñas */
+        font-size: 1.8em; /* Tamaño de letra reducido para pantallas pequeñas */
     }
 }
 
