@@ -71,7 +71,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/Ye8kGMEPsC0?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0" 
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que muestra una presentación general de la plataforma de desarrollo de aplicaciones multirrobot."> 
@@ -128,7 +128,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/hedSwOl6yJs?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0" 
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que muestra cómo modificar la cantidad total de robots que nuestra aplicación controlará."> 
@@ -150,8 +150,8 @@
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p>La plataforma de desarrollo multirrobot se encuentra preparada para trabajar con hasta 4 robots por lo que será necesario modificar su código para trabajar con el número de robots que realmente tendrá la aplicación.</p>
-					<p>El número de robots a utilizar debe establecerse en tiempo de programación modificando el valor de una constante. No es posible hacerlo en tiempo de ejecución desde ninguno de los parámetros existentes en las pantallas de configuración ni tampoco desde una HMI.</p>
+<!-- OK -->			<p>La plataforma de desarrollo multirrobot permite gestionar aplicaciones que utilicen entre 1 y 4 robots. Por defecto, está configurada para trabajar con 4 robots.</p>
+					<p>El número de robots a utilizar debe establecerse en el código modificando el valor de una constante. No es posible cambiar este número en tiempo de ejecución a través de los parámetros disponibles en las pantallas de configuración ni desde una HMI.</p>
 					<p>El código correspondiente a los robots no utilizados permanecerá intacto pero no será ejecutado por lo que no consumirá recursos del controlador</p>
 				</div>	
 			</div>
@@ -161,7 +161,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/RArm8MBSBnw?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0" 
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que muestra cómo modificar la referencia del robot seleccionado."> 
@@ -183,9 +183,9 @@
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p>Es fundamental comenzar seleccionando el robot específico (en este caso, el robot número 2) y confirmando su radio de trabajo actual. Este paso asegura que cualquier cambio se aplique al robot correcto, evitando errores en la configuración.</p>
-					<p>Después de acceder a la sección de cambio de referencia del panel de configuración, es recomendable utilizar los filtros disponibles, como el radio de trabajo, para localizar una referencia que se ajuste a las necesidades específicas de la aplicación</p>
-					<p>Para que los cambios tengan efecto, es necesario reiniciar el controlador. Este paso garantiza que la nueva configuración se aplique correctamente. Tras reiniciar, se debe verificar que el robot modificado tiene el nuevo radio de trabajo, confirmando así la efectividad del cambio.</p>
+<!-- OK -->			<p>El primer paso consiste en seleccionar, mediante el selector ubicado en la sección superior, el número del robot cuya referencia se desea modificar. Para mayor seguridad, se recomienda acceder al panel de modo automático para comprobar el color del área de trabajo de los robots, lo que permitirá identificar con certeza cuál es el activo. Este procedimiento es crucial para asegurar que los cambios se apliquen al robot correcto, evitando posibles errores en la configuración.</p>
+					<p>Para acceder a la pantalla de cambio de referencia, dirígete al panel de configuración y pulsa sobre la imagen del robot o su referencia. Desde allí, podrás seleccionar la referencia deseada de la lista de opciones disponibles o utilizar diversos filtros (radio de trabajo, con o sin eje de giro, etc.) para aislar las que mejor se ajusten a la aplicación.</p>
+					<p>Para que los cambios tengan efecto, es necesario reiniciar el controlador. Este paso garantiza que la nueva configuración se aplique correctamente.</p>
 				</div>	
 			</div>
 
@@ -194,7 +194,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/5pyYlC0y8O4?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->					
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe la composición de las pantallas de visualización utilizadas por la aplicación."> 
@@ -226,8 +226,15 @@
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p>Es posible acceder a las pantallas de visualización desde el entorno de desarrollo haciendo doble clic en "Vis_principal" o utilizando un navegador web utilizando la dirección http://ip_controlador:8080/webvisu.htm”.</p>
-					<p>Las pantallas de visualización se dividen en cuatro sectores: uno superior para ordenar el modo de trabajo y seleccionar el robot sobre el que se desea interactuar, uno lateral izquierdo para seleccionar qué información queremos mostrar en el panel central, uno central con información y parámetros relativos a un modo de trabajo determinado (según lo seleccionado en el sector izquierdo) y uno lateral derecho para visualizar el estado de las entradas/salidas del controlador o el contenido de los registros de desplazamiento de las cintas de recogida y entrega.</p>
+<!-- OK -->			<p>Para acceder a las pantallas de visualización, puedes hacerlo desde el entorno de desarrollo haciendo doble clic en "Vis_Principal" o mediante un navegador web usando la dirección http://IP_Controlador:8080/webvisu.htm.</p>
+					<p>Las pantallas de visualización se dividen en cuatro secciones:
+						<ul>
+							<li><strong>Superior:</strong> Permite ordenar el modo de trabajo, seleccionar el robot con el que se desea interactuar y monitorear la posición cartesiana del robot activo.</li>
+							<li><strong>Lateral izquierdo:</strong> Ofrece opciones para seleccionar la categoría de información que se mostrará en el panel central (como modos de trabajo, alarmas, recetas, etc.).</li>
+							<li><strong>Central:</strong> Muestra la información y permite modificar los parámetros relativos a la categoría seleccionada en la sección lateral izquierda.</li>
+							<li><strong>Lateral derecho:</strong> Permite visualizar el estado de las entradas/salidas del controlador y el contenido de los registros de desplazamiento de las cintas de recogida y entrega.</li>
+						</ul>
+					</p>
 					<p>Es posible escoger el idioma de las pantallas de visualización entre tres opcione (español, inglés y portugués).</p>
 				</div>	
 			</div>
@@ -237,7 +244,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/5EPx4OiCEzk?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->					
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones básicas disponibles en el panel de modo impulsos"> 
@@ -263,10 +270,10 @@
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p><strong>Activación del Modo Impulsos:</strong> Para utilizar el modo de trabajo de impulsos, es necesario seleccionar el robot correspondiente, en este caso el número uno, y activar este modo mediante el botón ubicado en la pantalla de visualización. Esta acción debe ser confirmada tanto con el piloto del robot como con la etiqueta visible en el área de trabajo, asegurando que el robot esté operando en el modo correcto.</p>
-					<p><strong>Operaciones Básicas Disponibles:</strong> Una vez en el panel de impulsos, se pueden realizar tres tipos de operaciones básicas. Estas incluyen movimientos en los ejes primitivos del robot, desplazamientos cartesianas respecto al TCP (punto central de la herramienta), y la rotación del eje auxiliar si el robot está equipado con uno. Cada tipo de operación permite diferentes ajustes y manipulaciones del robot, facilitando una amplia gama de movimientos y configuraciones.</p>
-					<p><strong>Modificación de Parámetros de Movimiento:</strong> El panel de impulsos también ofrece la posibilidad de ajustar parámetros como la velocidad y la distancia de movimiento. Por ejemplo, se puede incrementar la velocidad de desplazamiento en el eje X o limitar el movimiento a una distancia específica. Esto resulta particularmente útil para hacer ajustes precisos y para realizar pruebas que requieren un control exacto del movimiento del robot.</p>
-					<p><strong>Uso en Calibración y Puesta en Marcha:</strong> El modo impulsos es especialmente valioso durante la puesta en marcha del robot y para la calibración de sistemas como cámaras de visión artificial. Permite probar cada eje del robot de forma independiente, ajustar velocidades y distancias con precisión, y garantizar que el robot esté en la posición correcta para operaciones de calibración y ajuste fino.</p>
+<!-- OK -->			<p><strong>Activación:</strong> Dirígete al menú en la sección superior para seleccionar el robot deseado. Luego, cambia al modo impulsos utilizando el botón correspondiente. Confirma que el robot ha aceptado el nuevo modo comprobando el piloto situado a la izquierda del botón de cambio de modo y la etiqueta ubicada en la parte superior de la representación del área de trabajo del robot en el panel automático.</p>
+					<p><strong>Operaciones:</strong> Una vez en el panel de impulsos, al que se accede a través del botón correspondiente de la sección lateral izquierda, se pueden realizar tres tipos de operaciones básicas: desplazamientos de los ejes primitivos del robot, desplazamientos cartesianos del TCP (punto central de la herramienta), y rotación del eje auxiliar si el robot está equipado con uno.</p>
+					<p><strong>Parámetros:</strong> El panel de impulsos también ofrece la posibilidad de ajustar parámetros como la velocidad y la distancia de movimiento. Por ejemplo, se puede incrementar la velocidad de desplazamiento en el eje X o limitar el movimiento en impulsos a una distancia máxima. Esto resulta particularmente útil para hacer ajustes precisos y para realizar pruebas que requieren un control exacto del movimiento del robot.</p>
+					<p><strong>Uso:</strong> El modo impulsos es especialmente útil durante la puesta en marcha del robot, ya que permite identificar ejes, comprobar los sentidos de movimiento y calibrar el centro de coordenadas del robot en relación con el centro de coordenadas de las cintas y/o cámaras de visión artificial.</p>
 				</div>	
 			</div>
 
@@ -275,7 +282,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/k7e_zOWrzlQ?modestbranding=1&rel=0&enablejsapi=1"  
 					frameborder="0" 
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones avanzadas disponibles en el panel de modo impulsos"> 
@@ -307,10 +314,10 @@
 				
 				<div class="aspectos-container">
 					<h3>Aspectos Clave</h3>
-					<p><strong>Activación del Modo Impulsos:</strong> Para trabajar con las opciones avanzadas en el modo Impulsos, primero debes activar este modo en el robot y confirmar que está activo tanto a través del piloto correspondiente como de la etiqueta visible en el área de trabajo del robot. Esto establece el entorno necesario para realizar operaciones avanzadas.</p>
-					<p><strong>Creación y Análisis de Trayectorias Lineales:</strong> En el modo Impulsos, las trayectorias se componen exclusivamente de segmentos lineales. Para construir una trayectoria, se concatenan varios segmentos, que definen el camino del robot desde un punto de inicio hasta un destino. Puedes revisar la longitud total de la trayectoria y el tiempo estimado para completarla, lo cual es crucial para monitorear el progreso y hacer ajustes según sea necesario.</p>
-					<p><strong>Suavización de Trayectorias y Movimiento del Eje Auxiliar:</strong> Al definir trayectorias, el robot puede aplicar una suavización entre segmentos usando un parámetro de zona. Esto evita transiciones bruscas y permite un movimiento más fluido. Además, es posible incorporar movimientos del eje auxiliar de rotación dentro de la trayectoria, sincronizándolos con el movimiento general del robot para realizar ajustes precisos en su orientación durante el trayecto.</p>
-					<p><strong>Eliminación y Ajuste de Trayectorias:</strong> Es posible eliminar trayectorias del buffer de movimientos utilizando comandos específicos, como borrar desde el segmento cero. También se pueden ajustar trayectorias existentes, por ejemplo, eliminando zonas de suavización para que el robot se detenga en puntos específicos. Estos ajustes permiten una mayor flexibilidad y precisión en la programación de movimientos del robot.</p>
+<!-- OK -->			<p><strong>Activación:</strong> Dirígete al menú en la sección superior para seleccionar el robot deseado. Luego, cambia al modo impulsos utilizando el botón correspondiente. Confirma que el robot ha aceptado el nuevo modo comprobando el piloto situado a la izquierda del botón de cambio de modo y la etiqueta ubicada en la parte superior de la representación del área de trabajo del robot en el panel automático.</p>
+					<p><strong>Creación de trayectorias:</strong> Una de las operaciones más destacadas es la creación de trayectorias mediante la concatenación de segmentos lineales. Para ello, deberás pulsar, en el orden deseado, el botón que ordena dirigir al robot hacia un punto clave previamente definido en el casillero correspondiente. Cada pulsación generará un segmento que se almacenará en un buffer o registro de movimientos, aunque esto no hará que el robot se desplace aun. Una vez finalizada la creación de la trayectoria, podrás desplazarte a lo largo de ella en uno u otro sentido en modo impulsos (mientras se pulsa el botón correspondiente). Durante el movimiento, podrás comprobar la longitud total de la trayectoria y el tiempo estimado para completarla.</p>
+					<p><strong>Optimización de trayectorias:</strong> Al definir trayectorias, el robot puede aplicar una suavización entre segmentos usando el parámetro "Zona". Esto evita transiciones bruscas y permite un movimiento más fluido. Además, es posible incorporar movimientos del eje auxiliar de rotación dentro de la trayectoria, sincronizándolos con el movimiento del robot.</p>
+					<p><strong>Ajuste de trayectorias:</strong> Es posible eliminar trayectorias del buffer de movimientos utilizando comandos específicos, como borrar desde el segmento cero. También se pueden ajustar trayectorias existentes, por ejemplo, eliminando zonas de suavización para que el robot se detenga en puntos específicos.</p>
 				</div>	
 			</div>	
 
@@ -319,7 +326,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/95tx77AlOYk?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones disponibles en el panel de modo aprendizaje"> 
@@ -365,7 +372,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/yeJFuh62yWI?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->				
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones disponibles en el panel de modo limpieza"> 
@@ -400,7 +407,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/zqw2l6VHdgs?rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las posibilidades del visualizador 3D utilizado conjuntamente con la aplicación."> 
@@ -441,7 +448,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/IGlXcWXshPI?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe el apartado de simulación de ítems incluido en la aplicación"> 
@@ -486,7 +493,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/9eoQ_3-AcXQ?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe el funcionamiento del tipo de operación  Giro Asincrono del modo automático de la aplicación."> 
@@ -517,7 +524,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/O_egAatg3Xk?modestbranding=1&rel=0&enablejsapi=1" 
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones disponibles en el panel de modo limpieza"> 
@@ -556,7 +563,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/XkIW-Sa0lVw?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones de selección de ítems incluidas en la aplicación."> 
@@ -593,7 +600,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/LxAqXAZwxf0?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe el funcionamiento del tipo de entrega en punto fijo del modo automático de la aplicación."> 
@@ -626,7 +633,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/AkLb1QUprvQ?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe el funcionamiento del tipo de entrega en caja del modo automático de la aplicación."> 
@@ -657,7 +664,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/gmYwqyCr1Fs?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe el funcionamiento del tipo de entrega en cinta de canjilones del modo automático de la aplicación."> 
@@ -692,7 +699,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/xk3Bc-ihg20?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0" 
-					loading="lazy"  <!-- Lazy loading implementado -->
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las opciones de reparto de carga entre robots utilizadas por la aplicación."> 
@@ -745,7 +752,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/V773qxzeBNo?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->		
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe los diversos parámetros existentes para configurar la trayectoria utilizada en el modo automático."> 
@@ -790,7 +797,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/p4CCfO8_dn8?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->	
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que describe las posibilidades de conexión de la aplicación con un software basado en nube."> 
@@ -841,7 +848,7 @@
 				<iframe 
 					src="https://www.youtube.com/embed/mHBnvN01Xr0?modestbranding=1&rel=0&enablejsapi=1"
 					frameborder="0"
-					loading="lazy"  <!-- Lazy loading implementado -->	
+					loading="lazy"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
 					allowfullscreen 
 					aria-label="Vídeo que muestra las posibilidades de trabajar con recetas incluidas en la aplicación."> 

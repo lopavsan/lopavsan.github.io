@@ -1,4 +1,24 @@
 /*######################################################################################*/
+/*						VIDEO PRESENTACIÓN LOOP ENTRE DOS PUNTOS  					 	*/
+/*######################################################################################*/
+//const video = document.getElementById('miVideo');
+//const start = 12;  // Punto de inicio en segundos (12 para quitar el logo inicial)
+//const end = 100;   // Punto de finalización en segundos (100 para quitar el logo final)
+//
+//video.addEventListener('timeupdate', function() {
+//	if (video.currentTime >= end) {
+//		video.currentTime = start;  // Reiniciar al punto de inicio del bucle
+//		video.play();  // Continuar la reproducción
+//	}
+//});
+//
+//video.addEventListener('loadedmetadata', function() {
+//	video.currentTime = start;  // Iniciar el video desde el punto especificado
+//	video.play();
+//});
+
+	
+/*######################################################################################*/
 /*						DESPLIEGUE Y COLAPSO DE TEXTO TRANSCRIPCION						*/
 /*######################################################################################*/
 /* Esta sección de código funciona con todas las instancias del controlador de tipo transcripcion-header */

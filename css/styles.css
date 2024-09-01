@@ -226,7 +226,7 @@ footer nav ul li a img {
 .video-bienvenida {
     display: flex;
     justify-content: center; /* Centra el video horizontalmente dentro del contenedor */
-    margin: 20px 0; /* Espacio alrededor del video */
+	margin: 20px 0 20px 0; /* Espacio alrededor del video */
 }
 
 .video-bienvenida video {
