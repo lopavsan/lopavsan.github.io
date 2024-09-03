@@ -23,8 +23,9 @@
 /*######################################################################################*/
 /* Esta sección de código funciona con todas las instancias del controlador de tipo transcripcion-header */
 document.addEventListener("DOMContentLoaded", function() {
+	const courseTitle = document.querySelector('.course-title').textContent.trim();
     const headers = document.querySelectorAll('.transcripcion-header');
-	
+
     headers.forEach(header => {
         const icon = header.querySelector('.transcripcion-icon');
         const content = header.nextElementSibling;
@@ -33,14 +34,27 @@ document.addEventListener("DOMContentLoaded", function() {
             const isVisible = content.style.display === 'block';
             content.style.display = isVisible ? 'none' : 'block';
             icon.style.transform = isVisible ? 'rotate(0deg)' : 'rotate(90deg)';
+
+            // Capturar los datos del curso y la lección
+            const leccion = header.getAttribute('data-leccion');
+
+            // Agregar evento de gtag solo cuando se abre la transcripción para enviar evento a Google Analytics
+            if (!isVisible) {
+                gtag('event', 'click', {
+                    'event_category': 'Transcripción',
+                    'event_label': `Curso: ${courseTitle} - Lección: ${leccion}`
+                });
+            }
         });
     });
 });
+
 
 /*######################################################################################*/
 /*	  NAVEGACION ENTRE CLASES (DESDE BOTONES ANTERIOR/POSTERIOR Y DEDE MENU LATERAL 	*/
 /*######################################################################################*/
 document.addEventListener("DOMContentLoaded", function() {
+	const courseTitle = document.querySelector('.course-title').textContent.trim();
     const capitulos = document.querySelectorAll('.capitulo-container');
     const menuItems = document.querySelectorAll('.side-menu ul li a'); // Selecciona las opciones del menú
     let currentIndex = 0;
@@ -68,6 +82,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			
 		// Desplazar hacia la parte superior de la pantalla
         window.scrollTo(0, 0);	
+		
+		// Registra el cambio de lección en Google Analytics (mediante botonera o menú lateral)
+		gtag('event', 'change_leccion', {
+			'event_category': 'Navegación',									// Indica la categoría correspondiente al cambio de lección dentro de la formación
+			'event_label': `Curso: ${courseTitle} - Lección ${index + 1}` 	// Registra como "Ver Lección 1", "Ver Lección 2", etc.
+		});
     }
 
 	function closeAllTranscriptions() {
