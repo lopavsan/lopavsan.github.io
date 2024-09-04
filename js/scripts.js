@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Agregar evento de gtag solo cuando se abre la transcripción para enviar evento a Google Analytics
             if (!isVisible) {
-                gtag('event', 'click', {
+                gtag('event', 'open_transcripcion', {
                     'event_category': 'Transcripción',
                     'event_label': `Curso: ${courseTitle} - Lección: ${leccion}`
                 });
