@@ -201,6 +201,24 @@ footer nav ul li a img {
     transition: none; /* Evita transiciones de color o filtro */
 }
 
+.footer-line {
+	border: 0;
+	border-top: 1px solid white; 
+	width: 100%; 
+	max-width: 800px; 
+    margin: 0 auto;
+}
+
+@media (max-width: 800px) {
+	.footer-line {
+		border: 0; 
+		border-top: 1px solid white; 
+		width: 100%; 
+		max-width: 90%; 
+		margin: 0 auto;
+		}	
+}
+
 /* Media Query para evitar ejecutar el hover en dispositivos táctiles */
 @media (hover: hover) and (pointer: fine) {
 	footer nav ul li a img:hover {
@@ -470,6 +488,33 @@ footer nav ul li a img {
     margin-bottom: 0;                          /* Elimina el margen inferior del último elemento */
 }
 
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+    .capitulo-container video {
+        width: 100%; 								/* Ajusta el ancho del video al 100% en pantallas pequeñas */
+        max-width: 100%; 							/* Asegura que el video ocupe todo el ancho disponible */
+		height: auto;
+    }
+
+    .transcripcion-container,
+    .aspectos-container {
+        width: 100%; 								/* Ajusta el ancho de los contenedores al 100% */
+        max-width: 100%; 							/* Asegura que los contenedores ocupen todo el ancho disponible */
+    }
+
+    .transcripcion-content {
+        font-size: 0.9em; 							/* Reduce el tamaño del texto en pantallas pequeñas */
+    }
+
+    .aspectos-container h3 {
+        font-size: 1.2em; 							/* Reduce el tamaño del título en pantallas pequeñas */
+    }
+
+    .aspectos-container p {
+        font-size: 0.9em; 							/* Reduce el tamaño del texto descriptivo en pantallas pequeñas */
+    }
+}
+
 /*-------------------------------------------*/
 /*	  BOTONES NAVEGACION CAPITULO ANT/SIG	 */
 /*-------------------------------------------*/
@@ -505,33 +550,6 @@ footer nav ul li a img {
 	}
 }
 
-/* Media Queries para pantallas más pequeñas */
-@media (max-width: 600px) {
-    .capitulo-container video {
-        width: 100%; 								/* Ajusta el ancho del video al 100% en pantallas pequeñas */
-        max-width: 100%; 							/* Asegura que el video ocupe todo el ancho disponible */
-		height: auto;
-    }
-
-    .transcripcion-container,
-    .aspectos-container {
-        width: 100%; 								/* Ajusta el ancho de los contenedores al 100% */
-        max-width: 100%; 							/* Asegura que los contenedores ocupen todo el ancho disponible */
-    }
-
-    .transcripcion-content {
-        font-size: 0.9em; 							/* Reduce el tamaño del texto en pantallas pequeñas */
-    }
-
-    .aspectos-container h3 {
-        font-size: 1.2em; 							/* Reduce el tamaño del título en pantallas pequeñas */
-    }
-
-    .aspectos-container p {
-        font-size: 0.9em; 							/* Reduce el tamaño del texto descriptivo en pantallas pequeñas */
-    }
-}
-
 /*-------------------------------------------*/
 /*	MENU LATERAL NAVEGACION ENTRE CAPITULOS	 */
 /*-------------------------------------------*/
@@ -558,22 +576,11 @@ footer nav ul li a img {
     height: 60px;							/* Para fijar la altura de la parte de la cabecera del menú desplegable */	
 }
 
-.close-menu-button,
 .side-menu h2 {
     font-size: 1.2em;
     height: 100%;
     display: flex;
     align-items: center;
-}
-
-.close-menu-button {
-    background: none;
-    border: none;
-    color: var(--color-texto-negro);
-    font-size: 2.5em;
-    cursor: pointer;
-    z-index: 10;
-	display: none;							/* Ocultaremos el botón de cierre porque no lo usaremos más */	
 }
 
 .side-menu h2 {
