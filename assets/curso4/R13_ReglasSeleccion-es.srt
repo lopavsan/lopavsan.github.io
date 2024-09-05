@@ -1,0 +1,448 @@
+1
+00:00:01,599 --> 00:00:04,920
+En este vídeo se verá cómo funciona el
+
+2
+00:00:03,320 --> 00:00:07,640
+selector de objetivos del modo
+
+3
+00:00:04,920 --> 00:00:10,320
+automático de trabajo. En una situación
+
+4
+00:00:07,640 --> 00:00:11,920
+real, es muy probable que, en el 
+
+5
+00:00:10,320 --> 00:00:14,759
+área de trabajo del robot, esta área
+
+6
+00:00:11,920 --> 00:00:17,160
+de color verde, se encuentren varios
+
+7
+00:00:14,759 --> 00:00:19,520
+ítems a procesar y, de alguna manera, se
+
+8
+00:00:17,160 --> 00:00:22,800
+le ha decir al robot cuál de estos
+
+9
+00:00:19,520 --> 00:00:24,960
+items debe ser el primero. Para ello, se
+
+10
+00:00:22,800 --> 00:00:26,760
+utilizan una serie de reglas. Las reglas
+
+11
+00:00:24,960 --> 00:00:30,240
+que incluye la plataforma de desarrollo
+
+12
+00:00:26,760 --> 00:00:32,320
+de aplicaciones multirrobot son tres y
+
+13
+00:00:30,240 --> 00:00:34,040
+se pueden encontrar en el panel de
+
+14
+00:00:32,320 --> 00:00:36,680
+configuración, en la sección de
+
+15
+00:00:34,040 --> 00:00:39,000
+parámetros del modo automático; en esta
+
+16
+00:00:36,680 --> 00:00:40,480
+sección de aquí, en esta zona. Tenemos
+
+17
+00:00:39,000 --> 00:00:42,879
+tres para la cinta de recogida u
+
+18
+00:00:40,480 --> 00:00:46,039
+operación de "picking" y los mismos tres
+
+19
+00:00:42,879 --> 00:00:49,360
+para la cinta de entrega u operación de
+
+20
+00:00:46,039 --> 00:00:51,640
+"place". Vamos a ver un ejemplo de cada, que
+
+21
+00:00:49,360 --> 00:00:53,960
+es como mejor se entiende. Primero
+
+22
+00:00:51,640 --> 00:00:56,879
+seleccionaremos para el robot número 1
+
+23
+00:00:53,960 --> 00:01:01,239
+la regla de selección "cercana".
+
+24
+00:00:56,879 --> 00:01:03,760
+Volvemos al panel automático y vamos a
+
+25
+00:01:01,239 --> 00:01:05,159
+desinhibir el robot para que empiece a
+
+26
+00:01:03,760 --> 00:01:07,720
+procesar los ítems que se encuentran
+
+27
+00:01:05,159 --> 00:01:10,280
+dentro de su área de trabajo. Como la
+
+28
+00:01:07,720 --> 00:01:12,080
+regla de selección es la "cercana", lo que
+
+29
+00:01:10,280 --> 00:01:14,159
+va a hacer es buscar el item que se
+
+30
+00:01:12,080 --> 00:01:16,080
+encuentre más cerca del cero de
+
+31
+00:01:14,159 --> 00:01:17,720
+coordenadas del robot, que estaría
+
+32
+00:01:16,080 --> 00:01:21,240
+marcado por estos ejes cartesianos. En
+
+33
+00:01:17,720 --> 00:01:22,720
+este caso, debería ser el 4, pero el 4,
+
+34
+00:01:21,240 --> 00:01:26,640
+si nos fijamos, está marcado en
+
+35
+00:01:22,720 --> 00:01:28,600
+gris. ¿Esto por qué es? Porque este ítem ha
+
+36
+00:01:26,640 --> 00:01:30,159
+sido marcado para no ser procesado
+
+37
+00:01:28,600 --> 00:01:32,439
+debido a que se encuentra más allá
+
+38
+00:01:30,159 --> 00:01:34,759
+de los límites software de este robot.
+
+39
+00:01:32,439 --> 00:01:37,079
+Los límites software, si los vamos a...
+
+40
+00:01:34,759 --> 00:01:40,000
+hacemos una rápida visita, se encuentran
+
+41
+00:01:37,079 --> 00:01:44,159
+aquí para este robot 1 (el robot 2 tiene
+
+42
+00:01:40,000 --> 00:01:47,119
+otros límites distintos) están fijados en 
+
+43
+00:01:44,159 --> 00:01:51,079
+-400. Así que es muy probable de que este
+
+44
+00:01:47,119 --> 00:01:53,680
+ítem, el 4, tenga una cota Y inferior a
+
+45
+00:01:51,079 --> 00:01:57,479
+-400 y, por tanto, no debe ser
+
+46
+00:01:53,680 --> 00:02:00,439
+procesado. Entonces, vamos a darle al
+
+47
+00:01:57,479 --> 00:02:03,640
+botón inhibir para habilitar el
+
+48
+00:02:00,439 --> 00:02:04,960
+robot y vamos a ver lo que hace. Vemos
+
+49
+00:02:03,640 --> 00:02:06,520
+que se va al 5 porque su cero de
+
+50
+00:02:04,960 --> 00:02:08,440
+coordenadas es el más cercano al cero
+
+51
+00:02:06,520 --> 00:02:12,360
+del robot, luego al 3,
+
+52
+00:02:08,440 --> 00:02:14,920
+luego seguramente al 2,
+
+53
+00:02:12,360 --> 00:02:17,680
+al 7,
+
+54
+00:02:14,920 --> 00:02:19,560
+siempre está escogiendo aquel
+
+55
+00:02:17,680 --> 00:02:22,000
+cuyo centro se encuentre más cercano al
+
+56
+00:02:19,560 --> 00:02:23,800
+cero de coordenadas del robot, hasta
+
+57
+00:02:22,000 --> 00:02:26,280
+quedarse sin candidatos
+
+58
+00:02:23,800 --> 00:02:30,040
+viables. Bien, vamos a inhibir el robot
+
+59
+00:02:26,280 --> 00:02:30,040
+para que no trabaje y
+
+60
+00:02:30,239 --> 00:02:35,599
+hacemos llegar más ítems al área de
+
+61
+00:02:32,000 --> 00:02:37,879
+trabajo del robot. Por ejemplo, aquí.
+
+62
+00:02:35,599 --> 00:02:39,840
+Fijémonos que estos 7 ítems, que estaban
+
+63
+00:02:37,879 --> 00:02:43,640
+marcados como inviables para el robot
+
+64
+00:02:39,840 --> 00:02:45,920
+número 1 porque su cota Y está más
+
+65
+00:02:43,640 --> 00:02:49,200
+abajo del límite inferior
+
+66
+00:02:45,920 --> 00:02:51,360
+Y, han quedado desmarcados al rebasar
+
+67
+00:02:49,200 --> 00:02:54,599
+la zona de trabajo del robot número 1.
+
+68
+00:02:51,360 --> 00:02:57,120
+Esto es así porque el robot número 2
+
+69
+00:02:54,599 --> 00:02:59,120
+debe de tener otros límites software. Por
+
+70
+00:02:57,120 --> 00:03:01,200
+tanto, lo que no era válido para el robot 1
+
+71
+00:02:59,120 --> 00:03:03,599
+no tiene por que ser también inválido
+
+72
+00:03:01,200 --> 00:03:07,040
+para el robot número 2. Entonces,
+
+73
+00:03:03,599 --> 00:03:08,680
+volviendo a lo que estábamos haciendo,
+
+74
+00:03:07,040 --> 00:03:11,280
+volvemos al panel de
+
+75
+00:03:08,680 --> 00:03:15,360
+configuración y en este caso
+
+76
+00:03:11,280 --> 00:03:17,959
+seleccionamos otra regla: la "lejano
+
+77
+00:03:15,360 --> 00:03:20,760
+negativa". Lejana negativa quiere decir
+
+78
+00:03:17,959 --> 00:03:22,519
+que el robot escogerá aquel ítem cuyo
+
+79
+00:03:20,760 --> 00:03:25,319
+cero de coordenadas se encuentre más
+
+80
+00:03:22,519 --> 00:03:27,959
+lejos del cero de coordenadas del robot,
+
+81
+00:03:25,319 --> 00:03:30,080
+pero en sentido negativo respecto al eje
+
+82
+00:03:27,959 --> 00:03:32,879
+cartesiano X. En este caso, muy
+
+83
+00:03:30,080 --> 00:03:36,439
+probablemente será el 1. Vamos a
+
+84
+00:03:32,879 --> 00:03:38,400
+verlo. Exacto. Luego, el siguiente que va a
+
+85
+00:03:36,439 --> 00:03:41,280
+procesar será el 13 porque es el
+
+86
+00:03:38,400 --> 00:03:43,680
+siguiente viable más lejano en negativo
+
+87
+00:03:41,280 --> 00:03:43,680
+y
+
+88
+00:03:45,879 --> 00:03:50,760
+así. El 8, dependiendo si está dentro o
+
+89
+00:03:48,959 --> 00:03:53,280
+fuera del área verde, pues lo procesará o
+
+90
+00:03:50,760 --> 00:03:56,879
+no. En este caso, está fuera por un pelín,
+
+91
+00:03:53,280 --> 00:04:01,120
+no lo procesa. Vamos a inhibir y hacemos
+
+92
+00:03:56,879 --> 00:04:01,120
+llegar más ítems al área de trabajo.
+
+93
+00:04:03,720 --> 00:04:08,599
+Vale, ya tenemos unos cuantos y vamos a
+
+94
+00:04:07,120 --> 00:04:12,599
+seleccionar la última de las reglas que
+
+95
+00:04:08,599 --> 00:04:15,040
+nos faltaba por probar: la "lejana
+
+96
+00:04:12,599 --> 00:04:17,639
+positiva", que es exactamente igual que lo
+
+97
+00:04:15,040 --> 00:04:20,519
+que hemos visto hasta ahora, pero cogerá
+
+98
+00:04:17,639 --> 00:04:22,520
+el ítem cuyo centro se encuentre más
+
+99
+00:04:20,519 --> 00:04:25,040
+lejos del cero de coordenadas del robot,
+
+100
+00:04:22,520 --> 00:04:27,400
+pero en sentido positivo. Es decir, en
+
+101
+00:04:25,040 --> 00:04:30,280
+este caso sería el 2. Vamos a habilitar
+
+102
+00:04:27,400 --> 00:04:34,080
+el robot
+
+103
+00:04:30,280 --> 00:04:34,080
+y así... ahora será el 3.
+
+104
+00:04:37,800 --> 00:04:42,680
+No hay una regla de selección mejor
+
+105
+00:04:40,680 --> 00:04:46,000
+que otra; depende de la aplicación y lo
+
+106
+00:04:42,680 --> 00:04:48,240
+que se pretenda de ella. En este caso se
+
+107
+00:04:46,000 --> 00:04:52,919
+incluyen estas tres porque son las más
+
+108
+00:04:48,240 --> 00:04:55,479
+evidentes, pero corresponde al
+
+109
+00:04:52,919 --> 00:04:57,080
+desarrollador de la máquina decidir cuál
+
+110
+00:04:55,479 --> 00:04:58,880
+es la más correcta para su máquina y, si
+
+111
+00:04:57,080 --> 00:05:02,680
+ninguna de ellas lo es, desarrollar la
+
+112
+00:04:58,880 --> 00:05:02,680
+suya propia.
+

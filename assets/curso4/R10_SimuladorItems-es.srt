@@ -1,0 +1,1052 @@
+1
+00:00:00,919 --> 00:00:04,440
+En este vídeo se describirá el simulador
+
+2
+00:00:02,639 --> 00:00:06,200
+de items integrado en la plataforma. Para
+
+3
+00:00:04,440 --> 00:00:08,400
+conocer sus opciones nos dirigiremos al
+
+4
+00:00:06,200 --> 00:00:09,519
+panel de configuración y a la sección
+
+5
+00:00:08,400 --> 00:00:11,960
+donde se encuentran los parámetros
+
+6
+00:00:09,519 --> 00:00:14,400
+relativos a la captura y simulación de
+
+7
+00:00:11,960 --> 00:00:16,199
+ítems. Los primeros parámetros a tener en
+
+8
+00:00:14,400 --> 00:00:18,160
+cuenta corresponden con las dimensiones
+
+9
+00:00:16,199 --> 00:00:20,199
+del propio ítem, que pueden ser distintas
+
+10
+00:00:18,160 --> 00:00:22,880
+según pertenezca a la cinta de recogida o a
+
+11
+00:00:20,199 --> 00:00:25,359
+la de entrega, y el número de ítems a
+
+12
+00:00:22,880 --> 00:00:27,439
+generar en cada disparo. También es
+
+13
+00:00:25,359 --> 00:00:30,240
+importante el modo de trabajo del propio
+
+14
+00:00:27,439 --> 00:00:31,439
+simulador que puede ser continuo, esto es,
+
+15
+00:00:30,240 --> 00:00:33,640
+que el disparo se produzca de forma
+
+16
+00:00:31,439 --> 00:00:36,879
+automática cada cierto avance de la
+
+17
+00:00:33,640 --> 00:00:38,600
+cinta o modo no continuo: que sea el
+
+18
+00:00:36,879 --> 00:00:40,000
+propio usuario el que genere el disparo
+
+19
+00:00:38,600 --> 00:00:43,079
+cuando lo estime
+
+20
+00:00:40,000 --> 00:00:46,160
+oportuno. Con estos parámetros vamos a
+
+21
+00:00:43,079 --> 00:00:47,840
+ver el funcionamiento del simulador.
+
+22
+00:00:46,160 --> 00:00:49,920
+Si nos vamos al panel automático en la
+
+23
+00:00:47,840 --> 00:00:52,120
+sección inferior, vemos que existen dos
+
+24
+00:00:49,920 --> 00:00:55,280
+botones: "crear ítem bueno" y "crear ítem
+
+25
+00:00:52,120 --> 00:00:57,079
+malo". Si creamos un item bueno veremos
+
+26
+00:00:55,280 --> 00:00:58,920
+que este aparece en el cero de
+
+27
+00:00:57,079 --> 00:01:00,559
+coordenadas de la cinta de recogida a la
+
+28
+00:00:58,920 --> 00:01:04,760
+cual pertenece.
+
+29
+00:01:00,559 --> 00:01:07,240
+Todos los ítems se crean respecto
+
+30
+00:01:04,760 --> 00:01:11,040
+al cero de coordenadas de la cinta a la
+
+31
+00:01:07,240 --> 00:01:13,880
+cual pertenecen. En este caso, en este eje
+
+32
+00:01:11,040 --> 00:01:16,560
+de coordenadas. Vamos a arrancar la cinta 1
+
+33
+00:01:13,880 --> 00:01:18,040
+y también vamos a arrancar la cinta 2
+
+34
+00:01:16,560 --> 00:01:20,520
+para que se vayan evacuando los
+
+35
+00:01:18,040 --> 00:01:21,400
+productos. Este ítem, al ser creado como
+
+36
+00:01:20,520 --> 00:01:23,320
+bueno,
+
+37
+00:01:21,400 --> 00:01:25,560
+se
+
+38
+00:01:23,320 --> 00:01:28,240
+considera válido para ser procesado por
+
+39
+00:01:25,560 --> 00:01:30,119
+el robot, por tanto, el robot, cuando se
+
+40
+00:01:28,240 --> 00:01:33,759
+encuentra en la zona, digamos, de trabajo,
+
+41
+00:01:30,119 --> 00:01:36,479
+en la zona verde, lo va a buscar. Un ítem
+
+42
+00:01:33,759 --> 00:01:40,000
+malo no es procesable por el robot, por
+
+43
+00:01:36,479 --> 00:01:41,799
+tanto, el robot, lo dejará pasar. Que un
+
+44
+00:01:40,000 --> 00:01:44,719
+ítem sea bueno o se clasifique como bueno
+
+45
+00:01:41,799 --> 00:01:46,640
+o malo es labor de la cámara de visión
+
+46
+00:01:44,719 --> 00:01:49,320
+artificial, según los criterios que se
+
+47
+00:01:46,640 --> 00:01:50,920
+definan para la
+
+48
+00:01:49,320 --> 00:01:54,000
+aplicación.
+
+49
+00:01:50,920 --> 00:01:56,079
+Bien, vamos a repetir la operación, pero
+
+50
+00:01:54,000 --> 00:01:59,719
+en este caso, en cada disparo, vamos a
+
+51
+00:01:56,079 --> 00:01:59,719
+generar tres items.
+
+52
+00:02:01,840 --> 00:02:06,920
+Si repetimos la operación vemos que los
+
+53
+00:02:04,520 --> 00:02:08,599
+tres ítems se han generado, como se ha
+
+54
+00:02:06,920 --> 00:02:10,759
+comentado anteriormente, en el cero de
+
+55
+00:02:08,599 --> 00:02:13,680
+coordenadas de la cinta de recogida, esto es,
+
+56
+00:02:10,759 --> 00:02:15,400
+uno encima del otro. Esto es una
+
+57
+00:02:13,680 --> 00:02:18,200
+situación que, habitualmente, no se suele
+
+58
+00:02:15,400 --> 00:02:19,160
+dar en la vida real y no es, por lo
+
+59
+00:02:18,200 --> 00:02:22,920
+general,
+
+60
+00:02:19,160 --> 00:02:26,040
+deseable. Por tanto, se han añadido una
+
+61
+00:02:22,920 --> 00:02:28,640
+serie de parámetros que permiten generar
+
+62
+00:02:26,040 --> 00:02:31,360
+ítems alrededor del cero de coordenadas
+
+63
+00:02:28,640 --> 00:02:34,080
+con una cierta variabilidad tanto en X
+
+64
+00:02:31,360 --> 00:02:38,920
+como en la coordenada Y como, incluso, en
+
+65
+00:02:34,080 --> 00:02:42,360
+el ángulo. Por ejemplo, vamos a
+
+66
+00:02:38,920 --> 00:02:45,400
+probar añadiendo una variabilidad de 200
+
+67
+00:02:42,360 --> 00:02:47,959
+alrededor del cero del eje
+
+68
+00:02:45,400 --> 00:02:51,159
+coordenado X lo cual quiere decir que,
+
+69
+00:02:47,959 --> 00:02:52,920
+cada ítem, adoptará una X aleatoria
+
+70
+00:02:51,159 --> 00:02:56,120
+entre estos dos
+
+71
+00:02:52,920 --> 00:02:59,120
+rangos. La Y también tendrá su
+
+72
+00:02:56,120 --> 00:02:59,120
+variabilidad
+
+73
+00:03:01,920 --> 00:03:06,799
+y aprovecharemos para darle, incluso
+
+74
+00:03:03,920 --> 00:03:10,480
+también, un ángulo al ítem,
+
+75
+00:03:06,799 --> 00:03:15,120
+un ángulo alrededor del eje Z
+
+76
+00:03:10,480 --> 00:03:18,599
+entre -45º  y +45º de forma
+
+77
+00:03:15,120 --> 00:03:21,640
+aleatoria. Vamos a
+
+78
+00:03:18,599 --> 00:03:22,920
+probar y vamos generando disparos de
+
+79
+00:03:21,640 --> 00:03:25,720
+forma
+
+80
+00:03:22,920 --> 00:03:27,360
+manual. Vemos que los items ya no se
+
+81
+00:03:25,720 --> 00:03:30,599
+superponen y
+
+82
+00:03:27,360 --> 00:03:32,840
+circulan con una cierta separación
+
+83
+00:03:30,599 --> 00:03:32,840
+entre
+
+84
+00:03:34,000 --> 00:03:39,760
+ellos; aquí se ve más claramente,
+
+85
+00:03:36,920 --> 00:03:42,400
+asemejándose más a lo que nos podríamos
+
+86
+00:03:39,760 --> 00:03:46,239
+encontrar en la vida
+
+87
+00:03:42,400 --> 00:03:48,840
+real. Bien, ahora vamos a probar el modo
+
+88
+00:03:46,239 --> 00:03:52,799
+continuo. Si lo activamos, veremos que
+
+89
+00:03:48,840 --> 00:03:56,760
+cada 200 mm de avance de cinta se genera
+
+90
+00:03:52,799 --> 00:03:59,799
+un pulso de duración 100 milisegundos
+
+91
+00:03:56,760 --> 00:04:02,319
+que desemboca en la generación de tres
+
+92
+00:03:59,799 --> 00:04:05,360
+ítems sobre la cinta de recogida con
+
+93
+00:04:02,319 --> 00:04:08,879
+esta variabilidad en sus
+
+94
+00:04:05,360 --> 00:04:08,879
+coordenadas. Vamos a
+
+95
+00:04:09,760 --> 00:04:12,760
+verlo.
+
+96
+00:04:12,840 --> 00:04:20,359
+Sí, bien, aquí los vamos
+
+97
+00:04:16,919 --> 00:04:20,359
+teniendo. Si nos
+
+98
+00:04:21,440 --> 00:04:26,080
+fijamos, los items se van generando muy
+
+99
+00:04:24,160 --> 00:04:30,080
+aleatoriamente, con una densidad más o
+
+100
+00:04:26,080 --> 00:04:31,720
+menos elevada, pero algunos de ellos
+
+101
+00:04:30,080 --> 00:04:34,000
+se pueden encontrar
+
+102
+00:04:31,720 --> 00:04:36,199
+superpuestos. Por ejemplo aquí, estos dos
+
+103
+00:04:34,000 --> 00:04:39,199
+de aquí están superpuestos o
+
+104
+00:04:36,199 --> 00:04:41,560
+aquí, aquí vemos también un grupo de
+
+105
+00:04:39,199 --> 00:04:43,280
+ellos que están superpuestos. Esto hay
+
+106
+00:04:41,560 --> 00:04:46,039
+aplicaciones, sobre todo de clasificación,
+
+107
+00:04:43,280 --> 00:04:47,759
+en las que puede ser habitual
+
+108
+00:04:46,039 --> 00:04:50,600
+encontrarlo aunque no es algo que se
+
+109
+00:04:47,759 --> 00:04:53,520
+suela buscar porque luego las
+
+110
+00:04:50,600 --> 00:04:57,240
+coordenadas Z también son
+
+111
+00:04:53,520 --> 00:04:59,199
+importantes. En estos casos, a veces, para
+
+112
+00:04:57,240 --> 00:05:00,479
+simular una llegada de material más
+
+113
+00:04:59,199 --> 00:05:03,440
+realista,
+
+114
+00:05:00,479 --> 00:05:05,000
+lo que se suele hacer es falsear o
+
+115
+00:05:03,440 --> 00:05:09,000
+jugar, mejor dicho, con estos parámetros
+
+116
+00:05:05,000 --> 00:05:11,120
+para que los ítems se generen con
+
+117
+00:05:09,000 --> 00:05:12,840
+cierta aleatoriedad y cierta densidad,
+
+118
+00:05:11,120 --> 00:05:15,360
+pero que nunca se superpongan los unos a
+
+119
+00:05:12,840 --> 00:05:18,440
+los otros. Lo recomendable sería, en
+
+120
+00:05:15,360 --> 00:05:20,360
+estos casos, que el disparo no
+
+121
+00:05:18,440 --> 00:05:22,800
+corresponda con el campo de visión de la
+
+122
+00:05:20,360 --> 00:05:25,639
+cámara, como tendría que ser lo habitual,
+
+123
+00:05:22,800 --> 00:05:30,319
+sino que sea un pelín superior al
+
+124
+00:05:25,639 --> 00:05:32,479
+propio ancho del ítem y además
+
+125
+00:05:30,319 --> 00:05:34,319
+generar solamente un ítem por cada
+
+126
+00:05:32,479 --> 00:05:38,440
+disparo. Por ejemplo, si activamos aquí un
+
+127
+00:05:34,319 --> 00:05:41,440
+ítem por cada disparo y avance, o sea, 
+
+128
+00:05:38,440 --> 00:05:44,759
+disparo cada 100 mm de avance de
+
+129
+00:05:41,440 --> 00:05:47,759
+cinta, que es un pelín superior a 80,
+
+130
+00:05:44,759 --> 00:05:49,039
+obtendríamos, vemos que aún no lo
+
+131
+00:05:47,759 --> 00:05:50,280
+hemos conseguido porque aún se siguen
+
+132
+00:05:49,039 --> 00:05:53,240
+superponiendo,
+
+133
+00:05:50,280 --> 00:05:56,639
+pero se estaría generando un ítem
+
+134
+00:05:53,240 --> 00:05:58,960
+cada 100 mm de avance de cinta.
+
+135
+00:05:56,639 --> 00:06:00,400
+El problema aquí es que, como sigue
+
+136
+00:05:58,960 --> 00:06:03,479
+existiendo una cierta variabilidad
+
+137
+00:06:00,400 --> 00:06:06,840
+alrededor de la coordenada X,
+
+138
+00:06:03,479 --> 00:06:09,000
+el ítem de una foto puede
+
+139
+00:06:06,840 --> 00:06:11,520
+superponerse al de la foto anterior. En
+
+140
+00:06:09,000 --> 00:06:13,800
+este caso, para evitarlo, simplemente
+
+141
+00:06:11,520 --> 00:06:16,160
+vamos a configurarlo en cero la
+
+142
+00:06:13,800 --> 00:06:20,160
+variabilidad alrededor de la X.
+
+143
+00:06:16,160 --> 00:06:22,560
+En este caso ya vemos que la Y sigue
+
+144
+00:06:20,160 --> 00:06:27,319
+siendo aleatoria. La X siempre se genera
+
+145
+00:06:22,560 --> 00:06:29,919
+en el cero pero, al estar separado
+
+146
+00:06:27,319 --> 00:06:33,520
+100 mm con respecto a la anterior foto y
+
+147
+00:06:29,919 --> 00:06:37,000
+la siguiente, ya nunca se
+
+148
+00:06:33,520 --> 00:06:38,720
+pisan. Podríamos conseguir, por ejemplo, en
+
+149
+00:06:37,000 --> 00:06:42,319
+aplicaciones en las que el producto venga
+
+150
+00:06:38,720 --> 00:06:46,360
+en fila india y equidistante entre sí,
+
+151
+00:06:42,319 --> 00:06:50,199
+pues este efecto. Cogeríamos
+
+152
+00:06:46,360 --> 00:06:52,680
+la Y, la variabilidad alrededor del eje
+
+153
+00:06:50,199 --> 00:06:56,919
+Y, y se lo bajaríamos a
+
+154
+00:06:52,680 --> 00:06:59,199
+cero. Volveríamos y aquí veríamos como
+
+155
+00:06:56,919 --> 00:07:00,080
+los items vienen equidistantes entre sí
+
+156
+00:06:59,199 --> 00:07:03,560
+aunque no,
+
+157
+00:07:00,080 --> 00:07:07,000
+aparentemente no, parezcan hacerlo
+
+158
+00:07:03,560 --> 00:07:09,759
+debido al ángulo. La separación entre
+
+159
+00:07:07,000 --> 00:07:16,840
+los centros de los items es equidistante e
+
+160
+00:07:09,759 --> 00:07:20,120
+igual a 100, ¿a 100 o a 200?, a ver;
+
+161
+00:07:16,840 --> 00:07:24,639
+a 100. Para verlo más claramente, podemos
+
+162
+00:07:20,120 --> 00:07:24,639
+eliminar el ángulo alrededor del eje
+
+163
+00:07:25,680 --> 00:07:31,280
+Z y aquí lo
+
+164
+00:07:28,080 --> 00:07:33,599
+veríamos. Aquí ya vemos claramente que
+
+165
+00:07:31,280 --> 00:07:37,840
+los ítems se generan equidistantes entre
+
+166
+00:07:33,599 --> 00:07:39,160
+sí y vienen por la cinta de recogida en
+
+167
+00:07:37,840 --> 00:07:42,919
+fila
+
+168
+00:07:39,160 --> 00:07:46,280
+india. Hay aplicaciones en las que es así
+
+169
+00:07:42,919 --> 00:07:48,440
+y que puede servir este simulador.
+
+170
+00:07:46,280 --> 00:07:51,440
+Podemos separarlos un poco
+
+171
+00:07:48,440 --> 00:07:51,440
+más,
+
+172
+00:07:53,680 --> 00:08:00,879
+200, y así simular una situación de una
+
+173
+00:07:58,039 --> 00:08:03,520
+aplicación real de una forma
+
+174
+00:08:00,879 --> 00:08:08,159
+más, más
+
+175
+00:08:03,520 --> 00:08:12,280
+cómoda. Muy bien, además, para ajustar
+
+176
+00:08:08,159 --> 00:08:14,680
+finamente porque, el simulador, digamos, si
+
+177
+00:08:12,280 --> 00:08:17,680
+nos fijamos, el robot va a buscar el
+
+178
+00:08:14,680 --> 00:08:19,919
+producto justo en el centro del ítem
+
+179
+00:08:17,680 --> 00:08:23,080
+pero hay aplicaciones en las que esto no
+
+180
+00:08:19,919 --> 00:08:27,680
+es así entonces para ajustar un poco más el
+
+181
+00:08:23,080 --> 00:08:30,319
+trabajo de captura de items tenemos los
+
+182
+00:08:27,680 --> 00:08:32,640
+offsets que dependen o son distintos
+
+183
+00:08:30,319 --> 00:08:35,919
+para cada robot. En este caso, como el
+
+184
+00:08:32,640 --> 00:08:40,080
+ancho del item no son 80, si aplicamos un
+
+185
+00:08:35,919 --> 00:08:43,399
+offset de 40 positivos en la
+
+186
+00:08:40,080 --> 00:08:46,720
+X, veremos como el robot ya no lo coge
+
+187
+00:08:43,399 --> 00:08:49,240
+en el centro sino que lo coge justo en
+
+188
+00:08:46,720 --> 00:08:53,120
+el borde. Esto sería con 40
+
+189
+00:08:49,240 --> 00:08:56,000
+positivos. Con 40 negativos pues lo haría
+
+190
+00:08:53,120 --> 00:08:56,000
+en el otro
+
+191
+00:08:57,120 --> 00:09:02,560
+extremo. Esto puede ayudar,
+
+192
+00:09:00,200 --> 00:09:05,480
+cuando se utiliza una cámara de
+
+193
+00:09:02,560 --> 00:09:08,360
+visión artificial real, a ajustar pequeños
+
+194
+00:09:05,480 --> 00:09:09,760
+desajustes que tenga el robot con
+
+195
+00:09:08,360 --> 00:09:12,000
+respecto a esta cámara. Un robot en
+
+196
+00:09:09,760 --> 00:09:15,480
+concreto. Puede ser que un robot tenga
+
+197
+00:09:12,000 --> 00:09:19,440
+siempre un error conocido de 2 mm o de
+
+198
+00:09:15,480 --> 00:09:21,600
+3 mm respecto a la X o respecto a la Y y
+
+199
+00:09:19,440 --> 00:09:23,760
+el siguiente robot, pues, no los tenga.
+
+200
+00:09:21,600 --> 00:09:27,680
+Mediante estos parámetros podemos
+
+201
+00:09:23,760 --> 00:09:29,920
+ajustar cada robot de forma que su
+
+202
+00:09:27,680 --> 00:09:31,880
+herramienta
+
+203
+00:09:29,920 --> 00:09:33,920
+se ponga encima del producto de la misma
+
+204
+00:09:31,880 --> 00:09:35,440
+forma en todos los
+
+205
+00:09:33,920 --> 00:09:37,920
+robots.
+
+206
+00:09:35,440 --> 00:09:41,120
+Bien, otra cosa que hay que decir, antes
+
+207
+00:09:37,920 --> 00:09:44,600
+de acabar, sería que el simulador de items
+
+208
+00:09:41,120 --> 00:09:46,120
+se superpone al trabajo de una cámara de
+
+209
+00:09:44,600 --> 00:09:48,600
+visión artificial real. Esto quiere decir
+
+210
+00:09:46,120 --> 00:09:50,920
+que si, en este momento, tuviéramos una
+
+211
+00:09:48,600 --> 00:09:52,040
+cámara de visión artificial leyendo
+
+212
+00:09:50,920 --> 00:09:54,480
+objetos
+
+213
+00:09:52,040 --> 00:09:55,519
+reales estos serían dados de alta encima
+
+214
+00:09:54,480 --> 00:09:58,880
+de la cinta de
+
+215
+00:09:55,519 --> 00:10:01,200
+recogida superponiéndose a los que se
+
+216
+00:09:58,880 --> 00:10:04,360
+están dando de alta virtualmente a través del
+
+217
+00:10:01,200 --> 00:10:05,839
+simulador. Por esto es recomendable, 
+
+218
+00:10:04,360 --> 00:10:08,640
+cuando se utiliza una cámara de visión
+
+219
+00:10:05,839 --> 00:10:12,600
+artificial real leyendo producto real, no
+
+220
+00:10:08,640 --> 00:10:16,200
+utilizar el modo continuo, o sea,
+
+221
+00:10:12,600 --> 00:10:19,519
+desactivarlo y
+
+222
+00:10:16,200 --> 00:10:21,800
+utilizar el modo no continuo para
+
+223
+00:10:19,519 --> 00:10:22,680
+generar items en aquellos momentos en los
+
+224
+00:10:21,800 --> 00:10:25,240
+que
+
+225
+00:10:22,680 --> 00:10:27,040
+sospechamos que hay problemas con la
+
+226
+00:10:25,240 --> 00:10:28,959
+cámara de visión artificial, por ejemplo,
+
+227
+00:10:27,040 --> 00:10:32,320
+por una mala programación o porque se le
+
+228
+00:10:28,959 --> 00:10:34,160
+ha dado un golpe y se ha desalineado y 
+
+229
+00:10:32,320 --> 00:10:36,680
+la cámara está disparando pero no
+
+230
+00:10:34,160 --> 00:10:39,440
+aparecen, no aparecen ítems encima de la
+
+231
+00:10:36,680 --> 00:10:41,399
+cinta recogida. En estos casos, como
+
+232
+00:10:39,440 --> 00:10:43,959
+sabemos exactamente dónde se va a
+
+233
+00:10:41,399 --> 00:10:45,800
+generar el ítem a través del simulador,
+
+234
+00:10:43,959 --> 00:10:48,800
+podemos comprobar que realmente este
+
+235
+00:10:45,800 --> 00:10:50,240
+funciona y que, además, el robot va a
+
+236
+00:10:48,800 --> 00:10:52,360
+cogerlo. En la vida real no veríamos
+
+237
+00:10:50,240 --> 00:10:55,079
+ningún ítem porque es virtual pero sí
+
+238
+00:10:52,360 --> 00:10:58,839
+veríamos que aparece encima de la
+
+239
+00:10:55,079 --> 00:11:01,360
+cinta. Otra cosa que podemos hacer es que
+
+240
+00:10:58,839 --> 00:11:03,880
+cuando se genera un ítem, si miramos en
+
+241
+00:11:01,360 --> 00:11:06,639
+el buffer, digamos, de los 30
+
+242
+00:11:03,880 --> 00:11:07,240
+primeros items dados de alta en el registro
+
+243
+00:11:06,639 --> 00:11:09,760
+de
+
+244
+00:11:07,240 --> 00:11:12,959
+desplazamiento, podemos comprobar si
+
+245
+00:11:09,760 --> 00:11:14,519
+la coordenada X aparece o no aparece en
+
+246
+00:11:12,959 --> 00:11:18,240
+el registro de desplazamiento porque
+
+247
+00:11:14,519 --> 00:11:21,440
+muchas veces, debido a
+
+248
+00:11:18,240 --> 00:11:24,120
+un desajuste en la programación de
+
+249
+00:11:21,440 --> 00:11:25,680
+la cámara, quizás el ítem sí se está
+
+250
+00:11:24,120 --> 00:11:27,639
+dando de alta en el sistema, pero
+
+251
+00:11:25,680 --> 00:11:31,040
+con una Y tal que no aparece encima en
+
+252
+00:11:27,639 --> 00:11:33,800
+el dibujo de la cinta. La X sí
+
+253
+00:11:31,040 --> 00:11:35,600
+debería aparecer porque la X es algo que,
+
+254
+00:11:33,800 --> 00:11:38,440
+como el movimiento es a lo largo de
+
+255
+00:11:35,600 --> 00:11:40,760
+la X, debería aparecer siempre. Entonces,
+
+256
+00:11:38,440 --> 00:11:44,839
+en este caso, veríamos a lo mejor que no
+
+257
+00:11:40,760 --> 00:11:46,760
+hay item; sí veríamos su X pero la Y, al ser
+
+258
+00:11:44,839 --> 00:11:49,000
+muy alta o muy baja, pues hace que el ítem
+
+259
+00:11:46,760 --> 00:11:51,560
+se dibuje fuera de esta área y
+
+260
+00:11:49,000 --> 00:11:55,800
+no lo vemos con lo cual
+
+261
+00:11:51,560 --> 00:11:58,240
+nos permitiría detectar si hay algún
+
+262
+00:11:55,800 --> 00:12:02,240
+problema en la cámara de forma bastante
+
+263
+00:11:58,240 --> 00:12:02,240
+rápida.
+

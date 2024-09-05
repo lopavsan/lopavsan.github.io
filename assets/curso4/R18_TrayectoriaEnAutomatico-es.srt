@@ -1,0 +1,784 @@
+1
+00:00:01,719 --> 00:00:04,799
+En este vídeo se describirán las
+
+2
+00:00:03,159 --> 00:00:06,240
+opciones existentes para configurar la
+
+3
+00:00:04,799 --> 00:00:08,480
+trayectoria que seguirá el robot en modo
+
+4
+00:00:06,240 --> 00:00:10,480
+automático. Para ello, nos dirigiremos al
+
+5
+00:00:08,480 --> 00:00:11,599
+panel de configuración y a la sección
+
+6
+00:00:10,480 --> 00:00:14,160
+donde se encuentran los parámetros
+
+7
+00:00:11,599 --> 00:00:16,199
+relativos al modo automático de trabajo.
+
+8
+00:00:14,160 --> 00:00:17,480
+Tal como vemos en este panel, una
+
+9
+00:00:16,199 --> 00:00:20,720
+trayectoria de Pick & Place es
+
+10
+00:00:17,480 --> 00:00:23,400
+básicamente un spline cuya cota superior
+
+11
+00:00:20,720 --> 00:00:25,519
+corresponde con la cota Z de la posición
+
+12
+00:00:23,400 --> 00:00:27,080
+de reposo, y las inferiores con la cota Z
+
+13
+00:00:25,519 --> 00:00:28,960
+de los sistemas de coordenadas empleados
+
+14
+00:00:27,080 --> 00:00:30,880
+por la cinta de entrega y la de
+
+15
+00:00:28,960 --> 00:00:33,320
+recogida. Vamos a utilizar la
+
+16
+00:00:30,880 --> 00:00:34,800
+representación 3D para ver el aspecto de
+
+17
+00:00:33,320 --> 00:00:36,559
+esta trayectoria. Para ello, nos
+
+18
+00:00:34,800 --> 00:00:38,640
+dirigiremos al panel automático y
+
+19
+00:00:36,559 --> 00:00:40,960
+desinhibiremos el
+
+20
+00:00:38,640 --> 00:00:43,160
+robot. Vemos a través de la sombra que
+
+21
+00:00:40,960 --> 00:00:46,120
+deja el TCP a lo largo de la trayectoria
+
+22
+00:00:43,160 --> 00:00:48,440
+que esta es, efectivamente, un
+
+23
+00:00:46,120 --> 00:00:52,280
+spline. Este tipo de movimientos es
+
+24
+00:00:48,440 --> 00:00:54,320
+bastante adecuado para suavizar la
+
+25
+00:00:52,280 --> 00:00:56,480
+mecánica y para reducir los desgastes
+
+26
+00:00:54,320 --> 00:01:00,960
+producidos por aceleraciones bruscas
+
+27
+00:00:56,480 --> 00:01:02,559
+y cambios repentinos de sentido,
+
+28
+00:01:00,960 --> 00:01:05,080
+pero tiene algunas
+
+29
+00:01:02,559 --> 00:01:07,240
+limitaciones. La primera es que, tal como
+
+30
+00:01:05,080 --> 00:01:10,439
+está definido, no se tiene en cuenta la
+
+31
+00:01:07,240 --> 00:01:12,759
+altura del producto, del ítem, con lo
+
+32
+00:01:10,439 --> 00:01:14,119
+cual, al dirigirse hasta la cota Z del
+
+33
+00:01:12,759 --> 00:01:17,400
+sistema coordenadas empleado por las
+
+34
+00:01:14,119 --> 00:01:20,200
+cintas, esto es, hacia la superficie de la
+
+35
+00:01:17,400 --> 00:01:23,040
+de las cintas, podemos impactar contra el
+
+36
+00:01:20,200 --> 00:01:26,240
+producto. Para evitarlo, tenemos un
+
+37
+00:01:23,040 --> 00:01:30,040
+parámetro que sería este de aquí: "Altura
+
+38
+00:01:26,240 --> 00:01:31,479
+Herramienta". Si nos fijamos, el objeto que
+
+39
+00:01:30,040 --> 00:01:34,159
+representa el plato del robot se ilumina
+
+40
+00:01:31,479 --> 00:01:37,520
+en rojo cuando hay un impacto contra
+
+41
+00:01:34,159 --> 00:01:41,600
+otro objeto gráfico, en este caso el
+
+42
+00:01:37,520 --> 00:01:44,719
+ítem. Si aquí indicamos que el... que la
+
+43
+00:01:41,600 --> 00:01:46,079
+altura del ítem son 20 mm, veremos que
+
+44
+00:01:44,719 --> 00:01:48,759
+esta situación
+
+45
+00:01:46,079 --> 00:01:50,680
+cambia y ahora mismo ya no se ilumina en
+
+46
+00:01:48,759 --> 00:01:53,560
+rojo porque estamos dejando el producto
+
+47
+00:01:50,680 --> 00:01:55,759
+a una altura 20 mm de la superficie de
+
+48
+00:01:53,560 --> 00:01:55,759
+la
+
+49
+00:01:56,840 --> 00:02:02,159
+cinta. Otra desventaja que tiene este
+
+50
+00:01:59,520 --> 00:02:03,960
+tipo de movimiento curvo es que, en
+
+51
+00:02:02,159 --> 00:02:06,000
+algunas situaciones, puede ser no
+
+52
+00:02:03,960 --> 00:02:07,360
+conveniente. Por ejemplo, porque nos roce
+
+53
+00:02:06,000 --> 00:02:10,119
+el producto con la cinta cuando nos
+
+54
+00:02:07,360 --> 00:02:11,680
+estamos aproximando o si, por ejemplo,
+
+55
+00:02:10,119 --> 00:02:15,160
+estamos entregando el producto dentro de
+
+56
+00:02:11,680 --> 00:02:17,319
+una caja, pues que los brazos impacten
+
+57
+00:02:15,160 --> 00:02:19,599
+contra las paredes de esta caja. Para
+
+58
+00:02:17,319 --> 00:02:22,080
+evitarlo, tenemos el parámetro "Altura
+
+59
+00:02:19,599 --> 00:02:23,640
+Obstáculo". Podemos definir una altura de
+
+60
+00:02:22,080 --> 00:02:26,879
+obstáculo para la recogida, por ejemplo,
+
+61
+00:02:23,640 --> 00:02:28,400
+50 mm y para la entrega, pues, por ejemplo,
+
+62
+00:02:26,879 --> 00:02:31,800
+porque tenemos que entregar en una caja que
+
+63
+00:02:28,400 --> 00:02:35,840
+hace 150 mm de
+
+64
+00:02:31,800 --> 00:02:38,440
+alto. Vemos que, la trayectoria,
+
+65
+00:02:35,840 --> 00:02:41,280
+automáticamente, se ha modificado. Esta
+
+66
+00:02:38,440 --> 00:02:44,319
+curva se ha deformado para incluir una
+
+67
+00:02:41,280 --> 00:02:47,760
+sección lineal a su inicio y otra
+
+68
+00:02:44,319 --> 00:02:50,280
+también lineal a su fin. Y que esta
+
+69
+00:02:47,760 --> 00:02:53,800
+sección lineal se ejecuta tanto al
+
+70
+00:02:50,280 --> 00:02:53,800
+entrar a buscar el producto como al
+
+71
+00:02:54,840 --> 00:03:00,000
+retirarse. De esta forma, nos estamos
+
+72
+00:02:57,800 --> 00:03:02,040
+acercando y alejando linealmente,
+
+73
+00:03:00,000 --> 00:03:04,840
+perpendicularmente a la cinta, evitando el
+
+74
+00:03:02,040 --> 00:03:08,000
+problema que hemos descrito
+
+75
+00:03:04,840 --> 00:03:09,959
+anteriormente. Esto tiene, aunque es
+
+76
+00:03:08,000 --> 00:03:12,000
+positivo, tiene una limitación y es que
+
+77
+00:03:09,959 --> 00:03:13,440
+no estamos utilizando segmentos extras;
+
+78
+00:03:12,000 --> 00:03:15,599
+estamos utilizando el mismo segmento
+
+79
+00:03:13,440 --> 00:03:18,920
+curvo al que estamos deformando la
+
+80
+00:03:15,599 --> 00:03:22,519
+sección inicial y final, con lo cual no
+
+81
+00:03:18,920 --> 00:03:25,319
+podemos definir distintas velocidades en
+
+82
+00:03:22,519 --> 00:03:28,799
+distintas zonas de este segmento. No
+
+83
+00:03:25,319 --> 00:03:31,599
+podemos hacer que la sección, digamos,
+
+84
+00:03:28,799 --> 00:03:34,040
+lineal tenga una velocidad distinta que la curva.
+
+85
+00:03:31,599 --> 00:03:36,360
+Lo máximo que podemos hacer es variar la
+
+86
+00:03:34,040 --> 00:03:38,599
+velocidad a la ida y a la vuelta, pero de
+
+87
+00:03:36,360 --> 00:03:42,159
+toda la trayectoria. Por ejemplo, en la
+
+88
+00:03:38,599 --> 00:03:45,280
+recogida, ya que habitualmente el TCP va
+
+89
+00:03:42,159 --> 00:03:49,200
+sin pieza, podemos hacerlo más
+
+90
+00:03:45,280 --> 00:03:50,920
+rápido, por ejemplo 600 mm por segundo,
+
+91
+00:03:49,200 --> 00:03:53,360
+mientras que la entrega, que es cuando el
+
+92
+00:03:50,920 --> 00:03:55,640
+robot posee la pieza cogida en la
+
+93
+00:03:53,360 --> 00:03:56,959
+herramienta, pues, puede interesar hacerlo
+
+94
+00:03:55,640 --> 00:04:00,959
+a una velocidad inferior para evitar que
+
+95
+00:03:56,959 --> 00:04:03,799
+acelerones o brusquedades desprendan la
+
+96
+00:04:00,959 --> 00:04:05,519
+pieza de la herramienta. Aquí vemos el
+
+97
+00:04:03,799 --> 00:04:08,799
+el efecto en la representación 3D.
+
+98
+00:04:05,519 --> 00:04:11,560
+En un sentido vamos muy rápido y en
+
+99
+00:04:08,799 --> 00:04:11,560
+el otro vamos más
+
+100
+00:04:12,480 --> 00:04:18,239
+lento. No obstante, no
+
+101
+00:04:15,759 --> 00:04:20,040
+podemos modificar la velocidad al
+
+102
+00:04:18,239 --> 00:04:22,320
+aproximarnos para coger la pieza ni al
+
+103
+00:04:20,040 --> 00:04:24,639
+aproximarnos para dejarla. Para hacerlo,
+
+104
+00:04:22,320 --> 00:04:27,680
+tenemos otra opción que
+
+105
+00:04:24,639 --> 00:04:31,199
+sería la de "Altura Aproximación". Esto
+
+106
+00:04:27,680 --> 00:04:33,720
+sí ya añade un segmento lineal adicional
+
+107
+00:04:31,199 --> 00:04:36,160
+tanto al inicio como al final de esta
+
+108
+00:04:33,720 --> 00:04:39,280
+trayectoria. Vamos a poner una
+
+109
+00:04:36,160 --> 00:04:39,280
+aproximación de 50 mm
+
+110
+00:04:40,000 --> 00:04:46,919
+tanto a la recogida como a la
+
+111
+00:04:43,440 --> 00:04:49,479
+entrega y si nos fijamos vemos que,
+
+112
+00:04:46,919 --> 00:04:51,120
+efectivamente, los últimos 50 mm los hace
+
+113
+00:04:49,479 --> 00:04:53,880
+a otra
+
+114
+00:04:51,120 --> 00:04:57,120
+velocidad, tanto al coger como al
+
+115
+00:04:53,880 --> 00:04:58,800
+dejar. Eso sí, solamente cuando me estoy
+
+116
+00:04:57,120 --> 00:05:02,720
+aproximando para coger y cuando me estoy
+
+117
+00:04:58,800 --> 00:05:02,720
+aproximando para dejar, pero no al
+
+118
+00:05:03,120 --> 00:05:07,479
+retirarme. Esta velocidad se puede
+
+119
+00:05:05,440 --> 00:05:10,960
+modificar a través de parámetros
+
+120
+00:05:07,479 --> 00:05:14,680
+específicos. En este caso son 20 mm por
+
+121
+00:05:10,960 --> 00:05:16,759
+segundo, muy bajos, para que se note la
+
+122
+00:05:14,680 --> 00:05:18,000
+diferencia. Puede ser que nos interese 
+
+123
+00:05:16,759 --> 00:05:20,199
+que al dejar, por 
+
+124
+00:05:18,000 --> 00:05:22,039
+ejemplo, imaginemos que estamos dejando 
+
+125
+00:05:20,199 --> 00:05:25,080
+no encima de otro producto sino un poco 
+
+126
+00:05:22,039 --> 00:05:27,400
+en el aire, pues, no importe tanto esta
+
+127
+00:05:25,080 --> 00:05:30,160
+aproximación. Por tanto, a la entrega,
+
+128
+00:05:27,400 --> 00:05:32,080
+podemos hacer que entregue a la misma
+
+129
+00:05:30,160 --> 00:05:35,880
+velocidad de aproximación que la
+
+130
+00:05:32,080 --> 00:05:35,880
+trayectoria. En este caso
+
+131
+00:05:36,039 --> 00:05:40,680
+veríamos que toda la trayectoria,
+
+132
+00:05:38,360 --> 00:05:43,600
+incluida la aproximación, que la tiene, la
+
+133
+00:05:40,680 --> 00:05:47,440
+hace a igualdad de velocidad, mientras
+
+134
+00:05:43,600 --> 00:05:50,080
+que el camino de picking (de recogida)
+
+135
+00:05:47,440 --> 00:05:54,840
+hace toda la trayectoria a 600 pero los
+
+136
+00:05:50,080 --> 00:05:54,840
+últimos 50 mm los hace a 20 mm por
+
+137
+00:05:55,520 --> 00:05:59,520
+segundo. Bien,
+
+138
+00:06:00,080 --> 00:06:05,840
+tenemos también otro parámetro adicional
+
+139
+00:06:02,880 --> 00:06:08,680
+que nos permite crear capas, por eso se
+
+140
+00:06:05,840 --> 00:06:12,240
+llama "Altura Capa". Por ejemplo, ahora
+
+141
+00:06:08,680 --> 00:06:15,720
+tenemos que el objeto, pues, mide 20 mm de
+
+142
+00:06:12,240 --> 00:06:18,520
+alto pero queremos dejarlos en una caja
+
+143
+00:06:15,720 --> 00:06:23,520
+en varias capas. Por ejemplo, la siguiente
+
+144
+00:06:18,520 --> 00:06:23,520
+capa la podemos dejar a 20 mm
+
+145
+00:06:27,000 --> 00:06:33,160
+más. Si nos fijamos el producto se ha
+
+146
+00:06:30,319 --> 00:06:36,800
+dejado 20 mm por encima del anterior.
+
+147
+00:06:33,160 --> 00:06:40,759
+Podemos ir subiendo a cada
+
+148
+00:06:36,800 --> 00:06:43,479
+viaje. Ahora no nos ha dado tiempo. En el
+
+149
+00:06:40,759 --> 00:06:43,479
+siguiente si nos
+
+150
+00:06:50,919 --> 00:06:56,280
+dará. Y a medida que vamos subiendo, si
+
+151
+00:06:54,039 --> 00:06:58,680
+vemos, la
+
+152
+00:06:56,280 --> 00:07:02,000
+retirada, la retirada que hemos dicho que
+
+153
+00:06:58,680 --> 00:07:05,199
+la caja son 150, se va acortando porque
+
+154
+00:07:02,000 --> 00:07:09,680
+estamos llegando o estamos "comiéndonos" 
+
+155
+00:07:05,199 --> 00:07:09,680
+altura de obstáculo. Vamos a ponerle
+
+156
+00:07:10,319 --> 00:07:15,120
+100. Sin embargo, siempre estamos
+
+157
+00:07:13,000 --> 00:07:17,400
+conservando los 50 mm. En este caso, por
+
+158
+00:07:15,120 --> 00:07:20,199
+ejemplo, ahora mismo, tenemos una altura
+
+159
+00:07:17,400 --> 00:07:22,720
+de obstáculo de 150 y una altura de capa, es
+
+160
+00:07:20,199 --> 00:07:26,680
+decir, todos los objetos miden 100. Como
+
+161
+00:07:22,720 --> 00:07:28,160
+la aproximación son 50, 100 más 50 serían
+
+162
+00:07:26,680 --> 00:07:32,400
+igual que la altura de obstáculo, quiere
+
+163
+00:07:28,160 --> 00:07:35,160
+decir que empiezo a aproximar justo en
+
+164
+00:07:32,400 --> 00:07:39,479
+el borde de la caja. Aún así, puedo
+
+165
+00:07:35,160 --> 00:07:39,479
+hacerlo. Vamos a añadirle 120 mm
+
+166
+00:07:39,800 --> 00:07:45,599
+más. Ahora estamos aproximando ya por
+
+167
+00:07:43,240 --> 00:07:48,960
+encima de la zona del
+
+168
+00:07:45,599 --> 00:07:48,960
+obstáculo. Y 140,
+
+169
+00:07:50,280 --> 00:07:55,840
+ahora tenemos una aproximación de 40 mm
+
+170
+00:07:53,319 --> 00:07:57,479
+por encima del obstáculo y 10 dentro
+
+171
+00:07:55,840 --> 00:08:01,440
+del obstáculo. Y la
+
+172
+00:07:57,479 --> 00:08:01,440
+última serían
+
+173
+00:08:03,159 --> 00:08:10,400
+160, en este caso la aproximación se
+
+174
+00:08:07,120 --> 00:08:12,960
+sigue dando, lo único que hemos fijado
+
+175
+00:08:10,400 --> 00:08:16,919
+una velocidad muy pequeña. Vamos a
+
+176
+00:08:12,960 --> 00:08:16,919
+añadirle otra vez 20 para que se
+
+177
+00:08:18,879 --> 00:08:24,400
+note. Seguimos aproximándonos, pero La
+
+178
+00:08:22,000 --> 00:08:26,639
+retirada, ya que la altura de última capa
+
+179
+00:08:24,400 --> 00:08:30,000
+está por encima del borde de la caja,
+
+180
+00:08:26,639 --> 00:08:34,360
+tiene lugar sin sección
+
+181
+00:08:30,000 --> 00:08:36,760
+lineal. Es otra vez un spline. ¿Por qué? Porque
+
+182
+00:08:34,360 --> 00:08:38,120
+la aproximación solo tiene lugar cuando
+
+183
+00:08:36,760 --> 00:08:40,760
+me estoy aproximando para dejar el
+
+184
+00:08:38,120 --> 00:08:42,440
+objeto, pero no al retirarme y como me
+
+185
+00:08:40,760 --> 00:08:45,600
+estoy retirando por encima de la altura
+
+186
+00:08:42,440 --> 00:08:47,760
+del obstáculo, no tiene lugar ninguna...
+
+187
+00:08:45,600 --> 00:08:50,040
+ningún segmento
+
+188
+00:08:47,760 --> 00:08:51,080
+lineal. De esta forma, con estos
+
+189
+00:08:50,040 --> 00:08:52,600
+parámetros,
+
+190
+00:08:51,080 --> 00:08:55,880
+podemos
+
+191
+00:08:52,600 --> 00:08:57,440
+modificar tanto las velocidades como el
+
+192
+00:08:55,880 --> 00:08:59,560
+aspecto de la trayectoria que sigue el
+
+193
+00:08:57,440 --> 00:09:02,600
+robot, adaptándonos
+
+194
+00:08:59,560 --> 00:09:04,279
+a todo tipo de aplicaciones o, al menos,
+
+195
+00:09:02,600 --> 00:09:08,160
+a las aplicaciones más comunes, las que
+
+196
+00:09:04,279 --> 00:09:08,160
+nos podemos encontrar con más asiduidad.
+

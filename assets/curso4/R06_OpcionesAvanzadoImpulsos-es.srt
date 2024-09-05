@@ -1,0 +1,836 @@
+1
+00:00:01,560 --> 00:00:05,480
+En este vídeo veremos las opciones
+
+2
+00:00:03,120 --> 00:00:08,280
+avanzadas del modo de trabajo impulsos.
+
+3
+00:00:05,480 --> 00:00:11,160
+Para ello cogeremos el robot número 1,
+
+4
+00:00:08,280 --> 00:00:12,799
+lo pasaremos a modo de trabajo impulsos,
+
+5
+00:00:11,160 --> 00:00:14,240
+confirmaremos que este modo de trabajo
+
+6
+00:00:12,799 --> 00:00:17,439
+ha sido aceptado a través del piloto
+
+7
+00:00:14,240 --> 00:00:19,359
+correspondiente y también a través de la
+
+8
+00:00:17,439 --> 00:00:21,039
+etiqueta que figura en la zona
+
+9
+00:00:19,359 --> 00:00:23,199
+superior del área de trabajo, que el
+
+10
+00:00:21,039 --> 00:00:25,080
+robot número 1 se encuentra, 
+
+11
+00:00:23,199 --> 00:00:26,560
+efectivamente, en modo impulsos. Ahora, nos
+
+12
+00:00:25,080 --> 00:00:28,720
+dirigiremos al panel de
+
+13
+00:00:26,560 --> 00:00:30,560
+aprendizaje, que es un panel un tanto
+
+14
+00:00:28,720 --> 00:00:32,880
+especial porque reúne
+
+15
+00:00:30,560 --> 00:00:35,120
+funciones propias del modo impulsos, pero
+
+16
+00:00:32,880 --> 00:00:37,680
+también propias del modo aprendizaje, y
+
+17
+00:00:35,120 --> 00:00:41,559
+nos fijaremos en las que se incluyen en
+
+18
+00:00:37,680 --> 00:00:43,719
+el cuadro este de aquí, que son
+
+19
+00:00:41,559 --> 00:00:46,120
+opciones relativas a segmentos que
+
+20
+00:00:43,719 --> 00:00:49,320
+conforman una trayectoria. Existen otros
+
+21
+00:00:46,120 --> 00:00:50,879
+botones activos, pero se refieren más a
+
+22
+00:00:49,320 --> 00:00:54,760
+las operaciones básicas que ya hemos
+
+23
+00:00:50,879 --> 00:00:57,359
+visto en un vídeo anterior. Bien, en
+
+24
+00:00:54,760 --> 00:00:59,960
+cuanto a las operaciones referidas a
+
+25
+00:00:57,359 --> 00:01:01,280
+la trayectoria, hay que decir, o recordar,
+
+26
+00:00:59,960 --> 00:01:03,600
+que una trayectoria se compone de una
+
+27
+00:01:01,280 --> 00:01:05,199
+serie de segmentos. En este caso, en modo
+
+28
+00:01:03,600 --> 00:01:08,119
+impulsos, todos los segmentos que vamos a
+
+29
+00:01:05,199 --> 00:01:10,159
+utilizar son lineales. Es cierto que
+
+30
+00:01:08,119 --> 00:01:12,320
+tenemos segmentos tipo circular y tipo
+
+31
+00:01:10,159 --> 00:01:15,280
+spline, pero en modo impulsos únicamente
+
+32
+00:01:12,320 --> 00:01:17,640
+trabajaremos con segmentos lineales. Y,
+
+33
+00:01:15,280 --> 00:01:20,799
+para fabricar una trayectoria, lo que
+
+34
+00:01:17,640 --> 00:01:24,360
+hemos de hacer es concatenar una serie de
+
+35
+00:01:20,799 --> 00:01:26,880
+segmentos predefinidos hacia unas cotas
+
+36
+00:01:24,360 --> 00:01:29,280
+determinadas. En este caso, vamos a crear
+
+37
+00:01:26,880 --> 00:01:32,000
+una trayectoria muy simple consistente
+
+38
+00:01:29,280 --> 00:01:34,840
+en dos segmentos: uno que vaya desde la
+
+39
+00:01:32,000 --> 00:01:37,520
+posición actual al punto 3, y otro que
+
+40
+00:01:34,840 --> 00:01:40,479
+vaya desde el punto 3 al punto 2. Para
+
+41
+00:01:37,520 --> 00:01:45,159
+ello, simplemente venimos aquí, pulsamos
+
+42
+00:01:40,479 --> 00:01:47,479
+"ir punto 3" e "ir punto 2", y si nos fijamos
+
+43
+00:01:45,159 --> 00:01:49,360
+en los movimientos disponibles, antes
+
+44
+00:01:47,479 --> 00:01:51,320
+teníamos 20 movimientos lineales
+
+45
+00:01:49,360 --> 00:01:53,399
+disponibles y ahora tenemos solamente 18.
+
+46
+00:01:51,320 --> 00:01:57,000
+¿Por qué? porque hemos introducido estos
+
+47
+00:01:53,399 --> 00:01:59,360
+dos. Muy bien, también tenemos otra serie
+
+48
+00:01:57,000 --> 00:02:01,840
+de información interesante, que es, la
+
+49
+00:01:59,360 --> 00:02:04,320
+trayectoria que acabamos de crear, aquí nos
+
+50
+00:02:01,840 --> 00:02:05,640
+dice la longitud de la trayectoria, la
+
+51
+00:02:04,320 --> 00:02:08,599
+longitud total de la trayectoria
+
+52
+00:02:05,640 --> 00:02:10,440
+compuesta de dos segmentos, y la longitud
+
+53
+00:02:08,599 --> 00:02:12,080
+del siguiente segmento, es decir, este de
+
+54
+00:02:10,440 --> 00:02:13,560
+aquí, el que va de la posición actual al
+
+55
+00:02:12,080 --> 00:02:17,319
+punto 3.
+
+56
+00:02:13,560 --> 00:02:19,800
+Otros datos interesantes que nos
+
+57
+00:02:17,319 --> 00:02:21,400
+pueden ser de utilidad es el tiempo
+
+58
+00:02:19,800 --> 00:02:25,519
+restante a la velocidad actual que
+
+59
+00:02:21,400 --> 00:02:30,440
+serían 100, 100 unidades por segundo.
+
+60
+00:02:25,519 --> 00:02:31,959
+Cuando yo pulse "ir" o "desplazarse" de
+
+61
+00:02:30,440 --> 00:02:34,640
+esta trayectoria, veremos el tiempo que
+
+62
+00:02:31,959 --> 00:02:36,720
+nos falta hasta llegar al final. Bien,
+
+63
+00:02:34,640 --> 00:02:38,440
+vamos a poner a prueba la teoría que es
+
+64
+00:02:36,720 --> 00:02:42,440
+dándole al botoncito de trayectoria
+
+65
+00:02:38,440 --> 00:02:42,440
+positiva nos moveremos en sentido
+
+66
+00:02:44,879 --> 00:02:49,959
+positivo. Ya hemos llegado. Si nos hemos
+
+67
+00:02:47,440 --> 00:02:52,400
+fijado en los valores actuales veremos
+
+68
+00:02:49,959 --> 00:02:52,400
+que,
+
+69
+00:02:53,040 --> 00:03:00,000
+efectivamente, el tiempo va disminuyendo
+
+70
+00:02:55,159 --> 00:03:02,680
+a la vez que la posición, etcétera.
+
+71
+00:03:00,000 --> 00:03:02,680
+Vamos a darle otra
+
+72
+00:03:05,519 --> 00:03:09,959
+vez. Estos elementos de aquí, los
+
+73
+00:03:08,360 --> 00:03:12,280
+valores actuales, son muy importantes
+
+74
+00:03:09,959 --> 00:03:14,360
+cuando vayamos en modo automático para
+
+75
+00:03:12,280 --> 00:03:16,560
+controlar en qué posición de la
+
+76
+00:03:14,360 --> 00:03:18,319
+trayectoria nos encontramos, cuánto
+
+77
+00:03:16,560 --> 00:03:20,239
+tiempo falta para finalizar la
+
+78
+00:03:18,319 --> 00:03:22,200
+trayectoria, etcétera. Y esto nos
+
+79
+00:03:20,239 --> 00:03:24,519
+permitirá, pues, activar electroválvulas
+
+80
+00:03:22,200 --> 00:03:26,480
+cuando falte un cierto tiempo o realizar
+
+81
+00:03:24,519 --> 00:03:29,840
+operaciones cuando estemos a cierta
+
+82
+00:03:26,480 --> 00:03:33,159
+distancia del objetivo. Muy bien, lo visto
+
+83
+00:03:29,840 --> 00:03:35,599
+hasta ahora, si nos hemos fijado
+
+84
+00:03:33,159 --> 00:03:39,200
+bien, vemos
+
+85
+00:03:35,599 --> 00:03:42,439
+que el robot no pasa por el punto 3
+
+86
+00:03:39,200 --> 00:03:45,480
+realmente, sino que hace como una especie
+
+87
+00:03:42,439 --> 00:03:48,680
+de redondeo cuando entra en esta
+
+88
+00:03:45,480 --> 00:03:52,840
+área de color rojo
+
+89
+00:03:48,680 --> 00:03:54,439
+y continua por ahí. Vale, ¿esto por qué es?
+
+90
+00:03:52,840 --> 00:03:56,040
+Esto es porque el primer segmento, el que
+
+91
+00:03:54,439 --> 00:03:59,799
+se dirigía desde el punto 7 hasta el
+
+92
+00:03:56,040 --> 00:04:01,159
+punto 3, vale, este de aquí, tenía
+
+93
+00:03:59,799 --> 00:04:03,560
+definido un parámetro que se llama zona
+
+94
+00:04:01,159 --> 00:04:07,040
+con un valor de 50, es decir, tiene un
+
+95
+00:04:03,560 --> 00:04:08,680
+radio de 50 ¿vale?. Con lo cual, el robot, en
+
+96
+00:04:07,040 --> 00:04:10,840
+lugar de llegar al punto 3, lo que hace
+
+97
+00:04:08,680 --> 00:04:15,120
+es una suavización, coge estos dos
+
+98
+00:04:10,840 --> 00:04:16,880
+segmentos y los conecta de forma suave.
+
+99
+00:04:15,120 --> 00:04:18,560
+¿Qué es lo que hace el robot? Aunque aquí
+
+100
+00:04:16,880 --> 00:04:20,359
+veamos un círculo en realidad, esto en el
+
+101
+00:04:18,560 --> 00:04:22,720
+espacio tridimensional, es una esfera. Lo
+
+102
+00:04:20,359 --> 00:04:24,040
+que hace el robot es que, cuando alcanza
+
+103
+00:04:22,720 --> 00:04:27,479
+la superficie de esta
+
+104
+00:04:24,040 --> 00:04:30,520
+esfera, la superficie teórica que sería la
+
+105
+00:04:27,479 --> 00:04:32,919
+línea recta esta de aquí y esta de aquí,
+
+106
+00:04:30,520 --> 00:04:34,880
+lo que hace es entrar tangencialmente y
+
+107
+00:04:32,919 --> 00:04:38,360
+salir tangencialmente que es, básicamente,
+
+108
+00:04:34,880 --> 00:04:41,199
+la definición de un spline. El sistema
+
+109
+00:04:38,360 --> 00:04:42,759
+lo que hace es hacer un movimiento tipo
+
+110
+00:04:41,199 --> 00:04:44,400
+spline por el interior de la esfera y
+
+111
+00:04:42,759 --> 00:04:47,280
+nunca alcanza el punto 3. De esta
+
+112
+00:04:44,400 --> 00:04:50,639
+forma, hace una... lo que se llama un
+
+113
+00:04:47,280 --> 00:04:52,199
+"connection path" ¿vale?. Conecta el path del
+
+114
+00:04:50,639 --> 00:04:55,440
+primer segmento con el path del siguiente
+
+115
+00:04:52,199 --> 00:04:59,080
+segmento y crea un único segmento más
+
+116
+00:04:55,440 --> 00:05:01,639
+largo. Vale, volvemos otra vez hacia hacia
+
+117
+00:04:59,080 --> 00:05:01,639
+el origen.
+
+118
+00:05:03,800 --> 00:05:09,600
+Bien, dicho esto, vamos a añadir un nuevo
+
+119
+00:05:07,000 --> 00:05:11,840
+grado de dificultad, que sería realizar
+
+120
+00:05:09,600 --> 00:05:14,199
+un movimiento con el eje auxiliar de
+
+121
+00:05:11,840 --> 00:05:14,199
+rotación
+
+122
+00:05:14,759 --> 00:05:19,840
+insertado o superpuesto a la
+
+123
+00:05:17,960 --> 00:05:22,080
+trayectoria que tenemos de momento 
+
+124
+00:05:19,840 --> 00:05:24,000
+almacenada en el buffer de movimientos.
+
+125
+00:05:22,080 --> 00:05:25,360
+¿Cómo hacemos esto? Pues lo vamos a hacer
+
+126
+00:05:24,000 --> 00:05:27,639
+a través del "Giro Recogida", este
+
+127
+00:05:25,360 --> 00:05:30,240
+botoncito de aquí. Si vamos a buscar aquí
+
+128
+00:05:27,639 --> 00:05:30,240
+los parámetros...
+
+129
+00:05:31,759 --> 00:05:37,520
+aquí, vemos que el giro va a tener 90 grados,
+
+130
+00:05:35,560 --> 00:05:39,479
+que se va a iniciar en el segmento 
+
+131
+00:05:37,520 --> 00:05:41,960
+1210, que sería este de aquí, vemos que cada
+
+132
+00:05:39,479 --> 00:05:44,000
+segmento tiene un identificador único, y
+
+133
+00:05:41,960 --> 00:05:46,319
+va a finalizar en el segmento 1215 que
+
+134
+00:05:44,000 --> 00:05:48,720
+sería el segundo que hemos añadido.
+
+135
+00:05:46,319 --> 00:05:51,400
+¿Cuándo va a iniciar? Pues cuando lleve
+
+136
+00:05:48,720 --> 00:05:54,319
+transcurrido 0.5 mm
+
+137
+00:05:51,400 --> 00:05:56,840
+del segmento 1210. ¿Y cuándo lo va a
+
+138
+00:05:54,319 --> 00:06:00,080
+finalizar? Cuando le falten 0.5, de ahí el
+
+139
+00:05:56,840 --> 00:06:02,560
+signo negativo, cuando le falten 0.5 mm
+
+140
+00:06:00,080 --> 00:06:07,759
+para finalizar el segmento
+
+141
+00:06:02,560 --> 00:06:10,120
+1215. Bien, visto esto, le damos al botón y
+
+142
+00:06:07,759 --> 00:06:12,680
+volvemos a repetir el
+
+143
+00:06:10,120 --> 00:06:15,680
+movimiento. Vemos aquí, en la posición de
+
+144
+00:06:12,680 --> 00:06:17,479
+giro, como realmente está girando y
+
+145
+00:06:15,680 --> 00:06:20,000
+también en el
+
+146
+00:06:17,479 --> 00:06:22,440
+gráfico. Lo único que en el gráfico no se
+
+147
+00:06:20,000 --> 00:06:24,800
+ve tan bien ya que da la impresión de que ya ha
+
+148
+00:06:22,440 --> 00:06:26,960
+finalizado el ángulo de -90 pero, en
+
+149
+00:06:24,800 --> 00:06:29,720
+realidad, aún le falta un pelín porque
+
+150
+00:06:26,960 --> 00:06:34,160
+hasta que no le queden 0.5 mm realmente
+
+151
+00:06:29,720 --> 00:06:34,160
+no acaba. Vale, ahí
+
+152
+00:06:35,479 --> 00:06:41,560
+está. Es decir, lo que hagamos a hacer es
+
+153
+00:06:38,280 --> 00:06:45,759
+un movimiento síncrono con la
+
+154
+00:06:41,560 --> 00:06:48,680
+trayectoria del robot y entre dos puntos
+
+155
+00:06:45,759 --> 00:06:50,319
+que a nosotros nos interese. Finalmente,
+
+156
+00:06:48,680 --> 00:06:52,080
+vamos a hacer otra operación que es:
+
+157
+00:06:50,319 --> 00:06:53,759
+vamos a borrar totalmente la
+
+158
+00:06:52,080 --> 00:06:56,440
+trayectoria del buffer de movimientos.
+
+159
+00:06:53,759 --> 00:06:59,000
+Esto lo haremos a través de esta 
+
+160
+00:06:56,440 --> 00:07:01,680
+casilla y indicando que queremos
+
+161
+00:06:59,000 --> 00:07:03,520
+borrar desde el segmento cero. El segmento
+
+162
+00:07:01,680 --> 00:07:06,280
+cero no existe, aquí vemos que no hay
+
+163
+00:07:03,520 --> 00:07:07,759
+ningún segmento cero, ¿vale?, pero es un
+
+164
+00:07:06,280 --> 00:07:09,639
+código especial que lo que hace es
+
+165
+00:07:07,759 --> 00:07:11,520
+borrar todos los segmentos del
+
+166
+00:07:09,639 --> 00:07:13,240
+buffer de movimientos. De momento tenemos
+
+167
+00:07:11,520 --> 00:07:16,479
+dos. Vemos aquí que tenemos disponibles
+
+168
+00:07:13,240 --> 00:07:19,280
+18 de los 20 que teníamos. Le damos aquí
+
+169
+00:07:16,479 --> 00:07:21,080
+y ya volvemos a tener 20 y, además, no
+
+170
+00:07:19,280 --> 00:07:23,720
+podemos desplazarnos a través de la
+
+171
+00:07:21,080 --> 00:07:26,520
+trayectoria porque no hay trayectoria.
+
+172
+00:07:23,720 --> 00:07:28,800
+Bien, repitamos la operación que hemos
+
+173
+00:07:26,520 --> 00:07:31,520
+hecho hasta ahora, pero vamos a quitarle
+
+174
+00:07:28,800 --> 00:07:31,520
+la zona al punto 3.
+
+175
+00:07:32,759 --> 00:07:38,639
+Venimos al punto 3, sus
+
+176
+00:07:36,720 --> 00:07:41,000
+coordenadas cartesianas, y en lugar de 50,
+
+177
+00:07:38,639 --> 00:07:43,440
+vamos a decirle que no, que queremos
+
+178
+00:07:41,000 --> 00:07:45,560
+cero, y vamos a volver a crear una
+
+179
+00:07:43,440 --> 00:07:48,319
+trayectoria idéntica a la anterior. Es
+
+180
+00:07:45,560 --> 00:07:52,599
+decir, vamos al punto 3 y vamos al
+
+181
+00:07:48,319 --> 00:07:54,520
+punto 2, y como ya tenemos trayectoria
+
+182
+00:07:52,599 --> 00:07:56,360
+creada, pues, los botones de movimiento
+
+183
+00:07:54,520 --> 00:07:59,800
+por impulsos se han activado de nuevo.
+
+184
+00:07:56,360 --> 00:08:01,840
+Vamos a ver qué pasa. Le damos y vemos
+
+185
+00:07:59,800 --> 00:08:05,800
+que efectivamente llega a la posición
+
+186
+00:08:01,840 --> 00:08:08,360
+3, pero no continúa como antes sucedía.
+
+187
+00:08:05,800 --> 00:08:10,639
+Se queda ahí parado. ¿Por qué? Porque él
+
+188
+00:08:08,360 --> 00:08:12,039
+considera que esta trayectoria, que está
+
+189
+00:08:10,639 --> 00:08:13,879
+compuesta de dos segmentos, y es una
+
+190
+00:08:12,039 --> 00:08:15,000
+trayectoria porque los dos segmentos se
+
+191
+00:08:13,879 --> 00:08:18,319
+encuentran en
+
+192
+00:08:15,000 --> 00:08:20,479
+memoria, deseamos realmente pararnos, no
+
+193
+00:08:18,319 --> 00:08:23,120
+tiene zona, no hay suavización, por
+
+194
+00:08:20,479 --> 00:08:26,120
+tanto él lo que hace es pararse
+
+195
+00:08:23,120 --> 00:08:30,080
+aquí. Podemos ir hacia
+
+196
+00:08:26,120 --> 00:08:32,159
+atrás. Hacia delante. Igual que antes, pero
+
+197
+00:08:30,080 --> 00:08:33,719
+esta trayectoria finaliza ahí. Si
+
+198
+00:08:32,159 --> 00:08:35,240
+queremos saltar al siguiente segmento
+
+199
+00:08:33,719 --> 00:08:38,640
+que se encuentra en memoria, hemos de
+
+200
+00:08:35,240 --> 00:08:42,839
+decirle "Siguiente Connection Path".
+
+201
+00:08:38,640 --> 00:08:44,760
+Le damos y ahora ya podemos movernos a
+
+202
+00:08:42,839 --> 00:08:47,080
+través del siguiente
+
+203
+00:08:44,760 --> 00:08:48,880
+segmento. Pero no podemos regresar al
+
+204
+00:08:47,080 --> 00:08:51,120
+anterior. El anterior ya se ha cumplido:
+
+205
+00:08:48,880 --> 00:08:55,000
+hemos saltado y hemos... nos
+
+206
+00:08:51,120 --> 00:08:55,000
+hemos salido de este
+
+207
+00:08:56,560 --> 00:09:02,240
+segmento. Y en principio estos son todos
+
+208
+00:08:59,680 --> 00:09:05,760
+los movimientos avanzados que posee el
+
+209
+00:09:02,240 --> 00:09:05,760
+modo impulsos.
+

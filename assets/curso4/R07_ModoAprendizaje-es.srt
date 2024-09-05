@@ -1,0 +1,743 @@
+1
+00:00:02,200 --> 00:00:06,399
+En este vídeo veremos las
+
+2
+00:00:03,679 --> 00:00:09,440
+funcionalidades que incluye el modo
+
+3
+00:00:06,399 --> 00:00:12,040
+de trabajo aprendizaje. Para ello, lo
+
+4
+00:00:09,440 --> 00:00:13,480
+primero será seleccionar el robot con
+
+5
+00:00:12,040 --> 00:00:15,440
+el cual queremos trabajar. En este caso,
+6
+00:00:13,480 --> 00:00:18,160
+será el robot número 1, y le
+
+7
+00:00:15,440 --> 00:00:20,160
+ordenaremos pasar a modo aprendizaje.
+
+8
+00:00:18,160 --> 00:00:21,960
+Confirmaremos que el modo aprendizaje ha
+
+9
+00:00:20,160 --> 00:00:23,640
+sido aceptado con el piloto
+
+10
+00:00:21,960 --> 00:00:24,880
+correspondiente y nos dirigiremos al
+
+11
+00:00:23,640 --> 00:00:27,400
+panel de
+
+12
+00:00:24,880 --> 00:00:30,599
+aprendizaje. Bien, desde este panel
+
+13
+00:00:27,400 --> 00:00:32,840
+podemos hacer básicamente dos cosas.
+
+14
+00:00:30,599 --> 00:00:34,920
+Primero, comprobar que el robot se dirige
+
+15
+00:00:32,840 --> 00:00:37,079
+correctamente a todos los puntos que
+
+16
+00:00:34,920 --> 00:00:39,960
+hemos encontrado previamente gracias al
+
+17
+00:00:37,079 --> 00:00:43,440
+uso del modo impulsos y que se
+
+18
+00:00:39,960 --> 00:00:45,039
+encuentran definidos en esta sección. En
+
+19
+00:00:43,440 --> 00:00:49,440
+esta sección podemos ver las coordenadas
+
+20
+00:00:45,039 --> 00:00:51,960
+y zona para cada uno de los puntos que
+
+21
+00:00:49,440 --> 00:00:56,160
+conformarán nuestra trayectoria del modo
+
+22
+00:00:51,960 --> 00:00:59,239
+automático. En este caso, una vez ya
+
+23
+00:00:56,160 --> 00:01:01,000
+encontrados, repito, utilizando el modo de
+
+24
+00:00:59,239 --> 00:01:03,800
+trabajo impulsos,
+
+25
+00:01:01,000 --> 00:01:05,439
+podemos comprobar si el robot se
+
+26
+00:01:03,800 --> 00:01:09,479
+dirige a cada uno de ellos de forma
+
+27
+00:01:05,439 --> 00:01:11,880
+individual a las velocidades que
+
+28
+00:01:09,479 --> 00:01:14,400
+emplearemos cuando nos encontremos en el
+
+29
+00:01:11,880 --> 00:01:17,159
+modo automático de trabajo. Por ejemplo,
+
+30
+00:01:14,400 --> 00:01:19,240
+pulsando aquí podemos ver cómo se dirige
+
+31
+00:01:17,159 --> 00:01:21,560
+a este punto. El siguiente punto de la
+
+32
+00:01:19,240 --> 00:01:24,439
+trayectoria automática sería ir a la
+
+33
+00:01:21,560 --> 00:01:27,159
+posición de espera de ítem, el siguiente
+
+34
+00:01:24,439 --> 00:01:29,960
+a la de recogida del ítem, luego nos
+
+35
+00:01:27,159 --> 00:01:32,119
+retiraríamos hasta la posición segura 
+
+36
+00:01:29,960 --> 00:01:37,360
+superior de recogida, luego iríamos a
+
+37
+00:01:32,119 --> 00:01:40,560
+reposo, a entrega, a espera de entrega y
+
+38
+00:01:37,360 --> 00:01:42,640
+finalmente a entrega. Luego, nos retiraríamos
+
+39
+00:01:40,560 --> 00:01:44,479
+a la superior de entrega, volveríamos a
+
+40
+00:01:42,640 --> 00:01:48,119
+la de recogida, a la superior de recogida,
+
+41
+00:01:44,479 --> 00:01:53,000
+y así. Esto lo podemos comprobar también
+
+42
+00:01:48,119 --> 00:01:55,000
+utilizando la Smartvisu. Venimos aquí,
+
+43
+00:01:53,000 --> 00:01:57,320
+vamos a minimizar esto y así
+
+44
+00:01:55,000 --> 00:02:00,560
+trabajaremos con los dos
+
+45
+00:01:57,320 --> 00:02:03,399
+elementos. Podemos ver cómo el
+
+46
+00:02:00,560 --> 00:02:05,320
+robot va dirigiendo cada uno de los, va
+
+47
+00:02:03,399 --> 00:02:08,520
+dirigiéndose a cada uno de los puntos
+
+48
+00:02:05,320 --> 00:02:12,400
+que tenemos pregrabados y si
+
+49
+00:02:08,520 --> 00:02:15,040
+realmente lo hace correctamente, si las
+
+50
+00:02:12,400 --> 00:02:17,080
+pinzas del robot se
+
+51
+00:02:15,040 --> 00:02:18,280
+sitúan encima del ítem de forma correcta
+
+52
+00:02:17,080 --> 00:02:21,319
+para cogerlo,
+
+53
+00:02:18,280 --> 00:02:23,680
+etcétera. Esta es la parte quizás 
+
+54
+00:02:21,319 --> 00:02:26,599
+menos interesante. La más
+
+55
+00:02:23,680 --> 00:02:28,959
+interesante, yo creo que es esta de aquí
+
+56
+00:02:26,599 --> 00:02:31,200
+abajo, que es todos estos puntos
+
+57
+00:02:28,959 --> 00:02:33,760
+secuenciarlos de una forma automática, es
+
+58
+00:02:31,200 --> 00:02:36,080
+decir, crear una trayectoria 
+
+59
+00:02:33,760 --> 00:02:39,080
+secuenciada que se va repitiendo una y
+
+60
+00:02:36,080 --> 00:02:42,280
+otra vez y nos permite comprobar si la
+
+61
+00:02:39,080 --> 00:02:44,080
+cadencia de la máquina va a alcanzar
+
+62
+00:02:42,280 --> 00:02:46,680
+las expectativas que posee el
+
+63
+00:02:44,080 --> 00:02:49,760
+cliente para esta aplicación. Vamos
+
+64
+00:02:46,680 --> 00:02:52,440
+a activarla. Cogemos aquí "Activar
+
+65
+00:02:49,760 --> 00:02:54,560
+secuencia". Vemos que el robot se dirige a
+
+66
+00:02:52,440 --> 00:02:56,159
+la posición de reposo y luego, ya,
+
+67
+00:02:54,560 --> 00:02:59,319
+inmediatamente, con las velocidades que
+
+68
+00:02:56,159 --> 00:03:01,120
+hemos definido en estas cajetillas, se
+
+69
+00:02:59,319 --> 00:03:03,360
+dirigirá a cada uno de los puntos. En
+
+70
+00:03:01,120 --> 00:03:06,239
+este caso se ha ido al de espera
+
+71
+00:03:03,360 --> 00:03:08,040
+producto (espera de picking). Vamos a
+
+72
+00:03:06,239 --> 00:03:11,760
+decirle que ya ha llegado un producto,
+
+73
+00:03:08,040 --> 00:03:14,959
+decimos OK, y ahora ha alcanzado el punto
+
+74
+00:03:11,760 --> 00:03:16,319
+5 que sería "Espera Entrega" que está, pues,
+
+75
+00:03:14,959 --> 00:03:19,319
+para simular que está esperando la
+
+76
+00:03:16,319 --> 00:03:22,239
+llegada de una caja. Vamos a decirle que
+
+77
+00:03:19,319 --> 00:03:24,760
+la caja ya está disponible. En estos
+
+78
+00:03:22,239 --> 00:03:26,680
+casos, como los permisivos para continuar
+
+79
+00:03:24,760 --> 00:03:28,680
+permanecen activos, ya no hay ninguna
+
+80
+00:03:26,680 --> 00:03:31,920
+espera, simplemente el ciclo se va
+
+81
+00:03:28,680 --> 00:03:34,480
+repitiendo una y otra vez sin parar. Y en
+
+82
+00:03:31,920 --> 00:03:37,360
+esta parte superior vemos los ciclos por
+
+83
+00:03:34,480 --> 00:03:39,400
+minuto que estamos alcanzando con los
+
+84
+00:03:37,360 --> 00:03:41,599
+parámetros actuales y los puntos
+
+85
+00:03:39,400 --> 00:03:46,200
+definidos en las posiciones en las que
+
+86
+00:03:41,599 --> 00:03:49,040
+están definidas. Bien, como todo ciclo se
+
+87
+00:03:46,200 --> 00:03:51,480
+compone de un viaje de picking en el que
+
+88
+00:03:49,040 --> 00:03:53,920
+no tiene... el robot no contiene aún ningún
+
+89
+00:03:51,480 --> 00:03:56,079
+producto, y otro de placing en el que
+
+90
+00:03:53,920 --> 00:03:58,439
+viaja con un producto
+
+91
+00:03:56,079 --> 00:04:01,159
+cogido, podemos definir velocidades
+
+92
+00:03:58,439 --> 00:04:03,200
+distintas para cada uno de los sentidos.
+
+93
+00:04:01,159 --> 00:04:05,480
+Por ejemplo, el de recogida, que no tiene
+
+94
+00:04:03,200 --> 00:04:07,159
+nada en las pinzas, podría llegar a
+
+95
+00:04:05,480 --> 00:04:10,760
+hacerlo más rápido. Entonces podemos
+
+96
+00:04:07,159 --> 00:04:12,720
+coger y modificar la velocidad
+
+97
+00:04:10,760 --> 00:04:16,280
+aumentándola a
+
+98
+00:04:12,720 --> 00:04:19,280
+5000 y ya vemos que el viaje de recogida
+
+99
+00:04:16,280 --> 00:04:21,959
+lo hace mucho más rápido. La cadencia nos
+
+100
+00:04:19,280 --> 00:04:23,800
+ha aumentado un poco. También puede ser
+
+101
+00:04:21,959 --> 00:04:27,320
+que nos digan que la operación de
+
+102
+00:04:23,800 --> 00:04:29,759
+picking, es decir, si queremos coger un
+
+103
+00:04:27,320 --> 00:04:31,680
+producto con una ventosa ¿no?, lo que es el
+
+104
+00:04:29,759 --> 00:04:34,120
+tiempo para que la ventosa haga vacío
+
+105
+00:04:31,680 --> 00:04:35,880
+encima del producto, pues, en lugar de 1
+
+106
+00:04:34,120 --> 00:04:39,120
+segundo, pues, quizá nos digan que
+
+107
+00:04:35,880 --> 00:04:40,560
+sean 200 milisegundos. Pues le añadimos
+
+108
+00:04:39,120 --> 00:04:43,840
+el tiempo que nos
+
+109
+00:04:40,560 --> 00:04:46,919
+digan ya vemos que aquí ya ha vuelto a
+
+110
+00:04:43,840 --> 00:04:49,840
+aumentar. Y para dejar el producto, para
+
+111
+00:04:46,919 --> 00:04:51,880
+soltarlo, pues quizás porque el producto
+
+112
+00:04:49,840 --> 00:04:53,680
+sea muy pesado o lo que sea, no haga
+
+113
+00:04:51,880 --> 00:04:55,320
+falta 200 milisegundos. Con 100
+
+114
+00:04:53,680 --> 00:04:58,400
+milisegundos es suficiente, porque al
+
+115
+00:04:55,320 --> 00:05:00,440
+cortar la orden de vacío la propia
+
+116
+00:04:58,400 --> 00:05:02,840
+gravedad hará que el producto,
+
+117
+00:05:00,440 --> 00:05:07,440
+nos ayudará a que el producto, caiga más rápido
+
+118
+00:05:02,840 --> 00:05:11,840
+Bien, y aquí ya vemos que el ciclo poco a
+
+119
+00:05:07,440 --> 00:05:14,440
+poco va aumentando su cadencia. Puede
+
+120
+00:05:11,840 --> 00:05:16,520
+pasar también de que, aunque la velocidad
+
+121
+00:05:14,440 --> 00:05:18,680
+de entrega no sea tan rápida como la de
+
+122
+00:05:16,520 --> 00:05:20,880
+recogida, porque el robot está
+
+123
+00:05:18,680 --> 00:05:22,319
+transportando un producto, no hace falta
+
+124
+00:05:20,880 --> 00:05:23,800
+que sea tan baja. Podemos, a lo mejor,
+
+125
+00:05:22,319 --> 00:05:26,440
+subirla un
+
+126
+00:05:23,800 --> 00:05:30,560
+pelín. Esto lo podemos probar incluso con
+
+127
+00:05:26,440 --> 00:05:31,880
+un producto para ver cómo se comporta.
+
+128
+00:05:30,560 --> 00:05:34,840
+Hay que tener en cuenta aquí que el
+
+129
+00:05:31,880 --> 00:05:38,600
+simulador no simula las inercias del
+
+130
+00:05:34,840 --> 00:05:40,600
+producto ni la masa de la 
+
+131
+00:05:38,600 --> 00:05:42,520
+herramienta, pero sí nos permite
+
+132
+00:05:40,600 --> 00:05:45,319
+acercarnos bastante a la realidad.
+
+133
+00:05:42,520 --> 00:05:47,680
+Entonces, con estos parámetros, más o
+
+134
+00:05:45,319 --> 00:05:49,520
+menos podemos ver qué cadencia aumentará.
+
+135
+00:05:47,680 --> 00:05:51,440
+Por ejemplo, otros parámetros que tenemos
+
+136
+00:05:49,520 --> 00:05:53,240
+disponibles son estos de aquí, las rampas
+
+137
+00:05:51,440 --> 00:05:56,039
+que podemos hacerlas más bruscas o menos
+
+138
+00:05:53,240 --> 00:05:58,360
+bruscas. La velocidad es muy importante
+
+139
+00:05:56,039 --> 00:06:01,199
+porque aquí no vemos las inercias. El
+
+140
+00:05:58,360 --> 00:06:02,840
+producto, si es muy grande, estas
+
+141
+00:06:01,199 --> 00:06:05,800
+aceleraciones tan bruscas y estos
+
+142
+00:06:02,840 --> 00:06:07,639
+frenazos tan bruscos pueden ser que...
+
+143
+00:06:05,800 --> 00:06:10,160
+que el robot sea capaz de hacerlo no
+
+144
+00:06:07,639 --> 00:06:12,360
+signifique que sea bueno para la
+
+145
+00:06:10,160 --> 00:06:15,000
+aplicación: una aceleración muy brusca
+
+146
+00:06:12,360 --> 00:06:16,880
+puede desprender el producto de las pinzas.
+
+147
+00:06:15,000 --> 00:06:18,880
+Vamos a jugar, por ejemplo, con las rampas,
+
+148
+00:06:16,880 --> 00:06:23,319
+con la suavidad de las rampas. Vamos a
+
+149
+00:06:18,880 --> 00:06:23,319
+hacerlas menos suaves, o sea, más
+
+150
+00:06:23,440 --> 00:06:28,039
+bruscas. Y aquí vemos que sí ha mejorado
+
+151
+00:06:26,360 --> 00:06:29,800
+un pelín lo que son los ciclos por
+
+152
+00:06:28,039 --> 00:06:32,560
+minuto, pero tampoco espectacularmente
+
+153
+00:06:29,800 --> 00:06:37,039
+mucho: hemos subido de 53 a 56. Vamos a
+
+154
+00:06:32,560 --> 00:06:37,039
+volver a aumentar la
+
+155
+00:06:37,720 --> 00:06:43,440
+suavidad. Es decir, que igual no merece
+
+156
+00:06:41,199 --> 00:06:45,360
+mucho la pena, para ganar tres golpes por
+
+157
+00:06:43,440 --> 00:06:48,039
+minuto,
+
+158
+00:06:45,360 --> 00:06:49,479
+empeorar la suavidad de las rampas
+
+159
+00:06:48,039 --> 00:06:51,199
+porque eso puede hacer que el
+
+160
+00:06:49,479 --> 00:06:52,560
+producto no se comporte correctamente 
+
+161
+00:06:51,199 --> 00:06:55,000
+en la
+
+162
+00:06:52,560 --> 00:06:57,319
+herramienta. En definitiva, todos estos
+
+163
+00:06:55,000 --> 00:07:00,520
+parámetros nos van sirviendo, junto con
+
+164
+00:06:57,319 --> 00:07:03,039
+la Smartvisu, para determinar, antes
+
+165
+00:07:00,520 --> 00:07:04,639
+incluso de tener el robot disponible, y
+
+166
+00:07:03,039 --> 00:07:06,759
+esto va muy bien cuando se le hacen
+
+167
+00:07:04,639 --> 00:07:10,440
+presentaciones a los clientes o en
+
+168
+00:07:06,759 --> 00:07:12,440
+formaciones académicas, si el robot puede
+
+169
+00:07:10,440 --> 00:07:14,560
+alcanzar, o puede aproximarse al menos a
+
+170
+00:07:12,440 --> 00:07:17,879
+las prestaciones que el cliente nos
+
+171
+00:07:14,560 --> 00:07:19,280
+pide, a las deseadas, o si estamos por el
+
+172
+00:07:17,879 --> 00:07:21,800
+contrario muy lejos y ya no merece la
+
+173
+00:07:19,280 --> 00:07:24,479
+pena insistir. Si estamos muy cerca
+
+174
+00:07:21,800 --> 00:07:26,440
+siempre se podrían mejorar, pues, los
+
+175
+00:07:24,479 --> 00:07:29,560
+tiempos de operación ¿no? Se pueden
+
+176
+00:07:26,440 --> 00:07:31,440
+hacer más rápidos o menos indicándole al
+
+177
+00:07:29,560 --> 00:07:35,560
+cliente, pues, que modifique, pues, el
+
+178
+00:07:31,440 --> 00:07:38,560
+sistema, pues, neumático o modifique la
+
+179
+00:07:35,560 --> 00:07:42,479
+la herramienta para que pese menos u
+
+180
+00:07:38,560 --> 00:07:44,240
+otras operaciones en la máquina.
+
+181
+00:07:42,479 --> 00:07:45,319
+Pero esto es una herramienta bastante
+
+182
+00:07:44,240 --> 00:07:49,440
+potente
+
+183
+00:07:45,319 --> 00:07:52,479
+porque, sin inversión ni de tiempo ni
+
+184
+00:07:49,440 --> 00:07:56,759
+económica, nos permite hacernos una idea
+
+185
+00:07:52,479 --> 00:07:59,479
+muy rápida de si el robot va a
+
+186
+00:07:56,759 --> 00:08:02,479
+alcanzar lo que se le está exigiendo.
+

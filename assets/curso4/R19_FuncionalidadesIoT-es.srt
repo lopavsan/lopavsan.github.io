@@ -1,0 +1,1732 @@
+1
+00:00:01,719 --> 00:00:05,319
+En el presente vídeo hablaremos de las
+
+2
+00:00:03,439 --> 00:00:07,519
+funcionalidades IoT incluidas en la
+
+3
+00:00:05,319 --> 00:00:10,400
+plataforma de desarrollo de aplicaciones
+
+4
+00:00:07,519 --> 00:00:12,400
+multirrobot. Quizás la parte más complicada sea
+
+5
+00:00:10,400 --> 00:00:14,280
+definir para qué vamos a utilizar estas
+
+6
+00:00:12,400 --> 00:00:15,359
+funcionalidades. ¿Las vamos a utilizar
+
+7
+00:00:14,280 --> 00:00:17,480
+para, por
+
+8
+00:00:15,359 --> 00:00:19,279
+ejemplo, mejorar la productividad de la
+
+9
+00:00:17,480 --> 00:00:22,680
+máquina? ¿O para crear un plan más
+
+10
+00:00:19,279 --> 00:00:23,800
+eficiente de mantenimiento? ¿O nuestra
+
+11
+00:00:22,680 --> 00:00:26,080
+intención es crear un nuevo modelo de
+
+12
+00:00:23,800 --> 00:00:30,160
+negocio basado en la servitización?
+
+13
+00:00:26,080 --> 00:00:31,880
+En función del objetivo final perseguido,
+
+14
+00:00:30,160 --> 00:00:35,040
+necesitaremos extraer una serie de
+
+15
+00:00:31,880 --> 00:00:36,480
+información de nuestra máquina y, en
+
+16
+00:00:35,040 --> 00:00:37,480
+función de este tipo de información, pues
+
+17
+00:00:36,480 --> 00:00:41,480
+necesitaremos
+
+18
+00:00:37,480 --> 00:00:42,840
+acceder a ciertos datos de ella. Por
+
+19
+00:00:41,480 --> 00:00:44,840
+ejemplo, uno de los datos que podemos
+
+20
+00:00:42,840 --> 00:00:48,360
+encontrar en el panel de configuración
+
+21
+00:00:44,840 --> 00:00:51,239
+es las maniobras OK. ¿Con las maniobras OK 
+
+22
+00:00:48,360 --> 00:00:52,640
+podemos crear, por ejemplo, un plan de
+
+23
+00:00:51,239 --> 00:00:55,879
+mantenimiento
+
+24
+00:00:52,640 --> 00:00:57,680
+eficaz? Claramente, no. Por ejemplo, si
+
+25
+00:00:55,879 --> 00:01:00,559
+nuestra intención es cambiar una junta
+
+26
+00:00:57,680 --> 00:01:02,519
+cada 20000 maniobras, el que hayamos
+
+27
+00:01:00,559 --> 00:01:03,879
+hecho 15000 maniobras OK no quiere
+
+28
+00:01:02,519 --> 00:01:07,880
+decir que hayamos hecho, por ejemplo,
+
+29
+00:01:03,879 --> 00:01:10,280
+6000 que no esten OK. Entonces, este dato
+
+30
+00:01:07,880 --> 00:01:11,680
+por sí mismo, aunque podría llegar a ser
+
+31
+00:01:10,280 --> 00:01:14,320
+utilizado,
+
+32
+00:01:11,680 --> 00:01:16,400
+es insuficiente. Es insuficiente para
+
+33
+00:01:14,320 --> 00:01:18,720
+hacer algún tipo de plan de
+
+34
+00:01:16,400 --> 00:01:20,840
+mantenimiento que sea mínimamente
+
+35
+00:01:18,720 --> 00:01:22,040
+eficaz. Para ello, tendremos que también
+
+36
+00:01:20,840 --> 00:01:23,159
+tener información sobre el dato de
+
+37
+00:01:22,040 --> 00:01:25,680
+maniobras no
+
+38
+00:01:23,159 --> 00:01:27,479
+OK de tal manera que la suma de ambas sí
+
+39
+00:01:25,680 --> 00:01:30,479
+nos den una idea clara de lo que ha
+
+40
+00:01:27,479 --> 00:01:33,759
+hecho el robot. Por ejemplo, 15000 OK y
+
+41
+00:01:30,479 --> 00:01:35,640
+5000 no OK serían 20000 maniobras. En
+
+42
+00:01:33,759 --> 00:01:38,079
+este caso sí podíamos decidir cambiar la
+
+43
+00:01:35,640 --> 00:01:40,439
+junta porque ya he hecho más de las
+
+44
+00:01:38,079 --> 00:01:42,399
+15000. ¿Es suficiente? Bueno, siempre se
+
+45
+00:01:40,439 --> 00:01:44,360
+puede ir enriqueciendo esta información.
+
+46
+00:01:42,399 --> 00:01:45,960
+Por ejemplo, si nuestra intención es
+
+47
+00:01:44,360 --> 00:01:47,439
+hacer un estudio de la productividad de
+
+48
+00:01:45,960 --> 00:01:49,680
+la máquina,
+
+49
+00:01:47,439 --> 00:01:51,960
+el saber que la máquina ha hecho
+
+50
+00:01:49,680 --> 00:01:53,560
+15000 maniobras no nos da idea de la
+
+51
+00:01:51,960 --> 00:01:55,799
+productividad. Esas 15000 maniobras las
+
+52
+00:01:53,560 --> 00:01:58,079
+puede hacer en un minuto, en una hora, en
+
+53
+00:01:55,799 --> 00:02:00,079
+un día... No tenemos la tasa de
+
+54
+00:01:58,079 --> 00:02:02,159
+productividad de la máquina real.
+
+55
+00:02:00,079 --> 00:02:03,799
+Entonces, aquí quizás haría falta también
+
+56
+00:02:02,159 --> 00:02:04,680
+otro dato adicional, que es el tiempo que
+
+57
+00:02:03,799 --> 00:02:09,039
+lleva en
+
+58
+00:02:04,680 --> 00:02:11,120
+producción. En fin, estas estos datos
+
+59
+00:02:09,039 --> 00:02:13,800
+por sí solos, de forma independiente,
+
+60
+00:02:11,120 --> 00:02:17,120
+pueden servir de ayuda o no dependiendo
+
+61
+00:02:13,800 --> 00:02:20,959
+de lo que se esté buscando pero 
+
+62
+00:02:17,120 --> 00:02:23,239
+cuanto más valiosos son es cuando se
+
+63
+00:02:20,959 --> 00:02:27,040
+pueden mezclar con otros datos para
+
+64
+00:02:23,239 --> 00:02:30,200
+obtener informaciones más elaboradas.
+
+65
+00:02:27,040 --> 00:02:32,599
+La aplicación propuesta propone estos
+
+66
+00:02:30,200 --> 00:02:34,360
+datos. Son muy pocos datos por robot y
+
+67
+00:02:32,599 --> 00:02:36,480
+luego algunos que son más genéricos ¿no?
+
+68
+00:02:34,360 --> 00:02:38,519
+como, por ejemplo, los items perdidos
+
+69
+00:02:36,480 --> 00:02:40,480
+por la cinta de recogida o los perdidos
+
+70
+00:02:38,519 --> 00:02:43,480
+por la de
+
+71
+00:02:40,480 --> 00:02:47,200
+entrega. ¿Cómo funciona esto? Bueno, en
+
+72
+00:02:43,480 --> 00:02:50,720
+principio, estos datos se suelen dejar
+
+73
+00:02:47,200 --> 00:02:52,400
+preparados en lo que es la parte
+
+74
+00:02:50,720 --> 00:02:54,760
+superior de la máquina, el nivel superior,
+
+75
+00:02:52,400 --> 00:02:55,760
+el MainMachine. Aquí, en esta sección de
+
+76
+00:02:54,760 --> 00:02:58,360
+aquí que se llama
+
+77
+00:02:55,760 --> 00:03:00,959
+OPC UA, si nos dirigimos a esta sección,
+
+78
+00:02:58,360 --> 00:03:04,000
+vemos que cogemos variables de la
+
+79
+00:03:00,959 --> 00:03:08,760
+máquina. Aquí, recordemos, se utiliza la
+
+80
+00:03:04,000 --> 00:03:10,120
+variable g_stPD3, y estos datos
+
+81
+00:03:08,760 --> 00:03:12,120
+los cocinamos de alguna manera, los
+
+82
+00:03:10,120 --> 00:03:15,920
+dejamos preparados para subirlos a la
+
+83
+00:03:12,120 --> 00:03:18,360
+capa superior, la capa Gateway, donde
+
+84
+00:03:15,920 --> 00:03:19,879
+ya serán procesados y enviados a un
+
+85
+00:03:18,360 --> 00:03:22,879
+software basado en
+
+86
+00:03:19,879 --> 00:03:25,040
+nube. Si nos fijamos, vamos cogiendo datos
+
+87
+00:03:22,879 --> 00:03:26,840
+de máquina, algunos directamente ya son
+
+88
+00:03:25,040 --> 00:03:28,239
+utilizables: se asignan a unas
+
+89
+00:03:26,840 --> 00:03:31,159
+nuevas variables que se han creado para
+
+90
+00:03:28,239 --> 00:03:34,480
+ser subidas a la capa Gateway vía
+
+91
+00:03:31,159 --> 00:03:37,159
+OPC UA, otros se convierten de tipo de
+
+92
+00:03:34,480 --> 00:03:38,720
+variable y otros ya están un poco más
+
+93
+00:03:37,159 --> 00:03:41,720
+cocinados. Por ejemplo, en este caso de
+
+94
+00:03:38,720 --> 00:03:44,080
+aquí, el estado del robot 1,
+
+95
+00:03:41,720 --> 00:03:45,879
+en cada uno de los bits, vemos que el
+
+96
+00:03:44,080 --> 00:03:48,360
+estado del robot 1 es un Word, y
+
+97
+00:03:45,879 --> 00:03:51,519
+cada uno de los bits coge información de
+
+98
+00:03:48,360 --> 00:03:53,760
+bits de la máquina, incluso algunos se
+
+99
+00:03:51,519 --> 00:03:55,439
+hacen algún tipo de operación. Vale,
+
+100
+00:03:53,760 --> 00:03:57,599
+entonces, estas variables, que son las que
+
+101
+00:03:55,439 --> 00:04:01,959
+se van a subir, básicamente, estas de
+
+102
+00:03:57,599 --> 00:04:04,799
+aquí, a ver si las marco bien, estas de aquí,
+
+103
+00:04:01,959 --> 00:04:08,079
+estas, están definidas en la carpeta
+
+104
+00:04:04,799 --> 00:04:09,920
+3 dentro de este bloque de variables
+
+105
+00:04:08,079 --> 00:04:12,439
+globales. Esto es para que sea fácilmente
+
+106
+00:04:09,920 --> 00:04:14,040
+reconocibles. Serían estas de aquí.
+
+107
+00:04:12,439 --> 00:04:17,320
+Estas son las que realmente se van a
+
+108
+00:04:14,040 --> 00:04:20,120
+subir a la capa Gateway vía
+
+109
+00:04:17,320 --> 00:04:21,560
+OPC UA. ¿Cómo se suben? Bien, se suben a
+
+110
+00:04:20,120 --> 00:04:23,160
+través de este otro objeto que es el
+
+111
+00:04:21,560 --> 00:04:25,600
+"Symbol Configuration".
+
+112
+00:04:23,160 --> 00:04:30,280
+Aquí, doble
+
+113
+00:04:25,600 --> 00:04:31,560
+clic y se marcan para ser subidas,
+
+114
+00:04:30,280 --> 00:04:34,600
+simplemente
+
+115
+00:04:31,560 --> 00:04:37,560
+marcándolas, estas variables serán
+
+116
+00:04:34,600 --> 00:04:40,280
+comunicadas hacia el
+
+117
+00:04:37,560 --> 00:04:43,039
+exterior. Y, por supuesto, no nos hemos de
+
+118
+00:04:40,280 --> 00:04:44,680
+olvidar de marcar aquí que queremos
+
+119
+00:04:43,039 --> 00:04:47,680
+activar el servidor
+
+120
+00:04:44,680 --> 00:04:51,080
+OPC UA. Bien, hecho esto, estas variables ya
+
+121
+00:04:47,680 --> 00:04:53,280
+se publican hacia un elemento
+
+122
+00:04:51,080 --> 00:04:54,639
+hardware que es en este caso es un pc
+
+123
+00:04:53,280 --> 00:04:57,479
+Industrial. Voy a utilizar el mismo PC
+
+124
+00:04:54,639 --> 00:04:59,800
+que estoy utilizando para ver el
+
+125
+00:04:57,479 --> 00:05:01,680
+código de la aplicación, donde se
+
+126
+00:04:59,800 --> 00:05:04,680
+encuentra en este caso concreto, hay
+
+127
+00:05:01,680 --> 00:05:06,840
+muchas formas de hacerlo, un entorno
+
+128
+00:05:04,680 --> 00:05:10,400
+de desarrollo que se llama Node-Red.
+
+129
+00:05:06,840 --> 00:05:13,800
+Vale, entonces, si nos vamos a Node-Red,
+
+130
+00:05:10,400 --> 00:05:15,440
+aquí vemos el programa. Vemos que
+
+131
+00:05:13,800 --> 00:05:18,600
+estas variables se leen a través de una
+
+132
+00:05:15,440 --> 00:05:21,160
+serie de nodos, que vienen dentro del
+
+133
+00:05:18,600 --> 00:05:24,720
+lenguaje Node-Red, y se leen de dos
+
+134
+00:05:21,160 --> 00:05:26,440
+formas distintas: se leen cíclicamente, en
+
+135
+00:05:24,720 --> 00:05:30,840
+este caso, por ejemplo, los datos del 
+
+136
+00:05:26,440 --> 00:05:33,319
+robot 1 se leerían cada 30 segundos; 
+
+137
+00:05:30,840 --> 00:05:35,160
+y luego, también, hay unas pocas 
+
+138
+00:05:33,319 --> 00:05:38,120
+variables que se leen por suscripción, es 
+
+139
+00:05:35,160 --> 00:05:40,240
+decir, cuando su valor cambia, lo que 
+
+140
+00:05:38,120 --> 00:05:42,360
+serían los 
+
+141
+00:05:40,240 --> 00:05:44,759
+estados. En este ejemplo, que también se
+
+142
+00:05:42,360 --> 00:05:47,319
+incluye dentro de la memoria técnica, se
+
+143
+00:05:44,759 --> 00:05:49,960
+han empleado ambos métodos para que se
+
+144
+00:05:47,319 --> 00:05:52,639
+vean claras las dos posibilidades. Hay que
+
+145
+00:05:49,960 --> 00:05:54,440
+tener en cuenta que hasta aquí el coste
+
+146
+00:05:52,639 --> 00:05:57,680
+de subir datos hasta lo que es la capa
+
+147
+00:05:54,440 --> 00:05:59,880
+Gateway es gratuito. No importa subir muchos
+
+148
+00:05:57,680 --> 00:06:01,199
+o pocos, pero a partir de este punto,
+
+149
+00:05:59,880 --> 00:06:03,000
+cuando se intenta subir datos a un
+
+150
+00:06:01,199 --> 00:06:07,599
+software basado en nube,
+
+151
+00:06:03,000 --> 00:06:09,440
+estas subidas cuestan un
+
+152
+00:06:07,599 --> 00:06:10,919
+dinero por variable. Es decir, cada vez que
+
+153
+00:06:09,440 --> 00:06:13,880
+subimos una variable, sea del tipo que
+
+154
+00:06:10,919 --> 00:06:16,919
+sea, sea boolean o sea real, da igual, cuesta
+
+155
+00:06:13,880 --> 00:06:18,880
+un... tiene un coste. Por tanto, hay que estudiar
+
+156
+00:06:16,919 --> 00:06:22,759
+muy bien qué variables vamos a subir y
+
+157
+00:06:18,880 --> 00:06:25,639
+cada cuánto vamos a subirlas. Por tanto,
+
+158
+00:06:22,759 --> 00:06:27,360
+subir un todas estas variables cada 30
+
+159
+00:06:25,639 --> 00:06:29,880
+segundos, dependiendo de lo que queramos
+
+160
+00:06:27,360 --> 00:06:31,520
+conseguir siempre, pues, puede ser aceptable o
+
+161
+00:06:29,880 --> 00:06:33,160
+puede ser excesivamente caro para
+
+162
+00:06:31,520 --> 00:06:35,520
+el objetivo que se
+
+163
+00:06:33,160 --> 00:06:37,880
+pretende. En estos casos, siempre sería
+
+164
+00:06:35,520 --> 00:06:39,160
+mejor utilizar la suscripción. La
+
+165
+00:06:37,880 --> 00:06:42,360
+suscripción también hay que utilizarla
+
+166
+00:06:39,160 --> 00:06:44,599
+con cierta, con cierta inteligencia. No es
+
+167
+00:06:42,360 --> 00:06:46,599
+lo mismo, por ejemplo, subir por
+
+168
+00:06:44,599 --> 00:06:47,919
+suscripción un valor que fluctúa
+
+169
+00:06:46,599 --> 00:06:49,599
+constantemente, por ejemplo, un consumo de
+
+170
+00:06:47,919 --> 00:06:51,080
+un motor que estaría constantemente
+
+171
+00:06:49,599 --> 00:06:54,680
+modificando su valor y, por tanto,
+
+172
+00:06:51,080 --> 00:06:56,759
+constantemente siendo subido a la nube o,
+
+173
+00:06:54,680 --> 00:06:58,639
+por ejemplo, el modo de trabajo o el
+
+174
+00:06:56,759 --> 00:07:00,919
+número de averías ¿no? que no suele cambiar
+
+175
+00:06:58,639 --> 00:07:03,000
+muy frecuentemente.
+
+176
+00:07:00,919 --> 00:07:06,199
+Bien,
+
+177
+00:07:03,000 --> 00:07:09,240
+de esta manera subimos los dos, aquí
+
+178
+00:07:06,199 --> 00:07:13,240
+juntamos la información, la compactamos en el
+
+179
+00:07:09,240 --> 00:07:18,879
+formato que entiende el software basado en
+
+180
+00:07:13,240 --> 00:07:21,160
+nube y aquí se envía HTTP, utilizando el
+
+181
+00:07:18,879 --> 00:07:23,919
+protocolo HTTP hacia la nube. ¿Por qué?
+
+182
+00:07:21,160 --> 00:07:25,599
+porque la nube acepta solamente..., el
+
+183
+00:07:23,919 --> 00:07:27,560
+software basado en nube, acepta solamente
+
+184
+00:07:25,599 --> 00:07:31,080
+este
+
+185
+00:07:27,560 --> 00:07:34,319
+formato. Aquí, la ventana de debug, vemos
+
+186
+00:07:31,080 --> 00:07:38,800
+lo que se está intentando subir. Aquí,
+
+187
+00:07:34,319 --> 00:07:42,000
+digamos, en este payload, lo que hacemos es
+
+188
+00:07:38,800 --> 00:07:45,599
+analizar la respuesta de este nodo y
+
+189
+00:07:42,000 --> 00:07:47,039
+la mostramos aquí ¿vale? así vemos cómo se
+
+190
+00:07:45,599 --> 00:07:49,199
+está subiendo la
+
+191
+00:07:47,039 --> 00:07:52,080
+información empaquetada hacia el
+
+192
+00:07:49,199 --> 00:07:54,240
+software basado en nube. Y bien, para
+
+193
+00:07:52,080 --> 00:07:57,000
+acceder al software basado en
+
+194
+00:07:54,240 --> 00:08:00,240
+nube, venimos aquí, abrimos una pestaña en
+
+195
+00:07:57,000 --> 00:08:03,520
+Google, activamos el link que ya tengo
+
+196
+00:08:00,240 --> 00:08:05,680
+preparado, selecciono... este sería la pantalla
+
+197
+00:08:03,520 --> 00:08:07,240
+principal del sofware basado en nube, donde
+
+198
+00:08:05,680 --> 00:08:09,479
+podemos ver todas todas las máquinas que
+
+199
+00:08:07,240 --> 00:08:10,560
+tenemos conectadas y esta en concreto,
+
+200
+00:08:09,479 --> 00:08:12,879
+esta de
+
+201
+00:08:10,560 --> 00:08:15,400
+aquí, correspondería al proyecto final de
+
+202
+00:08:12,879 --> 00:08:18,319
+master. Iríamos a
+
+203
+00:08:15,400 --> 00:08:21,080
+monitor y aquí tendríamos el
+
+204
+00:08:18,319 --> 00:08:23,479
+dashboard principal. Esto funciona a
+
+205
+00:08:21,080 --> 00:08:26,759
+través de widgets. Cada información
+
+206
+00:08:23,479 --> 00:08:29,560
+mostrada aquí se obtiene o se representa
+
+207
+00:08:26,759 --> 00:08:31,080
+a través de un widget. Lo más 
+
+208
+00:08:29,560 --> 00:08:33,039
+importante de todo esto, estaríamos hablando
+
+209
+00:08:31,080 --> 00:08:35,200
+mucho tiempo sobre este software,
+
+210
+00:08:33,039 --> 00:08:36,959
+vamos a hablar de la parte elemental, lo
+
+211
+00:08:35,200 --> 00:08:37,839
+más importante son los valores, los
+
+212
+00:08:36,959 --> 00:08:41,039
+valores
+
+213
+00:08:37,839 --> 00:08:43,959
+leídos. Si venimos aquí vemos que tenemos
+
+214
+00:08:41,039 --> 00:08:45,920
+valores obtenidos de una calculadora
+
+215
+00:08:43,959 --> 00:08:48,200
+interna, es decir, calculados en la nube y
+
+216
+00:08:45,920 --> 00:08:50,640
+otros que son los que están leídos de la
+
+217
+00:08:48,200 --> 00:08:53,880
+capa inferior, la capa
+
+218
+00:08:50,640 --> 00:08:57,600
+Gateway. Vale, a través de los valores
+
+219
+00:08:53,880 --> 00:08:59,440
+leídos es posible extraer más
+
+220
+00:08:57,600 --> 00:09:01,560
+información haciendo cálculos entre
+
+221
+00:08:59,440 --> 00:09:03,920
+ellos. Por eso también a veces es
+
+222
+00:09:01,560 --> 00:09:06,959
+importante, cuando se diseña el
+
+223
+00:09:03,920 --> 00:09:08,720
+sistema, subir solamente datos de tipo
+
+224
+00:09:06,959 --> 00:09:12,279
+básico, de
+
+225
+00:09:08,720 --> 00:09:14,040
+tipo suficiente para extraer información
+
+226
+00:09:12,279 --> 00:09:16,120
+pero que, combinados con otros datos, nos
+
+227
+00:09:14,040 --> 00:09:18,560
+puedan ofrecer más información aún y
+
+228
+00:09:16,120 --> 00:09:21,480
+estos nuevos datos los calcularíamos
+
+229
+00:09:18,560 --> 00:09:23,959
+en la nube para evitarnos el coste de
+
+230
+00:09:21,480 --> 00:09:25,880
+subirlos. ¿Cómo se calculan? Bueno, los
+
+231
+00:09:23,959 --> 00:09:28,040
+cálculos, normalmente estos softwares suelen ser
+
+232
+00:09:25,880 --> 00:09:29,399
+muy sencillos, los cálculos son... ni
+
+233
+00:09:28,040 --> 00:09:31,480
+siquiera hay que programar nada ¿no?.
+
+234
+00:09:29,399 --> 00:09:33,680
+Venimos aquí en Calculator; en esta
+
+235
+00:09:31,480 --> 00:09:35,079
+pestaña hay varias posibilidades y en
+
+236
+00:09:33,680 --> 00:09:38,079
+este caso concreto, por ejemplo, esta
+
+237
+00:09:35,079 --> 00:09:39,680
+variable, la R1_OEE, pues venimos aquí
+
+238
+00:09:38,079 --> 00:09:42,959
+a editar y veremos un poco cómo se hace
+
+239
+00:09:39,680 --> 00:09:44,440
+el cálculo. Simplemente añadimos aquí, en
+
+240
+00:09:42,959 --> 00:09:46,560
+el listado de variables, las que queremos
+
+241
+00:09:44,440 --> 00:09:48,839
+utilizar de la lista que hemos visto
+
+242
+00:09:46,560 --> 00:09:50,600
+anteriormente y, a través de una serie de
+
+243
+00:09:48,839 --> 00:09:53,680
+operadores matemáticos, pues nos montamos
+
+244
+00:09:50,600 --> 00:09:56,680
+nuestra fórmula y obtenemos un resultado.
+
+245
+00:09:53,680 --> 00:09:58,680
+Vale, este nuevo valor ¿vale? esta
+
+246
+00:09:56,680 --> 00:10:00,880
+nueva fórmula, pues recibe un nombre, que
+
+247
+00:09:58,680 --> 00:10:02,480
+es, bueno, como si fuera un nombre de una
+
+248
+00:10:00,880 --> 00:10:05,360
+variable, y lo podemos utilizar dentro de
+
+249
+00:10:02,480 --> 00:10:08,680
+nuestros widgets. En este caso, y como
+
+250
+00:10:05,360 --> 00:10:09,880
+ejemplo, se propone una aplicación, se
+
+251
+00:10:08,680 --> 00:10:13,880
+propone un entorno, basado en tres
+
+252
+00:10:09,880 --> 00:10:17,880
+dashboards: uno principal que nos da una
+
+253
+00:10:13,880 --> 00:10:20,560
+información general del sistema; otro
+
+254
+00:10:17,880 --> 00:10:23,200
+que nos indica, con todos los datos
+
+255
+00:10:20,560 --> 00:10:24,920
+cocinados y en bruto, pues, nos indica una
+
+256
+00:10:23,200 --> 00:10:26,880
+serie de información para extraer el OEE de
+
+257
+00:10:24,920 --> 00:10:29,959
+cada una de los robots y de esta forma
+
+258
+00:10:26,880 --> 00:10:31,480
+ver formas de mejorar la
+
+259
+00:10:29,959 --> 00:10:32,920
+productividad de cada uno de ellos. Por
+
+260
+00:10:31,480 --> 00:10:35,800
+ejemplo, en este caso veríamos, pues, que
+
+261
+00:10:32,920 --> 00:10:37,440
+el robot 4 tiene una productividad
+
+262
+00:10:35,800 --> 00:10:41,000
+ligeramente inferior a los demás. Podemos
+
+263
+00:10:37,440 --> 00:10:42,670
+estudiar el porqué. Y aquí abajo, pues,
+
+264
+00:10:41,000 --> 00:10:44,279
+tendríamos los
+
+265
+00:10:42,670 --> 00:10:49,079
+eh 
+
+266
+00:10:44,279 --> 00:10:51,320
+los datos básicos, los KPI, que
+
+267
+00:10:49,079 --> 00:10:53,560
+forman el OEE ¿vale? los indicadores de
+
+268
+00:10:51,320 --> 00:10:56,079
+proceso, disponibilidad, rendimiento y
+
+269
+00:10:53,560 --> 00:10:58,480
+calidad que, multiplicados entre sí, pues
+
+270
+00:10:56,079 --> 00:10:59,760
+forman el OEE ¿vale? para comprobar,
+
+271
+00:10:58,480 --> 00:11:04,120
+por ejemplo,
+
+272
+00:10:59,760 --> 00:11:06,120
+cuál es el elemento a mejorar. En
+
+273
+00:11:04,120 --> 00:11:08,720
+este caso, ya vemos que la disponibilidad
+
+274
+00:11:06,120 --> 00:11:10,920
+del cuarto robot es bastante inferior
+
+275
+00:11:08,720 --> 00:11:12,760
+que el resto mientras que el resto de
+
+276
+00:11:10,920 --> 00:11:14,200
+indicadores son bastante similares. Por
+
+277
+00:11:12,760 --> 00:11:16,440
+tanto, nos centraríamos más en la
+
+278
+00:11:14,200 --> 00:11:18,480
+disponibilidad del cuarto robot más que
+
+279
+00:11:16,440 --> 00:11:20,360
+en la calidad. La calidad, por ejemplo,
+
+280
+00:11:18,480 --> 00:11:23,600
+aquí ya vemos que el cuarto robot es el
+
+281
+00:11:20,360 --> 00:11:26,600
+el que se lleva la peor calidad. Pero,
+
+282
+00:11:23,600 --> 00:11:30,079
+estamos hablando de 53 errores frente a
+
+283
+00:11:26,600 --> 00:11:32,839
+9213 no errores, por tanto, en este caso,
+
+284
+00:11:30,079 --> 00:11:36,279
+aunque sí es cierto que el robot 4 tiene
+
+285
+00:11:32,839 --> 00:11:37,839
+una calidad menor, no merece la pena
+
+286
+00:11:36,279 --> 00:11:39,240
+invertir muchos recursos en mejorarla
+
+287
+00:11:37,839 --> 00:11:41,440
+porque son, es,
+
+288
+00:11:39,240 --> 00:11:44,200
+insignificante. Con el rendimiento pasa
+
+289
+00:11:41,440 --> 00:11:46,839
+igual. Si es cierto que todos los robots
+
+290
+00:11:44,200 --> 00:11:50,320
+tienen un rendimiento inferior,
+
+291
+00:11:46,839 --> 00:11:54,000
+una producción inferior a la 
+
+292
+00:11:50,320 --> 00:11:55,720
+teórica, pero en proporción es más o menos
+
+293
+00:11:54,000 --> 00:11:57,320
+la misma tanto para el robot 1, para el 2,
+
+294
+00:11:55,720 --> 00:12:00,040
+para el 3 o para el 4.
+
+295
+00:11:57,320 --> 00:12:02,680
+También es cierto que para el robot 4 la
+
+296
+00:12:00,040 --> 00:12:05,600
+producción teórica es inferior
+
+297
+00:12:02,680 --> 00:12:07,200
+que la teórica de robot 3 por tanto,
+
+298
+00:12:05,600 --> 00:12:08,760
+es normal que la producción real también
+
+299
+00:12:07,200 --> 00:12:10,480
+sea inferior. Pero en proporción son
+
+300
+00:12:08,760 --> 00:12:13,199
+iguales, por lo tanto, vemos que en cuanto
+
+301
+00:12:10,480 --> 00:12:16,720
+a rendimiento, tampoco hay que invertir
+
+302
+00:12:13,199 --> 00:12:19,560
+muchos recursos en su mejora. Donde
+
+303
+00:12:16,720 --> 00:12:21,760
+realmente hay que mejorar es en la
+
+304
+00:12:19,560 --> 00:12:23,760
+disponibilidad. Otro dashboard que
+
+305
+00:12:21,760 --> 00:12:26,600
+tenemos es el de la productividad.
+
+306
+00:12:23,760 --> 00:12:29,480
+Este de aquí. Aquí podemos ver, por
+
+307
+00:12:26,600 --> 00:12:32,600
+ejemplo, datos históricos sobre los ciclos por
+
+308
+00:12:29,480 --> 00:12:34,880
+minuto, pues, de los robots 2, 3 y 4
+
+309
+00:12:32,600 --> 00:12:38,160
+y vemos que, más o menos, aunque van
+
+310
+00:12:34,880 --> 00:12:41,720
+fluctuando con el tiempo, pues bueno, son
+
+311
+00:12:38,160 --> 00:12:44,440
+similares ¿no?. Y contrastamos esta
+
+312
+00:12:41,720 --> 00:12:46,800
+información con los productos perdidos
+
+313
+00:12:44,440 --> 00:12:49,519
+por las cintas. Vemos que el producto
+
+314
+00:12:46,800 --> 00:12:51,959
+perdido en las cintas de "Place" es
+
+315
+00:12:49,519 --> 00:12:55,440
+solamente uno, mientras que en las
+
+316
+00:12:51,959 --> 00:12:57,760
+cintas de recogida van subiendo con el
+
+317
+00:12:55,440 --> 00:13:00,560
+tiempo vale hasta llegar al estado
+
+318
+00:12:57,760 --> 00:13:02,720
+actual que serían 636. Esto quiere decir
+
+319
+00:13:00,560 --> 00:13:04,959
+que, de alguna manera, la cinta de... o se
+
+320
+00:13:02,720 --> 00:13:06,680
+están alimentando demasiados items o los
+
+321
+00:13:04,959 --> 00:13:08,519
+4 robots en su conjunto no son
+
+322
+00:13:06,680 --> 00:13:11,040
+capaces de procesar todos los ítems que
+
+323
+00:13:08,519 --> 00:13:13,920
+conlleva la cinta. Por tanto, quizás
+
+324
+00:13:11,040 --> 00:13:16,079
+sería buena idea o bien subir la
+
+325
+00:13:13,920 --> 00:13:18,399
+velocidad de todos los robots o bien
+
+326
+00:13:16,079 --> 00:13:20,760
+bajar la velocidad de la cinta de
+
+327
+00:13:18,399 --> 00:13:22,560
+recogida porque, no estamos cogiendo, no
+
+328
+00:13:20,760 --> 00:13:24,240
+estamos procesando, todos los ítems
+
+329
+00:13:22,560 --> 00:13:27,920
+que están circulando por
+
+330
+00:13:24,240 --> 00:13:29,480
+ahí. Y en mantenimiento, si nos interesa
+
+331
+00:13:27,920 --> 00:13:31,519
+realmente mejorar el mantenimiento, pues
+
+332
+00:13:29,480 --> 00:13:33,680
+lo que estamos viendo aquí es los
+
+333
+00:13:31,519 --> 00:13:35,000
+desplazamientos, esos serían datos brutos:
+
+334
+00:13:33,680 --> 00:13:36,880
+el desplazamiento de cada uno de los
+
+335
+00:13:35,000 --> 00:13:40,079
+robots. Vemos que el robot 4 apenas se
+
+336
+00:13:36,880 --> 00:13:42,279
+desplaza. De alguna manera, el robot 4, o
+
+337
+00:13:40,079 --> 00:13:45,639
+no le llegan piezas
+
+338
+00:13:42,279 --> 00:13:47,880
+o tiene algún problema de lentitud que
+
+339
+00:13:45,639 --> 00:13:49,040
+no le hace procesar
+
+340
+00:13:47,880 --> 00:13:52,160
+correctamente
+
+341
+00:13:49,040 --> 00:13:54,800
+los items que le están llegando.
+
+342
+00:13:52,160 --> 00:13:56,639
+También, el tiempo de producción, vemos
+
+343
+00:13:54,800 --> 00:13:58,160
+que el tiempo de producción del robot 4
+
+344
+00:13:56,639 --> 00:14:01,560
+también es inferior que el resto. Esto
+
+345
+00:13:58,160 --> 00:14:04,240
+quiere decir que, efectivamente, no es un
+
+346
+00:14:01,560 --> 00:14:05,800
+problema de velocidad sino de que,
+
+347
+00:14:04,240 --> 00:14:08,000
+realmente, no se está moviendo el
+
+348
+00:14:05,800 --> 00:14:10,720
+robot. Es decir, de alguna manera ya no
+
+349
+00:14:08,000 --> 00:14:13,639
+le están llegando piezas al robot número 4,
+
+350
+00:14:10,720 --> 00:14:16,000
+probablemente, porque el robot 1, 2 y 3
+
+351
+00:14:13,639 --> 00:14:17,680
+están absorbiendo toda la producción
+
+352
+00:14:16,000 --> 00:14:21,079
+mientras que el 4 no está
+
+353
+00:14:17,680 --> 00:14:21,079
+absorbiendo toda la producción.
+
+354
+00:14:22,079 --> 00:14:26,040
+En el último gráfico vemos las
+
+355
+00:14:24,320 --> 00:14:28,240
+maniobras. Lo mismo: vemos que las
+
+356
+00:14:26,040 --> 00:14:30,560
+maniobras realizadas por el cuarto robot
+
+357
+00:14:28,240 --> 00:14:33,160
+no son tan elevadas como las realizadas
+
+358
+00:14:30,560 --> 00:14:34,920
+por los anteriores robots. De hecho, de
+
+359
+00:14:33,160 --> 00:14:36,800
+forma muy ligera, vemos que el robot
+
+360
+00:14:34,920 --> 00:14:39,079
+número 1 es el que más trabaja, el
+
+361
+00:14:36,800 --> 00:14:41,120
+robot número 2 trabaja un pelín menos
+
+362
+00:14:39,079 --> 00:14:43,000
+y el robot número 3 trabaja ya un
+
+363
+00:14:41,120 --> 00:14:45,560
+pelín menos pero el 4 ya es
+
+364
+00:14:43,000 --> 00:14:47,279
+exagerado: ya no le llegan ítems. Por
+
+365
+00:14:45,560 --> 00:14:49,639
+tanto, tendríamos que, quizás, buscar
+
+366
+00:14:47,279 --> 00:14:51,320
+métodos para equilibrar el reparto de
+
+367
+00:14:49,639 --> 00:14:54,639
+carga entre los
+
+368
+00:14:51,320 --> 00:14:58,120
+robots. Es decir, aquí, para concluir este
+
+369
+00:14:54,639 --> 00:15:01,199
+vídeo, con datos muy simples podemos
+
+370
+00:14:58,120 --> 00:15:04,160
+realizar estudios más o menos
+
+371
+00:15:01,199 --> 00:15:06,759
+elaborados que nos permitan extraer
+
+372
+00:15:04,160 --> 00:15:09,560
+información a largo plazo para mejorar,
+
+373
+00:15:06,759 --> 00:15:12,399
+en este caso, la producción y
+
+374
+00:15:09,560 --> 00:15:15,040
+también mejorar nuestros planes de
+
+375
+00:15:12,399 --> 00:15:17,600
+mantenimiento. No obstante, cada
+
+376
+00:15:15,040 --> 00:15:18,920
+aplicación es un mundo y lo que es la
+
+377
+00:15:17,600 --> 00:15:20,639
+plataforma de desarrollo de aplicaciones
+
+378
+00:15:18,920 --> 00:15:23,040
+multirrobot, pues, incluye una serie de datos pero
+
+379
+00:15:20,639 --> 00:15:26,040
+puede ser que sea necesario el uso de
+
+380
+00:15:23,040 --> 00:15:29,120
+otros datos distintos o, a lo mejor, con los 
+
+381
+00:15:26,040 --> 00:15:30,839
+datos que se proponen, simplemente 
+
+382
+00:15:29,120 --> 00:15:33,600
+utilizar, pues, 2 o 3 de ellos. Por
+
+383
+00:15:30,839 --> 00:15:34,800
+ejemplo, si quisiéramos crear un modelo
+
+384
+00:15:33,600 --> 00:15:37,480
+de negocio basado en servitización,
+
+385
+00:15:34,800 --> 00:15:40,720
+únicamente necesitaríamos un dato: el
+
+386
+00:15:37,480 --> 00:15:42,560
+número de maniobras OK por ejemplo. ¿Qué podemos
+
+387
+00:15:40,720 --> 00:15:43,880
+hacer? Pues podemos, por ejemplo, proponer
+
+388
+00:15:42,560 --> 00:15:46,680
+a nuestros clientes, si somos un
+
+389
+00:15:43,880 --> 00:15:48,680
+fabricante de maquinaria, que le vamos a
+
+390
+00:15:46,680 --> 00:15:51,000
+entregar la máquina, la línea robotizada,
+
+391
+00:15:48,680 --> 00:15:52,959
+totalmente gratuita y solo le vamos a
+
+392
+00:15:51,000 --> 00:15:54,120
+cobrar un tanto por ciento por producto
+
+393
+00:15:52,959 --> 00:15:56,519
+OK
+
+394
+00:15:54,120 --> 00:15:58,199
+fabricado. De esta manera él se ahorra la
+
+395
+00:15:56,519 --> 00:15:59,680
+inversión, la gran inversión, de comprar
+
+396
+00:15:58,199 --> 00:16:00,759
+una línea,
+
+397
+00:15:59,680 --> 00:16:02,480
+una línea
+
+398
+00:16:00,759 --> 00:16:05,199
+robotizada, que a lo mejor que solamente la
+
+399
+00:16:02,480 --> 00:16:08,759
+necesita para la presente campaña ¿vale?
+
+400
+00:16:05,199 --> 00:16:11,959
+y a cambio, bueno, nos tendrá que dar un
+
+401
+00:16:08,759 --> 00:16:12,839
+porcentaje de cada pieza fabricada, pero,
+
+402
+00:16:11,959 --> 00:16:15,480
+por
+
+403
+00:16:12,839 --> 00:16:16,720
+contra, él también podrá sacar más margen
+
+404
+00:16:15,480 --> 00:16:18,880
+por cada pieza fabricada porque no
+
+405
+00:16:16,720 --> 00:16:22,680
+tendrá que amortizar esta línea. Por
+
+406
+00:16:18,880 --> 00:16:24,560
+tanto, por un lado él sale ganando ¿vale? y
+
+407
+00:16:22,680 --> 00:16:26,199
+por otro lado nosotros, como fabricantes
+
+408
+00:16:24,560 --> 00:16:28,199
+de maquinaria, también saldríamos ganando.
+
+409
+00:16:26,199 --> 00:16:29,839
+A la larga recuperaríamos la línea y se la
+
+410
+00:16:28,199 --> 00:16:33,079
+podríamos
+
+411
+00:16:29,839 --> 00:16:35,880
+alquilar, pues, a otro
+
+412
+00:16:33,079 --> 00:16:36,920
+cliente. Eso sería un posible modelo de
+
+413
+00:16:35,880 --> 00:16:40,040
+negocio
+
+414
+00:16:36,920 --> 00:16:42,399
+nuevo. No todo el mundo tiene la
+
+415
+00:16:40,040 --> 00:16:45,880
+inversión o puede permitirse la inversión
+
+416
+00:16:42,399 --> 00:16:48,199
+de comprar una línea entera, a veces, bien
+
+417
+00:16:45,880 --> 00:16:50,440
+para tenerla en funcionamiento
+
+418
+00:16:48,199 --> 00:16:52,360
+varios años (3, 4 o 5 años) o a veces,
+
+419
+00:16:50,440 --> 00:16:54,680
+simplemente, la necesita para una
+
+420
+00:16:52,360 --> 00:16:55,839
+campaña en concreto o para absorver una punta de
+
+421
+00:16:54,680 --> 00:16:59,800
+trabajo
+
+422
+00:16:55,839 --> 00:17:02,240
+concreta y muchas veces lo que se suele hacer es
+
+423
+00:16:59,800 --> 00:17:04,919
+sobreexplotar las máquinas ya presentes
+
+424
+00:17:02,240 --> 00:17:07,559
+por no comprar una nueva que no
+
+425
+00:17:04,919 --> 00:17:10,720
+justifica el coste para una sola campaña.
+
+426
+00:17:07,559 --> 00:17:12,959
+En fin, las funcionales IoT 
+
+427
+00:17:10,720 --> 00:17:16,079
+permitirían estos nuevos modelos de
+
+428
+00:17:12,959 --> 00:17:18,640
+negocio, así como, por ejemplo, pues 
+
+429
+00:17:16,079 --> 00:17:21,480
+mejores o más eficientes
+
+430
+00:17:18,640 --> 00:17:23,640
+técnicas de mantenimiento o incluso
+
+431
+00:17:21,480 --> 00:17:25,240
+estudios de la máquina. Todo depende de
+
+432
+00:17:23,640 --> 00:17:28,839
+lo que se busque con estas
+
+433
+00:17:25,240 --> 00:17:28,839
+funcionalidades nuevas.
+

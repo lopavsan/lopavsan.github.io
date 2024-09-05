@@ -1,0 +1,748 @@
+1
+00:00:00,880 --> 00:00:04,440
+En este vídeo veremos las opciones de
+
+2
+00:00:02,720 --> 00:00:06,640
+reparto de carga entre robots incluidas en
+
+3
+00:00:04,440 --> 00:00:08,440
+la aplicación. Para ello, nos dirigiremos
+
+4
+00:00:06,640 --> 00:00:09,440
+al panel de configuración y a la sección
+
+5
+00:00:08,440 --> 00:00:11,519
+donde se encuentran los parámetros
+
+6
+00:00:09,440 --> 00:00:13,719
+relativos al modo automático de
+
+7
+00:00:11,519 --> 00:00:15,879
+trabajo. En este panel vemos que, en
+
+8
+00:00:13,719 --> 00:00:17,600
+cuanto a reparto de carga, existen tres
+
+9
+00:00:15,879 --> 00:00:19,680
+posibilidades: o no utilizar ningún
+
+10
+00:00:17,600 --> 00:00:21,560
+reparto de carga, o utilizar un reparto
+
+11
+00:00:19,680 --> 00:00:23,640
+de carga basado en la zona de la cinta
+
+12
+00:00:21,560 --> 00:00:25,599
+donde se encuentra el ítem, o bien un
+
+13
+00:00:23,640 --> 00:00:27,439
+reparto de carga basado en la categoría
+
+14
+00:00:25,599 --> 00:00:30,080
+que la cámara asigna a cada
+
+15
+00:00:27,439 --> 00:00:32,520
+ítem. Para comprobar el comportamiento de
+
+16
+00:00:30,080 --> 00:00:34,399
+la máquina ante cada una de estas
+
+17
+00:00:32,520 --> 00:00:35,520
+tres posibilidades, nos aseguraremos de
+
+18
+00:00:34,399 --> 00:00:38,719
+que los cuatro robots que vamos a
+
+19
+00:00:35,520 --> 00:00:40,160
+emplear en el proceso poseen el mismo
+
+20
+00:00:38,719 --> 00:00:42,800
+tipo de reparto de carga. En este
+
+21
+00:00:40,160 --> 00:00:46,000
+caso, "ninguno". Nos dirigiremos al panel
+
+22
+00:00:42,800 --> 00:00:46,000
+automático y arrancaremos las
+
+23
+00:00:46,800 --> 00:00:51,360
+cintas. En esta modalidad, como no existe
+
+24
+00:00:49,440 --> 00:00:53,399
+ningún reparto de carga, cada robot
+
+25
+00:00:51,360 --> 00:00:55,440
+intentará procesar todos los ítems que
+
+26
+00:00:53,399 --> 00:00:57,239
+entren en su zona de influencia. Aquellos
+
+27
+00:00:55,440 --> 00:00:58,680
+que no consiga procesar seguirán su
+
+28
+00:00:57,239 --> 00:01:00,960
+camino hasta alcanzar la zona de
+
+29
+00:00:58,680 --> 00:01:03,879
+influencia del siguiente robot, que hará
+
+30
+00:01:00,960 --> 00:01:08,000
+lo propio, y así hasta el último de los
+
+31
+00:01:03,879 --> 00:01:09,600
+robots. Vemos ya, a simple vista, que los
+
+32
+00:01:08,000 --> 00:01:11,200
+primeros robots están asumiendo la mayor
+
+33
+00:01:09,600 --> 00:01:13,920
+parte de la carga de trabajo, mientras
+
+34
+00:01:11,200 --> 00:01:16,159
+que los últimos robots tienden a asumir
+
+35
+00:01:13,920 --> 00:01:17,960
+una carga mucho menor. Vemos que el robot
+
+36
+00:01:16,159 --> 00:01:21,000
+número 1 y 2 están continuamente
+
+37
+00:01:17,960 --> 00:01:23,479
+procesando ítems sin parar, mientras que
+
+38
+00:01:21,000 --> 00:01:25,759
+el robot número 3 está solamente el 50%
+
+39
+00:01:23,479 --> 00:01:28,240
+de su tiempo, más o menos, procesando
+
+40
+00:01:25,759 --> 00:01:30,920
+ítems y el cuarto robot no procesa
+
+41
+00:01:28,240 --> 00:01:31,840
+ninguno; no hay ningún item que alcance su
+
+42
+00:01:30,920 --> 00:01:33,680
+zona de
+
+43
+00:01:31,840 --> 00:01:35,560
+influencia. Esto puede tener
+
+44
+00:01:33,680 --> 00:01:37,920
+consecuencias negativas en cuanto a
+
+45
+00:01:35,560 --> 00:01:39,280
+mantenimiento porque, evidentemente, los
+
+46
+00:01:37,920 --> 00:01:41,720
+los robots que más trabajan se van a
+
+47
+00:01:39,280 --> 00:01:43,560
+gastar antes y van a necesitar más
+
+48
+00:01:41,720 --> 00:01:46,880
+planes de mantenimiento que los
+
+49
+00:01:43,560 --> 00:01:48,479
+últimos. Por tanto, muy probablemente, a lo
+
+50
+00:01:46,880 --> 00:01:50,360
+largo del año, se produzcan muchas más
+
+51
+00:01:48,479 --> 00:01:52,159
+paradas técnicas que si el reparto
+
+52
+00:01:50,360 --> 00:01:54,680
+estuviera más
+
+53
+00:01:52,159 --> 00:01:57,159
+equilibrado. Luego, los planes de
+
+54
+00:01:54,680 --> 00:02:00,399
+mantenimiento predictivo y preventivo se
+
+55
+00:01:57,159 --> 00:02:02,200
+podían llegar a complicar porque
+
+56
+00:02:00,399 --> 00:02:04,880
+necesitarían considerar no la máquina
+
+57
+00:02:02,200 --> 00:02:07,319
+como un conjunto, sino cada uno de
+
+58
+00:02:04,880 --> 00:02:09,200
+los robots como si fueran máquinas
+
+59
+00:02:07,319 --> 00:02:11,440
+individuales. Bien, vamos a ver el
+
+60
+00:02:09,200 --> 00:02:13,760
+comportamiento del sistema con otro
+
+61
+00:02:11,440 --> 00:02:16,440
+reparto de carga. Nos dirigiremos al panel de
+
+62
+00:02:13,760 --> 00:02:18,400
+configuración y, en este caso,
+
+63
+00:02:16,440 --> 00:02:21,720
+seleccionaremos un reparto de carga
+
+64
+00:02:18,400 --> 00:02:21,720
+"zonal" en cada uno de los cuatro
+
+65
+00:02:25,920 --> 00:02:32,000
+robots. Bien, en este tipo de reparto de
+
+66
+00:02:29,280 --> 00:02:33,959
+carga, lo que se hace es dividir el
+
+67
+00:02:32,000 --> 00:02:36,879
+ancho de la cinta de recogida en tantas
+
+68
+00:02:33,959 --> 00:02:40,200
+zonas como robots se encuentren activos,
+
+69
+00:02:36,879 --> 00:02:40,200
+esto es, en automático y
+
+70
+00:02:40,239 --> 00:02:45,120
+trabajando. En este caso, como tenemos
+
+71
+00:02:42,319 --> 00:02:48,560
+4, el ancho de la cinta se divide en
+
+72
+00:02:45,120 --> 00:02:51,120
+4 secciones, cada una con el 25%
+
+73
+00:02:48,560 --> 00:02:55,080
+del ancho total de la cinta, de tal modo
+
+74
+00:02:51,120 --> 00:02:58,159
+que los ítems que circulan por el 25%,
+
+75
+00:02:55,080 --> 00:03:00,239
+por el primer 25% del ancho de la cinta,
+
+76
+00:02:58,159 --> 00:03:02,800
+será asignados al primer robot. El
+
+77
+00:03:00,239 --> 00:03:05,040
+segundo robot cogerá solamente los ítems
+
+78
+00:03:02,800 --> 00:03:07,560
+que se encuentren dentro del siguiente
+
+79
+00:03:05,040 --> 00:03:10,319
+25%. El tercer robot solo cogerá los
+
+80
+00:03:07,560 --> 00:03:12,480
+ítems que se encuentren en el tercer 25%
+
+81
+00:03:10,319 --> 00:03:16,360
+y el cuarto robot hará lo propio con los
+
+82
+00:03:12,480 --> 00:03:16,360
+ítems que se encuentren en el último
+
+83
+00:03:17,319 --> 00:03:24,159
+25%. De esta forma, ya vemos que el
+
+84
+00:03:20,799 --> 00:03:24,159
+reparto está más
+
+85
+00:03:24,599 --> 00:03:29,840
+equilibrado. Tal vez los primeros
+
+86
+00:03:27,040 --> 00:03:32,239
+robots estén produciendo menos tiempo,
+
+87
+00:03:29,840 --> 00:03:34,560
+pero eso es porque el reparto está
+
+88
+00:03:32,239 --> 00:03:36,200
+más equilibrado y los últimos dos están
+
+89
+00:03:34,560 --> 00:03:37,959
+produciendo más que antes, que cuando no
+
+90
+00:03:36,200 --> 00:03:40,519
+teníamos ningún reparto de
+
+91
+00:03:37,959 --> 00:03:43,640
+carga. Si ahora, por ejemplo, cogiéramos el
+
+92
+00:03:40,519 --> 00:03:47,360
+robot número 2 y lo
+
+93
+00:03:43,640 --> 00:03:49,760
+inhibiéramos, el sistema se autoconfiguraría y
+
+94
+00:03:47,360 --> 00:03:51,000
+las zonas se dividirían no en 4,
+
+95
+00:03:49,760 --> 00:03:53,879
+sino en 3, puesto que solamente
+
+96
+00:03:51,000 --> 00:03:56,799
+tenemos tres robots en automático y
+
+97
+00:03:53,879 --> 00:03:58,680
+produciendo. El sistema es el mismo: el
+
+98
+00:03:56,799 --> 00:04:00,400
+primer robot recogerá solamente los ítems
+
+99
+00:03:58,680 --> 00:04:02,840
+que se encuentren en el primer tercio
+
+100
+00:04:00,400 --> 00:04:04,439
+del ancho de la cinta. El segundo no va a
+
+101
+00:04:02,840 --> 00:04:07,400
+coger ninguno porque está inhibido. El
+
+102
+00:04:04,439 --> 00:04:09,360
+tercer robot solamente cogerá los ítems
+
+103
+00:04:07,400 --> 00:04:12,000
+que se encuentren en la parte central de
+
+104
+00:04:09,360 --> 00:04:13,959
+la cinta, en el segundo tercio, y el cuarto
+
+105
+00:04:12,000 --> 00:04:16,440
+robot solo cogerá los que se encuentren
+
+106
+00:04:13,959 --> 00:04:19,040
+en el último tercio de la cinta,
+
+107
+00:04:16,440 --> 00:04:19,040
+en el último 33%.
+
+108
+00:04:19,600 --> 00:04:25,440
+Esto puede ser útil en aquellos casos
+
+109
+00:04:22,400 --> 00:04:28,320
+en los que, por avería o por otras causas,
+
+110
+00:04:25,440 --> 00:04:30,600
+se deba de detener uno de los robots y
+
+111
+00:04:28,320 --> 00:04:33,039
+necesitemos que el resto siga
+
+112
+00:04:30,600 --> 00:04:35,880
+produciendo. Se podría bajar la velocidad
+
+113
+00:04:33,039 --> 00:04:38,400
+de la cinta y los tres robots
+
+114
+00:04:35,880 --> 00:04:40,560
+supervivientes asumirían la totalidad de
+
+115
+00:04:38,400 --> 00:04:40,560
+la
+
+116
+00:04:41,280 --> 00:04:48,080
+carga. Bien, vamos a parar
+
+117
+00:04:45,039 --> 00:04:50,320
+cientas y, en este caso, vamos a
+
+118
+00:04:48,080 --> 00:04:52,160
+seleccionar el último tipo de reparto de
+
+119
+00:04:50,320 --> 00:04:54,080
+carga existente, que sería el reparto de
+
+120
+00:04:52,160 --> 00:04:56,440
+carga basado en la categoría que la
+
+121
+00:04:54,080 --> 00:04:58,039
+cámara asigna a cada ítem. Haremos lo
+
+122
+00:04:56,440 --> 00:05:03,120
+mismo: nos dirigiremos
+
+123
+00:04:58,039 --> 00:05:03,120
+robot 1, cámara, robot 2,
+
+124
+00:05:03,479 --> 00:05:10,199
+cámara, robot 3, cámara, y robot
+
+125
+00:05:05,800 --> 00:05:12,160
+4... Bien, en este caso, la cámara asignará
+
+126
+00:05:10,199 --> 00:05:16,120
+una categoría a cada item en función de
+
+127
+00:05:12,160 --> 00:05:18,319
+sus características y el operario podría
+
+128
+00:05:16,120 --> 00:05:20,759
+asignar cada una de estas categorías
+
+129
+00:05:18,319 --> 00:05:23,280
+para ser procesadas por un robot u otro.
+
+130
+00:05:20,759 --> 00:05:25,440
+En este ejemplo, vamos a dividir la carga
+
+131
+00:05:23,280 --> 00:05:27,639
+también un poco de forma equilibrada y
+
+132
+00:05:25,440 --> 00:05:30,199
+asignaremos la categoría 0 al robot 1, la
+
+133
+00:05:27,639 --> 00:05:32,639
+categoría 1 al robot 2, la 2 al 3 y la
+
+134
+00:05:30,199 --> 00:05:35,720
+3 al 4 y la cuarta categoría se la
+
+135
+00:05:32,639 --> 00:05:39,000
+asignaremos a todos los robots, de forma
+
+136
+00:05:35,720 --> 00:05:41,600
+que si hay un ítem que tenga categoría 4,
+
+137
+00:05:39,000 --> 00:05:44,680
+será procesado por cualquiera de los
+
+138
+00:05:41,600 --> 00:05:46,360
+robots. Vamos a hacer aceptar, nos vamos al
+
+139
+00:05:44,680 --> 00:05:49,080
+panel de
+
+140
+00:05:46,360 --> 00:05:52,240
+automático. Bien, vamos a borrar la cinta
+
+141
+00:05:49,080 --> 00:05:54,400
+para que no nos cree confusión y el
+
+142
+00:05:52,240 --> 00:05:55,600
+segundo robot, que está inhibido, lo vamos
+
+143
+00:05:54,400 --> 00:05:58,000
+a
+
+144
+00:05:55,600 --> 00:06:01,160
+habilitar y ahora vamos a arrancar la
+
+145
+00:05:58,000 --> 00:06:02,800
+cinta de nuevo.
+
+146
+00:06:01,160 --> 00:06:05,120
+Dado que el generador de ítems está
+
+147
+00:06:02,800 --> 00:06:06,840
+generando items de forma aleatoria, las
+
+148
+00:06:05,120 --> 00:06:09,280
+categorías también son aleatorias. Por
+
+149
+00:06:06,840 --> 00:06:10,720
+tanto, muy probablemente la distribución
+
+150
+00:06:09,280 --> 00:06:13,120
+sea bastante
+
+151
+00:06:10,720 --> 00:06:14,880
+equitativa. Vemos que el robot número 1
+
+152
+00:06:13,120 --> 00:06:17,280
+solamente está cogiendo ítems que hayan
+
+153
+00:06:14,880 --> 00:06:19,319
+sido clasificados como categoría 0 o
+
+154
+00:06:17,280 --> 00:06:22,800
+como categoría
+
+155
+00:06:19,319 --> 00:06:25,639
+4, el robot número 2 solo cogerá los de
+
+156
+00:06:22,800 --> 00:06:28,680
+categoría 1 y
+
+157
+00:06:25,639 --> 00:06:30,400
+4, el 3 cogerá los de categoría
+
+158
+00:06:28,680 --> 00:06:32,400
+2 y 4
+
+159
+00:06:30,400 --> 00:06:35,639
+y el cuarto robot los de categoría 3
+
+160
+00:06:32,400 --> 00:06:38,080
+o 4. Algunos ítems puede ser que se
+
+161
+00:06:35,639 --> 00:06:40,039
+escapen, por ejemplo, si algún ítem de
+
+162
+00:06:38,080 --> 00:06:42,080
+categoría 0 no ha sido procesado por
+
+163
+00:06:40,039 --> 00:06:45,039
+el primer robot ya no será procesado
+
+164
+00:06:42,080 --> 00:06:48,000
+por ninguno y se
+
+165
+00:06:45,039 --> 00:06:50,560
+escapará. Los ítems de categoría 4 es
+
+166
+00:06:48,000 --> 00:06:52,479
+menos probable que se escapen porque, si
+
+167
+00:06:50,560 --> 00:06:53,960
+no fueran procesados por el robot 1, aún
+
+168
+00:06:52,479 --> 00:06:56,280
+podían ser procesados por el 2, por el 3
+
+169
+00:06:53,960 --> 00:06:59,720
+o por el 4. Hemos visto que se
+
+170
+00:06:56,280 --> 00:06:59,720
+ha escapado uno.
+
+171
+00:07:00,400 --> 00:07:05,199
+Para evitar esto, siempre que la
+
+172
+00:07:02,639 --> 00:07:08,240
+aplicación lo permita, es posible
+
+173
+00:07:05,199 --> 00:07:10,759
+utilizar repartos de carga distintos
+
+174
+00:07:08,240 --> 00:07:13,000
+para cada robot. Lo habitual es que el
+
+175
+00:07:10,759 --> 00:07:14,960
+cuarto robot intente procesar todo lo
+
+176
+00:07:13,000 --> 00:07:17,879
+que el resto de robot no pueda procesar.
+
+177
+00:07:14,960 --> 00:07:20,080
+Para eso, lo que se puede hacer es
+
+178
+00:07:17,879 --> 00:07:23,000
+dirigirnos al panel de
+
+179
+00:07:20,080 --> 00:07:25,520
+configuración y, para el cuarto robot
+
+180
+00:07:23,000 --> 00:07:26,560
+solamente, indicar que no deseamos ningún
+
+181
+00:07:25,520 --> 00:07:29,520
+reparto de
+
+182
+00:07:26,560 --> 00:07:31,360
+carga. En este caso, el robot número 4 va
+
+183
+00:07:29,520 --> 00:07:32,759
+va a procesar todos los ítems que
+
+184
+00:07:31,360 --> 00:07:34,240
+lleguen a su zona de influencia, siempre
+
+185
+00:07:32,759 --> 00:07:37,080
+y cuando pueda,
+
+186
+00:07:34,240 --> 00:07:40,360
+claro. Esto no todas las aplicaciones
+
+187
+00:07:37,080 --> 00:07:40,360
+lo permiten.
+
