@@ -172,11 +172,13 @@ footer {
 }
 
 .footer-legal, .footer-enlaces {
-	flex-basis: 25%; /* Ocupa el 25% del contenedor */
+	flex: 0 0 90px; /* No crecerá, no se encogerá, tendrá un ancho fijo de 90px */
+	/*flex-basis: 25%;  Ocupa el 25% del contenedor */
 }
 
 .footer-icons {
-    flex-basis: 50%; /* Ocupa el 50% del contenedor */
+	flex: 1; /* Se adapta al espacio restante disponible */
+    /*flex-basis: 50%;  Ocupa el 50% del contenedor */
 }
 
 .footer-legal h3, .footer-enlaces h3 {
@@ -246,8 +248,8 @@ footer nav ul li a:hover {
 
 @media (max-width: 600px) {
 	.footer-icons ul li img {
-		width: 32px; 
-		height: 32px;
+		width: 40px; 
+		height: 40px;
 	}
 }
 /* Media Query para evitar ejecutar el hover en dispositivos táctiles */
