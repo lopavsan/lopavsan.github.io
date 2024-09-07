@@ -57,6 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	const courseTitle = document.querySelector('.course-title').textContent.trim();
     const capitulos = document.querySelectorAll('.capitulo-container');
     const menuItems = document.querySelectorAll('.side-menu ul li a'); // Selecciona las opciones del menú
+	const introSection = document.querySelector('.intro-section'); // Sección de encabezado que deseas mostrar/ocultar
     let currentIndex = 0;
 
     function showCapitulo(index) {
@@ -73,6 +74,13 @@ document.addEventListener("DOMContentLoaded", function() {
         capitulos.forEach((capitulo, i) => {
             capitulo.style.display = i === index ? 'flex' : 'none';
         });
+		
+		// Mostrar u ocultar la sección de encabezado según el capítulo
+        if (index === 0) {
+            introSection.style.display = 'flex'; // Mostrar la sección de encabezado si es el capítulo 1
+        } else {
+            introSection.style.display = 'none'; // Ocultar la sección de encabezado en los demás capítulos
+        }
 		
 		// Actualiza los botones de navegación
         updateButtons();
