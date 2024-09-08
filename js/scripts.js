@@ -17,6 +17,33 @@
 //	video.play();
 //});
 
+/*######################################################################################*/
+/*										GOOGLE ANALYTICS								*/
+/*######################################################################################*/
+document.addEventListener('DOMContentLoaded', function() {
+	var downloadLink = document.getElementById('download-template');
+	var externalLink = document.getElementById('external-link');
+	
+	if (downloadLink) {
+	  downloadLink.addEventListener('click', function() {
+		gtag('event', 'click_download', {
+		  'event_category': 'Files',
+		  'event_label': 'Template de robótica',
+		  'value': 1
+		});
+	  });
+	}
+	
+	if (externalLink) {
+	  externalLink.addEventListener('click', function() {
+		gtag('event', 'click_external', {
+		  'event_category': 'External Link',
+		  'event_label': 'Schneider Electric',
+		  'value': 1
+		});
+	  });
+	}
+});
 	
 /*######################################################################################*/
 /*						DESPLIEGUE Y COLAPSO DE TEXTO TRANSCRIPCION						*/
