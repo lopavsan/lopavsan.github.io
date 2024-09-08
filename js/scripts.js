@@ -23,6 +23,8 @@
 document.addEventListener('DOMContentLoaded', function() {
 	var downloadLink = document.getElementById('download-template');
 	var externalLink = document.getElementById('external-link');
+	var linkedinLink = document.getElementById('linkedin-link');
+	var youtubeLink = document.getElementById('youtube-link');
 	
 	if (downloadLink) {
 	  downloadLink.addEventListener('click', function() {
@@ -39,6 +41,26 @@ document.addEventListener('DOMContentLoaded', function() {
 		gtag('event', 'click_external', {
 		  'event_category': 'External Link',
 		  'event_label': 'Schneider Electric',
+		  'value': 1
+		});
+	  });
+	}
+	
+	if (linkedinLink) {
+	  linkedinLink.addEventListener('click', function() {
+		gtag('event', 'click_linkedin', {
+		  'event_category': 'Social Media',
+		  'event_label': 'Linkedin',
+		  'value': 1
+		});
+	  });
+	}
+	
+	if (youtubeLink) {
+	  youtubeLink.addEventListener('click', function() {
+		gtag('event', 'click_youtube', {
+		  'event_category': 'Social Media',
+		  'event_label': 'Youtube',
 		  'value': 1
 		});
 	  });
