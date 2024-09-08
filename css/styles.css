@@ -126,7 +126,7 @@ main {
     color: #333;        /* Cambia el color del texto */
     margin-bottom: 40px; /* Espacio debajo del titular */
     width: 100%;        /* Asegura que el titular ocupe todo el ancho disponible */
-    max-width: 600px;   /* Limita el ancho máximo del titular al ancho del contenedor */
+    max-width: 800px;   /* Limita el ancho máximo del titular al ancho del contenedor */
     margin: 0 auto; /* Centra el texto en el contenedor */	  
 }
 
@@ -149,7 +149,7 @@ main {
 /*###########################################*/
 .contenido-bienvenida {
     width: 100%;
-    max-width: 600px; /* Ajusta el ancho máximo para el contenido */
+    max-width: 800px; /* Ajusta el ancho máximo para el contenido */
 	margin-top: 20px; /* Desplaza el contenedor hacia abajo 20px */
 }
 
@@ -281,7 +281,9 @@ main {
 /*   			PRESENTACION CURSO   		 */
 /*-------------------------------------------*/
 .intro-section {
-	width: 100%;
+	margin: -20px -20px 20px -20px; /* Anula el padding superior, izquierdo y derecho, pero mantiene el margen inferior heredados del main*/
+	width: calc(100% + 40px);		/* Para compensar el padding izquierdo y derecho heredados del main*/
+	/*width: 100%;*/				/* Sólo cuando la sección intro-sección se encuentra fuera del main*/
 	min-height: 400px;
 	position: relative;
 	display: flex;
@@ -344,7 +346,7 @@ main {
 }
 
 .item-content a.requisitos-icon {
-	margin-left: 10px;
+	margin-left: 10px;/* Espacio entre el texto y el icono */
 	display: inline-flex;
 	align-items: center;
 	color: inherit;
