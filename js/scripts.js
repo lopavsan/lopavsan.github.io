@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (!isVisible) {
                 gtag('event', 'open_transcripcion', {
                     'event_category': 'Transcripción',
-                    'event_label': `Curso: ${courseTitle} - Lección: ${leccion}`
+                    'event_label': `${courseTitle} - Lección: ${leccion}`
                 });
             }
         });
@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		// Registra el cambio de lección en Google Analytics (mediante botonera o menú lateral)
 		gtag('event', 'change_leccion', {
 			'event_category': 'Navegación',									// Indica la categoría correspondiente al cambio de lección dentro de la formación
-			'event_label': `Curso: ${courseTitle} - Lección ${index + 1}` 	// Registra como "Ver Lección 1", "Ver Lección 2", etc.
+			'event_label': `${courseTitle} - Lección ${index + 1}` 	// Registra como "Ver Lección 1", "Ver Lección 2", etc.
 		});
     }
 
@@ -276,5 +276,64 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+});
+
+/*######################################################################################*/
+/*				PASO VIDEO A PANTALLA COMPLETA AL GIRAR DISPOSITIVO MOVIL 				*/
+/*######################################################################################*/
+document.addEventListener('DOMContentLoaded', () => {
+    // Función para entrar en pantalla completa
+    function enterFullScreen(iframe) {
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) { // Para Firefox
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) { // Para Chrome, Safari y Opera
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) { // Para IE/Edge
+            iframe.msRequestFullscreen();
+        }
+    }
+
+    // Función para salir de pantalla completa
+    function exitFullScreen() {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.mozCancelFullScreen) { // Para Firefox
+            document.mozCancelFullScreen();
+        } else if (document.webkitExitFullscreen) { // Para Chrome, Safari y Opera
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { // Para IE/Edge
+            document.msExitFullscreen();
+        }
+    }
+
+    // Detectar el iframe visible
+    function getVisibleIframe() {
+        const iframes = document.querySelectorAll('iframe');
+        for (let iframe of iframes) {
+            const style = window.getComputedStyle(iframe);
+            if (style.display !== 'none' && style.visibility !== 'hidden' && iframe.offsetWidth > 0 && iframe.offsetHeight > 0) {
+                return iframe;
+            }
+        }
+        return null;
+    }
+
+    // Detectar cambios de orientación
+    window.addEventListener("resize", () => {
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+        const visibleIframe = getVisibleIframe();
+
+        if (visibleIframe) {
+            if (isLandscape) {
+                // Si está en modo horizontal, poner el iframe visible en pantalla completa
+                enterFullScreen(visibleIframe);
+            } else {
+                // Si está en modo vertical, salir de pantalla completa
+                exitFullScreen();
+            }
+        }
     });
 });
