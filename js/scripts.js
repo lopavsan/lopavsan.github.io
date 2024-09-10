@@ -283,7 +283,6 @@ document.addEventListener('DOMContentLoaded', () => {
 /*				PASO VIDEO A PANTALLA COMPLETA AL GIRAR DISPOSITIVO MOVIL 				*/
 /*######################################################################################*/
 document.addEventListener('DOMContentLoaded', () => {
-    // Función para entrar en pantalla completa
     function enterFullScreen(iframe) {
         if (iframe.requestFullscreen) {
             iframe.requestFullscreen();
@@ -296,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Función para salir de pantalla completa
     function exitFullScreen() {
         if (document.exitFullscreen) {
             document.exitFullscreen();
@@ -309,7 +307,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Detectar el iframe visible
     function getVisibleIframe() {
         const iframes = document.querySelectorAll('iframe');
         for (let iframe of iframes) {
@@ -321,7 +318,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return null;
     }
 
-    // Detectar cambios de orientación
     window.addEventListener("resize", () => {
         const isLandscape = window.matchMedia("(orientation: landscape)").matches;
         const visibleIframe = getVisibleIframe();
@@ -333,6 +329,22 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 // Si está en modo vertical, salir de pantalla completa
                 exitFullScreen();
+            }
+        }
+    });
+
+    // For iOS devices, you might need to trigger full screen manually with a user action
+    window.addEventListener("orientationchange", () => {
+        const isLandscape = window.matchMedia("(orientation: landscape)").matches;
+        const visibleIframe = getVisibleIframe();
+
+        if (visibleIframe) {
+            if (isLandscape) {
+                // Try to enter full screen manually as iOS may require user interaction
+                visibleIframe.requestFullscreen && visibleIframe.requestFullscreen();
+            } else {
+                // Exit full screen if orientation changes back
+                document.exitFullscreen && document.exitFullscreen();
             }
         }
     });
