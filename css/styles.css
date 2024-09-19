@@ -457,10 +457,10 @@ main {
 
 /* Reutilizando los estilos del botón */
 .btn-examenes button, .btn-container button {
-    background-color: #4CAF50; /* Color verde */
+    background-color: rgb(var(--color-fondo-oscuro));
     border: none;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -468,7 +468,13 @@ main {
     margin: 10px 10px; /* Espacio entre los botones */
     cursor: pointer;
     border-radius: 5px;
-	width: 150px; /* Ancho fijo para todos los botones */
+	width: 100px; 
+}
+
+.btn-examenes button {
+	margin: 10px 10px 30px 10px;
+	background-color: #4CAF50; /* Color verde */
+	width: 150px;
 }
 
 /* Alinear los botones horizontalmente */
@@ -478,9 +484,29 @@ main {
     align-items: center;
 }
 
+.pulse-button {
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+	transition: box-shadow;
+	animation: palpitacion 1.8s infinite ease-in-out; /* Aplica la animación de latido */
+}
+
+@keyframes palpitacion {
+	  0%, 100% {
+		transform: scale(1);
+	  }
+	  50% {
+		transform: scale(1.05); /* Tamaño ligeramente más grande en el medio del pulso */
+	  }
+}
+
 @media (hover: hover) and (pointer: fine) {
-	.btn-examenes button:hover, .btn-container button:hover {
+	.btn-examenes button:hover { 
+		box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
 		background-color: #45a049; /* Color más oscuro al pasar el ratón */
+	}
+		
+	.btn-container button:hover {
+		background-color: rgba(var(--color-fondo-oscuro),0.5);	 
 	}
 	
 	/* Estilo para los radio y checkbox deshabilitados */
@@ -657,7 +683,7 @@ main {
 
 .navegacion button {
 	font-size: 1em;
-	background-color: #4CAF50; /* Color verde */			/*rgb(var(--color-fondo-oscuro));*/
+	background-color: rgb(var(--color-fondo-oscuro));
     color: var(--color-texto-blanco);
     padding: 10px 20px;
     cursor: pointer;
@@ -673,7 +699,7 @@ main {
 
 @media (hover: hover) and (pointer: fine) {
 	.navegacion button:hover {
-		background-color: #45a049; /* Color más oscuro al pasar el ratón */		/*rgba(var(--color-fondo-oscuro),0.5);*/
+		background-color: rgba(var(--color-fondo-oscuro),0.5);
 	}
 	
 	.navegacion button:disabled:hover {

@@ -246,7 +246,7 @@
 			<div class="btn-container">
 				<button id="submitBtn" class="btn-submit" onclick="checkAnswers()">Enviar</button>
 				<button id="retryBtn" class="btn-retry" style="display: none;" onclick="retry()">Reintentar</button>
-				<a href="javascript:history.back()" class="btn-examenes">
+				<a href="javascript:history.back()" class="btn-return">
 					<button>Volver</button>
 				</a>
 			</div>
@@ -426,6 +426,8 @@
 				'event_label': titulo,  // Nombre de la formación
 				'value': score  // Nota obtenida
 			});
+			
+			//console.log("Evento 'click_examen' enviado con título: " + titulo + " y puntaje: " + score);
 		}
 
 		function loadStoredAnswers() {
