@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal de formación en la plataforma PacDrive. Cursos sobre robótica, automatización y tecnologías avanzadas.">
+    <meta name="keywords" content="formación, PacDrive, cursos, robótica, automatización, desarrollo, tecnologías avanzadas">
+    <title>Portal PacDrive | Exámenes de Formación en Robótica y Automatización</title>
+	<link rel="icon" href="assets/icons/favicon-512x512.png" type="image/png" sizes="512x512">
+	<link rel="icon" href="assets/icons/favicon-180x180.png" type="image/png" sizes="180x180">
+	<link rel="icon" href="assets/icons/favicon-152x152.png" type="image/png" sizes="152x152">
+	<link rel="icon" href="assets/icons/favicon-120x120.png" type="image/png" sizes="120x120">
+	<link rel="icon" href="assets/icons/favicon-76x76.png" type="image/png" sizes="76x76">
+    <link rel="stylesheet" href="css/styles.css">
+	
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XYDH0QS9L0"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-XYDH0QS9L0');
+	</script>	
+	
+	<style>
+        .question {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+	<!-- Menú principal -->
+    <header id="arriba">
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html" aria-label="Ir a Inicio">Inicio</a></li>
+                <li><a href="cursos.html" aria-label="Ir a Cursos">Cursos</a></li>
+                <li><a href="#info" aria-label="Ir a Legal">Legal</a></li>
+            </ul>
+        </nav>
+    </header>
+	
+	<main>
+		<section class="section-container">
+			<!-- Titular del curso -->
+			<h1>Pon a prueba tus conocimientos</h1>
+			
+			<article class="examen-container" id="capitulo1" style="display:none;">
+				<h2>El Ecosistema PacDrive3</h2>
+
+				<div class="question">
+				  <p>1. ¿Cuál de las siguientes afirmaciones describe mejor una característica del PacDrive3 de Schneider Electric?</p>
+				  <input type="radio" id="cap1_q1a" name="q1" value="incorrecto">
+				  <label for="cap1_q1a">Es un sistema exclusivo para aplicaciones en redes de comunicación industrial</label><br>
+				  <input type="radio" id="cap1_q1b" name="q1" value="incorrecto">
+				  <label for="cap1_q1b">Utiliza un protocolo de comunicación basado en el estándar Ethernet para todas las funciones</label><br>
+				  <input type="radio" id="cap1_q1c" name="q1" value="incorrecto">
+				  <label for="cap1_q1c">Se basa en una arquitectura modular que integra controladores, motores y dispositivos de entrada/salida</label><br>
+				  <input type="radio" id="cap1_q1d" name="q1" value="correcto">
+				  <label for="cap1_q1d">Ofrece un enfoque unificado para el control de movimiento, lógica de automatización y visión</label>
+				</div>
+			</article>
+			
+			<article class="examen-container" id="capitulo2" style="display:none;">
+				<h2>El Full Template Framework</h2>
+
+				<div class="question">
+				  <p>1. ¿Cuál es una de las principales ventajas del Full Template Framework del PacDrive3 de Schneider Electric?</p>
+				  <input type="radio" id="cap2_q1a" name="q1" value="incorrecto">
+				  <label for="cap2_q1a">Permite la integración exclusiva con dispositivos de control remoto de terceros</label><br>
+				  <input type="radio" id="cap2_q1b" name="q1" value="incorrecto">
+				  <label for="cap2_q1b">Ofrece soporte solo para aplicaciones de visión artificial</label><br>
+				  <input type="radio" id="cap2_q1c" name="q1" value="incorrecto">
+				  <label for="cap2_q1c">Requiere programación extensiva en lenguaje de bajo nivel para su configuración</label><br>
+				  <input type="radio" id="cap2_q1d" name="q1" value="correcto">
+				  <label for="cap2_q1d">Facilita el desarrollo rápido de aplicaciones mediante plantillas predefinidas y configuración gráfica</label>
+				</div>
+			</article>
+
+			<article class="examen-container" id="capitulo3" style="display:none;">
+				<h2>La POO en PacDrive3</h2>
+
+				<div class="question">
+				  <p>1. ¿Cuál es uno de los principios fundamentales de la programación orientada a objetos (OOP)?</p>
+				  <input type="radio" id="cap3_q1a" name="q1" value="incorrecto">
+				  <label for="cap3_q1a">Herencia de funciones globales</label><br>
+				  <input type="radio" id="cap3_q1b" name="q1" value="incorrecto">
+				  <label for="cap3_q1b">Uso exclusivo de funciones estáticas</label><br>
+				  <input type="radio" id="cap3_q1c" name="q1" value="incorrecto">
+				  <label for="cap3_q1c">Modificación directa de variables globales</label><br>
+				  <input type="radio" id="cap3_q1d" name="q1" value="correcto">
+				  <label for="cap3_q1d">Encapsulamiento, que implica ocultar los detalles internos de los objetos y exponer solo lo necesario</label>
+				</div>
+			</article>
+			
+			<article class="examen-container" id="capitulo4" style="display:none;">
+				<h2>El Template de Robótica</h2>
+				
+				<div class="question">
+					<p>1. ¿Qué opción describe mejor el enfoque del desarrollo de la herramienta?</p>
+					<input type="radio" id="cap4_q1a" name="q1" value="incorrecto">
+					<label for="cap4_q1a">Desarrollo exclusivo en código</label><br>
+					<input type="radio" id="cap4_q1b" name="q1" value="incorrecto">
+					<label for="cap4_q1b">Uso de múltiples lenguajes de programación</label><br>
+					<input type="radio" id="cap4_q1c" name="q1" value="incorrecto">
+					<label for="cap4_q1c">Desarrollo sin interfaz gráfica</label><br>
+					<input type="radio" id="cap4_q1d" name="q1" value="correcto">
+					<label for="cap4_q1d">Enfoque gráfico y parametrizable</label>
+				</div>
+
+				<div class="question">
+					<p>2. ¿Qué tipos de aplicaciones se mencionan como objetivo principal de la herramienta?</p>
+					<input type="checkbox" id="cap4_q2a" name="q2" value="correcto">
+					<label for="cap4_q2a">Packaging</label><br>
+					<input type="checkbox" id="cap4_q2b" name="q2" value="correcto">
+					<label for="cap4_q2b">Control de calidad</label><br>
+					<input type="checkbox" id="cap4_q2c" name="q2" value="incorrecto">
+					<label for="cap4_q2c">Fabricación aditiva</label><br>
+					<input type="checkbox" id="cap4_q2d" name="q2" value="correcto">
+					<label for="cap4_q2d">Material working</label>
+				</div>	
+
+				<div class="question">
+					<p>3. ¿Cuál es una de las características de la arquitectura hardware propuesta?</p>
+					<input type="radio" id="cap4_q3a" name="q3" value="incorrecto">
+					<label for="cap4_q3a">Está diseñada solo para resolver la parte robótica</label><br>
+					<input type="radio" id="cap4_q3b" name="q3" value="incorrecto">
+					<label for="cap4_q3b">Se basa en un sistema propietario</label><br>
+					<input type="radio" id="cap4_q3c" name="q3" value="correcto">
+					<label for="cap4_q3c">Es genérica y puede abordar diferentes secciones de una máquina</label><br>
+					<input type="radio" id="cap4_q3d" name="q3" value="incorrecto">
+					<label for="cap4_q3d">Requiere lenguajes de programación especializados</label>
+				</div>
+
+				<div class="question">
+					<p>4. ¿Cuál es el estándar que sigue la plataforma de desarrollo mencionada?</p>
+					<input type="radio" id="cap4_q4a" name="q4" value="incorrecto">
+					<label for="cap4_q4a">ISO 9001</label><br>
+					<input type="radio" id="cap4_q4b" name="q4" value="incorrecto">
+					<label for="cap4_q4b">IEEE 802.11</label><br>
+					<input type="radio" id="cap4_q4c" name="q4" value="incorrecto">
+					<label for="cap4_q4c">IEC 61499</label><br>
+					<input type="radio" id="cap4_q4d" name="q4" value="correcto">
+					<label for="cap4_q4d">IEC 61131/3</label>
+				</div>		
+
+				<div class="question">
+					<p>5. ¿Qué tipo de robots no son compatibles con la herramienta propuesta?</p>
+					<input type="radio" id="cap4_q5a" name="q5" value="incorrecto">
+					<label for="cap4_q5a">Robots Delta 3D</label><br>
+					<input type="radio" id="cap4_q5b" name="q5" value="correcto">
+					<label for="cap4_q5b">Robots antropomórficos</label><br>
+					<input type="radio" id="cap4_q5c" name="q5" value="incorrecto">
+					<label for="cap4_q5c">Robots articulados</label><br>
+					<input type="radio" id="cap4_q5d" name="q5" value="incorrecto">
+					<label for="cap4_q5d">Robots SCARA</label>
+				</div>				
+
+				<div class="question">
+					<p>6. ¿Qué tipo de funcionalidades incluye la herramienta para la simulación?</p>
+					<input type="radio" id="cap4_q6a" name="q6" value="correcto">
+					<label for="cap4_q6a">Modos de simulación en 2D y 3D</label><br>
+					<input type="radio" id="cap4_q6b" name="q6" value="incorrecto">
+					<label for="cap4_q6b">Simulación sin opción de personalización</label><br>
+					<input type="radio" id="cap4_q6c" name="q6" value="incorrecto">
+					<label for="cap4_q6c">Simulación solo para control numérico</label><br>
+					<input type="radio" id="cap4_q6d" name="q6" value="incorrecto">
+					<label for="cap4_q6d">Simulación solo en 2D</label>
+				</div>
+
+				<div class="question">
+					<p>7. ¿Para qué tipo de operaciones es útil el panel de "aprendizaje"?</p>
+					<input type="radio" id="cap4_q7a" name="q7" value="incorrecto">
+					<label for="cap4_q7a">Configurar la velocidad de las cintas</label><br>
+					<input type="radio" id="cap4_q7b" name="q7" value="incorrecto">
+					<label for="cap4_q7b">Ajustar la cámara de visión</label><br>
+					<input type="radio" id="cap4_q7c" name="q7" value="incorrecto">
+					<label for="cap4_q7c">Modificar las dimensiones de las cintas</label><br>
+					<input type="radio" id="cap4_q7d" name="q7" value="correcto">
+					<label for="cap4_q7d">Probar trayectorias realizando ciclos repetitivos</label>
+				</div>
+
+				<div class="question">
+					<p>8. ¿Qué funcionalidad de IoT se menciona en el texto?</p>
+					<input type="radio" id="cap4_q8a" name="q8" value="incorrecto">
+					<label for="cap4_q8a">Conectar robots a redes Wi-Fi</label><br>
+					<input type="radio" id="cap4_q8b" name="q8" value="incorrecto">
+					<label for="cap4_q8b">Utilizar RFID para identificar ítems</label><br>
+					<input type="radio" id="cap4_q8c" name="q8" value="incorrecto">
+					<label for="cap4_q8c">Sincronizar robots mediante Bluetooth</label><br>
+					<input type="radio" id="cap4_q8d" name="q8" value="correcto">
+					<label for="cap4_q8d">Publicar datos del robot mediante OPC UA</label>
+				</div>
+
+				<div class="question">
+					<p>9. ¿Qué tipo de controladores pueden ser utilizados con la herramienta propuesta?</p>
+					<input type="radio" id="cap4_q9a" name="q9" value="incorrecto">
+					<label for="cap4_q9a">Controladores de autómatas programable</label><br>
+					<input type="radio" id="cap4_q9b" name="q9" value="correcto">
+					<label for="cap4_q9b">Solo controladores de Schneider Electrics</label><br>
+					<input type="radio" id="cap4_q9c" name="q9" value="incorrecto">
+					<label for="cap4_q9c">Controladores de robots colaborativos</label><br>
+					<input type="radio" id="cap4_q9d" name="q9" value="incorrecto">
+					<label for="cap4_q9d">Controladores de distintos fabricantes</label>
+				</div>
+
+				<div class="question">
+					<p>10. ¿Qué se incluye en el modo automático de simulación?</p>
+					<input type="radio" id="cap4_q10a" name="q10" value="incorrecto">
+					<label for="cap4_q10a">Simulación solo con ítems fijos</label><br>
+					<input type="radio" id="cap4_q10b" name="q10" value="incorrecto">
+					<label for="cap4_q10b">Generar ítems con parámetros predefinidos</label><br>
+					<input type="radio" id="cap4_q10c" name="q10" value="incorrecto">
+					<label for="cap4_q10c">Limitar la simulación a una sola trayectoria</label><br>
+					<input type="radio" id="cap4_q10d" name="q10" value="correcto">
+					<label for="cap4_q10d">Definir el número de ítems y trayectorias</label>
+				</div>	
+			</article>
+			
+			<article class="examen-container" id="capitulo5" style="display:none;">
+				<h2>El Template del Multicarrier</h2>
+
+				<div class="question">
+				  <p>1. ¿Cuál es una característica destacada del hardware Multicarrier MC12 de Schneider Electric?</p>
+				  <input type="radio" id="cap5_q1a" name="q1" value="incorrecto">
+				  <label for="cap5_q1a">Incompatibilidad con otros sistemas de control</label><br>
+				  <input type="radio" id="cap5_q1b" name="q1" value="incorrecto">
+				  <label for="cap5_q1b">Capacidad de manejar únicamente un tipo de aplicación</label><br>
+				  <input type="radio" id="cap5_q1c" name="q1" value="correcto">
+				  <label for="cap5_q1c">Flexibilidad para integrar y gestionar múltiples carriers en una sola solución</label><br>
+				  <input type="radio" id="cap5_q1d" name="q1" value="incorrecto">
+				  <label for="cap5_q1d">Dependencia exclusiva de programación en código sin soporte gráfico</label>
+				</div>
+			</article>			
+
+			<!-- Texto del resultado -->
+			<div class="result" id="result"></div>
+			
+			<!-- Contenedor para los botones -->
+			<div class="btn-container">
+				<button id="submitBtn" class="btn-submit" onclick="checkAnswers()">Enviar</button>
+				<button id="retryBtn" class="btn-retry" style="display: none;" onclick="retry()">Reintentar</button>
+				<a href="javascript:history.back()" class="btn-examenes">
+					<button>Volver</button>
+				</a>
+			</div>
+
+			
+		</section>
+	</main>
+	
+	<!-- Footer -->
+	<footer id="info">
+		<div class="footer-container">
+			<!-- Lista de enlaces internos alineada a la izquierda -->
+			<div class="footer-enlaces">
+				<h3>Explorar</h3>
+				<nav aria-label="Enlaces página">
+					<ul>
+					    <li><a href="#arriba" aria-label="Volver al inicio de la página actual">Arriba</a></li>
+						<li><a href="index.html" aria-label="Ir a la página de Inicio">Inicio</a></li>
+						<li><a href="cursos.html" aria-label="Ir a la página de Cursos">Cursos</a></li>
+					</ul>
+				</nav>
+			</div>
+		
+		   <!-- Lista de enlaces legales alineada a la izquierda -->
+			<div class="footer-legal">
+				<h3>Ética</h3>
+				<nav aria-label="Enlaces legales">
+					<ul>
+						<li id="legal-note-link"><a href="nota-legal.html" aria-label="Leer aviso legal">Nota Legal</a></li>
+						<li id="privacy-link"><a href="politica-privacidad.html" aria-label="Leer política de privacidad">Política de Privacidad</a></li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Lista de iconos alineada a la derecha -->
+			<div class="footer-icons">
+				<nav aria-label="Enlaces a redes sociales">
+					<ul>
+						<li>
+							<a href="https://www.linkedin.com/in/santiagopavía/" target="_blank" rel="noopener noreferrer" aria-label="Perfil de LinkedIn de Santiago Pavía" id="linkedin-link">
+								<img src="assets/icons/icons8-linkedin.svg" alt="LinkedIn" aria-hidden="true">
+							</a>
+						</li>
+						<li>
+							<a href="https://www.youtube.com/@motioncontroller1530" target="_blank" rel="noopener noreferrer" aria-label="Canal de YouTube de Santiago Pavía" id="youtube-link">
+								<img src="assets/icons/icons8-youtube.svg" alt="YouTube" aria-hidden="true">
+							</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- Línea horizontal -->
+			<hr class="footer-line">
+
+			<!-- Texto del copyright -->
+			<p>&copy; 2024 Portal de Formación PacDrive. Todos los derechos reservados.</p>
+		</div>
+	</footer>
+
+	<script>
+		// Función para obtener el valor de un parámetro en la URL
+		function getQueryParam(param) {
+			const urlParams = new URLSearchParams(window.location.search);
+			return urlParams.get(param);
+		}
+
+		// Obtener los valores de los parámetros "formacion" y "titulo"
+		const formacion = getQueryParam('formacion');
+		const titulo = getQueryParam('titulo');
+
+		// Ocultar todos los artículos
+		document.querySelectorAll('.examen-container').forEach(container => {
+			container.style.display = 'none';
+		});
+
+		// Mostrar el artículo correspondiente basado en el valor del parámetro
+		if (formacion) {
+			const examenContainer = document.getElementById(`capitulo${formacion}`);
+			if (examenContainer) {
+				examenContainer.style.display = 'block';
+				loadStoredAnswers();
+			}
+		}
+
+		function checkAnswers() {
+			const container = document.querySelector('article.examen-container:not([style*="display:none"])');
+
+			// Función para obtener el valor de una pregunta o retornar null si no hay selección
+			function getSelectedValue(name) {
+				const selected = container.querySelector(`input[name="${name}"]:checked`);
+				const isCorrect = selected && selected.value === "correcto" ? "correcto" : null;
+				return {
+					selected: selected ? selected.id : null,
+					isCorrect: isCorrect
+				};
+			}
+
+			function getMultipleValue(name) {
+				const selectedOptions = Array.from(container.querySelectorAll(`input[name="${name}"]:checked`)).map(el => el.id);
+				const correctOptions = Array.from(container.querySelectorAll(`input[name="${name}"][value="correcto"]`)).map(el => el.id);
+
+				const isCorrect = correctOptions.length > 0 &&
+								  correctOptions.every(option => selectedOptions.includes(option)) &&
+								  selectedOptions.every(option => correctOptions.includes(option));
+
+				return {
+					selected: selectedOptions,
+					isCorrect: isCorrect ? "correcto" : null
+				};
+			}
+
+			const q1 = getSelectedValue("q1");
+			const q2 = getMultipleValue("q2");
+			const q3 = getSelectedValue("q3");
+			const q4 = getSelectedValue("q4");
+			const q5 = getSelectedValue("q5");
+			const q6 = getSelectedValue("q6");
+			const q7 = getSelectedValue("q7");
+			const q8 = getSelectedValue("q8");
+			const q9 = getSelectedValue("q9");
+			const q10 = getSelectedValue("q10");
+
+			// Verificar respuestas correctas
+			let score = 0;
+			if (q1.isCorrect === "correcto") score++;
+			if (q2.isCorrect === "correcto") score++;
+			if (q3.isCorrect === "correcto") score++;
+			if (q4.isCorrect === "correcto") score++;
+			if (q5.isCorrect === "correcto") score++;
+			if (q6.isCorrect === "correcto") score++;
+			if (q7.isCorrect === "correcto") score++;
+			if (q8.isCorrect === "correcto") score++;
+			if (q9.isCorrect === "correcto") score++;
+			if (q10.isCorrect === "correcto") score++;
+
+			// Crear objeto de respuestas con la etiqueta de formación
+			const answers = {
+				formacion: formacion,
+				q1: q1.selected,
+				q2: q2.selected,
+				q3: q3.selected,
+				q4: q4.selected,
+				q5: q5.selected,
+				q6: q6.selected,
+				q7: q7.selected,
+				q8: q8.selected,
+				q9: q9.selected,
+				q10: q10.selected
+			};
+
+			// Guardar respuestas y resultado en LocalStorage con la etiqueta de formación
+			localStorage.setItem(`examAnswers_${formacion}`, JSON.stringify(answers));
+			localStorage.setItem(`examScore_${formacion}`, score);
+
+			// Guardar estado de deshabilitación en LocalStorage
+			const inputsState = Array.from(container.querySelectorAll('input[type="radio"], input[type="checkbox"]'))
+				.map(input => ({ id: input.id, disabled: true }));
+
+			localStorage.setItem(`examInputsState_${formacion}`, JSON.stringify(inputsState));
+
+			// Mostrar el resultado
+			document.getElementById('result').innerText = "Has acertado " + score + " de 10 preguntas.";
+
+			// Deshabilitar todos los inputs para evitar cambios
+			container.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+				input.disabled = true;
+			});
+
+			// Cambiar visibilidad de botones
+			document.getElementById('submitBtn').style.display = 'none';
+			document.getElementById('retryBtn').style.display = 'inline-block';
+			
+			// Enviar evento a Google Analytics con gtag
+			gtag('event', 'click_examen', {
+				'event_category': 'Examen',
+				'event_label': titulo,  // Nombre de la formación
+				'value': score  // Nota obtenida
+			});
+		}
+
+		function loadStoredAnswers() {
+			const container = document.querySelector('article.examen-container:not([style*="display:none"])');
+
+			if (!container) return;
+
+			const storedAnswers = JSON.parse(localStorage.getItem(`examAnswers_${formacion}`));
+			const storedScore = localStorage.getItem(`examScore_${formacion}`);
+			const storedInputsState = JSON.parse(localStorage.getItem(`examInputsState_${formacion}`)) || [];
+
+			if (storedAnswers) {
+				Object.keys(storedAnswers).forEach(key => {
+					const answer = storedAnswers[key];
+					if (Array.isArray(answer)) {
+						answer.forEach(id => {
+							const checkbox = container.querySelector(`#${id}`);
+							if (checkbox) checkbox.checked = true;
+						});
+					} else if (answer !== null && key !== 'formacion') {
+						const input = container.querySelector(`input[name="${key}"][id="${answer}"]`);
+						if (input) input.checked = true;
+					}
+				});
+
+				const resultElement = document.getElementById('result');
+				if (resultElement) {
+					resultElement.innerText = "Has acertado " + storedScore + " de 10 preguntas.";
+				}
+
+				// Restaurar el estado de deshabilitación de los inputs
+				storedInputsState.forEach(({ id, disabled }) => {
+					const input = container.querySelector(`#${id}`);
+					if (input) input.disabled = disabled;
+				});
+
+				// Cambiar visibilidad de botones
+				if (storedInputsState.every(input => input.disabled)) {
+					document.getElementById('submitBtn').style.display = 'none';
+					document.getElementById('retryBtn').style.display = 'inline-block';
+				} else {
+					document.getElementById('submitBtn').style.display = 'inline-block';
+					document.getElementById('retryBtn').style.display = 'none';
+				}
+			} else {
+				// Si no hay respuestas almacenadas, mostrar "Enviar"
+				document.getElementById('submitBtn').style.display = 'inline-block';
+				document.getElementById('retryBtn').style.display = 'none';
+			}
+		}
+
+		function retry() {
+			const container = document.querySelector('article.examen-container:not([style*="display:none"])');
+
+			if (!container) return;
+
+			// Habilitar todos los inputs y restablecer estado
+			container.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(input => {
+				input.disabled = false;
+				input.checked = false; // Opcionalmente, desmarcar los inputs
+			});
+
+			// Eliminar respuestas almacenadas
+			localStorage.removeItem(`examAnswers_${formacion}`);
+			localStorage.removeItem(`examScore_${formacion}`);
+			localStorage.removeItem(`examInputsState_${formacion}`);
+
+			// Limpiar el resultado
+			const resultElement = document.getElementById('result');
+			if (resultElement) {
+				resultElement.innerText = '';
+			}
+
+			// Cambiar visibilidad de botones
+			document.getElementById('submitBtn').style.display = 'inline-block';
+			document.getElementById('retryBtn').style.display = 'none';
+		}
+	</script>
+
+	<script src="js/scripts.js"></script>
+</body>
+</html>

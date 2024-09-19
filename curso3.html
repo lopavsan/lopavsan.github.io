@@ -6,11 +6,11 @@
     <meta name="description" content="Aprende programación orientada a objetos en PacDrive3 y mejora la reutilización y escalabilidad de tu código con nuestro curso especializado.">
 	<meta name="keywords" content="cursos PacDrive, formación PacDrive, programación orientada a objetos, PacDrive3, templates PacDrive, automatización">
 	<title>Portal PacDrive | Programación Orientada a Objetos en PacDrive3</title>
-	<link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="512x512">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180x180.png" sizes="180x180">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-152x152.png" sizes="152x152">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-120x120.png" sizes="120x120">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-76x76.png" sizes="76x76">	
+	<link rel="icon" href="assets/icons/favicon-512x512.png" type="image/png" sizes="512x512">
+	<link rel="icon" href="assets/icons/favicon-180x180.png" type="image/png" sizes="180x180">
+	<link rel="icon" href="assets/icons/favicon-152x152.png" type="image/png" sizes="152x152">
+	<link rel="icon" href="assets/icons/favicon-120x120.png" type="image/png" sizes="120x120">
+	<link rel="icon" href="assets/icons/favicon-76x76.png" type="image/png" sizes="76x76">
     <link rel="stylesheet" href="css/styles.css">
 	
 	<!-- Google tag (gtag.js) -->
@@ -54,18 +54,56 @@
 	<!-- Superposición para bloquear el scroll y las interacciones cuando está el menú lateral abierto-->
 	<div id="overlay" class="overlay"></div>
 
-    <main>
+ 	<main>
 		<section class="section-container">
+			<section class="intro-section intro-section-3">
+				<div class="intro-overlay"></div>
+				 
+				<div class="intro-wrapper">
+					<h1>La POO en PacDrive3</h1>
+					<p><strong>¡Enhorabuena por dar el primer paso hacia una nueva dimensión en tu desarrollo profesional!</strong> Estoy emocionado de acompañarte en este curso, donde descubrirás cómo la Programación Orientada a Objetos (POO) te ayudará a estructurar tus aplicaciones de manera más eficiente y flexible. La POO es una habilidad esencial en el mundo de la automatización industrial, y con este curso, te convertirás en un experto en su aplicación en el ecosistema PacDrive3.</p>
+
+					<h2>¿Qué aprenderás?</h2>
+					<p>Este curso está diseñado para llevarte de la mano en el uso de la POO aplicada a la plataforma PacDrive3. A través de ejemplos prácticos y explicaciones claras, aprenderás a organizar y reutilizar código, creando soluciones robustas y escalables. Desde la creación de clases y objetos hasta la implementación de herencia y polimorfismo, este curso te proporcionará las herramientas para diseñar sistemas modulares, facilitar el mantenimiento de tus aplicaciones y maximizar la reutilización del código en tus proyectos.</p>
+					<p>Además, verás cómo la POO te permitirá gestionar de forma eficaz la interacción entre diferentes componentes del sistema, como robots y otros dispositivos de campo, manteniendo un control total de tus procesos industriales. ¡Al final del curso, estarás preparado para llevar la eficiencia y la modularidad de tus aplicaciones al siguiente nivel!</p>
+
+					<!-- Botón "Ponte a prueba" -->
+					<a href="examenes.html?formacion=3&titulo=La%20POO%20en%20PacDrive3" class="btn-examenes">
+						<button>Ponte a prueba</button>
+					</a>
+
+					<h2>Herramientas necesarias</h2>
+					<p>Para aprovechar al máximo este curso, necesitarás:</p>
+					<ul>
+					  <li>
+						<div class="item-content">
+						  <strong>EcoStruxure Machine Expert</strong>
+						  <a href="https://www.se.com/es/es/product-range/2226-ecostruxure-machine-expert-somachine/#products" class="requisitos-icon link-icon" download id="external-link">
+							<img src="assets/icons/icon_external_link.svg" alt="Acceder a página de descarga de EcoStruxure Machine Expert"/>
+						  </a>
+						</div>
+						<p>El software de desarrollo que utilizaremos para probar los diversos ejemplos a lo largo de la formación en modo simulación, sin necesidad de un controlador físico. La última versión siempre es recomendada para asegurar compatibilidad y acceso a todas las funcionalidades.</p>
+					  </li>
+					</ul>
+
+					<p>Al finalizar este curso, estarás equipado con el conocimiento y las habilidades para aplicar la Programación Orientada a Objetos en tus proyectos industriales, creando soluciones más eficientes y escalables. ¡Prepárate para transformar tu forma de desarrollar aplicaciones y lleva tu carrera al siguiente nivel!</p>				</div>
+			</section>
+		
 			<!-- Titular de la sección -->
 			<h1 class="section-title course-title">La POO en PacDrive3</h1>
 			
-			<!-- Capítulo 1 -->
+			<!-- Capítulo 1: INTRODUCCION GENERAL -->
 			<article class="capitulo-container" id="capitulo1">
-				<video controls poster="assets/curso3/clase1.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video1.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/Ye8kGMEPsC0?modestbranding=1&rel=0" 
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra una presentación general de la plataforma de desarrollo de aplicaciones multirrobot."> 
+				</iframe>
+		
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 1">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -82,13 +120,18 @@
 				</section>	
 			</article>
 
-			<!-- Capítulo 2 -->
+			<!-- Capítulo 2: Configurar número de robots -->
 			<article class="capitulo-container" id="capitulo2" style="display:none;">
-				<video controls poster="assets/curso3/clase2.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video2.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/hedSwOl6yJs?modestbranding=1&rel=0"
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra cómo modificar la cantidad total de robots que nuestra aplicación controlará."> 
+				</iframe>
+			
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 2">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -105,13 +148,18 @@
 				</section>	
 			</article>
 
-			<!-- Capítulo 3 -->
+			<!-- Capítulo 3: Configurar referencia de robots -->
 			<article class="capitulo-container" id="capitulo3" style="display:none;">
-				<video controls poster="assets/curso3/clase3.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video3.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/RArm8MBSBnw?modestbranding=1&rel=0" 
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra cómo modificar la referencia del robot seleccionado."> 
+				</iframe>
+			
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 3">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -132,9 +180,9 @@
 		<div class="navegacion" role="navigation" aria-label="Controles de navegación">
 			<button id="prevBtn" aria-label="Ir a la sección anterior">Anterior</button>
 			<button id="nextBtn" aria-label="Ir a la siguiente sección">Siguiente</button>
-		</div>		
+		</div>
     </main>
-	
+
 	<!-- Footer -->
 	<footer id="info">
 		<div class="footer-container">
@@ -152,11 +200,11 @@
 		
 		   <!-- Lista de enlaces legales alineada a la izquierda -->
 			<div class="footer-legal">
-				<h3>Legal</h3>
+				<h3>Ética</h3>
 				<nav aria-label="Enlaces legales">
 					<ul>
-						<li><a href="nota-legal.html" aria-label="Leer aviso legal">Notas</a></li>
-						<li><a href="politica-privacidad.html" aria-label="Leer política de privacidad">Privacidad</a></li>
+						<li id="legal-note-link"><a href="nota-legal.html" aria-label="Leer aviso legal">Nota Legal</a></li>
+						<li id="privacy-link"><a href="politica-privacidad.html" aria-label="Leer política de privacidad">Política de Privacidad</a></li>
 					</ul>
 				</nav>
 			</div>

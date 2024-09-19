@@ -1,0 +1,157 @@
+1
+00:00:01,810 --> 00:00:12,719
+[Música]
+
+2
+00:00:10,840 --> 00:00:15,320
+Ciclos de innovación de productos cada vez más cortos
+
+3
+00:00:12,719 --> 00:00:17,400
+Tiempos de ciclo más rápidos y los altos
+
+4
+00:00:15,320 --> 00:00:19,439
+costos de inactividad en la producción requieren
+
+5
+00:00:17,400 --> 00:00:21,600
+máquinas que ofrezcan máxima flexibilidad
+
+6
+00:00:19,439 --> 00:00:24,439
+y fiabilidad con un tiempo reducido para
+
+7
+00:00:21,600 --> 00:00:27,039
+salir al mercado. PacDrive es tu solución para
+
+8
+00:00:24,439 --> 00:00:29,359
+cumplir con estos requisitos. Un único
+
+9
+00:00:27,039 --> 00:00:31,840
+controlador centralizado y escalable realiza
+
+10
+00:00:29,359 --> 00:00:35,280
+todas las funciones de control de la máquina, incluyendo
+
+11
+00:00:31,840 --> 00:00:39,239
+el control de movimiento para entre 0 y 99 ejes servo,
+
+12
+00:00:35,280 --> 00:00:41,039
+robótica y lógica PLC de la máquina. Reduce tu
+
+13
+00:00:39,239 --> 00:00:43,600
+tiempo de salida al mercado simplificando
+
+14
+00:00:41,039 --> 00:00:45,680
+el proceso de ingeniería con herramientas intuitivas
+
+15
+00:00:43,600 --> 00:00:48,440
+y funciones de software preprogramadas y probadas.
+
+16
+00:00:45,680 --> 00:00:50,360
+Usa programación basada en plantillas
+
+17
+00:00:48,440 --> 00:00:52,600
+y aumenta tu productividad con hardware
+
+18
+00:00:50,360 --> 00:00:55,520
+y software para diseños modulares consistentes.
+
+19
+00:00:52,600 --> 00:00:57,640
+Las funciones de conectividad integradas de PacDrive
+
+20
+00:00:55,520 --> 00:01:01,640
+son clave para una rápida puesta en marcha
+
+21
+00:00:57,640 --> 00:01:03,480
+y la integración en la línea.
+
+22
+00:01:01,640 --> 00:01:05,760
+También permiten diagnósticos efectivos
+
+23
+00:01:03,480 --> 00:01:07,759
+y funciones plug-and-play. La capacidad
+
+24
+00:01:05,760 --> 00:01:09,880
+de rastrear rápidamente las fallas hasta su
+
+25
+00:01:07,759 --> 00:01:11,680
+origen y configurar automáticamente
+
+26
+00:01:09,880 --> 00:01:13,280
+los componentes de reemplazo ayuda a tus
+
+27
+00:01:11,680 --> 00:01:14,320
+clientes a operar sus máquinas con
+
+28
+00:01:13,280 --> 00:01:16,920
+máxima
+
+29
+00:01:14,320 --> 00:01:20,040
+disponibilidad. La eficiencia energética reduce
+
+30
+00:01:16,920 --> 00:01:22,320
+los costos operativos. Usa PacDrive para diseños de máquinas
+
+31
+00:01:20,040 --> 00:01:25,400
+rápidos y eficientes en energía.
+
+32
+00:01:22,320 --> 00:01:27,880
+Más de 80,000 máquinas en todo el mundo
+
+33
+00:01:25,400 --> 00:01:30,600
+ya están automatizadas con PacDrive.
+
+34
+00:01:27,880 --> 00:01:33,240
+¿Qué estás esperando? Schneider Electric
+
+35
+00:01:30,600 --> 00:01:35,960
+PacDrive Automation Solutions reduce
+
+36
+00:01:33,240 --> 00:01:38,520
+el tiempo de salida al mercado, aumenta la rentabilidad,
+
+37
+00:01:35,960 --> 00:01:41,159
+mejora la eficiencia, simplifica la integración
+
+38
+00:01:38,520 --> 00:01:45,920
+y el mantenimiento. PacDrive es parte de
+
+39
+00:01:41,159 --> 00:01:45,920
+Machine Structure, la próxima generación.
+
+

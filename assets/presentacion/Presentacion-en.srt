@@ -1,0 +1,156 @@
+1
+00:00:01,810 --> 00:00:12,719
+[Music]
+
+2
+00:00:10,840 --> 00:00:15,320
+increasingly shorter product Innovation
+
+3
+00:00:12,719 --> 00:00:17,400
+Cycles faster cycle times and the high
+
+4
+00:00:15,320 --> 00:00:19,439
+costs of production downtime require
+
+5
+00:00:17,400 --> 00:00:21,600
+machines that offer maximum flexibility
+
+6
+00:00:19,439 --> 00:00:24,439
+and reliability with a shorter time to
+
+7
+00:00:21,600 --> 00:00:27,039
+Market pack Drive is your solution for
+
+8
+00:00:24,439 --> 00:00:29,359
+meeting these requirements a single
+
+9
+00:00:27,039 --> 00:00:31,840
+centralized scalable controller performs
+
+10
+00:00:29,359 --> 00:00:35,280
+all machine control functions including
+
+11
+00:00:31,840 --> 00:00:39,239
+motion control for 0 to 99 Servo axes
+
+12
+00:00:35,280 --> 00:00:41,039
+Robotics and PLC machine logic cut your
+
+13
+00:00:39,239 --> 00:00:43,600
+time to Market by simplifying the
+
+14
+00:00:41,039 --> 00:00:45,680
+Engineering Process with intuitive tools
+
+15
+00:00:43,600 --> 00:00:48,440
+and pre-programmed tested software
+
+16
+00:00:45,680 --> 00:00:50,360
+functions use template-based programming
+
+17
+00:00:48,440 --> 00:00:52,600
+and increase your productivity with hard
+
+18
+00:00:50,360 --> 00:00:55,520
+and software for consistent modular
+
+19
+00:00:52,600 --> 00:00:57,640
+machine designs pack dries embedded
+
+20
+00:00:55,520 --> 00:01:01,640
+connectivity functions are the key to
+
+21
+00:00:57,640 --> 00:01:03,480
+fast commissioning and line integration
+
+22
+00:01:01,640 --> 00:01:05,760
+they also allow effective Diagnostics
+
+23
+00:01:03,480 --> 00:01:07,759
+and plug-and-play features the ability
+
+24
+00:01:05,760 --> 00:01:09,880
+to rapidly Trace malfunctions to their
+
+25
+00:01:07,759 --> 00:01:11,680
+source and automatically configure
+
+26
+00:01:09,880 --> 00:01:13,280
+replacement components helps your
+
+27
+00:01:11,680 --> 00:01:14,320
+customers run their machines with
+
+28
+00:01:13,280 --> 00:01:16,920
+maximum
+
+29
+00:01:14,320 --> 00:01:20,040
+availability Energy Efficiency reduces
+
+30
+00:01:16,920 --> 00:01:22,320
+operating costs use pack drive for fast
+
+31
+00:01:20,040 --> 00:01:25,400
+energy efficient machine
+
+32
+00:01:22,320 --> 00:01:27,880
+design over 80,000 machines worldwide
+
+33
+00:01:25,400 --> 00:01:30,600
+are already automated with pack Drive
+
+34
+00:01:27,880 --> 00:01:33,240
+what are you waiting for schne electric
+
+35
+00:01:30,600 --> 00:01:35,960
+pack Drive automation Solutions reduce
+
+36
+00:01:33,240 --> 00:01:38,520
+time to Market increase profitability
+
+37
+00:01:35,960 --> 00:01:41,159
+improve efficiency simplify integration
+
+38
+00:01:38,520 --> 00:01:45,920
+and maintenance pack Drive is part of
+
+39
+00:01:41,159 --> 00:01:45,920
+machine structure the Next Generation
+

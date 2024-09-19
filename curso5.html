@@ -6,11 +6,11 @@
     <meta name="description" content="Aprende a personalizar y usar el Template de Multicarrier en PacDrive3 para crear máquinas con múltiples carros y estaciones. Curso detallado con recursos educativos especializados.">
 	<meta name="keywords" content="curso PacDrive3, template multicarrier PacDrive3, configuración multicarrier, automatización multicarrier, formación PacDrive">
 	<title>Portal PacDrive | El Template del Multicarrier de PacDrive3</title>
-	<link rel="icon" href="assets/icons/favicon.png" type="image/png" sizes="512x512">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-180x180.png" sizes="180x180">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-152x152.png" sizes="152x152">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-120x120.png" sizes="120x120">
-	<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon-76x76.png" sizes="76x76">	
+	<link rel="icon" href="assets/icons/favicon-512x512.png" type="image/png" sizes="512x512">
+	<link rel="icon" href="assets/icons/favicon-180x180.png" type="image/png" sizes="180x180">
+	<link rel="icon" href="assets/icons/favicon-152x152.png" type="image/png" sizes="152x152">
+	<link rel="icon" href="assets/icons/favicon-120x120.png" type="image/png" sizes="120x120">
+	<link rel="icon" href="assets/icons/favicon-76x76.png" type="image/png" sizes="76x76">	
     <link rel="stylesheet" href="css/styles.css">
 	
 	<!-- Google tag (gtag.js) -->
@@ -53,19 +53,74 @@
 	
 	<!-- Superposición para bloquear el scroll y las interacciones cuando está el menú lateral abierto-->
 	<div id="overlay" class="overlay"></div>	
-	
-    <main>
+
+ 	<main>
 		<section class="section-container">
-			<!-- Titular de la sección -->
-			<h1 class="section-title course-title">Template Multicarrier</h1>
+			<section class="intro-section intro-section-5">
+				<div class="intro-overlay"></div>
+				 
+				<div class="intro-wrapper">
+					<h1>El Template del Multicarrier</h1>
+					<p><strong>¡Bienvenido a esta formación sobre el template del Multicarrier de PacDrive3!</strong> Es un placer acompañarte en este curso, donde aprenderás a dominar una de las soluciones más avanzadas en transporte para la industria: la <strong>MultiCarrier MC12</strong> de Schneider Electric. Con este template, integrado en <strong>EcoStruxure Machine Expert</strong>, tendrás las herramientas necesarias para diseñar, simular y controlar sistemas de transporte de alta precisión y velocidad, facilitando la creación de aplicaciones flexibles y escalables.</p>
+
+					<h2>¿Qué aprenderás?</h2>
+					<p>A lo largo de este curso, exploraremos juntos el uso del <strong>Template del Multicarrier</strong>, y adquirirás competencias clave en los siguientes aspectos:</p>
+					<ul>
+						<li>Descubrirás cómo configurar gráficamente la forma de tu pista, situar las estaciones de trabajo, añadir carros y diseñar las herramientas que llevarán, todo sin necesidad de escribir código.</li>
+						<li>Explorarás los ejemplos de uso incluidos en el template del multicarrier desde las pantallas de visualización, permitiéndote conocer a fondo las capacidades disponibles.</li>
+						<li>Desarrollarás habilidades para simular tus sistemas de transporte y ajustar tus soluciones en el entorno virtual antes de implementarlas físicamente, ahorrando tiempo y recursos.</li>
+						<li>Aprenderás a crear tu propio modo automático y a aplicar técnicas avanzadas como el warm start (para retomar el modo automático tras una emergencia) y la gestión de zonas seguras (para desactivar carros y segmentos en caso de intrusión).</li>
+						<li>¡Y mucho más!</li>
+					</ul>
+
+					<p>Este curso está diseñado para que tengas una experiencia práctica y efectiva. Al final del mismo, tendrás las habilidades necesarias para aprovechar al máximo el potencial de la <strong>MultiCarrier MC12</strong> en el desarrollo de aplicaciones industriales modernas y ágiles.</p>
+
+					<!-- Botón "Ponte a prueba" -->
+					<a href="examenes.html?formacion=5&titulo=El%20Template%20del%20Multicarrier" class="btn-examenes">
+					  <button>Ponte a prueba</button>
+					</a>
+
+					<h2>Herramientas necesarias</h2>
+					<p>Para seguir este curso, necesitarás:</p>
+					<ul>
+						<li>
+							<div class="item-content">
+								<strong>EcoStruxure Machine Expert</strong>
+								<a href="https://www.se.com/es/es/product-range/2226-ecostruxure-machine-expert-somachine/#products" class="requisitos-icon link-icon" download id="external-link">
+									<img src="assets/icons/icon_external_link.svg" alt="Acceder a página de descarga de EcoStruxure Machine Expert"/>
+								</a>
+							</div>
+							<p>La plataforma de software de Schneider Electric, necesaria para cargar el template en el controlador. Asegúrate de usar al menos la versión 2.2.0 para garantizar la compatibilidad.</p>
+						</li>
+						<li>
+							<div class="item-content">
+								<strong>Controlador PacDrive3</strong>
+								<a href="https://www.se.com/es/es/product-range/7590-ecostruxure-pacdrive3/#products" class="requisitos-icon link-icon" download id="external-link">
+									<img src="assets/icons/icon_external_link.svg" alt="Acceder a página de descarga de catálogo de PacDrive3" />
+								</a>
+							</div>
+							<p>El dispositivo en el que cargarás y ejecutarás el template del multicarrier para ver tus aplicaciones en acción. Es necesario, al menos, el modelo LMC402CA10000 para la ejecución del template.</p>
+						</li>
+					</ul>
+					<p>Estoy seguro de que al finalizar el curso, estarás preparado para llevar tus aplicaciones de transporte modular a un nuevo nivel con la <strong>MultiCarrier MC12</strong> gracias al template del Multicarrier. ¡Prepárate para comenzar esta emocionante aventura en el control avanzado de sistemas de transporte!</p>
+				</div>
+			</section>
 		
-			<!-- Capítulo 1 -->
+			<!-- Titular de la sección -->
+			<h1 class="section-title course-title">El Template del Multicarrier</h1>
+			
+			<!-- Capítulo 1: INTRODUCCION GENERAL -->
 			<article class="capitulo-container" id="capitulo1">
-				<video controls poster="assets/curso5/clase1.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video1.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/Ye8kGMEPsC0?modestbranding=1&rel=0" 
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra una presentación general de la plataforma de desarrollo de aplicaciones multirrobot."> 
+				</iframe>
+		
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 1">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -82,13 +137,18 @@
 				</section>	
 			</article>
 
-			<!-- Capítulo 2 -->
+			<!-- Capítulo 2: Configurar número de robots -->
 			<article class="capitulo-container" id="capitulo2" style="display:none;">
-				<video controls poster="assets/curso5/clase2.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video2.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/hedSwOl6yJs?modestbranding=1&rel=0"
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra cómo modificar la cantidad total de robots que nuestra aplicación controlará."> 
+				</iframe>
+			
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 2">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -105,13 +165,18 @@
 				</section>	
 			</article>
 
-			<!-- Capítulo 3 -->
+			<!-- Capítulo 3: Configurar referencia de robots -->
 			<article class="capitulo-container" id="capitulo3" style="display:none;">
-				<video controls poster="assets/curso5/clase3.jpg" playsinline webkit-playsinline controlsList="nodownload">
-					<source src="assets/video3.mp4" type="video/mp4">
-					Tu navegador no soporta la reproducción de video.
-				</video>
-				
+				<iframe 
+					data-src="https://www.youtube.com/embed/RArm8MBSBnw?modestbranding=1&rel=0" 
+					src="about:blank"
+					frameborder="0" 
+					loading="lazy"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen	
+					aria-label="Vídeo que muestra cómo modificar la referencia del robot seleccionado."> 
+				</iframe>
+			
 				<section class="transcripcion-container">
 					<div class="transcripcion-header" data-leccion="Lección 3">
 						<span class="transcripcion-icon" aria-hidden="true">▶</span>
@@ -132,9 +197,9 @@
 		<div class="navegacion" role="navigation" aria-label="Controles de navegación">
 			<button id="prevBtn" aria-label="Ir a la sección anterior">Anterior</button>
 			<button id="nextBtn" aria-label="Ir a la siguiente sección">Siguiente</button>
-		</div>	
+		</div>
     </main>
-	
+
 	<!-- Footer -->
 	<footer id="info">
 		<div class="footer-container">
@@ -152,11 +217,11 @@
 		
 		   <!-- Lista de enlaces legales alineada a la izquierda -->
 			<div class="footer-legal">
-				<h3>Legal</h3>
+				<h3>Ética</h3>
 				<nav aria-label="Enlaces legales">
 					<ul>
-						<li><a href="nota-legal.html" aria-label="Leer aviso legal">Notas</a></li>
-						<li><a href="politica-privacidad.html" aria-label="Leer política de privacidad">Privacidad</a></li>
+						<li id="legal-note-link"><a href="nota-legal.html" aria-label="Leer aviso legal">Nota Legal</a></li>
+						<li id="privacy-link"><a href="politica-privacidad.html" aria-label="Leer política de privacidad">Política de Privacidad</a></li>
 					</ul>
 				</nav>
 			</div>

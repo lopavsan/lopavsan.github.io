@@ -82,7 +82,7 @@ header nav ul li a {
 @media (hover: hover) and (pointer: fine) {
 	/* Agrega un fondo resaltado al pasar el ratón sobre el enlace */
 	header nav ul li a:hover {
-		background-color: #39ff14; /* Verde claro */
+		background-color: #4CAF50; /* Color verde 39ff14*/
 		color: var(--color-texto-oscuro); /* Color del texto cuando el fondo es verde claro */
 		border-radius: 15px; /* Bordes redondeados */
 		transition: background-color 0.3s; /* Transición suave para el cambio de fondo */
@@ -119,6 +119,12 @@ main {
     align-items: center; /* Centra horizontalmente los elementos */
 }
 
+.section-container h1,
+.section-container h2{
+	margin-top: 0; 			
+	margin-bottom: 10px;
+}
+
 /* Titular de sección */
 .section-title {
     text-align: center; /* Centra el texto del titular */
@@ -142,7 +148,17 @@ main {
   z-index: 1000; /* Justo debajo del menú lateral */
 }
 
-
+@media (max-width: 600px) {
+    .section-container p,
+	.section-container label	{
+        font-size: 0.9em; 							/* Reduce el tamaño del texto descriptivo en pantallas pequeñas */
+    }
+	
+    .section-container h1,	
+    .section-container h2 {
+        font-size: 1.35em; 							/* Reduce el tamaño del texto en pantallas pequeñas */
+    }		
+}
 
 /*###########################################*/
 /*				PAGINA BIENVENIDA			 */
@@ -172,7 +188,7 @@ main {
 }
 
 /* Responsividad */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     .contenido-bienvenida {
         max-width: 90%; /* Ajusta el ancho máximo del contenedor en pantallas más pequeñas */
     }
@@ -303,11 +319,30 @@ main {
 
 .intro-section::before {
 	content: '';
-	background-image: url('../assets/PacDrive3_Robotica.jpg');
 	background-size: cover;
 	background-position: center;
 	filter: grayscale(100%) brightness(50%);
 	z-index: 1;
+}
+
+.intro-section-1::before {
+    background-image: url('../assets/PacDrive3_Presentacion.jpg');
+}
+
+.intro-section-2::before {
+    background-image: url('../assets/PacDrive3_FullTemplate.jpg');
+}
+
+.intro-section-3::before {
+    background-image: url('../assets/PacDrive3_POO.jpg');
+}
+
+.intro-section-4::before {
+    background-image: url('../assets/PacDrive3_Robotica.jpg');
+}
+
+.intro-section-5::before {
+    background-image: url('../assets/PacDrive3_Multicarrier.jpg');
 }
 
 .intro-overlay {
@@ -388,7 +423,6 @@ main {
 	font-weight: bold;
 }
 
-
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 600px) {
 	.intro-wrapper p
@@ -400,6 +434,60 @@ main {
     .intro-wrapper h2 {
         font-size: 1.35em; 							/* Reduce el tamaño del texto en pantallas pequeñas */
     }	
+}
+
+/*-------------------------------------------*/
+/*   					EXAMENES   		 	 */
+/*-------------------------------------------*/
+.examen-container{
+	width: 100%; 									/* Ajusta el ancho del video al 100% del contenedor */
+    max-width: 800px; 								/* Limita el ancho máximo del video */
+}
+
+.examen-container h2 {
+    text-align: center; /* Centra el texto del h2 */
+}
+
+.btn-examenes {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+	text-decoration: none; /* Eliminar subrayado del enlace */
+}
+
+/* Reutilizando los estilos del botón */
+.btn-examenes button, .btn-container button {
+    background-color: #4CAF50; /* Color verde */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 10px; /* Espacio entre los botones */
+    cursor: pointer;
+    border-radius: 5px;
+	width: 150px; /* Ancho fijo para todos los botones */
+}
+
+/* Alinear los botones horizontalmente */
+.btn-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    align-items: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.btn-examenes button:hover, .btn-container button:hover {
+		background-color: #45a049; /* Color más oscuro al pasar el ratón */
+	}
+	
+	/* Estilo para los radio y checkbox deshabilitados */
+	.question input[type="radio"]:disabled,
+	.question input[type="checkbox"]:disabled {
+		cursor: not-allowed; /* Cursor de no permitido */
+	}
 }
 
 /*-------------------------------------------*/
@@ -569,18 +657,12 @@ main {
 
 .navegacion button {
 	font-size: 1em;
-	background-color: rgb(var(--color-fondo-oscuro));
+	background-color: #4CAF50; /* Color verde */			/*rgb(var(--color-fondo-oscuro));*/
     color: var(--color-texto-blanco);
     padding: 10px 20px;
     cursor: pointer;
     border: none;
     border-radius: 4px;
-}
-
-@media (hover: hover) and (pointer: fine) {
-	.navegacion button:hover {
-		background-color: rgba(var(--color-fondo-oscuro),0.5);
-	}
 }
 
 .navegacion button:disabled {
@@ -590,11 +672,14 @@ main {
 }
 
 @media (hover: hover) and (pointer: fine) {
+	.navegacion button:hover {
+		background-color: #45a049; /* Color más oscuro al pasar el ratón */		/*rgba(var(--color-fondo-oscuro),0.5);*/
+	}
+	
 	.navegacion button:disabled:hover {
 		background-color: #c0c0c0;
 	}
 }
-
 /*-------------------------------------------*/
 /*	MENU LATERAL NAVEGACION ENTRE CAPITULOS	 */
 /*-------------------------------------------*/
@@ -741,8 +826,13 @@ footer {
     text-align: left; /* Alinea el texto a la izquierda */
 }
 
-.footer-legal, .footer-enlaces {
+.footer-enlaces {
 	flex: 0 0 90px; /* No crecerá, no se encogerá, tendrá un ancho fijo de 90px */
+	/*flex-basis: 25%;  Ocupa el 25% del contenedor */
+}
+
+.footer-legal {
+	flex: 0 0 120px; /* No crecerá, no se encogerá, tendrá un ancho fijo de 90px */
 	/*flex-basis: 25%;  Ocupa el 25% del contenedor */
 }
 
@@ -807,8 +897,7 @@ footer p {
     font-size: 0.75rem; /* Tamaño del texto más pequeño */
     padding: 0;
     margin: 0;
-    width: 100%; /* Asegura que el copyright ocupe todo el ancho */
-    
+    width: 100%; /* Asegura que el copyright ocupe todo el ancho */ 
 }
 
 @media (max-width: 600px) {
